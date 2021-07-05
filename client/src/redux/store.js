@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import pruebaReducer from './reducers/pruebaReducer';
 
 const rootReducers = combineReducers({
-	prueba: pruebaReducer
+	prueba: pruebaReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
