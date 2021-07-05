@@ -1,12 +1,20 @@
-const app  = require('./src/app');
-const { conn } = require('./src/db');
-const PORT = process.env.PORT || 3001;
+require('dotenv').config()
+const server = require("./src/app");
+const { sequelize } = require("./src/db")
+const portBackend = process.env.PORT_BACKEND;
 
+const connectDB = async() => {
+  try {
+    await sequelize.authenticate();
+    console.log("Connection has been established successfully.");
+    await sequelize.sync({ force: true });
+    console.log("All models were synchronized successfully.");
+    await server.listen(portBackend, () => {
+      console.log(`Listening on PORT ${portBackend}`);
+    });
+  } catch (error) {
+    console.error("Unable to connect to the database:", error);
+  }
+}
 
-// Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  console.log('Successful database connection!!');
-  const server = app.listen(PORT, () => {
-     console.log(`Listening http://localhost:${server.address().port}`);
-  });
-});
+connectDB();

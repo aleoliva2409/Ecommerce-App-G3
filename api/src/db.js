@@ -29,15 +29,15 @@ let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].s
 sequelize.models = Object.fromEntries(capsEntries);
 
 
-const { Genre } = sequelize.models;
+const { Prueba } = sequelize.models;
 
-// Genre.belongsToMany(Genre, {
-//   through: "videogame_genre"
+// ? relations
+
+// Prueba.belongsToMany(Prueba, {
+//   through: "videogame_prueba"
 // });
-
-
 
 module.exports = {
   ...sequelize.models,
-  conn: sequelize,    
+  sequelize,
 };
