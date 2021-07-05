@@ -31,12 +31,11 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 const { Prueba } = sequelize.models;
 
-console.log(sequelize.models)
-// Genre.belongsToMany(Genre, {
-//   through: "videogame_genre"
+// ? relations
+
+// Prueba.belongsToMany(Prueba, {
+//   through: "videogame_prueba"
 // });
-
-
 
 module.exports = {
   ...sequelize.models,
