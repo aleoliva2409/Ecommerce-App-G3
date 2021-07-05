@@ -107,5 +107,4 @@ dist
 package-lock.json
 
 # editorconfig
-.editorconfig
 *helpers
