@@ -1,9 +1,10 @@
 import { Switch, Route } from 'react-router-dom'
-import PruebaPage from '../views/PruebaPage';
+import ProductPage from '../views/ProductPage'
 
 const Routes = () => (
 	<Switch>
-		<Route exact path="/" component={PruebaPage}/>
+    <Route exact path="/products" component={ProductPage} />
+    <Route path="/products/:id" component={ProductPage} />
 		{/* //TODO: create component */}
 		{/* <Route path="*" component={NotFound} /> */}
 	</Switch>
