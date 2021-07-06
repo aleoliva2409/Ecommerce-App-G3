@@ -11,13 +11,18 @@ import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-//import MailIcon from '@material-ui/icons/Mail';
-//import FavoriteIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShortLogo from './../../assets/img/Logos/short-logo.png';
+import LongLogo from './../../assets/img/Logos/long-logo.png';
+
 
 const useStyles = makeStyles((theme) => ({
+  navbar: {
+    color: '#FCF4D9',
+  },
+
   grow: {
     flexGrow: 1,
   },
@@ -65,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '55ch',
     },
   },
   sectionDesktop: {
@@ -136,7 +141,10 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          {/* <Badge badgeContent={4} color="secondary">
+            <ShoppingCartIcon />
+          </Badge> */}
+          <Badge badgeContent={0} color="secondary">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -144,7 +152,7 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+          <Badge badgeContent={0} color="secondary">
             <FavoriteIcon />
           </Badge>
         </IconButton>
@@ -167,18 +175,12 @@ export default function PrimarySearchAppBar() {
   return (
     <div className={classes.grow}>
       <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Pillow Top
-          </Typography>
+        <Toolbar >
+         {window.innerWidth>600?
+        <img src={LongLogo} alt="Pillow Top" height="35" width="auto" />
+        : <img src={ShortLogo} alt="Pillow Top" height="40" width="auto" />
+         }
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -198,12 +200,12 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
+              <Badge badgeContent={0} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
+              <Badge badgeContent={0} color="secondary">
                 <FavoriteIcon />
               </Badge>
             </IconButton>
