@@ -7,6 +7,8 @@ const App = () => (
     {/* //TODO: create Navbar */}
     <Navbar />
 		<Routes />
+    <Testing/>
+
 	</div>
 )
 
