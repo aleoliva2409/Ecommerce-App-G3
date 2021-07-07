@@ -1,7 +1,7 @@
 const { Category } = require("../db");
 
 const deleteCategory = async (req, res) => {
-    const { id } = req.body;
+    const { id } = req.params;
     try {
         const remove = await Category.findOne({
             where: {
@@ -19,10 +19,32 @@ const deleteCategory = async (req, res) => {
             res.status(404).json({ message: "Category not found" });
         }
     }
-    catch (err) {
-        console.log(err)
+    catch (error) {
+        next(error)
     }
 };
+
+
+
+const updateCategory = async (req, res) => {
+    try {
+      const {id} = req.body;
+        const edit = await Category.findOne({
+          where: {
+            id,
+          },
+        });
+        if (edit) {
+          const category = await edit.update(req.body);
+          return res.status(201).json({message: "updated category"});
+        } else {
+            res.status(404).json({ message: "Category not found" });
+        }
+    } catch (error) {
+      next(error);
+    }
+  };
+
 
 
 const addCategory = async (req, res, next) => {
@@ -58,5 +80,6 @@ const getCategories = async (req, res, next) => {
 module.exports = {
     addCategory,
     deleteCategory,
-    getCategories
+    getCategories,
+    updateCategory
 }
