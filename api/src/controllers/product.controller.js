@@ -1,30 +1,30 @@
 const { Product, Category } = require("../db");
 const Op = require('sequelize').Op;
 
-const getProducts = async (req, res) => {
+const getProducts = async (req, res, next) => {
   const { name } = req.query;
   try {
     const products = await Product.findAll({
       where: {
-        name: name ? { name: { [Op.iLike]: `%${name}%` } } : null
+        name: name ? { [Op.iLike]: `%${name}%` } : null
       }
     });
-    res.send(products);
+    if (products.length) return res.send(products)
+    else return res.status(404).json({ error: "Product not found" })
   } catch (err) {
-    console.log(err)
-    res.status(404).send("Product not found")
+    next(err)
   }
 };
 
 
-const getById = async (req, res) => {
-  const { idProduct } = req.params
+const getById = async (req, res, next) => {
+  const { id } = req.params
   try {
-    const product = await Product.findByPk(idProduct)
-    res.send(product);
+    const product = await Product.findByPk(id)
+    if (product) return res.send(product);
+    else return res.status(404).json({ error: "Product not found" })
   } catch (err) {
-    console.log(err)
-    res.status(404).send("Product not found")
+    next(err)
   }
 }
 

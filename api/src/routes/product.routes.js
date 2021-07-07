@@ -4,7 +4,7 @@ const { getProducts, getById, addProduct, updateProduct, deleteProduct } = requi
 const router = Router();
 
 router.get("/", getProducts);
-router.get("/:idProduct", getById)
+router.get("/:id", getById)
 router.post("/", addProduct)
 router.put("/:id", updateProduct)
 router.delete("/:id", deleteProduct)
