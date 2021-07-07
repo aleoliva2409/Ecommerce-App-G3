@@ -5,7 +5,6 @@ const { addCategory, deleteCategory, getCategories, updateCategory } = require('
 const router = Router();
 
 router.post('/add', addCategory);
-router.delete("/delete", deleteCategory);
 router.get('/', getCategories);
 router.delete('/delete/:id', deleteCategory);
 router.put('/edit', updateCategory);
