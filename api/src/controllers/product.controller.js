@@ -24,7 +24,7 @@ const getById = async (req, res) => {
     res.send(product);
   } catch (err) {
     console.log(err)
-    res.status(404).send("Product not found")
+    res.status(404).send('Product not found')
   }
 }
 
