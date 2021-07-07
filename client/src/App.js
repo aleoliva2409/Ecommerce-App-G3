@@ -1,6 +1,6 @@
 import './styles/index.css';
 import Routes from './routes/Routes';
-import Testing from './components/ProductCard/ProductCard.jsx';
+import Testing from './components/Product/Product.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 
 const App = () => (
