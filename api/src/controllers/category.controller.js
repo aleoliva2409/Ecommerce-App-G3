@@ -2,6 +2,7 @@ const { Category } = require("../db");
 
 const deleteCategory = async (req, res) => {
     const { id } = req.params;
+
     try {
         const remove = await Category.findOne({
             where: {
@@ -19,11 +20,11 @@ const deleteCategory = async (req, res) => {
             res.status(404).json({ message: "Category not found" });
         }
     }
+
     catch (error) {
         next(error)
     }
 };
-
 
 
 const updateCategory = async (req, res) => {
@@ -44,7 +45,6 @@ const updateCategory = async (req, res) => {
       next(error);
     }
   };
-
 
 
 const addCategory = async (req, res, next) => {

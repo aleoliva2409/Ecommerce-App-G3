@@ -41,6 +41,8 @@ const { Product, Category } = sequelize.models;
 Product.belongsToMany(Category, { through: "product_category" });
 Category.belongsToMany(Product, { through: "product_category" });
 
+
+
 module.exports = {
   ...sequelize.models,
   sequelize,

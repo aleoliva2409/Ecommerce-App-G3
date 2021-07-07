@@ -2,6 +2,7 @@ const { Product, Category } = require("../db");
 const Op = require('sequelize').Op;
 
 const getProducts = async (req, res, next) => {
+
   const { name } = req.query;
   try {
     const products = await Product.findAll({
@@ -15,7 +16,6 @@ const getProducts = async (req, res, next) => {
     next(err)
   }
 };
-
 
 const getById = async (req, res, next) => {
   const { id } = req.params
