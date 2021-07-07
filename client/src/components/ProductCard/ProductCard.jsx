@@ -1,15 +1,11 @@
 import React from 'react'
-import CardMedia from '@material-ui/core/CardMedia'
 
 const ProductCard = () => {
   return (
     <div>
-      <CardMedia
-        title=""
-        image=
-      />
+      <h1>culo</h1>
     </div>
   )
 }
 
-export default ProductC
+export default ProductCard;

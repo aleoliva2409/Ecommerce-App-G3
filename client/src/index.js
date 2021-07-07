@@ -1,5 +1,6 @@
 import "@fontsource/roboto";
-import { CssBaseline } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import theme from './styles/themeConfig'
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -13,7 +14,9 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <CssBaseline />
-        <App />
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
