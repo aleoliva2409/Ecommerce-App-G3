@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom'
 import CataloguePage from '../views/CataloguePage'
 import ProductPage from '../views/ProductPage'
-import AddCategory from '../components/AddCategorie/AddCategorie';
+import AddCategory from '../components/AddCategory/AddCategory';
 
 const Routes = () => (
 	<Switch>
