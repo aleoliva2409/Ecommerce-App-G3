@@ -52,4 +52,3 @@ export const activeLoading = () => {
     payload: true,
   })
 }
-
