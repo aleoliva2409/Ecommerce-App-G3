@@ -5,7 +5,8 @@ import {
   Box,
   makeStyles,
   Container,
-  Typography } from '@material-ui/core';
+  Typography
+} from '@material-ui/core';
 import { styleProduct } from './ProductStyle.js';
 
 

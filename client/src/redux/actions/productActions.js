@@ -8,11 +8,11 @@ export const ACTIVE_LOADING = "ACTIVE_LOADING";
 
 export const getProductDetails = (id) => async (dispatch) => {
 	try {
-        const {data} = await axios.get(`/products/${id}`);
+        const { data } = await axios.get(`/products/${id}`);
         dispatch({
           type: GET_PRODUCT_DETAILS,
-          product : await data,
-         })
+          payload: data,
+        })
   }catch(error){
     console.log(error)
   }
@@ -20,13 +20,13 @@ export const getProductDetails = (id) => async (dispatch) => {
 
 export const getProducts = () => async (dispatch) => {
   try {
-    const {data} = await axios.get(`/products/all`);
+    const { data } = await axios.get(`/products/all`);
     dispatch({
       type: GET_PRODUCTS,
-      allProducts: await data,
+      payload: data,
     })
   }catch(error){
-  console.log(error)
+    console.log(error)
   }
 }
 

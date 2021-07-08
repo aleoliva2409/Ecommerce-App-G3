@@ -1,9 +1,10 @@
-const { Category, Product } = require('./db.js');
-const axios = require('axios');
+const { Product } = require('./db.js');
+// const axios = require('axios');
 
 async function setProducts(){
   let products = [
     {
+      id: 1,
       name: 'Almohada Belmo Memory Foam',
       color: 'white',
       size: '50X70',
@@ -13,6 +14,7 @@ async function setProducts(){
       price: 3200,
     },
     {
+      id: 2,
       name: 'Almohada Cannon Viscoelástica',
       color: 'white',
       size: 'null',
@@ -22,6 +24,7 @@ async function setProducts(){
       price: 4500,
     },
     {
+      id: 3,
       name: 'Almohada Cannon Viscoelástica Cervical',
       color: 'white',
       size: 'null',
@@ -31,6 +34,7 @@ async function setProducts(){
       price: 4500,
     },
     {
+      id: 4,
       name: 'Almohada Nativa Triangular',
       color: 'white',
       size: '35X35',
@@ -40,6 +44,7 @@ async function setProducts(){
       price: 1500,
     },
     {
+      id: 5,
       name: 'Almohada Palette Cervical Viscoelástica',
       color: 'white',
       size: '40X60',
@@ -49,6 +54,7 @@ async function setProducts(){
       price: 3200,
     },
     {
+      id: 6,
       name: 'Almohada Palette Extra Firme',
       color: 'white',
       size: '50X70',
@@ -58,6 +64,7 @@ async function setProducts(){
       price: 1380,
     },
     {
+      id: 7,
       name: 'Almohada Palette Suave',
       color: 'white',
       size: '50X70',
@@ -67,6 +74,7 @@ async function setProducts(){
       price: 1400,
     },
     {
+      id: 8,
       name: 'Almohada Palette Visco Smart',
       color: 'white',
       size: '40x60',
@@ -76,6 +84,7 @@ async function setProducts(){
       price: 3000,
     },
     {
+      id: 9,
       name: 'Almohada Piero Cervical',
       color: 'white',
       size: '65x35',
