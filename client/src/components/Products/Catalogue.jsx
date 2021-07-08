@@ -3,37 +3,17 @@ import Grid from '@material-ui/core/Grid'
 import ProductCard from './ProductCard'
 import Box from "@material-ui/core/Box";
 
-const Catalogue = () => {
+const Catalogue = ({products}) => {
+  console.log(products)
   return (
     <Box p={3}>
       <Grid container spacing={6}>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
-        <Grid item xl={3}>
-          <ProductCard />
-        </Grid>
+        {products &&
+          products.map((product) => (
+            <Grid item xl={3} key={product.id}>
+              <ProductCard product={product} />
+            </Grid>
+          ))}
       </Grid>
     </Box>
   );
