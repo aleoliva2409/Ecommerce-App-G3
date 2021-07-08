@@ -2,7 +2,6 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -12,6 +11,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
+import SearchBar from '../SearchBar/SearchBar';
 
 // * STYLES *
 import {useStyles} from './Styles';
@@ -111,15 +111,7 @@ export default function PrimarySearchAppBar() {
             </div>
 
             {/* //TODO Search   */}
-            <InputBase
-              placeholder="Search…"
-              color='secondary'
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
+            <SearchBar />
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
