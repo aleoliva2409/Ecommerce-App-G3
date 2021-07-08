@@ -5,7 +5,7 @@ const { getProducts, getProductsAll, getById, addProduct, updateProduct, deleteP
 const router = Router();
 
 router.get("/", getProducts);//! commented to review
-router.get("/all", getProductsAll);//? may have to change this route
+router.get("/all", getProductsAll);
 router.get("/:id", getById)
 router.post("/", addProduct)
 router.put("/:id", updateProduct)
