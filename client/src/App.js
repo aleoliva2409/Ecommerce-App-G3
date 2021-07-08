@@ -4,11 +4,9 @@ import Navbar from './components/Navbar/Navbar';
 
 const App = () => (
 	<div className="container">
-    {/* //TODO: create Navbar */}
     <Navbar />
 		<Routes />
     {/* <Testing/> */}
-
 	</div>
 )
 

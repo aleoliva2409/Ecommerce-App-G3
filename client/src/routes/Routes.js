@@ -3,6 +3,7 @@ import CataloguePage from '../views/CataloguePage'
 import ProductPage from '../views/ProductPage'
 import Categories from '../components/Categories/Categories';
 
+
 const Routes = () => (
 	<Switch>
     <Route exact path="/products" component={CataloguePage} />
