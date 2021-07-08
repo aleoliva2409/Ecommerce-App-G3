@@ -1,12 +1,12 @@
 const { Product, Category } = require("../db");
-const {productCategory} = require("../utils/utils");
+const { productCategory } = require("../utils/utils");
 const Op = require('sequelize').Op;
 
 
-const getProductsAll = async (req, res,next) => {
+const getProductsAll = async (req, res, next) => {
   try {
     const dbProducts = await Product.findAll();
-    arrProducts =[];
+    arrProducts = [];
     if (dbProducts.length) {
       for (element of dbProducts) {
         const values = element.dataValues;
@@ -62,14 +62,16 @@ const getById = async (req, res, next) => {
 
 
 const addProduct = async (req, res, next) => {
-  const { id, name, color, size, description, image, price, stock, categories } = req.body
+  const { name, color, size, description, image, price, stock, categories } = req.body
   try {
-    const find = await Product.findByPk(id)
-    //const find = await Product.findOne({ where: { name } }); con esta linea no te deja agregar si ya existe
+    const find = await Product.findOne({
+      where: { name, color, size }
+    })
+
     if (find) {
       return res.status(500).json({ error: 'this product alredy exists' })
     }
-      const newProduct = await Product.create({
+    const newProduct = await Product.create({
       name,
       description,
       image,
@@ -137,4 +139,3 @@ module.exports = {
   deleteProduct,
   getProductsAll
 };
-
