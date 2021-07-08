@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCategories } from '../../redux/actions/categoriesActions';
-import CategoryCard from './CategoryCard';
+import { getCategories } from '../../../redux/actions/categoriesActions';
+import CategoryCard from '../CategoryCard/CategoryCard';
+import useStyles from "./ShowAndDeleteCategoriesStyle";  // styles file already import
 
 const ShowAndDeleteCategories = () => {
-
+    const classes = useStyles();
     const dispatch = useDispatch()
 
     const categoriesList = useSelector(state => state.categories.categories)
