@@ -1,7 +1,9 @@
-import { ADD_CATEGORY } from "../actions/categoriesActions";
+import { ADD_CATEGORY, GET_CATEGORIES, DELETE_CATEGORY } from "../actions/categoriesActions";
 
 const initialState = {
-	message: ''
+	message: '',
+	categories:[],
+	reloaded: false
 };
 
 const categoriesReducer = (state = initialState, action) => {
@@ -10,6 +12,21 @@ const categoriesReducer = (state = initialState, action) => {
 			return {
 				...state,
 				message: action.payload,
+				reloaded: true
+			};
+
+			case GET_CATEGORIES:
+			return {
+				...state,
+				categories: action.payload,
+				reloaded: false
+			};
+
+			case DELETE_CATEGORY:
+			return {
+				...state,
+				message: action.payload,
+				reloaded: true
 			};
 
 		default:
