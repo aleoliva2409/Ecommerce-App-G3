@@ -1,6 +1,19 @@
 const { Product, Category } = require("../db");
 const Op = require('sequelize').Op;
 
+
+//?may have to change this route
+const getProductsAll = async (req, res, next) => {
+  try {
+    const products = await Product.findAll();
+    if (products.length) return res.send(products)
+    else return res.status(404).json({ error: "Product not found" })
+  } catch (err) {
+    next(err)
+  }
+};
+
+//! this route return the products with the "name" receibed, to review
 const getProducts = async (req, res, next) => {
 
   const { name } = req.query;
@@ -90,6 +103,7 @@ module.exports = {
   getById,
   addProduct,
   updateProduct,
-  deleteProduct
+  deleteProduct,
+  getProductsAll
 };
 

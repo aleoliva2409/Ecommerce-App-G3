@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { cardStyle } from './ProductCardStyle.js';
 import { makeStyles,
   Card,
@@ -7,16 +8,21 @@ import { makeStyles,
   Button,
   Typography,
   Box,
+  Link,
 } from '@material-ui/core';
 
 const useStyles = makeStyles(cardStyle);
 
-export function ProductCard() {
+export function ProductCard({id}) {
 
   const styles = useStyles();
 
   return (
-      <Box>
+      <Link
+        className={styles.linkContainer}
+        component={RouterLink}
+        to={`/products/${id}`}
+      >
         <Card
           className={styles.root}
         >
@@ -39,7 +45,7 @@ export function ProductCard() {
             >
               {'$10000'}
             </Typography>
-            {/* <Box
+            <Box
               className={styles.footer}
             >
               <Button
@@ -49,10 +55,10 @@ export function ProductCard() {
               <Button
                 className={styles.footerDetails}
               >Details</Button>
-            </Box> */}
+            </Box>
           </CardContent>
         </Card>
-      </Box>
+      </Link>
   )
 }
 

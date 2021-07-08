@@ -1,10 +1,11 @@
 const { Router } = require("express");
-const { getProducts, getById, addProduct, updateProduct, deleteProduct } = require("../controllers/product.controller");
+const { getProducts, getProductsAll, getById, addProduct, updateProduct, deleteProduct } = require("../controllers/product.controller");
 
 
 const router = Router();
 
-router.get("/", getProducts);
+router.get("/", getProducts);//! commented to review
+router.get("/all", getProductsAll);//? may have to change this route
 router.get("/:id", getById)
 router.post("/", addProduct)
 router.put("/:id", updateProduct)
