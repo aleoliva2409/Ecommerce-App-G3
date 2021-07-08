@@ -19,13 +19,13 @@ const CataloguePage = () => {
   return (
     <Container maxWidth="xl">
       <Typography variant="h3" color="initial">
-        All products
+        Tienda
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xl={2}>
+        <Grid item xl={2} lg={2} md={3} sm={12} xs={12} >
           <FilterProducts />
         </Grid>
-        <Grid item xl={10}>
+        <Grid item xl={10} lg={10} md={9} sm={12} xs={12} >
           <Catalogue products={products}/>
         </Grid>
       </Grid>

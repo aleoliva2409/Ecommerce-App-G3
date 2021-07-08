@@ -7,10 +7,10 @@ const Catalogue = ({products}) => {
   console.log(products)
   return (
     <Box p={3}>
-      <Grid container spacing={6}>
+      <Grid container spacing={6} justifyContent="center" >
         {products &&
           products.map((product) => (
-            <Grid item xl={3} key={product.id}>
+            <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={product.id}>
               <ProductCard product={product} />
             </Grid>
           ))}

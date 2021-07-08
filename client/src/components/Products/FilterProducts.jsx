@@ -4,7 +4,7 @@ import { Box, Typography } from '@material-ui/core'
 const FilterProducts = () => {
   return (
     <Box>
-      <Typography variant="h4" color="initial">Filters</Typography>
+      <Typography variant="h5" color="initial">Filters</Typography>
       <Box>
 
       </Box>
