@@ -13,7 +13,7 @@ import { makeStyles,
 
 const useStyles = makeStyles(cardStyle);
 
-export function ProductCard({id}) {
+const ProductCard = ({product}) => {
 
   const styles = useStyles();
 
@@ -21,14 +21,14 @@ export function ProductCard({id}) {
       <Link
         className={styles.linkContainer}
         component={RouterLink}
-        to={`/products/${id}`}
+        to={`/products/${product.id}`}
       >
         <Card
           className={styles.root}
         >
           <CardMedia
             className={styles.media}
-            image={'https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Sommier-Mediano.jpg'}
+            image={product.image[0]}
           />
           <CardContent
             className={styles.data}
@@ -37,13 +37,13 @@ export function ProductCard({id}) {
               variant={'h1'}
               className={styles.title}
             >
-              Colchón y Sommier Suavegom Fashion
+              {product.name}
             </Typography>
             <Typography
               variant={'button'}
               className={styles.price}
             >
-              {'$10000'}
+              {product.price}
             </Typography>
             <Box
               className={styles.footer}

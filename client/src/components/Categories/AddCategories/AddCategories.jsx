@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TextField, Container, Snackbar, Typography } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
-import { createCategory } from "../../redux/actions/categoriesActions.js";
+import { createCategory } from "../../../redux/actions/categoriesActions.js";
+import useStyles from "./AddCategoriesStyles";  // styles file already import
 
 export default function AddCategory() {
+  const classes = useStyles();
   const dispatch = useDispatch();
 
   const state = useSelector(state => state.categories.message)
@@ -68,21 +70,18 @@ export default function AddCategory() {
           value="Agregar"
           variant="outlined"
           onClick={handleClick}
-        />{" "}
-        <hr />
+        /> <hr />
         {state.success ? (
           <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
-              {" "}
-              {state.success}{" "}
-            </Alert>
+             {state.success}     
+             </Alert>
           </Snackbar>
         ) : (
           <Snackbar open={open} onClose={handleClose}>
             <Alert onClose={handleClose} severity="error">
-              {" "}
-              {state.error}{" "}
-            </Alert>
+             {state.error}     
+             </Alert>
           </Snackbar>
         )}
       </form>

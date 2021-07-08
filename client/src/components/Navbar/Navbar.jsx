@@ -15,6 +15,7 @@ import SearchBar from '../SearchBar/SearchBar';
 
 // * STYLES *
 import {useStyles} from './Styles';
+import Container from '@material-ui/core/Container'
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
@@ -100,17 +101,16 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
-        <Toolbar className={classes.appbar}>
+        <AppBar position="static">
+            <Toolbar className={classes.appbar}>
 
-        <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+            <img src={LongLogo} className={classes.image} alt="Pillow Top" />
 
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-
-            {/* //TODO Search   */}
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+            {/* Done Search   */}
             <SearchBar />
           </div>
           <div className={classes.grow} />

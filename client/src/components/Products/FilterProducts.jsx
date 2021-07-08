@@ -1,10 +1,20 @@
 import React from 'react'
+import { Box, Typography } from '@material-ui/core'
 
 const FilterProducts = () => {
   return (
-    <div>
-      <h1>Filter Products </h1>
-    </div>
+    <Box>
+      <Typography variant="h5" color="initial">Filters</Typography>
+      <Box>
+
+      </Box>
+      <Box>
+
+      </Box>
+      <Box>
+
+      </Box>
+    </Box>
   )
 }
 

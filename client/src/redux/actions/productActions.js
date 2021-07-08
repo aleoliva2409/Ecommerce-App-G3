@@ -13,7 +13,7 @@ export const getSearchProducts = (name) => async (dispatch) => {
         const {data} = await axios.get(`products?name=${name}`);
         dispatch({
           type: SEARCH_PRODUCTS,
-          search : await data,
+          payload : data,
          })
   }catch(error){
     console.log(error)
@@ -25,7 +25,7 @@ export const getProductDetails = (id) => async (dispatch) => {
         const {data} = await axios.get(`/products/${id}`);
         dispatch({
           type: GET_PRODUCT_DETAILS,
-          product : await data,
+          payload : data,
          })
   }catch(error){
     console.log(error)
@@ -37,7 +37,7 @@ export const getProducts = () => async (dispatch) => {
     const {data} = await axios.get(`/products/all`);
     dispatch({
       type: GET_PRODUCTS,
-      allProducts: await data,
+      payload: data,
     })
   }catch(error){
   console.log(error)
@@ -49,6 +49,7 @@ export const getProducts = () => async (dispatch) => {
 export const activeLoading = () => {
   return({
     type: ACTIVE_LOADING,
-    isLoading: true,
+    payload: true,
   })
 }
+
