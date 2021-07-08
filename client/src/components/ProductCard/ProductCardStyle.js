@@ -1,6 +1,6 @@
 export const cardStyle = ({breakpoints, spacing}) => ({
   root: {
-    margin: '3rem auto',
+    margin: '3rem 3rem 2rem auto',
     borderRadius: spacing(2), // 16px
     transition: '0.3s',
     position: 'relative',
