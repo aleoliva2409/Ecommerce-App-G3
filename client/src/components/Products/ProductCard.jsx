@@ -13,7 +13,7 @@ import { makeStyles,
 
 const useStyles = makeStyles(cardStyle);
 
-export function ProductCard() {
+export function ProductCard({id}) {
 
   const styles = useStyles();
 
@@ -21,7 +21,7 @@ export function ProductCard() {
       <Link
         className={styles.linkContainer}
         component={RouterLink}
-        to={'/products/1'}
+        to={`/products/${id}`}
       >
         <Card
           className={styles.root}

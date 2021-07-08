@@ -1,22 +1,38 @@
 import axios from 'axios';
 
 export const GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS";
+export const GET_PRODUCTS = "GET_PRODUCTS";
 export const ACTIVE_LOADING = "ACTIVE_LOADING";
+
+// * Set data of each product
 
 export const getProductDetails = (id) => async (dispatch) => {
 	try {
         const {data} = await axios.get(`/products/${id}`);
-        console.log(data);
         dispatch({
           type: GET_PRODUCT_DETAILS,
-          product: await data,
+          product : await data,
          })
   }catch(error){
     console.log(error)
   }
 };
 
-export const activeLoading = (dispatch) => {
+export const getProducts = () => async (dispatch) => {
+  try {
+    const {data} = await axios.get(`/products/all`);
+    dispatch({
+      type: GET_PRODUCTS,
+      allProducts: await data,
+    })
+  }catch(error){
+  console.log(error)
+  }
+}
+
+// * SetLoading on true to display the loading component
+
+export const activeLoading = () => {
   return({
     type: ACTIVE_LOADING,
     isLoading: true,

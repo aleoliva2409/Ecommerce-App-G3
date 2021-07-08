@@ -25,7 +25,6 @@ function makeReviews(){
 function Product({product}){
 
   const styles = useStyles();
-  console.log(product);
   return (
     <Container
       className={styles.root}
