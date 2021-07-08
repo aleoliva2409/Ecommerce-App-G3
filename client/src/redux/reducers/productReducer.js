@@ -2,7 +2,7 @@ import { GET_PRODUCT_DETAILS, ACTIVE_LOADING } from "../actions/productActions";
 
 const initialState = {
   product: {},
-  isLoading: false,
+  isLoading: true,
 }
 
 const productReducer = (state=initialState, action) => {

@@ -6,6 +6,7 @@ export const ACTIVE_LOADING = "ACTIVE_LOADING";
 export const getProductDetails = (id) => async (dispatch) => {
 	try {
         const {data} = await axios.get(`/products/${id}`);
+        console.log(data);
         dispatch({
           type: GET_PRODUCT_DETAILS,
           product: await data,

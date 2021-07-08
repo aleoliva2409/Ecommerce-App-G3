@@ -21,88 +21,83 @@ function makeReviews(){
   return reviews;
 }
 //
-function Product({product, isLoading}){
+function Product({product}){
 
   const styles = useStyles();
-
+  console.log(product);
   return (
-    (!isLoading)?
-      <Container
-        className={styles.root}
+    <Container
+      className={styles.root}
+    >
+      <Card
+        className={styles.cardRoot}
       >
-        <Card
-          className={styles.cardRoot}
-        >
-          <CardMedia
-            className={styles.media}
-            image={product.image[0]}
-          />
-          <CardContent
-            className={styles.content}
-          >
-            <Typography
-              variant={'button'}
-              className={styles.price}
-            >
-              {product.price}
-            </Typography>
-            <Typography
-              variant={'caption'}
-            >
-              {(product.stock===0) ? 'unavailable' : 'available' }
-            </Typography>
-          </CardContent>
-        </Card>
-        <Typography
-          variant={'h2'}
-          className={styles.name}
-        >
-          {product.name}
-        </Typography>
-        <Container
-          className={styles.options}
-        >
-          <h2>hola mundo</h2>
-        </Container>
-        <Container
-          className={styles.description}
+        <CardMedia
+          className={styles.media}
+          image={product.image[0]}
+        />
+        <CardContent
+          className={styles.content}
         >
           <Typography
-            variant={'body1'}
+            variant={'button'}
+            className={styles.price}
           >
-            {product.description}
+            {`$${product.price}`}
           </Typography>
-        </Container>
-        <Container
-          className={styles.reviews}
-        >
           <Typography
-            variant={'subtitle2'}
+            variant={'caption'}
           >
-            Reviews
+            {(product.stock===0) ? 'unavailable' : 'available' }
           </Typography>
-          {makeReviews().map((el,i)=>{
-            return (
-              <Box
-                key={i}
-                component={'fieldset'}
-              >
-                <legend>{el.author}</legend>
-                <Typography
-                  variant={'body2'}
-                >
-                  {el.description}
-                </Typography>
-              </Box>
-
-            )
-          })}
-        </Container>
-      </Container>
-      :
+        </CardContent>
+      </Card>
       <Typography
-        variant={'h1'}
-      >LOADING...</Typography>
+        variant={'h2'}
+        className={styles.name}
+      >
+        {product.name}
+      </Typography>
+      <Container
+        className={styles.options}
+      >
+        <h2>hola mundo</h2>
+      </Container>
+      <Container
+        className={styles.description}
+      >
+        <Typography
+          variant={'body1'}
+        >
+          {product.description}
+        </Typography>
+      </Container>
+      <Container
+        className={styles.reviews}
+      >
+        <Typography
+          variant={'subtitle2'}
+        >
+          Reviews
+        </Typography>
+        {makeReviews().map((el,i)=>{
+          return (
+            <Box
+              key={i}
+              component={'fieldset'}
+            >
+              <legend>{el.author}</legend>
+              <Typography
+                variant={'body2'}
+              >
+                {el.description}
+              </Typography>
+            </Box>
+
+          )
+        })}
+      </Container>
+    </Container>
   )
 }
 

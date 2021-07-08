@@ -3,13 +3,13 @@ const axios = require('axios');
 
 async function setProducts(){
   let product = {
-    name: 'colchon',
+    name: 'Colchón y Sommier Piero Foam',
     color: 'white',
-    size: '97x80,plaza y media,',
-    description: 'un colchon demasiado suave',
-    image: ['https://www.pillowtop.com.ar/wp-content/uploads/som.jpg'],
+    size: '80x190',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque dolor unde incidunt harum perspiciatis similique, voluptate sed aspernatur voluptates.',
+    image: ['https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Foam-Mediano.jpg', 'https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Foam-Grande.jpg'],
     stock: 20,
-    price: 10.25,
+    price: 33500,
   }
 
   let newPoduct = await Product.create(product);

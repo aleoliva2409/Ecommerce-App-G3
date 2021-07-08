@@ -14,13 +14,17 @@ const ProductPage = ({getProductDetails, activeLoading, product, isLoading}) => 
       return await getProductDetails(id);
     }
     getDetails();
+    console.log(product);
   },[])
 
   return (
-    <Product
-      product={product}
-      isLoading={isLoading}
-    />
+    (isLoading)?
+      <h1>loading</h1>
+      :
+      <Product
+        product={product}
+        isLoading={isLoading}
+      />
   )
 }
 
