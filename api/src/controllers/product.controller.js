@@ -30,22 +30,34 @@ const getById = async (req, res, next) => {
 
 
 const addProduct = async (req, res, next) => {
-  const { id, name, color, size, description, image, price, stock, category } = req.body
+  const { id, name, color, size, description, image, price, stock, categories } = req.body
   try {
     const find = await Product.findByPk(id)
+    //const find = await Product.findOne({ where: { name } }); con esta linea no te deja agregar si ya existe
     if (find) {
       return res.status(500).json({ error: 'this product alredy exists' })
     }
-    else {
-      const findCategory = await Category.findOne({ where: { name: category } })
-      if (!findCategory) return res.status(500).json({ error: 'enter category' })
-      const product = await Product.create({ name, color, size, description, image, price, stock })
-      await findCategory.addProduct(product)
-      return res.status(200).json(product)
+      const newProduct = await Product.create({
+      name,
+      description,
+      image,
+      price,
+      stock,
+      color,
+      size
+    });
+    
+    for (element of categories) {
+      const categoryToAdd = await Category.findOne({
+
+        where: { name: element },
+      });
+      newProduct.addCategory(categoryToAdd);
     }
-  } catch (err) {
-    next(err)
-  }
+    res.status(200).json({ message: "Product added!" });
+  
+  } catch (error) { next(error) }
+
 }
 
 
