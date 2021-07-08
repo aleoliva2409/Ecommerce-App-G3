@@ -1,11 +1,11 @@
 export const cardStyle = ({breakpoints, spacing}) => ({
   root: {
-    margin: '3rem auto',
+    margin: '0 auto',
     borderRadius: spacing(2), // 16px
     transition: '0.3s',
     position: 'relative',
     maxWidth: 500,
-    marginLeft: 'auto',
+    // marginLeft: 'auto',
     overflow: 'initial',
     background: '#ffffff',
     display: 'flex',
