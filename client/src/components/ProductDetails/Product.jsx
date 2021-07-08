@@ -3,12 +3,11 @@ import {
   CardMedia,
   CardContent,
   Box,
-  Select,
   makeStyles,
-  InputLabel,
   Container,
   Typography } from '@material-ui/core';
 import { styleProduct } from './ProductStyle.js';
+
 
 const useStyles = makeStyles(styleProduct);
 
@@ -22,85 +21,83 @@ function makeReviews(){
   }
   return reviews;
 }
-
-function Product(){
+//
+function Product({product}){
 
   const styles = useStyles();
-  const stock = 10;
-  const colors = [{backgroundColor: 'black'}, {backgroundColor: 'white'}]
-  const sizes = ["97X65","100X50","120X60","130X60","135X65","140X80"];
-
   return (
-  <Container
-    className={styles.root}
-  >
-    <Card
-      className={styles.cardRoot}
+    <Container
+      className={styles.root}
     >
-      <CardMedia
-        className={styles.media}
-        image={'https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Sommier-Mediano.jpg'}
-      />
-      <CardContent
-        className={styles.content}
+      <Card
+        className={styles.cardRoot}
       >
-        <Typography
-          variant={'button'}
-          className={styles.price}
+        <CardMedia
+          className={styles.media}
+          image={product.image[0]}
+        />
+        <CardContent
+          className={styles.content}
         >
-          {'$5000'}
-        </Typography>
-        <Typography
-          variant={'caption'}
-        >
-          {(stock===0) ? 'unavailable' : 'available' }
-        </Typography>
-      </CardContent>
-    </Card>
-    <Typography
-      variant={'h2'}
-      className={styles.name}
-    >
-      Colchón Baby Belmo
-    </Typography>
-    <Container
-      className={styles.options}
-    >
-    </Container>
-    <Container
-      className={styles.description}
-    >
-      <Typography
-        variant={'body1'}
-      >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis officia odit beatae, corrupti sed voluptatem magnam autem, repellat commodi mollitia ipsam modi. Facilis dolores delectus nesciunt saepe odio tempora facere.
-      </Typography>
-    </Container>
-    <Container
-      className={styles.reviews}
-    >
-      <Typography
-        variant={'subtitle2'}
-      >
-        Reviews
-      </Typography>
-      {makeReviews().map(el=>{
-        return (
-          <Box
-            component={'fieldset'}
+          <Typography
+            variant={'button'}
+            className={styles.price}
           >
-            <legend>{el.author}</legend>
-            <Typography
-              variant={'body2'}
+            {`$${product.price}`}
+          </Typography>
+          <Typography
+            variant={'caption'}
+          >
+            {(product.stock===0) ? 'unavailable' : 'available' }
+          </Typography>
+        </CardContent>
+      </Card>
+      <Typography
+        variant={'h2'}
+        className={styles.name}
+      >
+        {product.name}
+      </Typography>
+      <Container
+        className={styles.options}
+      >
+        <h2>hola mundo</h2>
+      </Container>
+      <Container
+        className={styles.description}
+      >
+        <Typography
+          variant={'body1'}
+        >
+          {product.description}
+        </Typography>
+      </Container>
+      <Container
+        className={styles.reviews}
+      >
+        <Typography
+          variant={'subtitle2'}
+        >
+          Reviews
+        </Typography>
+        {makeReviews().map((el,i)=>{
+          return (
+            <Box
+              key={i}
+              component={'fieldset'}
             >
-              {el.description}
-            </Typography>
-          </Box>
+              <legend>{el.author}</legend>
+              <Typography
+                variant={'body2'}
+              >
+                {el.description}
+              </Typography>
+            </Box>
 
-        )
-      })}
+          )
+        })}
+      </Container>
     </Container>
-  </Container>
   )
 }
 

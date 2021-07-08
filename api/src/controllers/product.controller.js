@@ -1,6 +1,38 @@
 const { Product, Category } = require("../db");
+const {productCategory} = require("../utils/utils");
 const Op = require('sequelize').Op;
 
+
+const getProductsAll = async (req, res,next) => {
+  try {
+    const dbProducts = await Product.findAll();
+    arrProducts =[];
+    if (dbProducts.length) {
+      for (element of dbProducts) {
+        const values = element.dataValues;
+        let arrCategories = await productCategory(values.id);
+        const objProduct = {
+          id: values.id,
+          name: values.name,
+          description: values.description,
+          image: values.image,
+          price: values.price,
+          stock: values.stock,
+          size: values.size,
+          categories: arrCategories,
+        };
+        arrProducts.push(objProduct);
+      }
+    } else {
+      res.status(404).json({ message: "Empty database" });
+    }
+    res.status(200).json(arrProducts);
+  } catch (error) {
+    next(error);
+  }
+}
+
+//! this route return the products with the "name" receibed, to review
 const getProducts = async (req, res, next) => {
 
   const { name } = req.query;
@@ -30,22 +62,34 @@ const getById = async (req, res, next) => {
 
 
 const addProduct = async (req, res, next) => {
-  const { id, name, color, size, description, image, price, stock, category } = req.body
+  const { id, name, color, size, description, image, price, stock, categories } = req.body
   try {
     const find = await Product.findByPk(id)
+    //const find = await Product.findOne({ where: { name } }); con esta linea no te deja agregar si ya existe
     if (find) {
       return res.status(500).json({ error: 'this product alredy exists' })
     }
-    else {
-      const findCategory = await Category.findOne({ where: { name: category } })
-      if (!findCategory) return res.status(500).json({ error: 'enter category' })
-      const product = await Product.create({ name, color, size, description, image, price, stock })
-      await findCategory.addProduct(product)
-      return res.status(200).json(product)
+      const newProduct = await Product.create({
+      name,
+      description,
+      image,
+      price,
+      stock,
+      color,
+      size
+    });
+    
+    for (element of categories) {
+      const categoryToAdd = await Category.findOne({
+
+        where: { name: element },
+      });
+      newProduct.addCategory(categoryToAdd);
     }
-  } catch (err) {
-    next(err)
-  }
+    res.status(200).json({ message: "Product added!" });
+  
+  } catch (error) { next(error) }
+
 }
 
 
@@ -90,6 +134,7 @@ module.exports = {
   getById,
   addProduct,
   updateProduct,
-  deleteProduct
+  deleteProduct,
+  getProductsAll
 };
 

@@ -1,11 +1,17 @@
 export const cardStyle = ({breakpoints, spacing}) => ({
+  linkContainer:{
+    textDecoration: 'none',
+    '&:hover':{
+      textDecoration: 'none',
+    }
+  },
   root: {
-    margin: '0 auto',
+    // marginLeft: '0.5rem',
     borderRadius: spacing(2), // 16px
     transition: '0.3s',
     position: 'relative',
     maxWidth: 500,
-    // marginLeft: 'auto',
+    height: 'auto',
     overflow: 'initial',
     background: '#ffffff',
     display: 'flex',
@@ -49,16 +55,9 @@ export const cardStyle = ({breakpoints, spacing}) => ({
       opacity: 0.5,
     },
   },
-  content: {
-    padding: 24,
-  },
-  cta: {
-    marginTop: 24,
-    textTransform: 'initial',
-  },
   data:{
     maxWidth: '70%',
-    height: '10rem',
+    height: 'auto',
     display: 'flex',
     flexDirection:'column',
     alignItems:'center',
