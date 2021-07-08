@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 import { activeLoading, getProductDetails } from '../redux/actions/productActions.js';
-import Product from './../components/Product/Product.jsx';
+import Product from './../components/ProductDetails/Product.jsx';
 import {connect} from 'react-redux';
 
 const ProductPage = ({getProductDetails, activeLoading, product, isLoading}) => {

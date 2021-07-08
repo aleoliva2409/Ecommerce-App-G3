@@ -8,6 +8,7 @@ import {
   Typography } from '@material-ui/core';
 import { styleProduct } from './ProductStyle.js';
 
+
 const useStyles = makeStyles(styleProduct);
 
 function makeReviews(){
