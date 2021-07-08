@@ -15,6 +15,7 @@ import LongLogo from './../../assets/img/Logos/long-logo.png';
 
 // * STYLES *
 import {useStyles} from './Styles';
+import Container from '@material-ui/core/Container'
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
@@ -100,63 +101,63 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
-        <Toolbar className={classes.appbar}>
+        <AppBar position="static">
+            <Toolbar className={classes.appbar}>
 
-        <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+            <img src={LongLogo} className={classes.image} alt="Pillow Top" />
 
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
 
-            {/* //TODO Search   */}
-            <InputBase
-              placeholder="Search…"
-              color='secondary'
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <FavoriteIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </AppBar>
+                {/* //TODO Search   */}
+                <InputBase
+                  placeholder="Search…"
+                  color='secondary'
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </div>
+              <div className={classes.grow} />
+              <div className={classes.sectionDesktop}>
+                <IconButton aria-label="show 4 new mails" color="inherit">
+                  <Badge badgeContent={0} color="secondary">
+                    <ShoppingCartIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton aria-label="show 17 new notifications" color="inherit">
+                  <Badge badgeContent={0} color="secondary">
+                    <FavoriteIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+              </div>
+              <div className={classes.sectionMobile}>
+                <IconButton
+                  aria-label="show more"
+                  aria-controls={mobileMenuId}
+                  aria-haspopup="true"
+                  onClick={handleMobileMenuOpen}
+                  color="inherit"
+                >
+                  <MoreIcon />
+                </IconButton>
+              </div>
+            </Toolbar>
+        </AppBar>
       {renderMobileMenu}
       {renderMenu}
     </div>

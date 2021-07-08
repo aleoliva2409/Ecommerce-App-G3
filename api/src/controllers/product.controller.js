@@ -59,7 +59,7 @@ const addProduct = async (req, res, next) => {
       color,
       size
     });
-    
+
     for (element of categories) {
       const categoryToAdd = await Category.findOne({
 
@@ -68,7 +68,7 @@ const addProduct = async (req, res, next) => {
       newProduct.addCategory(categoryToAdd);
     }
     res.status(200).json({ message: "Product added!" });
-  
+
   } catch (error) { next(error) }
 
 }
