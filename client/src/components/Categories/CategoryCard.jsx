@@ -1,8 +1,34 @@
 import React, { useState } from "react";
-import { Typography, Button, Snackbar } from "@material-ui/core";
+import { Typography, Button, Snackbar, Modal, makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { delCategory } from "../../redux/actions/categoriesActions";
 import MuiAlert from "@material-ui/lab/Alert";
+
+const useStyles = makeStyles((theme) => ({
+    paper: {
+      position: 'absolute',
+      width: 400,
+      backgroundColor: theme.palette.background.paper,
+      border: '2px solid #000',
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3),
+    },
+  }));
+
+  function rand() {
+    return Math.round(Math.random() * 20) - 10;
+  }
+  
+  function getModalStyle() {
+    const top = 50 + rand();
+    const left = 50 + rand();
+  
+    return {
+      top: `${top}%`,
+      left: `${left}%`,
+      transform: `translate(-${top}%, -${left}%)`,
+    };
+  }
 
 const CategoryCard = ({ name, id, image, description }) => {
   const state = useSelector((state) => state.categories.message);
@@ -31,9 +57,36 @@ const CategoryCard = ({ name, id, image, description }) => {
   };
 
   const combineClick = () => {
+    handleClose()
     handleClick()
     deleteCategory()
   }
+
+  
+// modal para confirmacion:
+
+const [modalStyle] = useState(getModalStyle);
+
+const classes = useStyles();
+
+const [open, setOpen] = useState(false);
+
+const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const body = (
+    <div style={modalStyle} className={classes.paper}>
+      <h2>DELETING {name}</h2>
+      <h2>ARE YOU SURE?</h2>
+      <Button onClick={combineClick}>YES</Button>
+      <Button onClick={handleClose}>NO</Button>
+    </div>
+  );
 
   return (
     <div>
@@ -41,7 +94,15 @@ const CategoryCard = ({ name, id, image, description }) => {
         <Typography>{name}</Typography>
         <Typography>{description}</Typography>
         <Typography>{image}</Typography>
-        <Button onClick={combineClick}>X</Button>
+        <Button onClick={handleOpen}>X</Button>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        {body}
+      </Modal>
         {state.success ? (
           <Snackbar open={del} onClose={handleDelClose}>
             <Alert onClose={handleDelClose} severity="success">
