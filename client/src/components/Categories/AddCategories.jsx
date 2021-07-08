@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TextField, Container, Snackbar, Typography } from "@material-ui/core";
+import { TextField, Container, Snackbar } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
 import { createCategory } from "../../redux/actions/categoriesActions.js";
 
@@ -42,21 +42,20 @@ export default function AddCategory() {
 
   return (
     <Container>
-      <Typography variant="h5" color="initial">AGREGAR CATEGORIA</Typography>
-      <hr />
+      <h5>AGREGAR CATEGORIA</h5> <hr />
       <form onSubmit={enviarDatos}>
         <TextField type="text" placeholder="Nombre" name="name" variant="outlined" required onChange={handleInputChange} />
         <TextField type="text" placeholder="Descripción" name="description" variant="outlined" multiline onChange={handleInputChange} />
         <TextField type="submit" value="Agregar" variant="outlined" onClick={handleClick} /> <hr />
         { state.success?
-        <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
+        <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}> 
         <Alert onClose={handleClose} severity="success"> {state.success} </Alert>
         </Snackbar>
-            :
-        <Snackbar open={open} onClose={handleClose}>
+            : 
+        <Snackbar open={open} onClose={handleClose}> 
         <Alert onClose={handleClose} severity="error"> {state.error} </Alert>
         </Snackbar>
-        }
+        }   
       </form>
     </Container>
   );

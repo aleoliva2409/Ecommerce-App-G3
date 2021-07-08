@@ -4,11 +4,9 @@ export const styleProduct = ({breakpoints, spacing}) => ({
     margin: '1rem auto 1rem auto',
     width: '80%',
     height: 'auto',
-    border: '1px solid black',
     display: 'grid',
     gridTemplateColumns: '100%',
     gridTemplateRows: 'auto auto auto auto auto',
-    overflowY: 'scroll',
     [breakpoints.up('md')]:{
       gridTemplateColumns: '1fr 1fr',
       gridTemplateRows: 'auto auto auto',
