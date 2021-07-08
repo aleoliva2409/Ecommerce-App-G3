@@ -1,5 +1,5 @@
 const { Product, Category } = require("../db");
-const {productCategory} = require("../helpers/utils");
+const {productCategory} = require("../utils/utils");
 const Op = require('sequelize').Op;
 
 
