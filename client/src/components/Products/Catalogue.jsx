@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 const Catalogue = () => {
   return (
     <Box p={3}>
-      <Grid container spacing={5}>
+      <Grid container spacing={6}>
         <Grid item xl={3}>
           <ProductCard />
         </Grid>

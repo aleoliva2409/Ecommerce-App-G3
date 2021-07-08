@@ -17,8 +17,9 @@ const productReducer = (state=initialState, action) => {
       return {...state, product: action.product, isLoading: false}; //* Especific product data
     case ACTIVE_LOADING:
       return {...state, isLoading:action.isLoading}; //* just set the loading variable
+    default:
+      return state;
   }
-  return state;
 }
 
 export default productReducer;

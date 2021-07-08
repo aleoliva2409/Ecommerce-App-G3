@@ -15,7 +15,7 @@ const ProductPage = ({getProductDetails, activeLoading, product, isLoading}) => 
     }
     getDetails();
     console.log(product);
-  },[])
+  },[activeLoading,getProductDetails,id,product])
 
   return (
     (isLoading)?
