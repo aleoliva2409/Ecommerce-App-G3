@@ -1,19 +1,9 @@
 import React, { useState } from "react";
-import { Typography, Button, Snackbar, Modal, makeStyles } from "@material-ui/core";
+import { Typography, Button, Snackbar, Modal } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { delCategory } from "../../redux/actions/categoriesActions";
+import { delCategory } from "../../../redux/actions/categoriesActions";
 import MuiAlert from "@material-ui/lab/Alert";
-
-const useStyles = makeStyles((theme) => ({
-    paper: {
-      position: 'absolute',
-      width: 400,
-      backgroundColor: theme.palette.background.paper,
-      border: '2px solid #000',
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
-    },
-  }));
+import useStyles from "./CategoryCardStyles";  // styles file already import
 
   function rand() {
     return Math.round(Math.random() * 20) - 10;
