@@ -4,6 +4,7 @@ export const GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS";
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const ACTIVE_LOADING = "ACTIVE_LOADING";
 export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
+export const DELETE_PRODUCT = "DELETE_PRODUCT";
 
 // * Set data of each product
 
@@ -51,3 +52,11 @@ export const activeLoading = () => {
     payload: true,
   };
 };
+
+export const deleteProduct = (id) => async (dispatch) => {
+  try {
+    const { data } = await axios.delete(`/products/${id}`)
+  } catch (error) {
+
+  }
+}

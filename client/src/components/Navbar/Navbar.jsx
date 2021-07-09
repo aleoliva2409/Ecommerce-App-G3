@@ -69,7 +69,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-       <Link component={RouterLink} to="/products">
+      <Link component={RouterLink} to="/products">
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
