@@ -72,7 +72,7 @@ const addProduct = async (req, res, next) => {
       const categoryToAdd = await Category.findOne({
         where: { name: element },
       });
-      newProduct.addCategory(categoryToAdd);
+      newProduct.addCategories(categoryToAdd);
     }
     res.status(200).json({ message: "Product added!" });
   } catch (error) {
@@ -88,6 +88,7 @@ const updateProduct = async (req, res, next) => {
       Product.update(req.body, {
         where: { id },
       });
+      update.setCategories(req.body.categories);
       res.status(200).json({ message: "Product update" });
     } else {
       res.status(404).json({ error: "Product not found" });
