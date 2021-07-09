@@ -12,10 +12,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
 import SearchBar from './SearchBar/SearchBar';
-
-// * STYLES *
 import {useStyles} from './Styles';
-import Container from '@material-ui/core/Container'
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();

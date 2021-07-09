@@ -9,11 +9,11 @@ const CataloguePage = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.allProducts);
 
+  // ? sacar dispatch, all products dispatch from navbar!!!
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
 
-  console.log(products);
   return (
     <Container maxWidth="xl">
       <Typography variant="h3" color="initial">
