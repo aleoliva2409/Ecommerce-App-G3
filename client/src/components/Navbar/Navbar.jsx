@@ -9,9 +9,12 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
 import SearchBar from './SearchBar/SearchBar';
+import { Link as RouterLink } from 'react-router-dom';
+import Link from '@material-ui/core/Link';
 import {useStyles} from './Styles';
 
 export default function PrimarySearchAppBar() {
@@ -50,8 +53,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Mi cuenta</MenuItem>
     </Menu>
   );
 
@@ -66,32 +69,48 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={0} color="secondary">
-            <ShoppingCartIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={0} color="secondary">
-            <FavoriteIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
+       <Link component={RouterLink} to="/products">
+        <MenuItem>
+          <IconButton color="inherit">
+            <Badge badgeContent={0} color="secondary">
+              <ShoppingBasketIcon />
+            </Badge>
+          </IconButton>
+          <p>Catálogo</p>
+        </MenuItem>
+      </Link>
+
+      <Link component={RouterLink} to="#">
+        <MenuItem>
+          <IconButton color="inherit">
+            <Badge badgeContent={0} color="secondary">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+          <p>Carrito</p>
+        </MenuItem>
+      </Link>
+
+      <Link component={RouterLink} to="#">
+        <MenuItem>
+          <IconButton color="inherit">
+            <Badge badgeContent={0} color="secondary">
+              <FavoriteIcon />
+            </Badge>
+          </IconButton>
+          <p>Favoritos</p>
+        </MenuItem>
+      </Link>
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>Login</p>
       </MenuItem>
     </Menu>
   );
@@ -99,29 +118,45 @@ export default function PrimarySearchAppBar() {
   return (
     <div className={classes.grow}>
         <AppBar position="static">
-            <Toolbar className={classes.appbar}>
+          <Toolbar className={classes.appbar}>
 
-            <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+            <Link component={RouterLink} to="/">
+                <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+            </Link>
 
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
-                </div>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}> <SearchIcon /> </div>
             {/* Done Search   */}
             <SearchBar />
           </div>
+
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <FavoriteIcon />
-              </Badge>
-            </IconButton>
+            <Link component={RouterLink} to="/products">
+              <IconButton color="inherit">
+                <Badge badgeContent={0} color="secondary">
+                  <ShoppingBasketIcon />
+                </Badge>
+              </IconButton>
+            </Link>
+
+            <Link component={RouterLink} to="#">
+              <IconButton color="inherit">
+                <Badge badgeContent={0} color="secondary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </Link>
+
+            <Link component={RouterLink} to="#">
+              <IconButton color="inherit">
+                <Badge badgeContent={0} color="secondary">
+                  <FavoriteIcon />
+                </Badge>
+              </IconButton>
+            </Link>
+
+            <Link component={RouterLink} to="#">
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -132,6 +167,7 @@ export default function PrimarySearchAppBar() {
             >
               <AccountCircle />
             </IconButton>
+          </Link>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
