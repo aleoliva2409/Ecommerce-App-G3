@@ -85,6 +85,7 @@ const updateProduct = async (req, res, next) => {
       Product.update(req.body, {
         where: { id },
       });
+      update.setCategories(req.body.categories);
       res.status(200).json({ message: "Product update" });
     } else {
       res.status(404).json({ error: "Product not found" });
