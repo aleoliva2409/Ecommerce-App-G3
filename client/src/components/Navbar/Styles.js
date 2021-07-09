@@ -1,8 +1,7 @@
-import { fade, makeStyles } from '@material-ui/core/styles';
-import ShortLogo from './../../assets/img/Logos/short-logo.png';
+import { fade, makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  image:{
+  imageDesktop: {
     width: 220,
     // [theme.breakpoints.up('sm')]: {
     //   backgroundImage: `url(${ShortLogo})`,
@@ -10,10 +9,16 @@ const useStyles = makeStyles((theme) => ({
     //   backgroundRepeat: 'no-repeat',
     //   backgroundPosition: 'center center',
     // },
-  }
-  ,
-  appbar:{
-    backgroundColor: '#00BBC9',
+  },
+  iconLink: {
+    textDecoration: "none",
+    color: "#000000",
+    [theme.breakpoints.up("md")]: {
+      color: "#ffffff",
+    },
+  },
+  appbar: {
+    backgroundColor: "#00BBC9",
   },
   grow: {
     flexGrow: 1,
@@ -23,59 +28,59 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
     },
   },
   search: {
-    position: 'relative',
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
+    "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    margin:'auto',
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    margin: "auto",
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
+      width: "auto",
     },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   inputRoot: {
-    color: 'inherit',
+    color: "inherit",
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '55ch',
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "55ch",
     },
   },
   sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
     },
   },
   sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
     },
   },
 }));

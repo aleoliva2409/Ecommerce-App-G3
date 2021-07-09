@@ -1,46 +1,43 @@
-import React,{useState} from 'react';
-import InputBase from '@material-ui/core/InputBase';
-import { useDispatch } from 'react-redux';
-import { getSearchProducts } from '../../redux/actions/productActions';
-import {Redirect} from 'react-router-dom'; 
+import React, { useState } from "react";
+import InputBase from "@material-ui/core/InputBase";
+import { useDispatch } from "react-redux";
+import { getSearchProducts } from "../../redux/actions/productActions";
+import { Redirect } from "react-router-dom";
 
 // * STYLES *
-import {useStyles} from './Styles';
+import { useStyles } from "./Styles";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const [redirect,setRedirect]= useState(false);
+  const [redirect, setRedirect] = useState(false);
   const onChange = (e) => {
-    if(e.keyCode == 13){
-      if (e.target.value !== ""){
+    if (e.keyCode === 13) {
+      if (e.target.value !== "") {
         dispatch(getSearchProducts(e.target.value));
         setRedirect(true);
         e.target.value = "";
-      }
-      else{
+      } else {
         setRedirect(false);
       }
-   }
+    }
   };
 
   return (
     <>
-    <InputBase
+      <InputBase
         placeholder="Search…"
-        color='secondary'
+        color="secondary"
         classes={{
           root: classes.inputRoot,
           input: classes.inputInput,
         }}
-        inputProps={{ 'aria-label': 'search' }}
+        inputProps={{ "aria-label": "search" }}
         onKeyDown={onChange}
-
-    />
-    { redirect &&
-      <Redirect to="/products" />}
+      />
+      {redirect && <Redirect to="/products" />}
     </>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
