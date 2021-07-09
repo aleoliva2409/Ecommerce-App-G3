@@ -12,7 +12,7 @@ const SearchBar = () => {
   const classes = useStyles();
   const [redirect,setRedirect]= useState(false);
   const onChange = (e) => {
-    if(e.keyCode == 13){
+    if(e.keyCode === 13){
       if (e.target.value !== ""){
         dispatch(getSearchProducts(e.target.value));
         setRedirect(true);
@@ -21,7 +21,7 @@ const SearchBar = () => {
       else{
         setRedirect(false);
       }
-   }
+  }
   };
 
   return (
@@ -38,7 +38,7 @@ const SearchBar = () => {
 
     />
     { redirect &&
-      <Redirect to="/products" />}
+      <Redirect to="/products/search" />}
     </>
   )
 }

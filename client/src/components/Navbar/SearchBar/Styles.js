@@ -1,5 +1,4 @@
 import { fade, makeStyles } from '@material-ui/core/styles';
-import ShortLogo from './../../../assets/img/Logos/short-logo.png';
 
 const useStyles = makeStyles((theme) => ({
 
