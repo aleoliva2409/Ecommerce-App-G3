@@ -26,21 +26,21 @@ const SearchBar = () => {
 
   return (
     <>
-    <InputBase
-        placeholder="Search…"
-        color='secondary'
-        classes={{
-          root: classes.inputRoot,
-          input: classes.inputInput,
-        }}
-        inputProps={{ 'aria-label': 'search' }}
-        onKeyDown={onChange}
+      <InputBase
+          placeholder="Search…"
+          color='secondary'
+          classes={{
+            root: classes.inputRoot,
+            input: classes.inputInput,
+          }}
+          inputProps={{ 'aria-label': 'search' }}
+          onKeyDown={onChange}
 
-    />
-    { redirect &&
-      <Redirect to="/products/search" />}
+      />
+      { redirect &&
+        <Redirect to="/products/search" />}
     </>
   )
 }
 
-export default SearchBar
+export default SearchBar;
