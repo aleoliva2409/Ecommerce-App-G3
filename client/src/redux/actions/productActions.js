@@ -8,6 +8,7 @@ export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 // * Set data of each product
 
 export const getSearchProducts = (name) => async (dispatch) => {
+  console.log(name)
   try {
     const { data } = await axios.get(`products?name=${name}`);
     dispatch({
