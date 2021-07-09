@@ -50,6 +50,7 @@ const getById = async (req, res, next) => {
 const addProduct = async (req, res, next) => {
   const { name, color, size, description, image, price, stock, categories } =
     req.body;
+    //categories es un array que contienne solo los id de las categorias!
   try {
     const find = await Product.findOne({
       where: { name, color, size },
@@ -68,12 +69,8 @@ const addProduct = async (req, res, next) => {
       size,
     });
 
-    for (element of categories) {
-      const categoryToAdd = await Category.findOne({
-        where: { name: element },
-      });
-      newProduct.addCategory(categoryToAdd);
-    }
+    newProduct.addCategories(categories);
+    
     res.status(200).json({ message: "Product added!" });
   } catch (error) {
     next(error);
