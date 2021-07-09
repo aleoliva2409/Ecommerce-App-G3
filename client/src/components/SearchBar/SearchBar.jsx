@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import InputBase from '@material-ui/core/InputBase';
 import { useDispatch } from 'react-redux';
 import { getSearchProducts } from '../../redux/actions/productActions';
-import {Redirect} from 'react-router-dom'; 
+import {Redirect} from 'react-router-dom';
 
 // * STYLES *
 import {useStyles} from './Styles';
