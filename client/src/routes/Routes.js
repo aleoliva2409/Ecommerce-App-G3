@@ -7,7 +7,8 @@ import HomePage from '../views/HomePage';
 const Routes = () => (
 	<Switch>
     <Route exact path="/" component={HomePage} />
-    <Route exact path="/products" component={CataloguePage} />
+    <Route exact path="/products/search" component={SearchPage} />
+    <Route path="/products" component={CataloguePage} />
     <Route path="/products/:id" component={ProductPage} />
     <Route path="/category" component={Categories} />
 	</Switch>

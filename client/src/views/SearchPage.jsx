@@ -1,35 +1,33 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import FilterProducts from "../components/Products/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
-import Container from "@material-ui/core/Container";
 import { Container, Grid, Typography } from "@material-ui/core";
-import { getProducts } from "../redux/actions/productActions";
+import { getSearchProducts } from "../redux/actions/productActions";
 
-const CataloguePage = () => {
+const SearchPage = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.allProducts);
+  const searchProducts = useSelector((state) => state.products.searchProducts);
 
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getSearchProducts());
   }, [dispatch]);
 
-  console.log(products);
   return (
     <Container maxWidth="xl">
       <Typography variant="h3" color="initial">
-        Tienda
+        Busqueda
       </Typography>
       <Grid container spacing={2}>
         <Grid item xl={2} lg={2} md={3} sm={12} xs={12}>
           <FilterProducts />
         </Grid>
         <Grid item xl={10} lg={10} md={9} sm={12} xs={12}>
-          <Catalogue products={products} />
+          <Catalogue products={searchProducts} />
         </Grid>
       </Grid>
     </Container>
   );
 };
 
-export default CataloguePage;
+export default SearchPage;
