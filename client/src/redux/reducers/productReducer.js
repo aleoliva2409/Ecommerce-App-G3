@@ -15,7 +15,7 @@ const initialState = {
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
     case SEARCH_PRODUCTS:
-      return { ...state, searchProducts: action.search }; //* Array with search products
+      return { ...state, searchProducts: action.payload }; //* Array with search products
     case GET_PRODUCTS:
       return { ...state, allProducts: action.payload }; //* Array with all products
     case GET_PRODUCT_DETAILS:
