@@ -1,5 +1,6 @@
 import { Switch, Route } from 'react-router-dom'
 import CataloguePage from '../views/CataloguePage'
+import SearchPage from '../views/SearchPage'
 import ProductPage from '../views/ProductPage'
 import Categories from '../components/Categories/Categories';
 import HomePage from '../views/HomePage';
