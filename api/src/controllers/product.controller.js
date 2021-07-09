@@ -1,32 +1,22 @@
 const { Product, Category } = require("../db");
-const { productCategory } = require("../utils/utils");
 const Op = require('sequelize').Op;
 
 
 const getProductsAll = async (req, res, next) => {
   try {
-    const dbProducts = await Product.findAll();
-    arrProducts = [];
-    if (dbProducts.length) {
-      for (element of dbProducts) {
-        const values = element.dataValues;
-        let arrCategories = await productCategory(values.id);
-        const objProduct = {
-          id: values.id,
-          name: values.name,
-          description: values.description,
-          image: values.image,
-          price: values.price,
-          stock: values.stock,
-          size: values.size,
-          categories: arrCategories,
-        };
-        arrProducts.push(objProduct);
-      }
-    } else {
-      res.status(404).json({ message: "Empty database" });
-    }
-    res.status(200).json(arrProducts);
+    const dbProducts = await Product.findAll({
+      include:[
+        {
+          model: Category,
+          attributes:['name'],
+          through: {
+            attributes: []
+           }
+
+        }
+      ]
+    });
+    res.status(200).json(dbProducts);
   } catch (error) {
     next(error);
   }
@@ -131,11 +121,38 @@ const deleteProduct = async (req, res, next) => {
 }
 
 
+
+const getProductsByCategory = async (req, res,next) => {
+  const {id}= req.params;
+  try{
+    const category = await Category.findOne({
+      where:{
+        id
+      },
+      include:[
+        {
+          model: Product,
+          through: {
+            attributes: []
+           }
+        }
+      ]
+    });
+    res.send(category);
+  }
+  catch(err){
+    next(err);
+  }
+}
+
+
+
 module.exports = {
   getProducts,
   getById,
   addProduct,
   updateProduct,
   deleteProduct,
-  getProductsAll
+  getProductsAll,
+  getProductsByCategory
 };
