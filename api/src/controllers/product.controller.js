@@ -1,65 +1,62 @@
 const { Product, Category } = require("../db");
-const Op = require('sequelize').Op;
-
+const Op = require("sequelize").Op;
 
 const getProductsAll = async (req, res, next) => {
   try {
     const dbProducts = await Product.findAll({
-      include:[
+      include: [
         {
           model: Category,
-          attributes:['name'],
+          attributes: ["name"],
           through: {
-            attributes: []
-           }
-
-        }
-      ]
+            attributes: [],
+          },
+        },
+      ],
     });
     res.status(200).json(dbProducts);
   } catch (error) {
     next(error);
   }
-}
+};
 
 //! this route return the products with the "name" receibed, to review
 const getProducts = async (req, res, next) => {
-
   const { name } = req.query;
   try {
     const products = await Product.findAll({
       where: {
-        name: name ? { [Op.iLike]: `%${name}%` } : null
-      }
+        name: name ? { [Op.iLike]: `%${name}%` } : null,
+      },
     });
-    if (products.length) return res.send(products)
-    else return res.status(404).json({ error: "Product not found" })
+    if (products.length) return res.send(products);
+    else return res.status(404).json({ error: "Product not found" });
   } catch (err) {
-    next(err)
+    next(err);
   }
 };
 
 const getById = async (req, res, next) => {
-  const { id } = req.params
+  const { id } = req.params;
   try {
-    const product = await Product.findByPk(id)
+    const product = await Product.findByPk(id);
     if (product) return res.send(product);
-    else return res.status(404).json({ error: "Product not found" })
+    else return res.status(404).json({ error: "Product not found" });
   } catch (err) {
-    next(err)
+    next(err);
   }
-}
-
+};
 
 const addProduct = async (req, res, next) => {
-  const { name, color, size, description, image, price, stock, categories } = req.body
+  const { name, color, size, description, image, price, stock, categories } =
+    req.body;
   try {
     const find = await Product.findOne({
-      where: { name, color, size }
-    })
+      where: { name, color, size },
+    });
 
     if (find) {
-      return res.status(500).json({ error: 'this product alredy exists' })
+      return res.status(500).json({ error: "this product alredy exists" });
     }
     const newProduct = await Product.create({
       name,
@@ -68,84 +65,76 @@ const addProduct = async (req, res, next) => {
       price,
       stock,
       color,
-      size
+      size,
     });
 
     for (element of categories) {
       const categoryToAdd = await Category.findOne({
-
         where: { name: element },
       });
       newProduct.addCategory(categoryToAdd);
     }
     res.status(200).json({ message: "Product added!" });
-
-  } catch (error) { next(error) }
-
-}
-
+  } catch (error) {
+    next(error);
+  }
+};
 
 const updateProduct = async (req, res, next) => {
-  const { id } = req.params
+  const { id } = req.params;
   try {
     const update = await Product.findByPk(id);
     if (update) {
       Product.update(req.body, {
         where: { id },
-      })
+      });
       res.status(200).json({ message: "Product update" });
     } else {
       res.status(404).json({ error: "Product not found" });
     }
   } catch (err) {
-    next(err)
+    next(err);
   }
-}
-
+};
 
 const deleteProduct = async (req, res, next) => {
-  const { id } = req.params
+  const { id } = req.params;
   try {
     const remove = await Product.findByPk(id);
     if (remove) {
       Product.destroy({
         where: { id },
-      })
+      });
       res.status(200).json({ message: "Product delete" });
     } else {
       res.status(404).json({ error: "Product not found" });
     }
   } catch (err) {
-    next(err)
+    next(err);
   }
-}
+};
 
-
-
-const getProductsByCategory = async (req, res,next) => {
-  const {id}= req.params;
-  try{
+const getProductsByCategory = async (req, res, next) => {
+  const { id } = req.params;
+  try {
     const category = await Category.findOne({
-      where:{
-        id
+      where: {
+        id,
       },
-      include:[
+      include: [
         {
           model: Product,
           through: {
-            attributes: []
-           }
-        }
-      ]
+            attributes: [],
+          },
+        },
+      ],
     });
     res.send(category);
-  }
-  catch(err){
+  } catch (err) {
     next(err);
   }
-}
-
-
+};
 
 module.exports = {
   getProducts,
@@ -154,5 +143,5 @@ module.exports = {
   updateProduct,
   deleteProduct,
   getProductsAll,
-  getProductsByCategory
+  getProductsByCategory,
 };

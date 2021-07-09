@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import InputBase from '@material-ui/core/InputBase';
 import { useDispatch } from 'react-redux';
-import { getSearchProducts } from '../../redux/actions/productActions';
+import { getSearchProducts } from '../../../redux/actions/productActions';
 import {Redirect} from 'react-router-dom';
 
 // * STYLES *
@@ -21,7 +21,7 @@ const SearchBar = () => {
       else{
         setRedirect(false);
       }
-   }
+  }
   };
 
   return (
