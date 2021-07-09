@@ -67,7 +67,7 @@ export const styleProduct = ({breakpoints, spacing}) => ({
   },
   reviews: {
     width: '100%',
-    height: '10rem',
+    height: '15rem',
     gridColumn: '1/2',
     gridRow: '5/6',
     overflowY: 'scroll',
