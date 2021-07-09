@@ -11,7 +11,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from './SearchBar/SearchBar';
 
 // * STYLES *
 import {useStyles} from './Styles';
