@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import FilterProducts from "../components/Products/FilterProducts";
+import FilterProducts from "../components/Products/FilterProducts/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
 import { Container, Grid, Typography } from "@material-ui/core";
 import { getProducts } from "../redux/actions/productActions";

@@ -7,6 +7,8 @@ export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 export const GET_PRODUCT_UPDATE = "GET_PRODUCT_UPDATE";
+export const FILTER_PRODUCT_CATEGORY = "FILTER_PRODUCT_CATEGORY";
+
 
 // * Set data of each product
 
@@ -88,5 +90,16 @@ export const updateProduct = (id, product) => async (dispatch) => {
 
   } catch (error) {
 
+  }
+}
+
+export const filterProductCategory = (id) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/products/category/${id}`)
+    dispatch({
+      type: FILTER_PRODUCT_CATEGORY,
+      payload: data
+    })
+  } catch (error) {
   }
 }
