@@ -5,8 +5,19 @@ import {
   Box,
   makeStyles,
   Container,
-  Typography
+  Typography,
+  Button,
+  IconButton,
+  ButtonGroup,
+  Badge,
+  Grid,
 } from '@material-ui/core';
+import {
+  Favorite,
+  Add,
+  Remove
+} from '@material-ui/icons';
+import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
 
 
@@ -22,10 +33,26 @@ function makeReviews(){
   }
   return reviews;
 }
-//
+
+
+
+
+
 function Product({product}){
 
   const styles = useStyles();
+
+  function handlerBuyButton(){
+    alert(`product ${product.name} added to cart`);
+  }
+
+  function handlerFavoriteButton(){
+    setInvisible(!invisible);
+  };
+
+  const [invisible,setInvisible] = useState(true);
+  const [amount,setAmount] = useState(1);
+
   return (
     <Container
       className={styles.root}
@@ -59,11 +86,59 @@ function Product({product}){
       >
         {product.name}
       </Typography>
-      <Container
-        className={styles.options}
+      <Grid
+      container
+        direction="column"
+        justifyItems={'center'}
+        alignItems={'center'}
       >
-        <h2>hola mundo</h2>
-      </Container>
+        <Grid item direction="row"
+          className={styles.options}
+        >
+          <IconButton color={'primary'} onClick={handlerFavoriteButton}>
+            <Badge color="secondary" variant={'dot'} invisible={invisible}>
+              <Favorite />
+            </Badge>
+          </IconButton>
+          <Container
+            className={styles.addController}
+          >
+            <Typography
+              variant={'h4'}
+              color={'secondary'}
+            >
+              {amount}
+            </Typography>
+            <ButtonGroup
+              color={'primary'}
+              orientation={'vertical'}
+              className={styles.addControllerButtons}
+            >
+              <Button
+                onClick={()=>setAmount((amount===product.stock) ? product.stock : amount+1)}
+              >
+                <Add/>
+              </Button>
+              <Button
+                onClick={()=>setAmount((amount===1) ? 1 : amount-1)}
+              >
+                <Remove/>
+              </Button>
+            </ButtonGroup>
+          </Container>
+        </Grid>
+        <Grid item className={styles.buyButtonContainer}>
+          <Button
+            variant={'contained'}
+            color={'primary'}
+            className={styles.buyButton}
+            id={product.id}
+            onClick={handlerBuyButton}
+          >
+            BUY
+          </Button>
+        </Grid>
+      </Grid>
       <Container
         className={styles.description}
       >
