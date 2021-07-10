@@ -11,7 +11,7 @@ import { Typography } from "@material-ui/core";
 const ProductPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const product = useSelector(state => state.products.product)
+  const product = useSelector(state => state.products.productDetail)
   const isLoading = useSelector(state => state.products.isLoading)
 
   useEffect(() => {

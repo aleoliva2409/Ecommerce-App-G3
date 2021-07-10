@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import ProductsTable from './ProductsTable';
+import ProductsTable from './ProductsTable.jsx';
 
 const Crud = () => {
   return (
