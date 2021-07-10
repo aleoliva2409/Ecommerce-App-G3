@@ -66,7 +66,8 @@ export const cardStyle = ({breakpoints, spacing}) => ({
   title:{
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    color: '#6b8dc8'
+    color: '#6b8dc8',
+    height: '8rem'
   },
   price:{
     fontSize: '1.2rem',
