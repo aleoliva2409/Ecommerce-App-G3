@@ -4,7 +4,7 @@ import SearchPage from "../views/SearchPage";
 import ProductPage from "../views/ProductPage";
 // import Categories from '../components/Categories/Categories';
 import HomePage from "../views/HomePage";
-import Crud from "../components/CrudProduct/Crud";
+import CrudProduct from "../components/CrudProduct/CrudProduct";
 
 const Routes = () => (
   <Switch>
@@ -12,7 +12,7 @@ const Routes = () => (
     <Route exact path="/products/search" component={SearchPage} />
     <Route path="/products/:id" component={ProductPage} />
     <Route exact path="/products" component={CataloguePage} />
-    <Route path="/admin" component={Crud} />
+    <Route path="/admin" component={CrudProduct} />
     {/* <Route path="/category" component={Categories} /> */}
   </Switch>
 );
