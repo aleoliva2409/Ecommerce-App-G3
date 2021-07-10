@@ -4,45 +4,26 @@ import {
   activeLoading,
   getProductDetails,
 } from "../redux/actions/productActions.js";
+import { useDispatch, useSelector } from "react-redux";
 import Product from "./../components/ProductDetails/Product.jsx";
-import { connect } from "react-redux";
+import { Typography } from "@material-ui/core";
 
-const ProductPage = ({
-  getProductDetails,
-  activeLoading,
-  product,
-  isLoading,
-}) => {
-  let { id } = useParams();
+const ProductPage = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const product = useSelector(state => state.products.productDetail)
+  const isLoading = useSelector(state => state.products.isLoading)
 
   useEffect(() => {
-    async function getDetails() {
-      activeLoading();
-      return await getProductDetails(id);
-    }
-    getDetails();
-    console.log(product);
-  }, [activeLoading, getProductDetails, id, product]);
+      dispatch(activeLoading());
+      dispatch(getProductDetails(id));
+  }, [dispatch,id]);
 
   return isLoading ? (
-    <h1>loading</h1>
+    <Typography variant="h4" color="initial">Cargando...</Typography>
   ) : (
     <Product product={product} isLoading={isLoading} />
   );
 };
 
-function mapStateToProps(state) {
-  return {
-    product: state.products.product,
-    isLoading: state.products.isLoading,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    getProductDetails: (id) => dispatch(getProductDetails(id)),
-    activeLoading: () => dispatch(activeLoading()),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);
+export default ProductPage;
