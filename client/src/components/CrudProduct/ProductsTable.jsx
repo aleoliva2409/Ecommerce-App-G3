@@ -10,17 +10,20 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import { StyledTableCell, StyledTableRow, useStyles } from "./ProductsTable";
 import { useDispatch } from 'react-redux';
+import { deleteProduct, getProductDetails } from "../../redux/actions/productActions";
 
 const ProductsTable = ({ products }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  // ? usar selector en AddForm
 
-  const deleteProduct = (e) => {
-    
+  const btnDelete = (e) => {
+    dispatch(deleteProduct(e.target.id));
   }
 
-  const editProduct = (e) => {
-
+  const btnEdit = (e) => {
+    // ? uso 2do parametro para que editAction
+    dispatch(getProductDetails(e.target.id,true));
   }
 
   return (
@@ -51,12 +54,12 @@ const ProductsTable = ({ products }) => {
                   {product.price}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <IconButton aria-label="edit" color="primary" onClick={editProduct}>
+                  <IconButton aria-label="edit" color="primary" onClick={btnEdit} id={product.id}>
                     <EditIcon />
                   </IconButton>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <IconButton aria-label="delete" color="secondary" onClick={deleteProduct}>
+                  <IconButton aria-label="delete" color="secondary" onClick={btnDelete} id={product.id}>
                     <DeleteIcon />
                   </IconButton>
                 </StyledTableCell>

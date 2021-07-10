@@ -5,6 +5,8 @@ export const GET_PRODUCTS = "GET_PRODUCTS";
 export const ACTIVE_LOADING = "ACTIVE_LOADING";
 export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+export const GET_PRODUCT_UPDATE = "GET_PRODUCT_UPDATE";
 
 // * Set data of each product
 
@@ -21,13 +23,22 @@ export const getSearchProducts = (name) => async (dispatch) => {
   }
 };
 
-export const getProductDetails = (id) => async (dispatch) => {
+export const getProductDetails = (id,update = false) => async (dispatch) => {
   try {
     const { data } = await axios.get(`/products/${id}`);
-    dispatch({
-      type: GET_PRODUCT_DETAILS,
-      payload: data,
-    });
+    if(update) {
+      dispatch({
+        type: GET_PRODUCT_UPDATE,
+        payload: data
+      })
+    } else {
+      dispatch({
+        type: GET_PRODUCT_DETAILS,
+        payload: data,
+      });
+    }
+
+
   } catch (error) {
     console.log(error);
   }
@@ -57,6 +68,24 @@ export const activeLoading = () => {
 export const deleteProduct = (id) => async (dispatch) => {
   try {
     const { data } = await axios.delete(`/products/${id}`)
+    dispatch({
+      type: DELETE_PRODUCT,
+      payload: data
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const updateProduct = (id, product) => async (dispatch) => {
+  try {
+    const { data } = await axios.put(`/products/${id}`, product)
+
+    dispatch({
+      type: UPDATE_PRODUCT,
+      payload: data
+    })
+
   } catch (error) {
 
   }
