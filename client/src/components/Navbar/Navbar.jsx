@@ -69,7 +69,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-       <Link component={RouterLink} to="/products">
+       <Link component={RouterLink} to="/products"  className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -80,7 +80,7 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
-      <Link component={RouterLink} to="#">
+      <Link component={RouterLink} to="#"  className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -91,7 +91,7 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
-      <Link component={RouterLink} to="#">
+      <Link component={RouterLink} to="#" className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -132,7 +132,7 @@ export default function PrimarySearchAppBar() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link component={RouterLink} to="/products">
+            <Link component={RouterLink} to="/products"  className={classes.linkDesktop}>
               <IconButton color="inherit">
                 <Badge badgeContent={0} color="secondary">
                   <ShoppingBasketIcon />
@@ -140,7 +140,7 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="#">
+            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
               <IconButton color="inherit">
                 <Badge badgeContent={0} color="secondary">
                   <ShoppingCartIcon />
@@ -148,7 +148,7 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="#">
+            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
               <IconButton color="inherit">
                 <Badge badgeContent={0} color="secondary">
                   <FavoriteIcon />
@@ -156,7 +156,7 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="#">
+            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
             <IconButton
               edge="end"
               aria-label="account of current user"
