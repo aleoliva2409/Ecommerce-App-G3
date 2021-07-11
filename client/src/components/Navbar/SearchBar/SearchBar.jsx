@@ -15,7 +15,7 @@ const SearchBar = () => {
 const allProducts = useSelector(state => state.products.allProducts)
 
 useEffect(() => {
- dispatch(getProducts())
+  dispatch(getProducts())
 }, [dispatch])
 
   const onChange = (e) => {
@@ -44,14 +44,14 @@ useEffect(() => {
       onKeyDown={onChange}
       options={allProducts.map((option) => option.name)}
       renderInput={(params) => (
-    <TextField {...params} 
-    classes={{
-      root: classes.inputRoot,
-      input: classes.inputInput,
-    }} color='secondary' label="Search…" margin="normal" variant="outlined" 
+      <TextField {...params}
+      classes={{
+        root: classes.inputRoot,
+        input: classes.inputInput,
+      }} color='secondary' label="Search…" margin="normal" variant="outlined"
     />
-)}
-/>
+    )}
+    />
       {/* <InputBase
           placeholder="Search…"
           color='secondary'
