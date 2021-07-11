@@ -19,6 +19,8 @@ import {
 } from '@material-ui/icons';
 import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
+import { useDispatch } from "react-redux";
+import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
 
 const useStyles = makeStyles(styleProduct);
@@ -38,9 +40,16 @@ function makeReviews(){
 
 function Product({product}){
 
+  const amountToBuy = document.getElementById('amountToBuy');
+
   const styles = useStyles();
+  const dispatch = useDispatch();
 
   function handlerBuyButton(){
+    dispatch(addToCart({
+      product,
+      amount: Number(amountToBuy.innerText),
+    }))
     alert(`product ${product.name} added to cart`);
   }
 
@@ -104,6 +113,7 @@ function Product({product}){
             <Typography
               variant={'h4'}
               color={'secondary'}
+              id={'amountToBuy'}
             >
               {amount}
             </Typography>
