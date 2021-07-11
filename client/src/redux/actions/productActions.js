@@ -39,8 +39,6 @@ export const getProductDetails = (id,update = false) => async (dispatch) => {
         payload: data,
       });
     }
-
-
   } catch (error) {
     console.log(error);
   }

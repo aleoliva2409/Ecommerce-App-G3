@@ -15,7 +15,7 @@ const SearchBar = () => {
 const allProducts = useSelector(state => state.products.allProducts)
 
 useEffect(() => {
- dispatch(getProducts())
+  dispatch(getProducts())
 }, [dispatch])
 
   const onChange = (e) => {

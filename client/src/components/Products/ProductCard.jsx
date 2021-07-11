@@ -56,12 +56,11 @@ export default function RecipeReviewCard({product}) {
 
       <CardContent>
         <Typography  variant="h5" component="h5"  className={classes.price}>
-           {`$ ${product.price}`}
+          {`$ ${product.price}`}
         </Typography>
       </CardContent>
 
       <CardActions >
-
         <IconButton aria-label="Agregar a favoritos">
           <FavoriteIcon />
         </IconButton>
@@ -75,7 +74,6 @@ export default function RecipeReviewCard({product}) {
         <IconButton aria-label="Compartir">
           <ShareIcon />
         </IconButton>
-
       </CardActions>
     </Card>
   );
