@@ -7,14 +7,11 @@ const useStyles = makeStyles((theme) => ({
   linkDesktop:{
     color:'#FFF',
   },
+  imageShort:{
+    width: 70,
+  },
   image:{
     width: 220,
-    // [theme.breakpoints.up('sm')]: {
-    //   backgroundImage: `url(${ShortLogo})`,
-    //   width:'200px',
-    //   backgroundRepeat: 'no-repeat',
-    //   backgroundPosition: 'center center',
-    // },
   }
   ,
   appbar:{
