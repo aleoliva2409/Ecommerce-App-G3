@@ -22,10 +22,8 @@ const FilterProducts = () => {
     dispatch(getCategories())
    }, [dispatch])
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log("ID" + e.target.id);
-    dispatch(filterProductCategory(e.target.id));
+  const handleClick = (id) => {
+    dispatch(filterProductCategory(id));
   }
   return (
     <Box>
@@ -38,12 +36,9 @@ const FilterProducts = () => {
             >
             {categories &&
             categories.map((categorie) => (
-            // <ListItem button  >
-            //   <ListItemText  id={categorie.id} primary={categorie.name} onClick={handleClick}/>
-            // </ListItem>
-            <button id={categorie.id} onClick={handleClick}>
-                {categorie.name}
-            </button>
+            <ListItem button id={categorie.id} key={categorie.id} onClick={() => handleClick(categorie.id)}>
+              <ListItemText   primary={categorie.name} />
+            </ListItem>
           ))}
           </List>
       </Box>
