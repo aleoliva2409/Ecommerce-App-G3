@@ -11,14 +11,18 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShortLogo from './../../assets/img/Logos/short-logo.png';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
 import SearchBar from './SearchBar/SearchBar';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
+import { useMediaQuery } from '@material-ui/core';
 import {useStyles} from './Styles';
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
+  const isPhone = useMediaQuery('(max-width: 760px)');
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -67,6 +71,7 @@ export default function PrimarySearchAppBar() {
       keepMounted
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMobileMenuOpen}
+
       onClose={handleMobileMenuClose}
     >
        <Link component={RouterLink} to="/products"  className={classes.links}>
@@ -121,7 +126,10 @@ export default function PrimarySearchAppBar() {
           <Toolbar className={classes.appbar}>
 
             <Link component={RouterLink} to="/">
+                {isPhone ?
+                <img src={ShortLogo} className={classes.imageShort} alt="Pillow Top" /> :
                 <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+                }
             </Link>
 
           <div className={classes.search}>

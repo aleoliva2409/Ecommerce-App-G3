@@ -36,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
     width: '60ch',
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
+    [theme.breakpoints.down('sm')]: {
+      width: '50ch',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '20ch',
+    },
   }
 
 }));
