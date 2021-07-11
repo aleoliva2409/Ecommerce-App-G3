@@ -1,5 +1,5 @@
 
-export const styleProduct = ({breakpoints, spacing}) => ({
+export const styleProduct = ({breakpoints, spacing, theme}) => ({
   root: {
     margin: '1rem auto 1rem auto',
     width: '80%',
@@ -67,7 +67,8 @@ export const styleProduct = ({breakpoints, spacing}) => ({
   },
   reviews: {
     width: '100%',
-    height: '15rem',
+    minHeight: 'auto',
+    maxHeight: '15rem',
     gridColumn: '1/2',
     gridRow: '5/6',
     overflowY: 'scroll',
@@ -75,5 +76,26 @@ export const styleProduct = ({breakpoints, spacing}) => ({
       gridColumn: '1/3',
       gridRow: '3/4',
     }
+  },
+  buyButtonContainer:{
+    width: '100%'
+  },
+  buyButton: {
+    letterSpacing: '3px',
+    margin: '1rem',
+    minWidth: '70%',
+    justifySelf: 'center'
+  },
+  options: {
+    display: 'flex',
+  },
+  addController:{
+    display: 'flex',
+    alignItems: 'center',
+    border: `1px solid #3F51B5`,
+    borderRadius:  spacing(3)
+  },
+  addControllerButtons:{
+    margin: '1rem'
   }
 })
