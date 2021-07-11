@@ -36,8 +36,6 @@ function makeReviews(){
 
 
 
-
-
 function Product({product}){
 
   const styles = useStyles();
@@ -51,7 +49,7 @@ function Product({product}){
   };
 
   const [invisible,setInvisible] = useState(true);
-  const [amount,setAmount] = useState(1);
+  const [amount,setAmount] = useState(0);
 
   return (
     <Container
@@ -116,11 +114,13 @@ function Product({product}){
             >
               <Button
                 onClick={()=>setAmount((amount===product.stock) ? product.stock : amount+1)}
+                disabled={(product.stock===0) ? true : false}
               >
                 <Add/>
               </Button>
               <Button
-                onClick={()=>setAmount((amount===1) ? 1 : amount-1)}
+                onClick={()=>setAmount((amount===0) ? 0 : amount-1)}
+                disabled={(product.stock===0) ? true : false}
               >
                 <Remove/>
               </Button>
@@ -156,22 +156,26 @@ function Product({product}){
         >
           Reviews
         </Typography>
-        {makeReviews().map((el,i)=>{
-          return (
-            <Box
-              key={i}
-              component={'fieldset'}
-            >
-              <legend>{el.author}</legend>
-              <Typography
-                variant={'body2'}
+        {
+          (product.reviews && product.reviews.length>0) ?
+            product.reviews.map((el,i) => {
+              return <Box
+                key={i}
+                component={'fieldset'}
               >
-                {el.description}
-              </Typography>
-            </Box>
-
-          )
-        })}
+                <legend>{el.author}</legend>
+                <Typography
+                  variant={'body2'}
+                >
+                  {el.description}
+                </Typography>
+              </Box>
+            })
+            :
+            <Typography
+              variant={'h3'}
+            >No Reviews Yet</Typography>
+        }
       </Container>
     </Container>
   )
