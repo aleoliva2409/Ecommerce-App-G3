@@ -1,10 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import { Container, Typography } from "@material-ui/core";
+import Carrousel from '../components/Home/Carrousel/Carrousel';
 const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
-    </div>
+    <Container maxWidth="xl">
+      <Carrousel />
+    </Container>
   )
 }
 

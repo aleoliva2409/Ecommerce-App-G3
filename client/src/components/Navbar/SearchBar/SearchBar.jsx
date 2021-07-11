@@ -35,35 +35,25 @@ useEffect(() => {
   return (
     <>
     <Autocomplete
-      freeSolo
-      classes={{
-      root: classes.inputRoot,
-      input: classes.inputInput,
-      }}
-      placeholder="Search…"
-      onKeyDown={onChange}
-      options={allProducts.map((option) => option.name)}
-      renderInput={(params) => (
-    <TextField {...params} 
-    classes={{
-      root: classes.inputRoot,
-      input: classes.inputInput,
-    }} color='secondary' label="Search…" margin="normal" variant="outlined" 
+        freeSolo
+        className ={classes.autocomplet}
+        onKeyDown={onChange}
+        options={allProducts.map((option) => option.name)}
+        renderInput={(params) => (
+            <TextField {...params}
+              InputProps={{...params.InputProps, disableUnderline: true}}
+              style={{width:400}}
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+               placeholder="Search…"
+
+            />
+        )}
     />
-)}
-/>
-      {/* <InputBase
-          placeholder="Search…"
-          color='secondary'
-          classes={{
-            root: classes.inputRoot,
-            input: classes.inputInput,
-          }}
-          inputProps={{ 'aria-label': 'search' }}
-          onKeyDown={onChange}
-      /> */}
-      { redirect &&
-        <Redirect to="/products/search" />}
+    { redirect &&
+    <Redirect to="/products/search" />}
     </>
   )
 }
