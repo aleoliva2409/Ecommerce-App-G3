@@ -2,9 +2,9 @@ require('dotenv').config()
 const server = require("./src/app");
 const { sequelize } = require("./src/db")
 const portBackend = process.env.PORT_BACKEND;
-const preChargeProducts = require('./src/ProductInitTest.js');
-const preChargeCategory = require('./src/CategoryInitTest.js');
-
+//const preChargeProducts = require('./src/ProductInitTest.js');
+//const preChargeCategory = require('./src/CategoryInitTest.js');
+const { initDb } = require('./src/initDB')
 
 const connectDB = async() => {
   try {
@@ -15,9 +15,9 @@ const connectDB = async() => {
     await server.listen(portBackend, () => {
       console.log(`Listening on PORT ${portBackend}`);
     });
-
-    preChargeProducts();
-    preChargeCategory();
+    initDb();
+    //preChargeProducts();
+    //preChargeCategory();
 
   } catch (error) {
     console.error("Unable to connect to the database:", error);
