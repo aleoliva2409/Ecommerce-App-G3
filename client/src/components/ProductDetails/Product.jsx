@@ -5,9 +5,22 @@ import {
   Box,
   makeStyles,
   Container,
-  Typography
+  Typography,
+  Button,
+  IconButton,
+  ButtonGroup,
+  Badge,
+  Grid,
 } from '@material-ui/core';
+import {
+  Favorite,
+  Add,
+  Remove
+} from '@material-ui/icons';
+import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
+import { useDispatch } from "react-redux";
+import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
 
 const useStyles = makeStyles(styleProduct);
@@ -22,10 +35,31 @@ function makeReviews(){
   }
   return reviews;
 }
-//
+
+
+
 function Product({product}){
 
+  const amountToBuy = document.getElementById('amountToBuy');
+
   const styles = useStyles();
+  const dispatch = useDispatch();
+
+  function handlerBuyButton(){
+    dispatch(addToCart({
+      product,
+      amount: Number(amountToBuy.innerText),
+    }))
+    alert(`product ${product.name} added to cart`);
+  }
+
+  function handlerFavoriteButton(){
+    setInvisible(!invisible);
+  };
+
+  const [invisible,setInvisible] = useState(true);
+  const [amount,setAmount] = useState(0);
+
   return (
     <Container
       className={styles.root}
@@ -59,11 +93,62 @@ function Product({product}){
       >
         {product.name}
       </Typography>
-      <Container
-        className={styles.options}
+      <Grid
+      container
+        direction="column"
+        justifyItems={'center'}
+        alignItems={'center'}
       >
-        <h2>hola mundo</h2>
-      </Container>
+        <Grid item direction="row"
+          className={styles.options}
+        >
+          <IconButton color={'primary'} onClick={handlerFavoriteButton}>
+            <Badge color="secondary" variant={'dot'} invisible={invisible}>
+              <Favorite />
+            </Badge>
+          </IconButton>
+          <Container
+            className={styles.addController}
+          >
+            <Typography
+              variant={'h4'}
+              color={'secondary'}
+              id={'amountToBuy'}
+            >
+              {amount}
+            </Typography>
+            <ButtonGroup
+              color={'primary'}
+              orientation={'vertical'}
+              className={styles.addControllerButtons}
+            >
+              <Button
+                onClick={()=>setAmount((amount===product.stock) ? product.stock : amount+1)}
+                disabled={(product.stock===0) ? true : false}
+              >
+                <Add/>
+              </Button>
+              <Button
+                onClick={()=>setAmount((amount===0) ? 0 : amount-1)}
+                disabled={(product.stock===0) ? true : false}
+              >
+                <Remove/>
+              </Button>
+            </ButtonGroup>
+          </Container>
+        </Grid>
+        <Grid item className={styles.buyButtonContainer}>
+          <Button
+            variant={'contained'}
+            color={'primary'}
+            className={styles.buyButton}
+            id={product.id}
+            onClick={handlerBuyButton}
+          >
+            BUY
+          </Button>
+        </Grid>
+      </Grid>
       <Container
         className={styles.description}
       >
@@ -81,22 +166,26 @@ function Product({product}){
         >
           Reviews
         </Typography>
-        {makeReviews().map((el,i)=>{
-          return (
-            <Box
-              key={i}
-              component={'fieldset'}
-            >
-              <legend>{el.author}</legend>
-              <Typography
-                variant={'body2'}
+        {
+          (product.reviews && product.reviews.length>0) ?
+            product.reviews.map((el,i) => {
+              return <Box
+                key={i}
+                component={'fieldset'}
               >
-                {el.description}
-              </Typography>
-            </Box>
-
-          )
-        })}
+                <legend>{el.author}</legend>
+                <Typography
+                  variant={'body2'}
+                >
+                  {el.description}
+                </Typography>
+              </Box>
+            })
+            :
+            <Typography
+              variant={'h3'}
+            >No Reviews Yet</Typography>
+        }
       </Container>
     </Container>
   )

@@ -11,6 +11,8 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import { Link as RouterLink } from 'react-router-dom';
 import {Link} from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 //import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 // * STYLES *
@@ -18,6 +20,15 @@ import {useStyles} from './ProductCardStyle';
 
 export default function RecipeReviewCard({product}) {
   const classes = useStyles();
+
+  const dispatch = useDispatch();
+
+  const pushToCart = () => {
+    dispatch(addToCart({
+      product,
+      amount: 1
+    }))
+  }
 
   return (
     <Card className={classes.root}>
@@ -57,9 +68,8 @@ export default function RecipeReviewCard({product}) {
         <Button
           variant="contained"
           className={classes.button}
-        >
-          Agregar a carrito
-        </Button>
+          onClick={pushToCart}
+         >Agregar a carrito</Button>
 
         <IconButton aria-label="Compartir">
           <ShareIcon />
