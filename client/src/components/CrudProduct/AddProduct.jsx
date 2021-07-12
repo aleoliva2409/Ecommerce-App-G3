@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TextField, Select, MenuItem, Button, Box, FormControl } from "@material-ui/core";
 import useStyles from "./AddProductStyle";
 import { useDispatch } from "react-redux";
@@ -8,26 +8,37 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
   const classes = useStyles();
 
   const dispatch = useDispatch();
+
   const [formProduct, setFormProduct] = useState({
     name: "",
     size: "",
     description: "",
     color: "",
-    image: "",
+    image: [],
     stock: 0,
     price: 0,
     categories: []
   })
 
-  if(product.name) {
-    btnChange(false)
-  }
 
   const handleForm = (e) => {
-    setFormProduct({
-      ...formProduct,
-      [e.target.name]: e.target.value,
-    });
+    if(e.target.name === "image"){
+      let imageArr = formProduct.image;
+      if(formProduct.image.includes(e.target.value)){
+        imageArr = formProduct.image.filter( el => e.target.value !== el);
+      }else{
+        imageArr.push(e.target.value);
+      }
+      setFormProduct({
+        ...formProduct,
+        [e.target.name]: imageArr
+      });
+    }else{
+      setFormProduct({
+        ...formProduct,
+        [e.target.name]: e.target.value,
+      });
+    }
   };
 
 
@@ -44,7 +55,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
       size: "",
       description: "",
       color: "",
-      image: "",
+      image: [],
       stock: 0,
       price: 0,
       categories: []
@@ -101,7 +112,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         variant="outlined"
         margin="normal"
         className={classes.textField}
-        value={formProduct.image ? formProduct.image : product.image}
+        // value={formProduct.image[0] !== undefined ? "" : product.image[0]}
         onChange={handleForm}
       />
       <TextField
@@ -134,6 +145,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         onChange={handleForm}
         name="categories"
         multiple
+        required
       >
         <MenuItem value="DEFAULT" selected disabled>
           <em>None</em>
@@ -141,7 +153,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         {
           categories &&
           categories.map(category => (
-            <MenuItem value={category.name} key={category.name}>
+            <MenuItem value={category.id} key={category.name}>
               {category.name}
             </MenuItem>
           ))
