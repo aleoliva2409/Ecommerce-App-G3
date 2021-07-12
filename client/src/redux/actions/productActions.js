@@ -5,6 +5,7 @@ export const GET_PRODUCTS = "GET_PRODUCTS";
 export const ACTIVE_LOADING = "ACTIVE_LOADING";
 export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const ADD_PRODUCT = "ADD_PRODUCT";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 export const GET_PRODUCT_UPDATE = "GET_PRODUCT_UPDATE";
 export const FILTER_PRODUCT_CATEGORY = "FILTER_PRODUCT_CATEGORY";
@@ -74,6 +75,19 @@ export const deleteProduct = (id) => async (dispatch) => {
     })
   } catch (error) {
     console.log(error)
+  }
+}
+
+export const addProduct = (product) => async (dispatch) => {
+  try {
+    const { data } = await axios.post(`/products` , product)
+
+    dispatch({
+      type: ADD_PRODUCT,
+      payload: data
+    })
+  } catch (error) {
+    console.log(error);
   }
 }
 

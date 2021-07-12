@@ -7,9 +7,10 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 
-const Search = ({ products, search, setSearch }) => {
+const Search = ({ products, state, setState }) => {
 
   const [currentPage, setCurrentPage] = useState(0);
+  const [search, setSearch] = useState("")
 
   const paginations = () => {
     if (search.length === 0) {
@@ -65,7 +66,7 @@ const Search = ({ products, search, setSearch }) => {
         onChange={handleSearch}
         value={search}
       />
-      <ProductsTable products={paginations()}/>
+      <ProductsTable products={paginations()} state={state} setState={setState}/>
       <Box display="flex" justifyContent="space-evenly" mt={1}>
         <IconButton aria-label="previous" onClick={prevPage} disabled={prevBtn()}>
           <NavigateBeforeIcon />
