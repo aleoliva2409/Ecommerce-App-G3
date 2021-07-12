@@ -8,30 +8,37 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
   const classes = useStyles();
 
   const dispatch = useDispatch();
+
   const [formProduct, setFormProduct] = useState({
     name: "",
     size: "",
     description: "",
     color: "",
-    image: "",
+    image: [],
     stock: 0,
     price: 0,
     categories: []
   })
 
-  if(product.name) {
-    btnChange(false)
-  }
 
   const handleForm = (e) => {
-    setFormProduct({
-      ...formProduct,
-      [e.target.name]: e.target.value,
-    });
+    if(e.target.name === "image"){
+      let imageArr = [];
+      imageArr.push(e.target.value);
+      setFormProduct({
+        ...formProduct,
+        [e.target.name]: imageArr
+      });
+    }else{
+      setFormProduct({
+        ...formProduct,
+        [e.target.name]: e.target.value,
+      });
+    }
   };
 
 
-  const editProduct = (id,product) => {
+  const editProduct = (e,id,product) => {
     dispatch(updateProduct(id,product))
     setState(true)
   }
@@ -44,7 +51,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
       size: "",
       description: "",
       color: "",
-      image: "",
+      image: [],
       stock: 0,
       price: 0,
       categories: []
@@ -101,7 +108,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         variant="outlined"
         margin="normal"
         className={classes.textField}
-        value={formProduct.image ? formProduct.image : product.image}
+        // value={formProduct.image[0] !== undefined ? "" : product.image[0]}
         onChange={handleForm}
       />
       <TextField
@@ -130,10 +137,11 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         id="category"
         label="Category"
         variant="outlined"
-        defaultValue={categories}
+        defaultValue={[]}
         onChange={handleForm}
         name="categories"
         multiple
+        required
       >
         <MenuItem value="DEFAULT" selected disabled>
           <em>None</em>
@@ -141,7 +149,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         {
           categories &&
           categories.map(category => (
-            <MenuItem value={category.name} key={category.name}>
+            <MenuItem value={category.id} key={category.name}>
               {category.name}
             </MenuItem>
           ))
