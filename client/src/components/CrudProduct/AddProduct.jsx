@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TextField, Select, MenuItem, Button, Box, FormControl } from "@material-ui/core";
 import useStyles from "./AddProductStyle";
 import { useDispatch } from "react-redux";
@@ -23,8 +23,12 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
 
   const handleForm = (e) => {
     if(e.target.name === "image"){
-      let imageArr = [];
-      imageArr.push(e.target.value);
+      let imageArr = formProduct.image;
+      if(formProduct.image.includes(e.target.value)){
+        imageArr = formProduct.image.filter( el => e.target.value !== el);
+      }else{
+        imageArr.push(e.target.value);
+      }
       setFormProduct({
         ...formProduct,
         [e.target.name]: imageArr
@@ -38,7 +42,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
   };
 
 
-  const editProduct = (e,id,product) => {
+  const editProduct = (id,product) => {
     dispatch(updateProduct(id,product))
     setState(true)
   }
@@ -137,7 +141,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         id="category"
         label="Category"
         variant="outlined"
-        defaultValue={[]}
+        defaultValue={categories}
         onChange={handleForm}
         name="categories"
         multiple
