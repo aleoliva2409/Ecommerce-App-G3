@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import Container from '@material-ui/core/Container'
-import AddProduct from './AddProduct.jsx';
+import AddProduct from './AddProduct';
 import Search from './Search.jsx';
-// import ProductsTable from './ProductsTable.jsx';
 import { Grid, Typography } from '@material-ui/core';
+import { getCategories } from '../../redux/actions/categoriesActions';
 
 const CrudProduct = ({ products }) => {
 
@@ -13,15 +13,10 @@ const CrudProduct = ({ products }) => {
   const categories = useSelector(state => state.categories.categories)
   const [btn, setBtn] = useState(false)
   const [search, setSearch] = useState("")
-  const [formProduct, setFormProduct] = useState({
-    name: "",
-    size: "",
-    description: "",
-    image: "",
-    stock: 0,
-    price: 0,
-    categories: []
-  })
+
+  useEffect(() => {
+    dispatch(getCategories())
+  }, [dispatch])
 
   return (
       <Container>

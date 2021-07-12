@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import ProductsTable from './ProductsTable.jsx';
+import ProductsTable from './ProductsTable';
 import Box from '@material-ui/core/Box'
-import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -9,8 +8,6 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 
 const Search = ({ products, search, setSearch }) => {
-
-  console.log(products)
 
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -59,7 +56,7 @@ const Search = ({ products, search, setSearch }) => {
   };
 
   return (
-    <FormControl >
+    <Box>
       <TextField
         id="search"
         label="Search"
@@ -77,7 +74,7 @@ const Search = ({ products, search, setSearch }) => {
           <NavigateNextIcon />
         </IconButton>
       </Box>
-    </FormControl>
+    </Box>
   )
 }
 

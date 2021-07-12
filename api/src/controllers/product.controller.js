@@ -39,7 +39,13 @@ const getProducts = async (req, res, next) => {
 const getById = async (req, res, next) => {
   const { id } = req.params;
   try {
-    const product = await Product.findByPk(id);
+    const product = await Product.findByPk(id,{
+      include:[
+      {
+        model: Category
+      }
+    ]
+    });
     if (product) return res.send(product);
     else return res.status(404).json({ error: "Product not found" });
   } catch (err) {
@@ -70,7 +76,7 @@ const addProduct = async (req, res, next) => {
     });
 
     newProduct.addCategories(categories);
-    
+
     res.status(200).json({ message: "Product added!" });
   } catch (error) {
     next(error);
