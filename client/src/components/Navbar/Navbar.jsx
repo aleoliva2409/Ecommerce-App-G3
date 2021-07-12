@@ -57,8 +57,12 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Mi cuenta</MenuItem>
+       <Link component={RouterLink} to="/admin"  className={classes.links}>
+          <MenuItem onClick={handleMenuClose}>Agregar producto</MenuItem>
+       </Link>
+       <Link component={RouterLink} to="/categories"  className={classes.links}>
+          <MenuItem onClick={handleMenuClose}>Agregar categoria</MenuItem>
+       </Link>
     </Menu>
   );
 

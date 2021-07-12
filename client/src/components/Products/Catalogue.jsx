@@ -4,7 +4,6 @@ import ProductCard from './ProductCard'
 import Box from "@material-ui/core/Box";
 
 const Catalogue = ({products}) => {
-  console.log(products)
   return (
     <Box p={3}>
       <Grid container spacing={6} >
