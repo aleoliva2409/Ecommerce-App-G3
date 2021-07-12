@@ -12,13 +12,14 @@ import { StyledTableCell, StyledTableRow, useStyles } from "./ProductsTableStyle
 import { useDispatch } from 'react-redux';
 import { deleteProduct, getProductDetails } from "../../redux/actions/productActions";
 
-const ProductsTable = ({ products }) => {
+const ProductsTable = ({ products, setState }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   // ? usar selector en AddForm
 
   const btnDelete = (id) => {
     dispatch(deleteProduct(id));
+    setState(true);
   }
 
   const btnEdit = (id) => {

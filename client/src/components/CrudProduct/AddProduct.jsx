@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { TextField, Select, MenuItem, Button, Box, FormControl } from "@material-ui/core";
 import useStyles from "./AddProductStyle";
-import { useSelector } from "react-redux";
-import { updateProduct } from "../../redux/actions/productActions";
+import { useDispatch } from "react-redux";
+import { updateProduct, addProduct } from "../../redux/actions/productActions";
 
-const AddForm = ({ product, btnState, btnChange, categories }) => {
+const AddForm = ({ product, btnState, btnChange, categories, state, setState }) => {
   const classes = useStyles();
 
-  // const produc = useSelector(state => state.produc)
-  // const [edit, setEdit] = useState(null)
-  // const [add, setAdd] = useState(null)
+  const dispatch = useDispatch();
   const [formProduct, setFormProduct] = useState({
     name: "",
     size: "",
     description: "",
+    color: "",
     image: "",
     stock: 0,
     price: 0,
@@ -31,16 +30,25 @@ const AddForm = ({ product, btnState, btnChange, categories }) => {
     });
   };
 
-  // useEffect(() => {
-  //   if(submit) {
-  //     dispatch(updateProduct(product.id, product))
-  //   }
-  // }, [submit])
 
-  const handleSubmit = (update) => {
-    if(update) {
+  const editProduct = (id,product) => {
+    dispatch(updateProduct(id,product))
+    setState(true)
+  }
 
-    }
+  const addProductForm = (product) => {
+    dispatch(addProduct(product))
+    setState(true)
+    setFormProduct({
+      name: "",
+      size: "",
+      description: "",
+      color: "",
+      image: "",
+      stock: 0,
+      price: 0,
+      categories: []
+    })
   }
 
   return (
@@ -54,6 +62,7 @@ const AddForm = ({ product, btnState, btnChange, categories }) => {
         className={classes.textField}
         value={formProduct.name ? formProduct.name : product.name}
         onChange={handleForm}
+        required
       />
       <TextField
         id="size"
@@ -76,6 +85,16 @@ const AddForm = ({ product, btnState, btnChange, categories }) => {
         onChange={handleForm}
       />
       <TextField
+        id="color"
+        name="color"
+        label="Color"
+        variant="outlined"
+        margin="normal"
+        className={classes.textField}
+        value={formProduct.color ? formProduct.color : product.color}
+        onChange={handleForm}
+      />
+      <TextField
         id="image"
         name="image"
         label="URL imagen"
@@ -94,6 +113,7 @@ const AddForm = ({ product, btnState, btnChange, categories }) => {
         className={classes.textField}
         value={formProduct.stock ? formProduct.stock : product.stock}
         onChange={handleForm}
+        required
       />
       <TextField
         id="price"
@@ -104,6 +124,7 @@ const AddForm = ({ product, btnState, btnChange, categories }) => {
         className={classes.textField}
         value={formProduct.price ? formProduct.price : product.price}
         onChange={handleForm}
+        required
       />
       <Select
         id="category"
@@ -129,11 +150,11 @@ const AddForm = ({ product, btnState, btnChange, categories }) => {
       <Box display="flex" justifyContent="flex-end" alignItems="center" my={2}>
         {
           product.name ?
-          <Button onClick={handleSubmit(true)}>
+          <Button onClick={() => editProduct(product.id, formProduct)}>
             Editar
           </Button>
           :
-          <Button onClick={handleSubmit(false)}>
+          <Button onClick={() => addProductForm(formProduct)}>
             Agregar
           </Button>
         }

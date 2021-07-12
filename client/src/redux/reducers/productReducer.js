@@ -5,6 +5,7 @@ import {
   SEARCH_PRODUCTS,
   DELETE_PRODUCT,
   UPDATE_PRODUCT,
+  ADD_PRODUCT,
   GET_PRODUCT_UPDATE,
   FILTER_PRODUCT_CATEGORY,
 } from "../actions/productActions";
@@ -15,6 +16,7 @@ const initialState = {
   productDetail: {},
   getProductUpdate: {},
   updatedProduct: {},
+  addProduct: {},
   deleteProduct: {},
   filterproducts:[],
   isLoading: true,
@@ -34,6 +36,8 @@ const productReducer = (state = initialState, action) => {
       return { ...state, deleteProduct: action.payload }; //* delete product
     case UPDATE_PRODUCT:
       return { ...state, updatedProduct: action.payload}; // * update product
+    case ADD_PRODUCT:
+      return { ...state, addProduct: action.payload }; //
     case GET_PRODUCT_UPDATE:
       return { ...state, getProductUpdate: action.payload };
     case FILTER_PRODUCT_CATEGORY:
