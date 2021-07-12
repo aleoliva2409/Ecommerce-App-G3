@@ -65,6 +65,7 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+
 # Yarn Integrity file
 .yarn-integrity
 
@@ -105,3 +106,6 @@ dist
 
 # package-lock.json
 package-lock.json
+
+# editorconfig
+*helpers
