@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import FilterProducts from "../components/Products/FilterProducts/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
@@ -8,11 +8,17 @@ import { getProducts } from "../redux/actions/productActions";
 const CataloguePage = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.allProducts);
+  const filterproducts = useSelector((state) => state.products.filterproducts.products);
 
   // ? sacar dispatch, all products dispatch from navbar!!!
-  useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getProducts());
+  // }, [dispatch]);
+
+  let render;
+  const [filter,setFilter] = useState(true);
+
+  filter ? render=products : render = filterproducts;
 
   return (
     <Container maxWidth="xl">
@@ -21,10 +27,10 @@ const CataloguePage = () => {
       </Typography>
       <Grid container spacing={2}>
         <Grid item xl={2} lg={2} md={3} sm={12} xs={12}>
-          <FilterProducts />
+          <FilterProducts setFilter={setFilter}  />
         </Grid>
         <Grid item xl={10} lg={10} md={9} sm={12} xs={12}>
-          <Catalogue products={products} />
+          <Catalogue products={render} />
         </Grid>
       </Grid>
     </Container>

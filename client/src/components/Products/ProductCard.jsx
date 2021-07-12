@@ -51,7 +51,7 @@ export default function RecipeReviewCard({product}) {
       <CardMedia
         className={classes.media}
         image={product.image[0]}
-        title="Paella dish"
+        title={`image ${product.name}`}
       />
 
       <CardContent>

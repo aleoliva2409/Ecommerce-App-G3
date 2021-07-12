@@ -7,13 +7,14 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategories } from '../../../redux/actions/categoriesActions';
 import { filterProductCategory} from '../../../redux/actions/productActions';
-import { Button } from '@material-ui/core';
+import Typography from "@material-ui/core/Typography";
+
 
 // * STYLES *
 import {useStyles} from './FilterProductStyle';
 
 
-const FilterProducts = () => {
+const FilterProducts = ({setFilter}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const categories = useSelector(state => state.categories.categories)
@@ -24,9 +25,16 @@ const FilterProducts = () => {
 
   const handleClick = (id) => {
     dispatch(filterProductCategory(id));
+    setFilter(false);
   }
   return (
+
     <Box>
+       <Box component='button' onClick={() => setFilter(true)} >
+       <Typography>
+         Ver todos
+       </Typography>
+      </Box>
       <Box component='div'>
             <List
             component="nav"
