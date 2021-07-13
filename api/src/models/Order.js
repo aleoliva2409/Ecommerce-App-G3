@@ -13,7 +13,7 @@ module.exports = (sequelize) => {
           "cart"
         ),
         defaultValue: "cart",
-        allowNull: true,
+        allowNull: false,
       },
       shippingState: {
         type: DataTypes.ENUM(
@@ -23,8 +23,42 @@ module.exports = (sequelize) => {
           "cancelled",
           "completed"
         ),
+        allowNull: false,
+      },
+      shippingcost: {
+        type: DataTypes.DECIMAL(10,2),
         allowNull: true,
       },
+      shippingaddres: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      shippingzip: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      shippingcity: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      comments: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      paymentdetails: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      firstname: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      lastname: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
+    { timestamps: false }
+    ,
   );
 };
