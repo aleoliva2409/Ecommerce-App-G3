@@ -6,6 +6,10 @@ const portBackend = process.env.PORT_BACKEND;
 //const preChargeCategory = require('./src/CategoryInitTest.js');
 const { initDb } = require('./src/initDB')
 
+// TESTING USER
+const setUser = require('./src/UserInitTest');
+// ---------------------
+
 const connectDB = async() => {
   try {
     await sequelize.authenticate();
@@ -16,6 +20,7 @@ const connectDB = async() => {
       console.log(`Listening on PORT ${portBackend}`);
     });
     initDb();
+    setUser();
     //preChargeProducts();
     //preChargeCategory();
 

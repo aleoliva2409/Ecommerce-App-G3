@@ -7,22 +7,16 @@ async function setUser(){
       email: 'test@gmail.com',
       password: 'test',
       isadmin: true,
-      shippingcost: 24.5,
-      shippingaddres: 'siemprevivas 222',
-      shippingzip: 'N3300',
-      shippingcity: 'eldorado',
-      shippingstate: 'Misiones',
       firstname: 'Juan',
       lastname: 'perez',
-      comments: 'Sarasa sarasa',
-      paymentdetails: 'Efectivo'
+
     },
     {
       email: 'test1@gmail.com',
       password: 'test',
-      isadmin: true,
+      isadmin: false,
       shippingcost: 24.5,
-      shippingaddres: 'siemprevivas 222',
+      shippingaddres: 'siemprevivas23',
       shippingzip: 'N3300',
       shippingcity: 'eldorado',
       shippingstate: 'Misiones',
@@ -38,8 +32,8 @@ async function setUser(){
       shippingcost: 24.5,
       shippingaddres: 'siemprevivas 222',
       shippingzip: 'N3300',
-      shippingcity: 'eldorado',
-      shippingstate: 'Misiones',
+      shippingcity: 'CABA',
+      shippingstate: 'Buenos Aires',
       firstname: 'Juan',
       lastname: 'perez',
       comments: 'Sarasa sarasa',
@@ -52,12 +46,12 @@ async function setUser(){
       shippingcost: 24.5,
       shippingaddres: 'siemprevivas 222',
       shippingzip: 'N3300',
-      shippingcity: 'eldorado',
-      shippingstate: 'Misiones',
+      shippingcity: 'another',
+      shippingstate: 'Another State',
       firstname: 'Juan',
       lastname: 'perez',
       comments: 'Sarasa sarasa',
-      paymentdetails: 'Efectivo'
+      paymentdetails: 'Tarjeta'
     }
 
   ]
