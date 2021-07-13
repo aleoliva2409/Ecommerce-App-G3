@@ -1,6 +1,11 @@
 const { Product, Category } = require('./db.js');
 const fs = require('fs');
 
+// TESTING USER
+const users = require('./UserInitTest');
+users();
+// ---------------------
+
 const categories = [
   {
     name: 'Colchones',
