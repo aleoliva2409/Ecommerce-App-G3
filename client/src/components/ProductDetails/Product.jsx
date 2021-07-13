@@ -25,16 +25,16 @@ import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
 const useStyles = makeStyles(styleProduct);
 
-function makeReviews(){
-  let reviews = [];
-  for(let i=0; i<5; i++){
-    reviews.push({
-      author: `Author${i}`,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloribus consectetur ex laborum dolore temporibus nostrum eligendi quidem iusto hic.'
-    })
-  }
-  return reviews;
-}
+// function makeReviews(){
+//   let reviews = [];
+//   for(let i=0; i<5; i++){
+//     reviews.push({
+//       author: `Author${i}`,
+//       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloribus consectetur ex laborum dolore temporibus nostrum eligendi quidem iusto hic.'
+//     })
+//   }
+//   return reviews;
+// }
 
 
 
