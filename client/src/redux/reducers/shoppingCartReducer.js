@@ -12,8 +12,10 @@ const shoppingCartReducer = (state=initialState, action) => {
   switch(action.type){
     case ADD_PRODUCT:
       return {...state, productsOnCart: state.productsOnCart.concat(action.payload)}; //* push a product to cart
+
+    default:
+      return state;
   }
-  return state;
 }
 
 export default shoppingCartReducer;
