@@ -75,6 +75,10 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
+//TODO: S45
+const getOrdersByUser = async (req, res) => {
+  // codigo:
+}
 
 
 module.exports = {
@@ -82,4 +86,5 @@ module.exports = {
   updateUser,
   deleteUser,
   getAllUsers,
+  getOrdersByUser
 };
