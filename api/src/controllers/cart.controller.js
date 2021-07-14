@@ -84,13 +84,36 @@ const addCart = async (req, res, next) => {
           }
           else{
             //no tiene cosas el carrito
-            orderUser.cart= cartGuest;
+
+            for(item of cartGuest)
+          {
+            var stock = await Product.findOne({
+              where:{
+                id: item.id_product,
+              }
+              
+            })
+            if(item.cantidad > stock.dataValues.stock)
+            {
+  
+              return res.json({error: `No hay stock disponible del producto ${stock.dataValues.name}`}).status(400);
+            }
+        }
+        console.log(cartGuest);
+          await Order.update({
+          cart:cartGuest
+        },
+         {
+          where:{
+            userId:user.id
+         } 
+          });
+            return res.json({message: 'se creo el carrito con exito'}).status(200);
           }
         }
         else{
           //camino 3
-          console.log('no hay orden para este suuario');
-          console.log(user.email);
+
           for(element of cartGuest)
           {
             var stockDis = await Product.findOne({
@@ -99,8 +122,7 @@ const addCart = async (req, res, next) => {
               }
               
             })
-            console.log(element.cantidad);
-            console.log(stockDis.dataValues.stock);
+
             if(element.cantidad > stockDis.dataValues.stock)
             {
   
