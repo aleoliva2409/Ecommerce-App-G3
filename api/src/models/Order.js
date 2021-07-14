@@ -25,6 +25,9 @@ module.exports = (sequelize) => {
         ),
         allowNull: true,
       },
+      cart: {
+        type: DataTypes.ARRAY(DataTypes.JSON),
+      },
     },
   );
 };
