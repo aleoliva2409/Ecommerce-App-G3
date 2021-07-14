@@ -12,30 +12,21 @@ const getAllUsers = async (req, res, next) => {
 
 
 const addUser = async (req, res, next) => {
-  const { name, color, size, description, image, price, stock, categories } =
-    req.body;
-    //categories es un array que contienne solo los id de las categorias!
+  const {email,password,isadmin} = req.body;
   try {
     const find = await User.findOne({
-      where: { name, color, size },
+      where: { email },
     });
-
     if (find) {
-      return res.status(500).json({ error: "this product alredy exists" });
+      return res.status(500).json({ error: "This User already exists" });
     }
-    const newProduct = await User.create({
-      name,
-      description,
-      image,
-      price,
-      stock,
-      color,
-      size,
+    const newUser = await User.create({
+      email,
+      password,
+      isadmin
     });
 
-    newProduct.addCategories(categories);
-
-    res.status(200).json({ message: "Product added!" });
+    res.status(200).json({ message: "User added!" });
   } catch (error) {
     next(error);
   }
