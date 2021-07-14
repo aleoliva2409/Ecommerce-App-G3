@@ -18,6 +18,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import { useMediaQuery } from '@material-ui/core';
 import {useStyles} from './Styles';
+import { useSelector } from 'react-redux';
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
@@ -28,6 +29,8 @@ export default function PrimarySearchAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const cartItemsBadge = useSelector((state) => state.cart.productsOnCart.length)
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -89,7 +92,7 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
-      <Link component={RouterLink} to="#"  className={classes.links}>
+      <Link component={RouterLink} to="/cart"  className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -152,9 +155,9 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
+            <Link component={RouterLink} to="/cart" className={classes.linkDesktop}>
               <IconButton color="inherit">
-                <Badge badgeContent={0} color="secondary">
+                <Badge badgeContent={cartItemsBadge} color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>

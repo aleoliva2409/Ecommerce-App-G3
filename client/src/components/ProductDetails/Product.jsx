@@ -45,13 +45,7 @@ function Product({product}){
   const styles = useStyles();
   const dispatch = useDispatch();
 
-  function handlerBuyButton(){
-    dispatch(addToCart({
-      product,
-      amount: Number(amountToBuy.innerText),
-    }))
-    alert(`product ${product.name} added to cart`);
-  }
+  const pushToCart = () => dispatch(addToCart(product,1));
 
   function handlerFavoriteButton(){
     setInvisible(!invisible);
@@ -143,9 +137,9 @@ function Product({product}){
             color={'primary'}
             className={styles.buyButton}
             id={product.id}
-            onClick={handlerBuyButton}
+            onClick={pushToCart}
           >
-            BUY
+            Añadir al Carrito
           </Button>
         </Grid>
       </Grid>
@@ -164,7 +158,7 @@ function Product({product}){
         <Typography
           variant={'subtitle2'}
         >
-          Reviews
+          Comentarios
         </Typography>
         {
           (product.reviews && product.reviews.length>0) ?
@@ -184,7 +178,7 @@ function Product({product}){
             :
             <Typography
               variant={'h3'}
-            >No Reviews Yet</Typography>
+            >No hay comentarios para este producto</Typography>
         }
       </Container>
     </Container>

@@ -16,9 +16,7 @@ const CataloguePage = () => {
 
   return (
     <Container maxWidth="xl">
-      <Typography variant="h3" color="initial">
-        Tienda
-      </Typography>
+      <Typography variant="h3" color="initial">Tienda</Typography>
       <Grid container spacing={2}>
         <Grid item xl={2} lg={2} md={3} sm={12} xs={12}>
           <FilterProducts setFilter={setFilter} setCurrentPage={setCurrentPage}/>
