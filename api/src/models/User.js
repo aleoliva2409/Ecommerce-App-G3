@@ -9,7 +9,11 @@ module.exports = (sequelize) => {
         allowNull: false,
         unique: true,
         validate: {
-          isEmail: true
+          isEmail: true,
+          // Examples of custom validators:
+          isEmail: {
+            message: "Debería ser un email"
+          }
         }
       },
       password: {
