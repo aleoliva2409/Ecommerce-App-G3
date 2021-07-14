@@ -1,7 +1,7 @@
 const { Product, Order } = require("../db");
 
 
-const addOrder = async (req, res) => {
+const addOrder = async (req, res, next) => {
   try {
     const { orderState, shippingState, products, firstname,lastname } = req.body;
 
@@ -12,10 +12,12 @@ const addOrder = async (req, res) => {
       lastname,
     })
 
-    newOrder.addProduct(1)
+    const item = await Product.findByPk(1)
+    newOrder.addProduct(item)
     res.status(200).json([{msg: 'Order added successfully'}])
   } catch (error) {
-    console.log(error);
+    next(error);
+    res.status(404).json([{msg: 'Error'}])
   }
 }
 
@@ -26,7 +28,10 @@ const getAllOrders = async (req, res) => {
       include: [
         {
           model: Product,
-          attributes: ["id", "name"]
+          attributes: ["id", "name"],
+          through: {
+            attributes: [],
+          },
         }
       ]
     });
