@@ -45,7 +45,7 @@ Order.belongsToMany(Product, { through: Orderlines });
 Product.belongsToMany(Order, { through: Orderlines });
 
 User.hasMany(Order);
-Order.hasOne(User);
+Order.belongsTo(User);
 
 module.exports = {
   ...sequelize.models,
