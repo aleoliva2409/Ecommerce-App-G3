@@ -1,5 +1,5 @@
-const { User } = require("../db");
-const Op = require("sequelize").Op;
+const { User, Order } = require("../db");
+// const Op = require("sequelize").Op;
 
 const getAllUsers = async (req, res, next) => {
   try {
@@ -18,7 +18,7 @@ const addUser = async (req, res, next) => {
       where: { email },
     });
     if (find) {
-      return res.status(500).json({ error: "This User already exists" });
+      return res.status(409).json({ error: "This User already exists" });
     }
     const newUser = await User.create({
       email,
@@ -66,9 +66,23 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
-//TODO: S45
 const getOrdersByUser = async (req, res) => {
   // codigo:
+  try {
+    const { id } = req.params;
+    const ordersByUser = await User.findByPk(id, {
+      include: [
+        {
+          model: Order,
+        }
+      ]
+    });
+    res.status(200).json(ordersByUser);
+
+  } catch (error) {
+    console.log(error);
+    res.status(404)
+  }
 }
 
 
