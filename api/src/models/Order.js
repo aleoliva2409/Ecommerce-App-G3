@@ -25,6 +25,7 @@ module.exports = (sequelize) => {
         ),
         allowNull: true,
       },
+
       shippingCost: {
         type: DataTypes.DECIMAL(10,2),
         allowNull: true,
