@@ -16,7 +16,7 @@ export const FILTER_PRODUCT_CATEGORY = "FILTER_PRODUCT_CATEGORY";
 export const getSearchProducts = (name) => async (dispatch) => {
   console.log(name)
   try {
-    const { data } = await axios.get(`products?name=${name}`);
+    const { data } = await axios.get(`/products?name=${name}`);
     dispatch({
       type: SEARCH_PRODUCTS,
       payload: data,
