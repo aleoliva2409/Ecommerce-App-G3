@@ -1,3 +1,8 @@
+:root{
+  --primaryColor:#00BBC9;
+  --primaryColorDarker: #1ba1ab;
+}
+
 .container {
   min-height: 100vh;
   text-align: center;
