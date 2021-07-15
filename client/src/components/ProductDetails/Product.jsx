@@ -1,27 +1,9 @@
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  Box,
-  makeStyles,
-  Container,
-  Typography,
-  Button,
-  IconButton,
-  ButtonGroup,
-  Badge,
-  Grid,
-} from '@material-ui/core';
-import {
-  Favorite,
-  Add,
-  Remove
-} from '@material-ui/icons';
+import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, ButtonGroup, Badge, Grid } from '@material-ui/core';
+import { Favorite } from '@material-ui/icons';
 import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
 import { useDispatch } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
-
 
 const useStyles = makeStyles(styleProduct);
 
@@ -36,8 +18,6 @@ const useStyles = makeStyles(styleProduct);
 //   return reviews;
 // }
 
-
-
 function Product({product}){
 
   const amountToBuy = document.getElementById('amountToBuy');
@@ -45,13 +25,7 @@ function Product({product}){
   const styles = useStyles();
   const dispatch = useDispatch();
 
-  function handlerBuyButton(){
-    dispatch(addToCart({
-      product,
-      amount: Number(amountToBuy.innerText),
-    }))
-    alert(`product ${product.name} added to cart`);
-  }
+  const pushToCart = () => dispatch(addToCart(product,1));
 
   function handlerFavoriteButton(){
     setInvisible(!invisible);
@@ -107,35 +81,6 @@ function Product({product}){
               <Favorite />
             </Badge>
           </IconButton>
-          <Container
-            className={styles.addController}
-          >
-            <Typography
-              variant={'h4'}
-              color={'secondary'}
-              id={'amountToBuy'}
-            >
-              {amount}
-            </Typography>
-            <ButtonGroup
-              color={'primary'}
-              orientation={'vertical'}
-              className={styles.addControllerButtons}
-            >
-              <Button
-                onClick={()=>setAmount((amount===product.stock) ? product.stock : amount+1)}
-                disabled={(product.stock===0) ? true : false}
-              >
-                <Add/>
-              </Button>
-              <Button
-                onClick={()=>setAmount((amount===0) ? 0 : amount-1)}
-                disabled={(product.stock===0) ? true : false}
-              >
-                <Remove/>
-              </Button>
-            </ButtonGroup>
-          </Container>
         </Grid>
         <Grid item className={styles.buyButtonContainer}>
           <Button
@@ -143,9 +88,9 @@ function Product({product}){
             color={'primary'}
             className={styles.buyButton}
             id={product.id}
-            onClick={handlerBuyButton}
+            onClick={pushToCart}
           >
-            BUY
+            Añadir al Carrito
           </Button>
         </Grid>
       </Grid>
@@ -164,7 +109,7 @@ function Product({product}){
         <Typography
           variant={'subtitle2'}
         >
-          Reviews
+          Comentarios
         </Typography>
         {
           (product.reviews && product.reviews.length>0) ?
@@ -184,7 +129,7 @@ function Product({product}){
             :
             <Typography
               variant={'h3'}
-            >No Reviews Yet</Typography>
+            >No hay comentarios para este producto</Typography>
         }
       </Container>
     </Container>

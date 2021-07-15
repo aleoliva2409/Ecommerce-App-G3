@@ -23,12 +23,7 @@ export default function RecipeReviewCard({product}) {
 
   const dispatch = useDispatch();
 
-  const pushToCart = () => {
-    dispatch(addToCart({
-      product,
-      amount: 1
-    }))
-  }
+  const pushToCart = () => dispatch(addToCart(product,1));
 
   return (
     <Card className={classes.root}>
