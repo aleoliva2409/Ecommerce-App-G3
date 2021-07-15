@@ -1,21 +1,15 @@
-import { ADD_PRODUCT, REMOVE_FROM_CART, ADJUST_QUANTITY, RESET_CART } from './../actions/shoppingCartActions.js';
+import { SET_CART, RESET_CART } from './../actions/shoppingCartActions.js';
 
 const initialState = {
-  clientID: "",
-  products: [],
-  productsOnCart: []
+  items: JSON.parse(localStorage.getItem('cart') || '[]')
 }
 
 const shoppingCartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_PRODUCT:
-      return { ...state, productsOnCart: [...state.productsOnCart, ...action.payload] }; //* push a product to cart
-    case REMOVE_FROM_CART:
-      return { ...state, productsOnCart: state.productsOnCart.filter((item) => item !== action.payload) }
-    case ADJUST_QUANTITY:
-      return { ...state, productsOnCart: state.productsOnCart + action.payload.quantity }
+    case SET_CART:
+      return { ...state, items: action.payload }; //* push a product to cart
     case RESET_CART:
-      return { ...state }
+      return { ...state, items:initialState.items }
     default:
       return state;
   }

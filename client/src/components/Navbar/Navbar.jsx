@@ -30,7 +30,8 @@ export default function PrimarySearchAppBar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const cartItemsBadge = useSelector((state) => state.cart.productsOnCart.length)
+  const inLocal = useSelector((state) => state.cart.items)
+  const cartItemsBadge = inLocal.reduce((acc, crr) => acc + (crr.qty), 0)
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -95,7 +96,7 @@ export default function PrimarySearchAppBar() {
       <Link component={RouterLink} to="/cart"  className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
-            <Badge badgeContent={0} color="secondary">
+            <Badge badgeContent={cartItemsBadge} color="secondary">
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
