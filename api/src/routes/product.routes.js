@@ -7,6 +7,7 @@ const {
   updateProduct,
   deleteProduct,
   getProductsByCategory,
+  addReview,
 } = require("../controllers/product.controller");
 
 const router = Router();
@@ -18,5 +19,8 @@ router.get("/:id", getById);
 router.post("/", addProduct);
 router.put("/:id", updateProduct);
 router.delete("/:id", deleteProduct);
+
+//TODO: Task 54
+router.post("/:id/review", addReview);
 
 module.exports = router;
