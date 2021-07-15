@@ -9,7 +9,11 @@ module.exports = (sequelize) => {
         allowNull: false,
         unique: true,
         validate: {
-          isEmail: true
+          isEmail: true,
+          // Examples of custom validators:
+          isEmail: {
+            message: "Debería ser un email"
+          }
         }
       },
       password: {
@@ -20,42 +24,7 @@ module.exports = (sequelize) => {
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
-      shippingcost: {
-        type: DataTypes.DECIMAL(10,2),
-        allowNull: true,
-      },
-      shippingaddres: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      shippingzip: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      shippingcity: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      shippingstate: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      firstname: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      lastname: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      comments: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      paymentdetails: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
+
     },
     { timestamps: false }
   );

@@ -12,6 +12,13 @@ import axios from 'axios';
 
 axios.defaults.baseURL = "http://localhost:3001/api";
 
+// cart in local storage (initial state)
+if (!localStorage.cart) {
+  localStorage.setItem("cart", JSON.stringify([]));
+} else {
+  localStorage.setItem("cart", localStorage.getItem("cart"));
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

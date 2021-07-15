@@ -9,6 +9,7 @@ const userRouter = require('./user.routes');
 const orderRouter = require('./order.routes');
 const cartRouter = require('./cart.routes');
 
+
 const router = Router();
 
 // ? config routers
@@ -17,7 +18,7 @@ const router = Router();
 router.use("/products", productRouter);
 router.use("/categories", categoryRouter);
 router.use("/users", userRouter);
-router.use("/order", orderRouter);
 router.use("/cart", cartRouter);
+router.use("/orders", orderRouter);
 
 module.exports = router;

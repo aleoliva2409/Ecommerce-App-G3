@@ -25,9 +25,44 @@ module.exports = (sequelize) => {
         ),
         allowNull: true,
       },
+
+      shippingCost: {
+        type: DataTypes.DECIMAL(10,2),
+        allowNull: true,
+      },
+      shippingAddres: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      shippingZip: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      shippingCity: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      comments: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      paymentDetails: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       cart: {
         type: DataTypes.ARRAY(DataTypes.JSON),
-      },
+      }
     },
+    { timestamps: false }
+    ,
   );
 };

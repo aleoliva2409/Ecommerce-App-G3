@@ -77,7 +77,7 @@ const addProduct = async (req, res, next) => {
 
     newProduct.addCategories(categories);
 
-    res.status(200).json({ message: "Product added!" });
+    res.status(201).json({ message: "Product added!" });
   } catch (error) {
     next(error);
   }
