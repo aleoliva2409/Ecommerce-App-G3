@@ -13,8 +13,8 @@ const connectDB = async() => {
     console.log("Connection has been established successfully.");
     await sequelize.sync({ force: true });
     console.log("All models were synchronized successfully.");
-    await server.listen(process.env.PORT, () => {
-      console.log(`Listening on PORT ${process.env.PORT}`);
+    await server.listen(process.env.PORT_BACKEND, () => {
+      console.log(`Listening on PORT ${process.env.PORT_BACKEND}`);
     });
     initDb();
     setUser();
