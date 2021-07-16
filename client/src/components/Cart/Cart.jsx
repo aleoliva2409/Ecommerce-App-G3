@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, CardMedia, Container, Typography, ButtonGroup} from '@material-ui/core'
+import { Button, IconButton, Container, Grid, Typography, ButtonGroup, Box} from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles';
 import { cartStyle } from './CartStyles.js';
 import { useSelector, useDispatch } from "react-redux";
@@ -7,6 +7,7 @@ import { Add, Remove } from '@material-ui/icons';
 import { adjustQuantity, removeFromCart, resetCart } from '../../redux/actions/shoppingCartActions';
 import ClearIcon from '@material-ui/icons/Clear';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import Checkout from './checkout/Checkout.jsx';
 
 const useStyles = makeStyles(cartStyle)
 
@@ -33,51 +34,36 @@ const Cart = () => {
     <Container className={styles.root}>
       {
         cartItems.map(item => (
-          <Card className={styles.cartItem}>
-            <Container
-            className={styles.addController}
-          >
-            <Typography
-              variant={'h4'}
-              color={'secondary'}
-              id={'amountToBuy'}
-            >
-              {item.qty}
-            </Typography>
-            <ButtonGroup
-              color={'primary'}
-              orientation={'vertical'}
-              className={styles.addControllerButtons}
-            >
-              <Button
-               onClick={()=>remove(item)}
-              >
+            <Grid container className={styles.cardItem}>
+              <Box component="div">
+                <Typography className={styles.name} variant="h4">{item.name}</Typography>
+              </Box>
+              <Box component="div">
+                <Box component="img" className={styles.img} src={item.image[0]} />
+              </Box>
+              <Box className={styles.priceQuantity} component="div">
+                <Typography className={styles.price} variant="h4">$ {item.price}</Typography>
+                <ButtonGroup color={'primary'} orientation={'horizontal'} className={styles.quantityController}>
+                  <Button onClick={()=>setAmount(item,-1)} disabled={(item.qty===1)? true : false}>
+                    <Remove/>
+                  </Button>
+                  <Typography className={styles.quantity} variant="overline">
+                    {item.qty}
+                  </Typography>
+                  <Button onClick={()=>setAmount(item,1)} disabled={(item.stock===item.qty) ? true : false}>
+                    <Add/>
+                  </Button>
+                </ButtonGroup>
+              </Box>
+              <Button className={styles.clearItem} onClick={()=>remove(item)}>
                 <ClearIcon/>
               </Button>
-              <Button
-                onClick={()=>setAmount(item,1)}
-                disabled={(item.stock===item.qty) ? true : false}
-              >
-                <Add/>
-              </Button>
-              <Button
-                onClick={()=>setAmount(item,-1)}
-                disabled={(item.qty===1)? true : false}
-              >
-                <Remove/>
-              </Button>
-            </ButtonGroup>
-          </Container>
-            <CardMedia image={item.image[0]} className={styles.img}/>
-            <Typography variant="h5">{item.name}</Typography>
-          </Card>
-        ))
-      }
-      <Button
-        onClick={emptyCart}
-      >
-        <DeleteForeverIcon fontSize="large"/>
-      </Button>
+            </Grid>
+        ))}
+        <Checkout />
+        <Button className={styles.deleteForever} onClick={emptyCart}>
+          <DeleteForeverIcon fontSize="large"/>
+        </Button>
     </Container>
   )
 }
