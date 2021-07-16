@@ -140,6 +140,11 @@ const getProductsByCategory = async (req, res, next) => {
   }
 };
 
+//TODO: Task 53
+const addReview = async (req, res, next) => {
+  
+}
+
 module.exports = {
   getProducts,
   getById,
@@ -148,4 +153,5 @@ module.exports = {
   deleteProduct,
   getProductsAll,
   getProductsByCategory,
+  addReview,
 };
