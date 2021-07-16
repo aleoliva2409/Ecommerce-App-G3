@@ -5,7 +5,7 @@ import ProductPage from "../views/ProductPage";
 import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
 import HomePage from "../views/HomePage";
 import Admin from "../views/Admin";
-
+import DashboardPage from "../views/DashboardPage";
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={HomePage} />
@@ -14,6 +14,7 @@ const Routes = () => (
     <Route exact path="/products" component={CataloguePage} />
     <Route path="/admin" component={Admin} />
     <Route path="/categories" component={Categories} />
+    <Route path="/dashboard" component={DashboardPage} />
   </Switch>
 );
 
