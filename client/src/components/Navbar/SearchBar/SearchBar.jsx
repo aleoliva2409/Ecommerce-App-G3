@@ -42,7 +42,6 @@ useEffect(() => {
         renderInput={(params) => (
             <TextField {...params}
               InputProps={{...params.InputProps, disableUnderline: true}}
-
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
