@@ -14,7 +14,6 @@ const getAllUsers = async (req, res, next) => {
 
 const addUser = async (req, res, next) => {
   const body = req.body;
-  console.log(body)
   if (!(body.email && body.password)) {
     return res.status(400).json({ error: "Data not formatted properly" });
   }
@@ -27,7 +26,7 @@ const addUser = async (req, res, next) => {
     }
     const salt = await bcrypt.genSalt(10);
     body.password = await bcrypt.hash(body.password, salt);
-    const newUser = await User.create({ body });
+    const newUser = await User.create(body);
 
     res.status(200).json({ message: "User added!" });
   } catch (error) {
