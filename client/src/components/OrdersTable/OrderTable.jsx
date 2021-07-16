@@ -8,7 +8,8 @@ import {
   TableBody,
   IconButton,
   Typography,
-  Collapse
+  Collapse,
+  CardMedia
 } from '@material-ui/core';
 import {
   ExpandLess,
@@ -16,6 +17,7 @@ import {
 } from '@material-ui/icons';
 import { useState } from 'react';
 import { useStyles } from './OrderTable.js';
+import OrderDetails from './OrderDetail/OrderDetail.jsx';
 
 //* Rows Table Generator
 const RowsTable = (props) => {
@@ -28,7 +30,7 @@ const RowsTable = (props) => {
     <>
       <TableRow
         onClick={()=>setIsOpen(!isOpen)}
-        hover
+        className={classes.rows}
       >
         <TableCell
           className={classes.cells}
@@ -73,13 +75,15 @@ const RowsTable = (props) => {
           Initial
         </TableCell>                               {/* SHIPPING STATE*/}
       </TableRow>
-      <TableRow>
+      <TableRow
+        className={classes.collapse}
+      >
         <TableCell
           className={classes.cells}
           colSpan={7}
         >
           <Collapse in={isOpen} timeout={"auto"} unmountOnExit>
-            <Typography variant={"h1"}>hola mundo</Typography>
+            <OrderDetails></OrderDetails>
           </Collapse>
         </TableCell>
       </TableRow>
