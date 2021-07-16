@@ -1,18 +1,15 @@
-
-import {
-  ADD_PRODUCT,
-} from './../actions/shoppingCartActions.js';
+import { SET_CART, RESET_CART } from './../actions/shoppingCartActions.js';
 
 const initialState = {
-  clientID : "",
-  productsOnCart: []
+  items: JSON.parse(localStorage.getItem('cart') || '[]')
 }
 
-const shoppingCartReducer = (state=initialState, action) => {
-  switch(action.type){
-    case ADD_PRODUCT:
-      return {...state, productsOnCart: state.productsOnCart.concat(action.payload)}; //* push a product to cart
-
+const shoppingCartReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_CART:
+      return { ...state, items: action.payload }; //* push a product to cart
+    case RESET_CART:
+      return { ...state, items:initialState.items }
     default:
       return state;
   }
