@@ -11,7 +11,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import { Link as RouterLink } from 'react-router-dom';
 import {Link} from "@material-ui/core";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 //import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
@@ -24,6 +24,16 @@ export default function RecipeReviewCard({product}) {
   const dispatch = useDispatch();
 
   const pushToCart = () => dispatch(addToCart(product,1));
+
+  const inLocal = useSelector(state => state.cart.items)
+  let noStock = false
+  for(let each of inLocal){
+    if(each.id === product.id){
+      if(each.stock === each.qty){
+        noStock = true;
+      }
+    }
+  }
 
   return (
     <Card className={classes.root}>
@@ -59,13 +69,19 @@ export default function RecipeReviewCard({product}) {
         <IconButton aria-label="Agregar a favoritos">
           <FavoriteIcon />
         </IconButton>
-
+{ noStock? 
         <Button
           variant="contained"
           className={classes.button}
-          onClick={pushToCart}
+          disabled={true}
          >Agregar a carrito</Button>
-
+         :
+         <Button
+         variant="contained"
+         className={classes.button}
+         onClick={pushToCart}
+        >Agregar a carrito</Button>
+}
         <IconButton aria-label="Compartir">
           <ShareIcon />
         </IconButton>

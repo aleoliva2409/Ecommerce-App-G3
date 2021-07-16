@@ -52,11 +52,11 @@ module.exports = (sequelize) => {
       },
       firstName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       lastName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       cart: {
         type: DataTypes.ARRAY(DataTypes.JSON),

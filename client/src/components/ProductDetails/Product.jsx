@@ -2,7 +2,7 @@ import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, B
 import { Favorite } from '@material-ui/icons';
 import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
 const useStyles = makeStyles(styleProduct);
@@ -34,6 +34,15 @@ function Product({product}){
   const [invisible,setInvisible] = useState(true);
   const [amount,setAmount] = useState(0);
 
+  const inLocal = useSelector(state => state.cart.items)
+  let noStock = false
+  for(let each of inLocal){
+    if(each.id === product.id){
+      if(each.stock === each.qty){
+        noStock = true;
+      }
+    }
+  }
   return (
     <Container
       className={styles.root}
@@ -57,7 +66,7 @@ function Product({product}){
           <Typography
             variant={'caption'}
           >
-            {(product.stock===0) ? 'unavailable' : 'available' }
+            {(product.stock===0 || noStock) ? 'Sin Stock' : 'Disponible' }
           </Typography>
         </CardContent>
       </Card>
@@ -83,6 +92,17 @@ function Product({product}){
           </IconButton>
         </Grid>
         <Grid item className={styles.buyButtonContainer}>
+{ noStock?
+          <Button
+            variant={'contained'}
+            color={'primary'}
+            className={styles.buyButton}
+            id={product.id}
+            disabled = {true}
+          >
+            Añadir al Carrito
+          </Button>
+          :
           <Button
             variant={'contained'}
             color={'primary'}
@@ -92,6 +112,7 @@ function Product({product}){
           >
             Añadir al Carrito
           </Button>
+}
         </Grid>
       </Grid>
       <Container

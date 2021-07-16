@@ -1,7 +1,9 @@
-export const SET_CART = "SET_CART";
-export const RESET_CART = "RESET_CART"
+import axios from 'axios';
 
-export const addToCart = ({id,name,image,price,stock},qty) => (dispatch) => {
+export const SET_CART = "SET_CART";
+export const RESET_CART = "RESET_CART";
+
+export const addToCart = ({id,name,image,price,stock},qty) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem('cart'));
   let exist = false;
   for(let each of inLocal){
@@ -13,9 +15,10 @@ export const addToCart = ({id,name,image,price,stock},qty) => (dispatch) => {
   if (!exist) inLocal.push({ id,name,image,price,stock,qty })
   dispatch({ type: SET_CART, payload: inLocal })
   localStorage.setItem('cart', JSON.stringify(inLocal)) //guest
-}
+  const {data} = await axios.post('/cart/add', {email: 'test@gmail.com', cartGuest: inLocal} ) //hardcore x1000000000 hahahaha
+} 
 
-export const adjustQuantity = ({ id }, value) => (dispatch) => {
+export const adjustQuantity = ({ id }, value) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem('cart'));
   for(let each of inLocal){
     if(each.id === id){
@@ -24,18 +27,19 @@ export const adjustQuantity = ({ id }, value) => (dispatch) => {
   }
   dispatch({ type: SET_CART, payload: inLocal })
   localStorage.setItem('cart', JSON.stringify(inLocal))
+  const {data} = await axios.post('/cart/add', {email: 'test@gmail.com', cartGuest: inLocal} ) //hardcore x1000000000 hahahaha
 }
 
-export const removeFromCart = ({id}) => (dispatch) => {
+export const removeFromCart = ({id}) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem('cart')).filter((each)=>each.id!==id);
   dispatch({ type: SET_CART, payload: inLocal })
   localStorage.setItem('cart', JSON.stringify(inLocal))
+  const {data} = await axios.post('/cart/add', {email: 'test@gmail.com', cartGuest: inLocal} ) //hardcore x1000000000 hahahaha
 }
 
-
-export const resetCart = () => (dispatch) => {
-  console.log('action')
+export const resetCart = () => async (dispatch) => {
   localStorage.setItem("cart", JSON.stringify([]));
   dispatch({ type: RESET_CART })
-  window.location.replace('http://localhost:3000/products') 
+  window.location.replace('http://localhost:3000/products')
+  const {data} = await axios.post('/cart/add', {email: 'test@gmail.com', cartGuest: []} ) //hardcore x1000000000 hahahaha
 }
