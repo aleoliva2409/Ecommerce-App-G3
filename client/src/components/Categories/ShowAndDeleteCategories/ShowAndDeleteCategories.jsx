@@ -2,10 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategories } from '../../../redux/actions/categoriesActions';
 import CategoryCard from '../CategoryCard/CategoryCard';
-import useStyles from "./ShowAndDeleteCategoriesStyle";  // styles file already import
 
 const ShowAndDeleteCategories = () => {
-    const classes = useStyles();
     const dispatch = useDispatch()
 
     const categoriesList = useSelector(state => state.categories.categories)
@@ -17,7 +15,7 @@ const ShowAndDeleteCategories = () => {
 
     return (
         <div>
-            {categoriesList.map((e)=>( 
+            {categoriesList.map((e)=>(
             <CategoryCard name={e.name} description={e.description} id={e.id} image={e.image} />
             ))}
         </div>

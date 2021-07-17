@@ -77,7 +77,7 @@ const addProduct = async (req, res, next) => {
 
     newProduct.addCategories(categories);
 
-    res.status(200).json({ message: "Product added!" });
+    res.status(201).json({ message: "Product added!" });
   } catch (error) {
     next(error);
   }
@@ -140,6 +140,11 @@ const getProductsByCategory = async (req, res, next) => {
   }
 };
 
+//TODO: Task 53
+const addReview = async (req, res, next) => {
+  
+}
+
 module.exports = {
   getProducts,
   getById,
@@ -148,4 +153,5 @@ module.exports = {
   deleteProduct,
   getProductsAll,
   getProductsByCategory,
+  addReview,
 };

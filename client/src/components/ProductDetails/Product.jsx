@@ -1,42 +1,22 @@
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  Box,
-  makeStyles,
-  Container,
-  Typography,
-  Button,
-  IconButton,
-  ButtonGroup,
-  Badge,
-  Grid,
-} from '@material-ui/core';
-import {
-  Favorite,
-  Add,
-  Remove
-} from '@material-ui/icons';
+import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, ButtonGroup, Badge, Grid } from '@material-ui/core';
+import { Favorite } from '@material-ui/icons';
 import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
-
 
 const useStyles = makeStyles(styleProduct);
 
-function makeReviews(){
-  let reviews = [];
-  for(let i=0; i<5; i++){
-    reviews.push({
-      author: `Author${i}`,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloribus consectetur ex laborum dolore temporibus nostrum eligendi quidem iusto hic.'
-    })
-  }
-  return reviews;
-}
-
-
+// function makeReviews(){
+//   let reviews = [];
+//   for(let i=0; i<5; i++){
+//     reviews.push({
+//       author: `Author${i}`,
+//       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloribus consectetur ex laborum dolore temporibus nostrum eligendi quidem iusto hic.'
+//     })
+//   }
+//   return reviews;
+// }
 
 function Product({product}){
 
@@ -45,13 +25,7 @@ function Product({product}){
   const styles = useStyles();
   const dispatch = useDispatch();
 
-  function handlerBuyButton(){
-    dispatch(addToCart({
-      product,
-      amount: Number(amountToBuy.innerText),
-    }))
-    alert(`product ${product.name} added to cart`);
-  }
+  const pushToCart = () => dispatch(addToCart(product,1));
 
   function handlerFavoriteButton(){
     setInvisible(!invisible);
@@ -60,6 +34,15 @@ function Product({product}){
   const [invisible,setInvisible] = useState(true);
   const [amount,setAmount] = useState(0);
 
+  const inLocal = useSelector(state => state.cart.items)
+  let noStock = false
+  for(let each of inLocal){
+    if(each.id === product.id){
+      if(each.stock === each.qty){
+        noStock = true;
+      }
+    }
+  }
   return (
     <Container
       className={styles.root}
@@ -83,7 +66,7 @@ function Product({product}){
           <Typography
             variant={'caption'}
           >
-            {(product.stock===0) ? 'unavailable' : 'available' }
+            {(product.stock===0 || noStock) ? 'Sin Stock' : 'Disponible' }
           </Typography>
         </CardContent>
       </Card>
@@ -107,46 +90,29 @@ function Product({product}){
               <Favorite />
             </Badge>
           </IconButton>
-          <Container
-            className={styles.addController}
-          >
-            <Typography
-              variant={'h4'}
-              color={'secondary'}
-              id={'amountToBuy'}
-            >
-              {amount}
-            </Typography>
-            <ButtonGroup
-              color={'primary'}
-              orientation={'vertical'}
-              className={styles.addControllerButtons}
-            >
-              <Button
-                onClick={()=>setAmount((amount===product.stock) ? product.stock : amount+1)}
-                disabled={(product.stock===0) ? true : false}
-              >
-                <Add/>
-              </Button>
-              <Button
-                onClick={()=>setAmount((amount===0) ? 0 : amount-1)}
-                disabled={(product.stock===0) ? true : false}
-              >
-                <Remove/>
-              </Button>
-            </ButtonGroup>
-          </Container>
         </Grid>
         <Grid item className={styles.buyButtonContainer}>
+{ noStock?
           <Button
             variant={'contained'}
             color={'primary'}
             className={styles.buyButton}
             id={product.id}
-            onClick={handlerBuyButton}
+            disabled = {true}
           >
-            BUY
+            Añadir al Carrito
           </Button>
+          :
+          <Button
+            variant={'contained'}
+            color={'primary'}
+            className={styles.buyButton}
+            id={product.id}
+            onClick={pushToCart}
+          >
+            Añadir al Carrito
+          </Button>
+}
         </Grid>
       </Grid>
       <Container
@@ -164,7 +130,7 @@ function Product({product}){
         <Typography
           variant={'subtitle2'}
         >
-          Reviews
+          Comentarios
         </Typography>
         {
           (product.reviews && product.reviews.length>0) ?
@@ -184,7 +150,7 @@ function Product({product}){
             :
             <Typography
               variant={'h3'}
-            >No Reviews Yet</Typography>
+            >No hay comentarios para este producto</Typography>
         }
       </Container>
     </Container>
