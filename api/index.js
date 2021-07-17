@@ -11,7 +11,7 @@ const connectDB = async() => {
   try {
     await sequelize.authenticate();
     console.log("Connection has been established successfully.");
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     console.log("All models were synchronized successfully.");
     await server.listen(process.env.PORT, () => {
       console.log(`Listening on PORT ${process.env.PORT}`);
