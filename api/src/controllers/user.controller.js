@@ -1,4 +1,5 @@
 const { User, Order } = require("../db");
+const bcrypt = require('bcrypt')
 // const Op = require("sequelize").Op;
 
 const getAllUsers = async (req, res, next) => {
@@ -12,19 +13,20 @@ const getAllUsers = async (req, res, next) => {
 
 
 const addUser = async (req, res, next) => {
-  const {email,password,isadmin} = req.body;
+  const body = req.body;
+  if (!(body.email && body.password)) {
+    return res.status(400).json({ error: "Data not formatted properly" });
+  }
   try {
     const find = await User.findOne({
-      where: { email },
+      where: { email: body.email },
     });
     if (find) {
       return res.status(409).json({ error: "This User already exists" });
     }
-    const newUser = await User.create({
-      email,
-      password,
-      isadmin
-    });
+    const salt = await bcrypt.genSalt(10);
+    body.password = await bcrypt.hash(body.password, salt);
+    const newUser = await User.create(body);
 
     res.status(200).json({ message: "User added!" });
   } catch (error) {
