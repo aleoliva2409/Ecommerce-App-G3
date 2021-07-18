@@ -1,5 +1,4 @@
 const { User } = require('./db.js');
-// const axios = require('axios');
 
 async function setUser(){
   let user = [
@@ -23,7 +22,7 @@ async function setUser(){
       email: 'test3@gmail.com',
       password: 'test',
       isadmin: false,
-     }
+    }
 
   ]
 

@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getOrders,
 } from "../../redux/actions/ordersActions.js";
-import { useStyles } from './OrderTable.js';
+import { useStyles } from './OrderTableStyle.js';
 import OrderDetails from './OrderDetail/OrderDetail.jsx';
 
 //* Rows Table Generator

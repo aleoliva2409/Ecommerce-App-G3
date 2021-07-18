@@ -63,7 +63,7 @@ const addProduct = async (req, res, next) => {
     });
 
     if (find) {
-      return res.status(500).json({ error: "this product alredy exists" });
+      return res.status(409).json({ error: "this product alredy exists" });
     }
     const newProduct = await Product.create({
       name,
@@ -140,9 +140,33 @@ const getProductsByCategory = async (req, res, next) => {
   }
 };
 
-//TODO: Task 53
+//TODO: Task 54
 const addReview = async (req, res, next) => {
-  
+  try {
+    const { idProduct } = req.params;
+    const { text } = req.body;
+    const review = await Review.create({
+      text,
+    })
+
+    review.addProduct(idProduct);
+    // review.addUser()
+
+    res.status(200).json(review);
+  } catch (error) {
+    console.log(error);
+    res.status(404).json([{Error: "something was wrong"}]);
+  }
+}
+
+//TODO: Task 55
+const updateReview = async (req, res, next) => {
+  const { idProduct, idReview } = req.params;
+
+  const product = await Product.findByPk(idProduct);
+  if(product) {
+
+  }
 }
 
 module.exports = {
@@ -154,4 +178,5 @@ module.exports = {
   getProductsAll,
   getProductsByCategory,
   addReview,
+  updateReview,
 };
