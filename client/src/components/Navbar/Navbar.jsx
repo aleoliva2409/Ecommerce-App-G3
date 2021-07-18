@@ -14,10 +14,12 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShortLogo from './../../assets/img/Logos/short-logo.png';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
 import SearchBar from './SearchBar/SearchBar';
+import AccountButton from '../Account/AccountButton';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import { useMediaQuery } from '@material-ui/core';
 import {useStyles} from './Styles';
+import { useSelector } from 'react-redux';
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
@@ -28,6 +30,9 @@ export default function PrimarySearchAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const inLocal = useSelector((state) => state.cart.items)
+  const cartItemsBadge = inLocal.reduce((acc, crr) => acc + (crr.qty), 0)
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -89,10 +94,10 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
-      <Link component={RouterLink} to="#"  className={classes.links}>
+      <Link component={RouterLink} to="/cart"  className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
-            <Badge badgeContent={0} color="secondary">
+            <Badge badgeContent={cartItemsBadge} color="secondary">
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
@@ -121,7 +126,13 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Login</p>
       </MenuItem>
+
+      <MenuItem >
+        <AccountButton />
+      </MenuItem>
     </Menu>
+
+
   );
 
   return (
@@ -152,9 +163,9 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
+            <Link component={RouterLink} to="/cart" className={classes.linkDesktop}>
               <IconButton color="inherit">
-                <Badge badgeContent={0} color="secondary">
+                <Badge badgeContent={cartItemsBadge} color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
@@ -180,6 +191,8 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </Link>
+          <AccountButton className={classes.linkDesktop}/>
+
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

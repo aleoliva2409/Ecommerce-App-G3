@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
+
     margin:'auto',
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -29,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     backgroundColor: 'none',
-
   },
   autocomplet:{
     margin:'5px',

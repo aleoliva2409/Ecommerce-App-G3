@@ -1,4 +1,7 @@
 const { User, Order } = require("../db");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const passport = require("passport");
 // const Op = require("sequelize").Op;
 
 const getAllUsers = async (req, res, next) => {
@@ -12,19 +15,20 @@ const getAllUsers = async (req, res, next) => {
 
 
 const addUser = async (req, res, next) => {
-  const {email,password,isadmin} = req.body;
+  const body = req.body;
+  if (!(body.email && body.password)) {
+    return res.status(400).json({ error: "Data not formatted properly" });
+  }
   try {
     const find = await User.findOne({
-      where: { email },
+      where: { email: body.email },
     });
     if (find) {
       return res.status(409).json({ error: "This User already exists" });
     }
-    const newUser = await User.create({
-      email,
-      password,
-      isadmin
-    });
+    const salt = await bcrypt.genSalt(10);
+    body.password = await bcrypt.hash(body.password, salt);
+    const newUser = await User.create(body);
 
     res.status(200).json({ message: "User added!" });
   } catch (error) {
@@ -85,11 +89,43 @@ const getOrdersByUser = async (req, res) => {
   }
 }
 
+const login = async (req, res, next) => {
+  passport.authenticate('login', async (err, user, info) => {
+    try {
+      if (err) return next(err);
+
+      req.login(user, { session: false }, async (error) => {
+        if (error) return next(error);
+
+        const payload = {
+          id: user.id,
+          exp: Math.floor(Date.now() / 1000) + (60 * 60), //1h
+          email: user.email
+        }
+
+        const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);
+        return res.json({ token });
+      })
+    } catch (err) {
+      return next(err)
+    }
+  })(req, res, next)
+}
+
+const example = (req, res, next) => {
+  res.json({
+    message: 'You made it to the secure route',
+    user: req.user,
+    //token: req.query.token
+  })
+}
 
 module.exports = {
   addUser,
   updateUser,
   deleteUser,
   getAllUsers,
-  getOrdersByUser
+  getOrdersByUser,
+  login,
+  example,
 };
