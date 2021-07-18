@@ -17,7 +17,7 @@ import {
   useEffect,
   useState
 } from 'react';
-import { useStyles } from './OrderDetail.js';
+import { useStyles } from './OrderDetailStyle';
 import { useDispatch, useSelector } from "react-redux";
 import {
   getOrder,

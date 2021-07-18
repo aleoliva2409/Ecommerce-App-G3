@@ -179,5 +179,4 @@ module.exports = {
   getProductsByCategory,
   addReview,
   updateReview,
-  allReviews,
 };
