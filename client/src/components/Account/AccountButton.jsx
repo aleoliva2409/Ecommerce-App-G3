@@ -11,56 +11,44 @@ import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-  root:{
-    display: 'flex',
-  },
-  label: {
-    fontSize: '0.9em'
-  },
-  paper: {
-    margin: theme.spacing(2),
-    display: 'flex',
-    maxWidth: '400px',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: '#00BBC9',
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
-  },
-  button:{
-    color: '#FFF'
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-    backgroundColor: '#00BBC9',
-    '&:hover':{
-      backgroundColor: '#232020 ',
-    },
-
-  },
-}));
-
+import {useStyles} from './AccountStyle';
 
 
 export default function FormDialog() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [register,setRegister] = React.useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
+    setRegister({
+      registro: 'Registrarme',
+      google: 'Registrarse con Google',
+      createAccount:'Crear cuenta',
+      withoutAccount: '¿Tenés cuenta? Logueate',
+      withlogin : ''
+    });
   };
 
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleClickLogin = () =>{
+    setRegister({
+      registro: 'Iniciar sesión',
+      google: 'Iniciar con Google',
+      createAccount:'Iniciar sesión',
+      withoutAccount:'¿Sin cuenta? Registrate',
+      withlogin : '¿La olvidaste?'
+    });
+  };
+  //Form
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const {email, password } = e.target.elements;
+    console.log({email: email.value, password: password.value });
+  }
 
   return (
     <div className={classes.root}>
@@ -76,9 +64,9 @@ export default function FormDialog() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Nuevo Cliente
+              {register.registro}
             </Typography>
-             <form className={classes.form} noValidate>
+             <form className={classes.form} noValidate onSubmit={handleSubmit}>
             <Grid container spacing={2}>
 
               <Grid item xs={12} >
@@ -104,20 +92,20 @@ export default function FormDialog() {
                   autoComplete="current-password"
                 />
               </Grid>
-              <Grid item xs={12}>
-                <TextField
+              <Grid item xs={12}
+                    style={{
+                          textAlign:'center' // this does the magic
+                     }} >
+                <Button
                   variant="outlined"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Contraseña"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-                />
-                <button class="loginBtn loginBtn--google">
-                Login with Google
-              </button>
+                  className = {classes.loginBtnGoogle}
+                  size='small'
+                  name="google"
+                  id="google"
+                 >
+                     {register.google}
+                </Button>
+
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
@@ -140,14 +128,20 @@ export default function FormDialog() {
               color="primary"
               className={classes.submit}
             >
-              Crear cuenta
+              {register.createAccount}
             </Button>
-            <Grid container justifyContent="flex-end">
+            <Grid container justifyContent="space-between">
               <Grid item>
-                <Link href="#" variant="body2">
-                  ¿Tenés cuenta? Logueate
-                </Link>
+                <Button component={Link} style={{textDecoration: 'none'}}  onClick={handleClickLogin}  disableRipple className={classes.buttonAccount} >
+                  {register.withoutAccount}
+                </Button>
               </Grid>
+              <Grid item>
+                <Button component={Link} style={{textDecoration: 'none'}}  onClick={handleClickLogin}  disableRipple className={classes.buttonAccount} >
+                  {register.withlogin}
+                </Button>
+              </Grid>
+
             </Grid>
           </form>
           </div>
