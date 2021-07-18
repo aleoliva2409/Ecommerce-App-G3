@@ -13,7 +13,7 @@ const initialState = {
 const orderReducer = (state=initialState, action) => {
   switch (action.type){
     case GET_ALL_ORDERS:
-      return {...state, orderList: action.payload} //* all orders list
+      return {...state, ordersList: action.payload} //* all orders list
     case GET_ORDER:
       return {...state, order: action.payload} //* one order details
     case UPDATE_ORDER:

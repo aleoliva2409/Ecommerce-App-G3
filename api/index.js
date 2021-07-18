@@ -1,6 +1,7 @@
 require('dotenv').config()
 const server = require("./src/app");
 const { sequelize } = require("./src/db")
+
 const initDb = require('./src/initDB')
 const orderInitTest = require("./src/ordersInitTest")
 
@@ -19,7 +20,7 @@ const connectDB = async() => {
     });
     initDb();
     setUser();
-    orderInitTest();
+    ordersInitTest();
   } catch (error) {
     console.error("Unable to connect to the database:", error);
   }

@@ -6,7 +6,7 @@ export const GET_ORDER = "GET_ORDER";
 
 export const getOrders = () => async (dispatch) => {
   try{
-    const { data } = await axios.get('/orders')
+    const { data } = await axios.get('/orders');
     dispatch({
       type: GET_ALL_ORDERS,
       payload: data,
