@@ -16,7 +16,7 @@ import {
 import {
   useState
 } from 'react';
-import { useStyles } from './OrderDetail.js';
+import { useStyles } from './OrderDetailStyle';
 
 //* Products Table
 const ProductsTable = ({productos}) => {
