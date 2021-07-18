@@ -1,3 +1,9 @@
+:root{
+  --primaryColor:#00BBC9;
+  --primaryColor30: rgba(0, 187, 201, .3);
+  --primaryColorDarker: #1ba1ab;
+}
+
 .container {
   min-height: 100vh;
   text-align: center;
