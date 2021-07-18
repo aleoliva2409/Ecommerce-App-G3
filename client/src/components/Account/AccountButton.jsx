@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
   root:{
     display: 'flex',
   },
+  label: {
+    fontSize: '0.9em'
+  },
   paper: {
     margin: theme.spacing(2),
     display: 'flex',
@@ -102,10 +105,25 @@ export default function FormDialog() {
                 />
               </Grid>
               <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Contraseña"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+                <button class="loginBtn loginBtn--google">
+                Login with Google
+              </button>
+              </Grid>
+              <Grid item xs={12}>
                 <FormControlLabel
+                  classes={{ label: classes.label }}
                   control={
                     <Checkbox value="allowExtraEmails"
-                      className={classes.checkboxx}
                       style ={{
                         color: "#00BBC9",
                       }}
