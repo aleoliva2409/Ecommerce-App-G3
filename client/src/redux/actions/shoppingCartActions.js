@@ -43,3 +43,12 @@ export const resetCart = () => async (dispatch) => {
   window.location.replace('http://localhost:3000/products')
   const {data} = await axios.post('/cart/add', {email: 'test@gmail.com', cartGuest: []} ) //hardcore x1000000000 hahahaha
 }
+
+export const goToCheckout = () => async (dispatch) => {
+  const productsInCart = JSON.parse(localStorage.getItem("cart"))
+  console.log(productsInCart)
+  const { data } = await axios.post('/checkout', { productsInCart })
+  console.log(data)
+  window.location = data.init_point
+
+}

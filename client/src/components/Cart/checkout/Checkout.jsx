@@ -1,13 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
 import { checkoutStyles } from './CheckoutStyles';
 import { Box, Container, Typography, Button, Link, makeStyles } from '@material-ui/core';
+import { goToCheckout } from '../../../redux/actions/shoppingCartActions';
 
 const useStyles = makeStyles(checkoutStyles);
 
 const Checkout = () => {
 
+  const dispatch = useDispatch()
+
   const styles = useStyles()
+
+  const handleGoToCheckout = () => dispatch(goToCheckout());
 
   return (
     <Container className={styles.root} maxWidth="lg">
@@ -17,7 +23,7 @@ const Checkout = () => {
         xxxxxxxxxxxxxxxxx
       </Box>
       <Box component="div">
-        <Button href="#" fullWidth={true} variant="contained">
+        <Button onClick={handleGoToCheckout} fullWidth={true} variant="contained">
           Checkout
         </Button>
       </Box>
