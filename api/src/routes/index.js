@@ -9,7 +9,7 @@ const categoryRouter = require('./category.routes');
 const userRouter = require('./user.routes');
 const orderRouter = require('./order.routes');
 const cartRouter = require('./cart.routes');
-const checkout = require ('./checkout.routes')
+// const checkout = require ('./checkout.routes')
 const protectedRouter = require('./protected.routes');
 
 

@@ -7,6 +7,7 @@ import HomePage from "../views/HomePage";
 import CartPage from "../views/CartPage";
 import Admin from "../views/Admin";
 import DashboardPage from "../views/DashboardPage";
+
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={HomePage} />

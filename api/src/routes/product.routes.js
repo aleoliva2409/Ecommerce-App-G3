@@ -8,6 +8,8 @@ const {
   deleteProduct,
   getProductsByCategory,
   addReview,
+  updateReview,
+  allReviews,
 } = require("../controllers/product.controller");
 
 const router = Router();
@@ -20,7 +22,8 @@ router.post("/", addProduct);
 router.put("/:id", updateProduct);
 router.delete("/:id", deleteProduct);
 
-//TODO: Task 54
-router.post("/:id/review", addReview);
+//TODO: Task 54,55
+router.post("/:idProduct/review", addReview);
+router.put("/:idProduct/review/:idReview", updateReview);
 
 module.exports = router;

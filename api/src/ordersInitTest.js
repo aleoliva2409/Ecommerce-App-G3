@@ -1,5 +1,5 @@
 const { Order, Product } = require("./db");
-const {Op} = require("sequelize");
+const { Op } = require("sequelize");
 
 const orders = [
   {
@@ -146,6 +146,6 @@ const ordersInitTest = async () => {
   } catch (e) {console.log(e)}
 }
 
-module.exports = {ordersInitTest};
+module.exports = ordersInitTest;
 
 
