@@ -1,5 +1,5 @@
-const { Orders, Product } = require("./db");
-const Order = require("./models/Order");
+const { Order, Product } = require("./db");
+const { Op } = require("sequelize");
 
 const orders = [
   {
