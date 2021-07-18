@@ -3,7 +3,7 @@ const server = require("./src/app");
 const { sequelize } = require("./src/db")
 
 const initDb = require('./src/initDB')
-const orderInitTest = require("./src/ordersInitTest")
+const ordersInitTest = require("./src/ordersInitTest")
 
 // TESTING USER
 const setUser = require('./src/UserInitTest');

@@ -1,5 +1,4 @@
-const { Order, Product } = require("./db");
-const { Op } = require("sequelize");
+const { Order } = require("./db");
 
 const orders = [
   {
@@ -107,7 +106,7 @@ const orders = [
     ],
   },
   {
-    orderState:"cart",
+    orderState:"processing",
     shippingState:"completed",
     shippingCost:600.99,
     shippingAddres:"coronel diaz 1000",
@@ -147,5 +146,3 @@ const ordersInitTest = async () => {
 }
 
 module.exports = ordersInitTest;
-
-
