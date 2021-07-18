@@ -3,6 +3,8 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const routes = require("./routes/index");
+const passport = require("passport");
+require('./auth/auth');
 // const portFrontCors = process.env.PORT_FRONT_CORS || 3000;
 // const baseUrl = process.env.BASE_URL;
 
@@ -30,7 +32,7 @@ server.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
-
+server.use(passport.initialize());
 server.use('/api', routes);
 
 server.use((err, req, res, next) => {
