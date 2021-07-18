@@ -10,12 +10,12 @@ const App = () => {
 	return (
     <div className="container">
     {
-      location.pathname !== "/admin" ||
-      location.pathname !== "/admin/dashboard" ||
-      location.pathname !== "/admin/dashboard/products"
+      location.pathname === "/admin/dashboard/products" ||
+      location.pathname === "/admin/dashboard" ||
+      location.pathname === "/admin"
       ?
-      <Navbar /> :
-      <></>
+      <></>:
+      <Navbar />
     }
 		<Routes />
 	</div>

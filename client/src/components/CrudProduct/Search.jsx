@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ProductsTable from './ProductsTable';
+import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
@@ -57,15 +58,19 @@ const Search = ({ products, state, setState }) => {
   };
 
   return (
-    <Box>
-      <TextField
-        id="search"
-        label="Search"
-        variant="outlined"
-        margin="normal"
-        onChange={handleSearch}
-        value={search}
-      />
+    <Grid>
+      <Typography variant="h5" color="initial">Lista de productos</Typography>
+      <Box>
+        <TextField
+          id="search"
+          label="Search"
+          variant="outlined"
+          margin="normal"
+          onChange={handleSearch}
+          value={search}
+          fullWidth
+        />
+      </Box>
       <ProductsTable products={paginations()} state={state} setState={setState}/>
       <Box display="flex" justifyContent="space-evenly" mt={1}>
         <IconButton aria-label="previous" onClick={prevPage} disabled={prevBtn()}>
@@ -75,7 +80,7 @@ const Search = ({ products, state, setState }) => {
           <NavigateNextIcon />
         </IconButton>
       </Box>
-    </Box>
+    </Grid>
   )
 }
 
