@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ProductsTable from './ProductsTable';
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
+import {Grid} from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
