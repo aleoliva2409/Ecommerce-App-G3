@@ -1,5 +1,4 @@
-const { Orders, Product } = require("./db");
-const Order = require("./models/Order");
+const { Order, Product } = require("./db");
 
 const orders = [
   {
@@ -74,7 +73,7 @@ const orders = [
   },
 ]
 
-const orderInitTest = async () => {
+const ordersInitTest = async () => {
   for(let i=0; i < orders; i++){
     let temp1 = Math.trunc(Math.random()*(240-1)+1);
     let temp2 = Math.trunc(Math.random()*(240-1)+1);
@@ -91,6 +90,6 @@ const orderInitTest = async () => {
   await Order.bulkCreate(orders);
 }
 
-module.exports = orderInitTest;
+module.exports = {ordersInitTest};
 
 

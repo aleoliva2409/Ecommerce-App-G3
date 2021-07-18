@@ -23,7 +23,7 @@ router.use("/categories", categoryRouter);
 router.use("/users", userRouter);
 router.use("/cart", cartRouter);
 router.use("/orders", orderRouter);
-router.use("/checkout", checkout);
+// router.use("/checkout", checkout);
 
 router.use("/users", passport.authenticate('jwt', { session: false }), protectedRouter);
 
