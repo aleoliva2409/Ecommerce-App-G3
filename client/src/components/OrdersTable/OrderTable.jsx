@@ -15,7 +15,11 @@ import {
   ExpandLess,
   ExpandMore
 } from '@material-ui/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getOrders,
+} from "../../redux/actions/ordersActions.js";
 import { useStyles } from './OrderTable.js';
 import OrderDetails from './OrderDetail/OrderDetail.jsx';
 
@@ -25,6 +29,14 @@ const RowsTable = (props) => {
   //* Collapsable controler
   const [isOpen, setIsOpen] = useState(false);
   const classes = useStyles();
+
+  const getTotal = () => {
+    let total = 0;
+    for(let i=0; i < props.cart.length; i++){
+      total += props.cart[i].price;
+    }
+    return total;
+  }
 
   return (
     <>
@@ -43,7 +55,7 @@ const RowsTable = (props) => {
         <TableCell
           className={classes.cells}
           align={"center"}
-          >1</TableCell>             {/* ID */}
+          >{props.id}</TableCell>             {/* ID */}
         <TableCell
           className={classes.cells}
           align={"center"}
@@ -54,25 +66,25 @@ const RowsTable = (props) => {
           className={classes.cells}
           align={"center"}
         >
-          Sebastian Garcia
+          {`${props.firstName} ${props.lastName}`}
         </TableCell>                               {/* NAME */}
         <TableCell
           className={classes.cells}
           align={"right"}
         >
-          $50000
+          {`$${getTotal()}`}
         </TableCell>                               {/* COST */}
         <TableCell
           className={classes.cells}
           align={"right"}
         >
-          Processing
+          {props.orderState}
         </TableCell>                               {/* ORDER STATE */}
         <TableCell
           className={classes.cells}
           align={"right"}
         >
-          Initial
+          {props.shippingState}
         </TableCell>                               {/* SHIPPING STATE*/}
       </TableRow>
       <TableRow
@@ -83,7 +95,7 @@ const RowsTable = (props) => {
           colSpan={7}
         >
           <Collapse in={isOpen} timeout={"auto"} unmountOnExit>
-            <OrderDetails></OrderDetails>
+            <OrderDetails order={props}></OrderDetails>
           </Collapse>
         </TableCell>
       </TableRow>
@@ -95,6 +107,12 @@ const RowsTable = (props) => {
 const OrdersTable = () => {
 
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const orders = useSelector(state => state.orders.ordersList);
+
+  useEffect(()=>{
+    dispatch(getOrders);
+  },[])
 
   return (
     <TableContainer component={Paper}>
@@ -124,7 +142,7 @@ const OrdersTable = () => {
         </TableHead>
         <TableBody>
           {
-            [1,1,1,1,1,1,1].map(()=><RowsTable/>)
+            orders.map(el=><RowsTable order={el}/>)
           }
         </TableBody>
       </Table>
