@@ -24,7 +24,7 @@ import { useStyles } from './OrderTableStyle.js';
 import OrderDetails from './OrderDetail/OrderDetail.jsx';
 
 //* Rows Table Generator
-const RowsTable = (props) => {
+const RowsTable = ({order}) => {
 
   //* Collapsable controler
   const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +32,8 @@ const RowsTable = (props) => {
 
   const getTotal = () => {
     let total = 0;
-    for(let i=0; i < props.cart.length; i++){
-      total += props.cart[i].price;
+    for(let i=0; i < order.cart.length; i++){
+      total += order.cart[i].price;
     }
     return total;
   }
@@ -55,18 +55,18 @@ const RowsTable = (props) => {
         <TableCell
           className={classes.cells}
           align={"center"}
-          >{props.id}</TableCell>             {/* ID */}
+          >{order.id}</TableCell>             {/* ID */}
         <TableCell
           className={classes.cells}
           align={"center"}
         >                          {/* DATE */}
-          28/09/1996
+          {order.updatedAt.split('T')[0].replace(/-/g,'/')}
         </TableCell>
         <TableCell
           className={classes.cells}
           align={"center"}
         >
-          {`${props.firstName} ${props.lastName}`}
+          {`${order.firstName} ${order.lastName}`}
         </TableCell>                               {/* NAME */}
         <TableCell
           className={classes.cells}
@@ -78,13 +78,13 @@ const RowsTable = (props) => {
           className={classes.cells}
           align={"right"}
         >
-          {props.orderState}
+          {order.orderState}
         </TableCell>                               {/* ORDER STATE */}
         <TableCell
           className={classes.cells}
           align={"right"}
         >
-          {props.shippingState}
+          {order.shippingState}
         </TableCell>                               {/* SHIPPING STATE*/}
       </TableRow>
       <TableRow
@@ -95,7 +95,7 @@ const RowsTable = (props) => {
           colSpan={7}
         >
           <Collapse in={isOpen} timeout={"auto"} unmountOnExit>
-            <OrderDetails order={props}></OrderDetails>
+            <OrderDetails order={order}></OrderDetails>
           </Collapse>
         </TableCell>
       </TableRow>
@@ -111,7 +111,7 @@ const OrdersTable = () => {
   const orders = useSelector(state => state.orders.ordersList);
 
   useEffect(()=>{
-    dispatch(getOrders);
+    dispatch(getOrders());
   },[])
 
   return (

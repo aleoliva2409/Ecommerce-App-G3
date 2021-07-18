@@ -14,9 +14,16 @@ import {
   TextareaAutosize
 } from '@material-ui/core';
 import {
+  useEffect,
   useState
 } from 'react';
 import { useStyles } from './OrderDetailStyle';
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getOrder,
+  updateOrder,
+} from "../../../redux/actions/ordersActions";
+
 
 //* Products Table
 const ProductsTable = ({productos}) => {
@@ -84,7 +91,7 @@ const ProductsTable = ({productos}) => {
             </TableCell>
           </TableHead>
           {
-            productos.map(producto => {
+            productos?.map(producto => {
               return (
                 <TableRow>
                   <TableCell
@@ -97,19 +104,19 @@ const ProductsTable = ({productos}) => {
                     align={"center"}
                     className={styles.productsTableCell}
                   >
-                    {producto.nombre}
+                    {producto.name}
                   </TableCell>
                   <TableCell
                     align={"center"}
                     className={styles.productsTableCell}
                   >
-                    {producto.cantidad}
+                    {producto.cant}
                   </TableCell>
                   <TableCell
                     align={"center"}
                     className={styles.productsTableCell}
                   >
-                    {producto.price}
+                    {`$${producto.price}`}
                   </TableCell>
                 </TableRow>
               )
@@ -127,7 +134,7 @@ const ProductsTable = ({productos}) => {
               align={"center"}
               className={styles.productsTableCell}
             >
-              {getTotal()}
+              {`$${getTotal()}`}
             </TableCell>
           </TableRow>
           </Table>
@@ -146,11 +153,13 @@ const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shipping
   const [shippingAddresLocal, setShippingAddresLocal ] = useState(shippingAddres);
   const [shippingCityLocal, setShippingCityLocal ] = useState(shippingCity);
   const [shippingZipLocal, setShippingZipLocal ] = useState(shippingZip);
+  const dispatch = useDispatch();
 
   const handleChange = (ev) => {
     switch(ev.target.name){
       case 'shippingState':
         setIsEditingOneElement(false,false,false,false);
+        dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
         setShippingStateLocal(ev.target.value);
       break;
       case 'shippingCost':
@@ -170,6 +179,7 @@ const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shipping
 
   const enterKey = (ev) => {
     if(ev.key === "Enter" && ev.target.value!=="") setIsEditingOneElement(false,false,false,false)
+    dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
   }
 
   return (
@@ -305,11 +315,13 @@ const Comments = ({id, orderState, comments, paymentDetails}) => {
   const [orderStateLocal, setOrderStateLocal] = useState(orderState);
   const [paymentDetailsLocal, setPaymentDetailsLocal] = useState(paymentDetails);
   const [commentsLocal, setCommentsLocal ] = useState(comments);
+  const dispatch = useDispatch();
 
   const handleChange = (ev) => {
     switch(ev.target.name){
       case 'orderState':
         setIsEditingOneElement(false,false,false,false);
+        dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
         setOrderStateLocal(ev.target.value);
       break;
       case 'paymentDetails':
@@ -323,6 +335,7 @@ const Comments = ({id, orderState, comments, paymentDetails}) => {
 
   const enterKey = (ev) => {
     if(ev.key === "Enter" && ev.target.value!=="") setIsEditingOneElement(false,false,false)
+    dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
   }
 
   return (
@@ -405,9 +418,16 @@ const Comments = ({id, orderState, comments, paymentDetails}) => {
 }
 
 //* OrderDetail Structure
-const OrderDetail = (props) => {
+const OrderDetail = ({order}) => {
 
   const styles = useStyles();
+  const dispatch = useDispatch();
+  const orderTemp = useSelector(state => state.orders.order);
+  const orderDetails = (orderTemp.id) ? orderTemp : order;
+
+  useEffect(()=>{
+    dispatch(getOrder(order.id))
+  },[dispatch])
 
   return (
     <Box
@@ -415,26 +435,26 @@ const OrderDetail = (props) => {
     >
       <Box>
         <Typography variant={"h4"}>Productos</Typography>
-        <ProductsTable productos={props.cart}/>
+        <ProductsTable productos={orderDetails.cart}/>
       </Box>
       <Box>
         <Typography variant={"h4"}>Datos de Envio</Typography>
         <ShippingData
-          id={props.id}
-          shippingState= {props.shippingState}
-          shippingCost = {props.shippingCost}
-          shippingAddres= {props.shippingAddres}
-          shippingZip= {props.shippingZip}
-          shippingCity= {props.shippingCity}
+          id={orderDetails.id}
+          shippingState= {orderDetails.shippingState}
+          shippingCost = {orderDetails.shippingCost}
+          shippingAddres= {orderDetails.shippingAddres}
+          shippingZip= {orderDetails.shippingZip}
+          shippingCity= {orderDetails.shippingCity}
         ></ShippingData>
       </Box>
       <Box>
         <Typography variant={"h4"}>Pago y Coment</Typography>
         <Comments
-          id={props.id}
-          orderState={props.orderState}
-          paymentDetails={props.paymentDetails}
-          comments={props.comments}
+          id={orderDetails.id}
+          orderState={orderDetails.orderState}
+          paymentDetails={orderDetails.paymentDetails}
+          comments={orderDetails.comments}
         ></Comments>
       </Box>
     </Box>
