@@ -12,7 +12,7 @@ import { StyledTableCell, StyledTableRow, useStyles } from "./ProductsTableStyle
 import { useDispatch } from 'react-redux';
 import { deleteProduct, getProductDetails } from "../../redux/actions/productActions";
 
-const ProductsTable = ({ products, setState }) => {
+const ProductsTable = ({ products, state, setState }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   // ? usar selector en AddForm
