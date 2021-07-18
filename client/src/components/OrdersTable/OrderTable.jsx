@@ -72,7 +72,7 @@ const RowsTable = ({order}) => {
           className={classes.cells}
           align={"right"}
         >
-          {/* {`$${getTotal()}`} */}
+          {`$${getTotal()}`}
         </TableCell>                               {/* COST */}
         <TableCell
           className={classes.cells}
@@ -112,7 +112,6 @@ const OrdersTable = () => {
 
   useEffect(()=>{
     dispatch(getOrders());
-    console.log(orders);
   },[])
 
   return (

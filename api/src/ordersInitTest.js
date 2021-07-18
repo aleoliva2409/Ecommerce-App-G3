@@ -1,4 +1,5 @@
 const { Order, Product } = require("./db");
+const {Op} = require("sequelize");
 
 const orders = [
   {
@@ -13,6 +14,12 @@ const orders = [
     firstName:"camila",
     lastName:"bonilla",
     cart:[
+      {
+        id: 1,
+        name: "Colchón y Sommier Suavegom Merit 80x190",
+        cant: 2,
+        price: 35800.00
+      }
     ],
   },
   {
@@ -27,6 +34,24 @@ const orders = [
     firstName:"felipe",
     lastName:"alvarez",
     cart:[
+      {
+        id: 1,
+        name: "Colchón y Sommier Suavegom Merit 80x190",
+        cant: 2,
+        price: 35800.00
+      },
+      {
+        id: 2,
+        name: "Colchón y Sommier King Koil Brighton 200x200",
+        cant: 1,
+        price: 158100.00
+      },
+      {
+        id: 3,
+        name: "Colchón y Sommier Elegante Señorial 180x200",
+        cant: 1,
+        price: 86000.00
+      }
     ],
   },
   {
@@ -41,6 +66,18 @@ const orders = [
     firstName:"camilo",
     lastName:"moralez",
     cart:[
+      {
+        id: 1,
+        name: "Colchón y Sommier Suavegom Merit 80x190",
+        cant: 2,
+        price: 35800.00
+      },
+      {
+        id: 3,
+        name: "Colchón y Sommier Elegante Señorial 180x200",
+        cant: 1,
+        price: 86000.00
+      }
     ],
   },
   {
@@ -55,6 +92,18 @@ const orders = [
     firstName:"jaime",
     lastName:"angulo",
     cart:[
+      {
+        id: 2,
+        name: "Colchón y Sommier King Koil Brighton 200x200",
+        cant: 1,
+        price: 158100.00
+      },
+      {
+        id: 3,
+        name: "Colchón y Sommier Elegante Señorial 180x200",
+        cant: 1,
+        price: 86000.00
+      }
     ],
   },
   {
@@ -69,25 +118,32 @@ const orders = [
     firstName:"mariana",
     lastName:"corredor",
     cart:[
+      {
+        id: 1,
+        name: "Colchón y Sommier Suavegom Merit 80x190",
+        cant: 2,
+        price: 35800.00
+      },
+      {
+        id: 2,
+        name: "Colchón y Sommier King Koil Brighton 200x200",
+        cant: 1,
+        price: 158100.00
+      },
+      {
+        id: 3,
+        name: "Colchón y Sommier Elegante Señorial 180x200",
+        cant: 1,
+        price: 86000.00
+      }
     ],
   },
 ]
 
 const ordersInitTest = async () => {
-  for(let i=0; i < orders; i++){
-    let temp1 = Math.trunc(Math.random()*(240-1)+1);
-    let temp2 = Math.trunc(Math.random()*(240-1)+1);
-    let temp3 = Math.trunc(Math.random()*(240-1)+1);
-    let products = await Product.findAll({
-      where: {
-        id: {
-            [Op.or]: [temp1, temp2, temp3],
-        }
-    }
-  })
-  orders[i].cart = products;
-  }
-  await Order.bulkCreate(orders);
+  try{
+    await Order.bulkCreate(orders);
+  } catch (e) {console.log(e)}
 }
 
 module.exports = {ordersInitTest};
