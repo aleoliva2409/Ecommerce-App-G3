@@ -9,11 +9,9 @@ const useStyles = makeStyles(categoriesShow_Delete)
 
 const ShowAndDeleteCategories = () => {
   const styles = useStyles()
-
   const dispatch = useDispatch()
-
   const categoriesList = useSelector(state => state.categories.categories)
-
+  const categoriesList = useSelector(state => state.categories.categories)
   const reloaded = useSelector(state => state.categories.reloaded)
 
   useEffect(() => {

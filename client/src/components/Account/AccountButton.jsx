@@ -3,50 +3,11 @@ import { makeStyles, FormControlLabel, Typography, Avatar, Checkbox, Grid, Link,
 import PersonIcon from '@material-ui/icons/Person';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
-const useStyles = makeStyles((theme) => ({
-  root:{
-    display: 'flex',
-  },
-  label: {
-    fontSize: '0.9em'
-  },
-  paper: {
-    margin: theme.spacing(2),
-    display: 'flex',
-    maxWidth: '400px',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: '#00BBC9',
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
-  },
-  button:{
-    color: '#FFF'
-  },
-  submit: {
-    backgroundColor: '#00BBC9',
-    margin: theme.spacing(3, 0, 2),
-    '&:hover':{
-      backgroundColor: '#232020 ',
-    },
-  },
-  googleBtn: {
-    backgroundColor: '#00BBC9',
-    margin: `${theme.spacing(1)}px auto`,
-    '&:hover':{
-      backgroundColor: '#232020 ',
-    },
-  }
-}));
+import Typography from '@material-ui/core/Typography';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { useStyles } from './AccountStyle';
 
-
-
-export default function FormDialog() {
+export default function FormDialog({ field, setRegister, register }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -56,6 +17,13 @@ export default function FormDialog() {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  //Form
+  const handleSubmit = e => {
+    e.preventDefault();
+    const { email, password } = e.target.elements;
+    console.log({ email: email.value, password: password.value });
   };
 
   return (
@@ -70,11 +38,11 @@ export default function FormDialog() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component='h1' variant='h5'>
-              Nuevo Cliente
+              {field.registro}
             </Typography>
-            <form className={classes.form} noValidate>
+            <form className={classes.form} noValidate onSubmit={handleSubmit}>
               <Grid container spacing={2}>
-                <Grid item xs={12} >
+                <Grid item xs={12}>
                   <TextField
                     variant='outlined'
                     required
@@ -97,40 +65,62 @@ export default function FormDialog() {
                     autoComplete='current-password'
                   />
                 </Grid>
-                <Grid item xs={12}>
-                  <TextField
+                <Grid
+                  item
+                  xs={12}
+                  style={{
+                    textAlign: 'center' // this does the magic
+                  }}
+                >
+                  <Button
                     variant='outlined'
-                    required
-                    fullWidth
-                    name='password'
-                    label='Repetir Contraseña'
-                    type='password'
-                    id='password'
-                    autoComplete='current-password'
-                  />
-                  <Button color='primary' variant='contained' className={classes.googleBtn}>
-                    Registrarse con Google
+                    className={classes.loginBtnGoogle}
+                    size='small'
+                    name='google'
+                    id='google'
+                  >
+                    {field.google}
                   </Button>
                 </Grid>
                 <Grid item xs={12}>
-                  <FormControlLabel classes={{ label: classes.label }} control={
-                      <Checkbox value='allowExtraEmails'
-                        style ={{
-                          color: '#00BBC9',
+                  <FormControlLabel
+                    classes={{ label: classes.label }}
+                    control={
+                      <Checkbox
+                        value='allowExtraEmails'
+                        style={{
+                          color: '#00BBC9'
                         }}
-                      />}
+                      />
+                    }
                     label='Deseo recibir publicidad y promociones por email'
                   />
                 </Grid>
               </Grid>
               <Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>
-                Crear cuenta
+                {field.createAccount}
               </Button>
-              <Grid container justifyContent='flex-end'>
+              <Grid container justifyContent='space-between'>
                 <Grid item>
-                  <Link href='#' variant='body2'>
-                    ¿Tenés cuenta? Logueate
-                  </Link>
+                  <Button
+                    component={Link}
+                    style={{ textDecoration: 'none' }}
+                    onClick={() => setRegister(!register)}
+                    disableRipple
+                    className={classes.buttonAccount}
+                  >
+                    {field.withoutAccount}
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button
+                    component={Link}
+                    style={{ textDecoration: 'none' }}
+                    disableRipple
+                    className={classes.buttonAccount}
+                  >
+                    {field.withlogin}
+                  </Button>
                 </Grid>
               </Grid>
             </form>
