@@ -60,7 +60,6 @@ const Search = ({ products, state, setState }) => {
 
   return (
     <Grid>
-      <Typography variant="h5" color="initial">Lista de productos</Typography>
       <Box>
         <TextField
           id="search"
@@ -69,7 +68,7 @@ const Search = ({ products, state, setState }) => {
           margin="normal"
           onChange={handleSearch}
           value={search}
-          fullWidth
+
         />
       </Box>
       <ProductsTable products={paginations()} state={state} setState={setState}/>
