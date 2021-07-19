@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import AccountButton from './AccountButton';
+// import AccountButton from './AccountButton';
 
 const ValuesAccount = () => {
 
@@ -26,7 +26,7 @@ const ValuesAccount = () => {
 
   return (
     <>
-        <AccountButton field={data} setRegister={setRegister} register={register}/>
+        {/* <AccountButton field={data} setRegister={setRegister} register={register}/> */}
     </>
   )
 }
