@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { useDispatch } from 'react-redux'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,11 +12,22 @@ import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+// * {Actions}
+import { userActions } from './../../redux/actions/userActions';
+
+// * Style
 import { useStyles } from './AccountStyle';
 
 export default function FormDialog({ field, setRegister, register }) {
+  const dispatch = useDispatch()
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+
+  const [open, setOpen] = useState(false);
+  const [valuesForm,SetValuesForm] = useState({
+    email: '',
+    password: '',
+    submitted: false
+  })
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -25,11 +37,23 @@ export default function FormDialog({ field, setRegister, register }) {
     setOpen(false);
   };
 
-  //Form
+  //onChange Handle
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    SetValuesForm({ [name]: value });
+    console.log(valuesForm);
+  };
+
+  //Form Submit
   const handleSubmit = e => {
     e.preventDefault();
-    const { email, password } = e.target.elements;
-    console.log({ email: email.value, password: password.value });
+    SetValuesForm({submitted: true });
+    const { email, password } = valuesForm;
+    //const { dispatch } = this.props;
+    if (email && password) {
+      dispatch(userActions.login(email, password));
+
+  }
   };
 
   return (
@@ -62,6 +86,8 @@ export default function FormDialog({ field, setRegister, register }) {
                     label='Correo electrónico'
                     name='email'
                     autoComplete='email'
+                    value={valuesForm.name}
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -74,6 +100,8 @@ export default function FormDialog({ field, setRegister, register }) {
                     type='password'
                     id='password'
                     autoComplete='current-password'
+                    value={valuesForm.password}
+                    onChange={handleChange}
                   />
                 </Grid>
                 <Grid
