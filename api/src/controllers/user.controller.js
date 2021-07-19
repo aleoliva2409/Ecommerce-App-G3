@@ -1,5 +1,7 @@
 const { User, Order } = require("../db");
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const passport = require("passport");
 // const Op = require("sequelize").Op;
 
 const getAllUsers = async (req, res, next) => {
@@ -87,11 +89,43 @@ const getOrdersByUser = async (req, res) => {
   }
 }
 
+const login = async (req, res, next) => {
+  passport.authenticate('login', async (err, user, info) => {
+    try {
+      if (err) return next(err);
+
+      req.login(user, { session: false }, async (error) => {
+        if (error) return next(error);
+
+        const payload = {
+          id: user.id,
+          exp: Math.floor(Date.now() / 1000) + (60 * 60), //1h
+          email: user.email
+        }
+
+        const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);
+        return res.json({ token });
+      })
+    } catch (err) {
+      return next(err)
+    }
+  })(req, res, next)
+}
+
+const example = (req, res, next) => {
+  res.json({
+    message: 'You made it to the secure route',
+    user: req.user,
+    //token: req.query.token
+  })
+}
 
 module.exports = {
   addUser,
   updateUser,
   deleteUser,
   getAllUsers,
-  getOrdersByUser
+  getOrdersByUser,
+  login,
+  example,
 };

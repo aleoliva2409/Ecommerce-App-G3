@@ -62,7 +62,7 @@ module.exports = (sequelize) => {
         type: DataTypes.ARRAY(DataTypes.JSON),
       }
     },
-    { timestamps: false }
+    { timestamps: true }
     ,
   );
 };

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useSelector } from "react-redux";
-import Container from '@material-ui/core/Container'
 import AddProduct from './AddProduct';
 import Search from './Search.jsx';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 
 const CrudProduct = ({ products, categories, state, setState }) => {
 
@@ -12,18 +12,13 @@ const CrudProduct = ({ products, categories, state, setState }) => {
 
 
   return (
-      <Container>
-        <Grid container>
-          <Grid item xl={6} xs={12}>
-            <Typography variant="h5" color="initial">Lista de productos</Typography>
-            <Search products={products} state={state} setState={setState}/>
-          </Grid>
-          <Grid item xl={6} xs={12}>
-            <Typography variant="h5" color="initial">Agregar nuevo producto</Typography>
-            <AddProduct btnState={btn} btnChange={setBtn} product={productUpdate} categories={categories} state={state} setState={setState}/>
-          </Grid>
-        </Grid>
-      </Container>
+    <Grid container direction="column" justifyContent="center" alignItems="center" >
+      <Typography variant="h5" color="initial">Lista de productos</Typography>
+      <AddProduct btnState={btn} btnChange={setBtn} product={productUpdate} categories={categories} state={state} setState={setState} />
+      <Grid item xl={10} lg={10} md={12} sm={12} xs={12} container direction="row" >
+        <Search products={products} state={state} setState={setState}/>
+      </Grid>
+    </Grid>
   )
 }
 

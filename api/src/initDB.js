@@ -41,4 +41,4 @@ const initDb = async () => {
   })
 }
 
-module.exports = { initDb }
+module.exports = initDb

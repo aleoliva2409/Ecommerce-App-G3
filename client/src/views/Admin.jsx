@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CrudProduct from '../components/CrudProduct/CrudProduct'
 import { getProducts } from '../redux/actions/productActions'
 import { getCategories } from '../redux/actions/categoriesActions';
+import Table from '../components/OrdersTable/OrderTable';
 
 const Admin = () => {
 
@@ -26,6 +27,7 @@ const Admin = () => {
   return (
     <div>
       <CrudProduct products={products} categories={categories} state={render} setState={setRender}/>
+      <Table />
     </div>
   )
 }
