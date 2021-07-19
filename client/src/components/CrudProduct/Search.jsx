@@ -7,10 +7,17 @@ import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '200px',
+  },
+
+}));
 
 const Search = ({ products, state, setState }) => {
-
+  const classes = useStyles();
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("")
 
@@ -59,8 +66,8 @@ const Search = ({ products, state, setState }) => {
   };
 
   return (
-    <Grid>
-      <Box>
+    <Grid >
+      <Box className={classes.root}>
         <TextField
           id="search"
           label="Search"

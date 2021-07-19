@@ -14,8 +14,8 @@ const CrudProduct = ({ products, categories, state, setState }) => {
   return (
     <Grid container direction="column" justifyContent="center" alignItems="center" >
       <Typography variant="h5" color="initial">Lista de productos</Typography>
+      <AddProduct btnState={btn} btnChange={setBtn} product={productUpdate} categories={categories} state={state} setState={setState} />
       <Grid item xl={10} lg={10} md={12} sm={12} xs={12} container direction="row" >
-        <AddProduct btnState={btn} btnChange={setBtn} product={productUpdate} categories={categories} state={state} setState={setState} />
         <Search products={products} state={state} setState={setState}/>
       </Grid>
     </Grid>
