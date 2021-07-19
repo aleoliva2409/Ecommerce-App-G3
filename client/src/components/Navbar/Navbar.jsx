@@ -14,7 +14,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShortLogo from './../../assets/img/Logos/short-logo.png';
 import LongLogo from './../../assets/img/Logos/long-logo.png';
 import SearchBar from './SearchBar/SearchBar';
-import AccountButton from '../Account/AccountButton';
+import ValuesAccount from '../Account/ValuesAccount';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import { useMediaQuery } from '@material-ui/core';
@@ -128,7 +128,7 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
 
       <MenuItem >
-        <AccountButton />
+        <ValuesAccount />
       </MenuItem>
     </Menu>
 
@@ -191,7 +191,7 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </Link>
-          <AccountButton className={classes.linkDesktop}/>
+          <ValuesAccount className={classes.linkDesktop}/>
 
           </div>
           <div className={classes.sectionMobile}>
