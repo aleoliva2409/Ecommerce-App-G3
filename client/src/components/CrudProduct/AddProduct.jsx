@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 import { TextField, Select, MenuItem, Button, Box, FormControl } from "@material-ui/core";
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import AddIcon from '@material-ui/icons/Add';
 import useStyles from "./AddProductStyle";
 import { useDispatch } from "react-redux";
 import { updateProduct, addProduct } from "../../redux/actions/productActions";
 
 const AddForm = ({ product, btnState, btnChange, categories, state, setState }) => {
   const classes = useStyles();
-
   const dispatch = useDispatch();
 
+  //------Changes
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  //------End Changes
   const [formProduct, setFormProduct] = useState({
     name: "",
     size: "",
@@ -63,7 +75,19 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
   }
 
   return (
-    <FormControl>
+    <>
+      <Button
+        variant='text'
+        onClick={handleClickOpen}
+        variant="outlined"
+        className={classes.buttonAddProduct}
+        startIcon={<AddIcon />}
+      >
+       Agregar producto
+      </Button>
+    <Dialog open={open} onClose={handleClose}>
+      <DialogContent  className={classes.formAddProduct} >
+        <FormControl>
       <TextField
         id="name"
         name="name"
@@ -172,7 +196,9 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
         }
       </Box>
     </FormControl>
-
+    </DialogContent>
+  </Dialog>
+  </>
   );
 };
 

@@ -106,7 +106,7 @@ const orders = [
     ],
   },
   {
-    orderState:"processing",
+    orderState:"completed",
     shippingState:"completed",
     shippingCost:600.99,
     shippingAddres:"coronel diaz 1000",
