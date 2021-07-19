@@ -1,20 +1,34 @@
 export const cartStyle = ({ breakpoints, spacing, theme }) => ({
   root: {
+    display: "grid",
+    gridTemplateRows: "auto auto auto",
+    gridTemplateColumns: "1fr auto",
+    gridGap: spacing(1),
+    [breakpoints.down("md")]: {
+      gridTemplateRows: "1fr auto auto",
+      gridTemplateColumns: "1fr",
+    }
+  },
+  cardsContainer: {
+    gridColumn: "1/2",
+    gridRow: "1/3",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
   },
   cardItem: {
     backgroundColor: "white",
     display: "grid",
-    gridTemplateRows: "repeat(4, auto)",
-    margin: spacing(1),
+    gridTemplateColumns: "repeat(3, 1fr)",
     padding: `${spacing(2)}px 0`,
+    marginTop: spacing(1),
     borderRadius: "10px",
-    [breakpoints.up("md")]: {
+    maxHeight: "15rem",
+    [breakpoints.down("md")]: {
       display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
-      gridTemplateRows: "auto",
+      gridTemplateRows: "repeat(4, 1fr)",
+      gridTemplateColumns: "auto",
+      maxHeight: "20rem",
       border: "solid 1px #cccccc",
       flexDirection: "row",
       justifyContent: "space-around",
@@ -28,16 +42,18 @@ export const cartStyle = ({ breakpoints, spacing, theme }) => ({
     paddingBottom: spacing(1)
   },
   img: {
-    width: "50%",
-    [breakpoints.up("md")]: {
-      width: "100%",
-    }
+    width: "auto",
+    height: "8rem",
   },
   priceQuantity: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     alignItems: "center",
     margin: spacing(1),
+    [breakpoints.up("md")]: {
+      display: "flex",
+      flexDirection: "column",
+    }
   },
   price: {
     gridColumn: "1/2",
@@ -53,15 +69,26 @@ export const cartStyle = ({ breakpoints, spacing, theme }) => ({
   deleteForever: {
     backgroundColor: "#FF6868",
     border: "solid 1px #cccccc",
+    borderRadius: "10px",
     width: "100%",
+    gridColumn: "1/2",
+    gridRow: "3/4",
+    justifySelf: "center",
     "&:hover": {
       backgroundColor: "#D22626",
     }
+  },
+  checkout: {
+    gridColumn: "2/3",
+    gridRow: "1/2",
   },
   clearItem: {
     backgroundColor: "#FF6868",
     "&:hover": {
       backgroundColor: "#D22626",
+    },
+    [breakpoints.up("md")]: {
+      gridColumn: "1/13"
     }
   }
 })

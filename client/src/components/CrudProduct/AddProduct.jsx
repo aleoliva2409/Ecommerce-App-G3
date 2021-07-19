@@ -129,7 +129,7 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
       <TextField
         id="price"
         name="price"
-        label="Price"
+        label="Precio"
         variant="outlined"
         margin="normal"
         className={classes.textField}

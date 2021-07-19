@@ -32,35 +32,37 @@ const Cart = () => {
   }
   return (
     <Container className={styles.root}>
-      {
-        cartItems.map(item => (
-            <Grid container className={styles.cardItem}>
-              <Box component="div">
-                <Typography className={styles.name} variant="h4">{item.name}</Typography>
-              </Box>
-              <Box component="div">
-                <Box component="img" className={styles.img} src={item.image[0]} />
-              </Box>
-              <Box className={styles.priceQuantity} component="div">
-                <Typography className={styles.price} variant="h4">$ {item.price}</Typography>
-                <ButtonGroup color={'primary'} orientation={'horizontal'} className={styles.quantityController}>
-                  <Button onClick={()=>setAmount(item,-1)} disabled={(item.qty===1)? true : false}>
-                    <Remove/>
-                  </Button>
-                  <Typography className={styles.quantity} variant="overline">
-                    {item.qty}
-                  </Typography>
-                  <Button onClick={()=>setAmount(item,1)} disabled={(item.stock===item.qty) ? true : false}>
-                    <Add/>
-                  </Button>
-                </ButtonGroup>
-              </Box>
-              <Button className={styles.clearItem} onClick={()=>remove(item)}>
-                <ClearIcon/>
-              </Button>
-            </Grid>
-        ))}
-        <Checkout />
+      <Box component="div" className={styles.cardsContainer}>
+        {
+          cartItems.map(item => (
+              <Grid container className={styles.cardItem}>
+                <Box component="div">
+                  <Typography className={styles.name} variant="h4">{item.name}</Typography>
+                </Box>
+                <Box component="div">
+                  <Box component="img" className={styles.img} src={item.image[0]} />
+                </Box>
+                <Box className={styles.priceQuantity} component="div">
+                  <Typography className={styles.price} variant="h4">$ {item.price}</Typography>
+                  <ButtonGroup color={'primary'} orientation={'horizontal'} className={styles.quantityController}>
+                    <Button onClick={()=>setAmount(item,-1)} disabled={(item.qty===1)? true : false}>
+                      <Remove/>
+                    </Button>
+                    <Typography className={styles.quantity} variant="overline">
+                      {item.qty}
+                    </Typography>
+                    <Button onClick={()=>setAmount(item,1)} disabled={(item.stock===item.qty) ? true : false}>
+                      <Add/>
+                    </Button>
+                  </ButtonGroup>
+                </Box>
+                <Button className={styles.clearItem} onClick={()=>remove(item)}>
+                  <ClearIcon/>
+                </Button>
+              </Grid>
+          ))}
+        </Box>
+        <Checkout className={styles.checkout} />
         <Button className={styles.deleteForever} onClick={emptyCart}>
           <DeleteForeverIcon fontSize="large"/>
         </Button>

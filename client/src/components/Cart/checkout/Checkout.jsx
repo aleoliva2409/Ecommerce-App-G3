@@ -16,7 +16,7 @@ const Checkout = () => {
   const handleGoToCheckout = () => dispatch(goToCheckout());
 
   return (
-    <Container className={styles.root} maxWidth="lg">
+    <Box component="div" className={styles.root} maxWidth="lg">
       <Box component="div">
         <Typography variant="h3">Total:</Typography>
         {/* //! MISSING TOTAL PRICE */}
@@ -28,11 +28,11 @@ const Checkout = () => {
         </Button>
       </Box>
       <Box component="div">
-        <Link component={RouterLink} to="/products">
-          <Typography paragraph={true}>Seguir Comprando</Typography>
+        <Link component={RouterLink} color="inherit" className={styles.linkContainer} to="/products">
+          <Typography className={styles.link} paragraph={true}>SEGUIR COMPRANDO</Typography>
         </Link>
       </Box>
-    </Container>
+    </Box>
   )
 }
 
