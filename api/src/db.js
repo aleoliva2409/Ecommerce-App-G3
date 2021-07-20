@@ -75,7 +75,6 @@ Order.belongsTo(User);
 User.belongsToMany(Product, { through: "wishlist" });
 Product.belongsToMany(User, { through: "wishlist" });
 
-
 module.exports = {
   ...sequelize.models,
   sequelize,
