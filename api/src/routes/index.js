@@ -9,8 +9,9 @@ const categoryRouter = require('./category.routes');
 const userRouter = require('./user.routes');
 const orderRouter = require('./order.routes');
 const cartRouter = require('./cart.routes');
-const checkout = require ('./checkout.routes')
+const checkout = require('./checkout.routes')
 const protectedRouter = require('./protected.routes');
+const wishlist = require('./wishlist.routes');
 
 
 const router = Router();
@@ -27,5 +28,6 @@ router.use("/checkout", checkout);
 
 router.use("/users", passport.authenticate('jwt', { session: false }), protectedRouter);
 
+router.use("/wishlist", wishlist);
 
 module.exports = router;
