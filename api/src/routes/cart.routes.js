@@ -1,11 +1,11 @@
 const { Router } = require("express");
-const { addCart, getCartAll } = require("../controllers/cart.controller.js");
-const { route } = require("./order.routes.js");
+const { addCart, getCartAll , getCartAllByUser} = require("../controllers/cart.controller.js");
 
 const router = Router();
 
 router.get('/', getCartAll);
 router.post('/add', addCart);
+router.get('/user',getCartAllByUser);
 
 
 module.exports = router;
