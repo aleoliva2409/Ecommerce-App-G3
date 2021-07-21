@@ -112,7 +112,7 @@ const OrdersTable = () => {
 
   useEffect(()=>{
     dispatch(getOrders());
-  },[])
+  },[dispatch])
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
