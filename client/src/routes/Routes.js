@@ -2,7 +2,6 @@ import { Switch, Route } from "react-router-dom";
 import CataloguePage from "../views/CataloguePage";
 import SearchPage from "../views/SearchPage";
 import ProductPage from "../views/ProductPage";
-// import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
 import HomePage from "../views/HomePage";
 import CartPage from "../views/CartPage";
 import DashboardPage from "../views/DashboardPage";
@@ -15,7 +14,6 @@ const Routes = () => (
     <Route exact path="/cart" component={CartPage} />
     <Route path="/products/:id" component={ProductPage} />
     <Route path="/admin/dashboard" component={DashboardPage} />
-    {/* <Route path="/categories" component={Categories} /> */}
   </Switch>
 );
 
