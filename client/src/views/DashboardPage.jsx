@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import CrudProduct from "../components/CrudProduct/CrudProduct";
 import Table from '../components/OrdersTable/OrderTable';
+import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
 import { getProducts } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import Dashboard from "../components/Dashboard/Dashboard";
@@ -42,6 +43,16 @@ const DashboardPage = () => {
       case "/admin/dashboard/orders":
         return (
           <Table />
+        )
+
+      case "/admin/dashboard/categories":
+        return (
+          <Categories />
+        )
+
+      case "/admin/dashboard/promote":
+        return (
+          <></>
         )
 
       default:

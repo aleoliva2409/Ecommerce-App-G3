@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ProductsTable from './ProductsTable';
+import AddProduct from './AddProduct';
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
@@ -7,17 +8,16 @@ import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: '200px',
   },
 
 }));
 
-const Search = ({ products, state, setState }) => {
+const Search = ({ products, product, state, setState, categories }) => {
   const classes = useStyles();
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("")
@@ -69,13 +69,11 @@ const Search = ({ products, state, setState }) => {
   return (
     <Grid container>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <Typography variant="h5" color="initial">Lista de productos</Typography>
+        <Typography variant="h4" color="initial">Lista de productos</Typography>
       </Grid>
       <Grid container direction="row" justifyContent="center" alignItems="center">
         <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
-          <Button variant="contained" color="primary" size="large">
-            Agregar producto
-          </Button>
+          <AddProduct product={product} categories={categories} state={state} setState={setState} />
         </Grid>
         <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
           <TextField

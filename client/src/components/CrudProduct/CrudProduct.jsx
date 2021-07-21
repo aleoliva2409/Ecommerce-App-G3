@@ -1,9 +1,7 @@
 import React from 'react'
 import { useSelector } from "react-redux";
-import AddProduct from './AddProduct';
 import Search from './Search.jsx';
 import { Grid } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
 
 const CrudProduct = ({ products, categories, state, setState }) => {
 
@@ -13,10 +11,8 @@ const CrudProduct = ({ products, categories, state, setState }) => {
 
   return (
     <Grid container direction="column" justifyContent="center" alignItems="center" >
-      <Typography variant="h5" color="initial">Lista de productos</Typography>
-      <AddProduct btnState={btn} btnChange={setBtn} product={productUpdate} categories={categories} state={state} setState={setState} />
       <Grid item xl={10} lg={10} md={12} sm={12} xs={12} container direction="row" >
-        <Search products={products} state={state} setState={setState}/>
+        <Search products={products} state={state} setState={setState} product={productUpdate} categories={categories}/>
       </Grid>
     </Grid>
   )
