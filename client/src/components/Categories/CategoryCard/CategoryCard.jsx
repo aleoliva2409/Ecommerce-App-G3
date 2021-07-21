@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Typography, Button, Snackbar, Modal } from "@material-ui/core";
+import { Typography, Button, Snackbar, Modal, IconButton } from "@material-ui/core";
+import { Close } from '@material-ui/icons';
 import { useDispatch, useSelector } from "react-redux";
 import { delCategory } from "../../../redux/actions/categoriesActions";
 import MuiAlert from "@material-ui/lab/Alert";
@@ -8,11 +9,11 @@ import useStyles from "./CategoryCardStyles";  // styles file already import
   function rand() {
     return Math.round(Math.random() * 20) - 10;
   }
-  
+
   function getModalStyle() {
     const top = 50 + rand();
     const left = 50 + rand();
-  
+
     return {
       top: `${top}%`,
       left: `${left}%`,
@@ -52,7 +53,7 @@ const CategoryCard = ({ name, id, image, description }) => {
     deleteCategory()
   }
 
-  
+
 // modal para confirmacion:
 
 const [modalStyle] = useState(getModalStyle);
@@ -71,20 +72,20 @@ const handleOpen = () => {
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
-      <h2>DELETING {name}</h2>
-      <h2>ARE YOU SURE?</h2>
-      <Button onClick={combineClick}>YES</Button>
-      <Button onClick={handleClose}>NO</Button>
+      <h2 className={classes.modalTitle}>DELETING {name}</h2>
+      <h2 className={classes.modalTitle}>ARE YOU SURE?</h2>
+      <Button variant={"outlined"} className={classes.buttonOutlinedColorRed} onClick={combineClick}>YES</Button>
+      <Button variant={"outlined"} className={classes.buttonOutlined} onClick={handleClose}>NO</Button>
     </div>
   );
 
   return (
-    <div>
+    <div className={classes.cardContainer}>
       <>
-        <Typography>{name}</Typography>
-        <Typography>{description}</Typography>
+        <IconButton onClick={handleOpen} className={classes.close}><Close />  </IconButton>
+        <Typography variant={"h4"} className={classes.title}>{name}</Typography>
+        <Typography variant={"subtitle2"} className={classes.description}>{description}</Typography>
         <Typography>{image}</Typography>
-        <Button onClick={handleOpen}>X</Button>
         <Modal
         open={open}
         onClose={handleClose}

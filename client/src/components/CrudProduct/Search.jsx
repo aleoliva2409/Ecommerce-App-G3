@@ -8,10 +8,17 @@ import IconButton from '@material-ui/core/IconButton'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '200px',
+  },
+
+}));
 
 const Search = ({ products, state, setState }) => {
-
+  const classes = useStyles();
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("")
 
