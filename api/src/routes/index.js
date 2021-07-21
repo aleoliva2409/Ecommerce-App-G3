@@ -11,6 +11,7 @@ const orderRouter = require('./order.routes');
 const cartRouter = require('./cart.routes');
 const checkout = require('./checkout.routes')
 const protectedRouter = require('./protected.routes');
+const authRouter = require('./auth.routes');
 const wishlist = require('./wishlist.routes');
 
 
@@ -25,7 +26,7 @@ router.use("/users", userRouter);
 router.use("/cart", cartRouter);
 router.use("/orders", orderRouter);
 router.use("/checkout", checkout);
-
+router.use("/auth", authRouter);
 router.use("/users", passport.authenticate('jwt', { session: false }), protectedRouter);
 
 router.use("/wishlist", wishlist);
