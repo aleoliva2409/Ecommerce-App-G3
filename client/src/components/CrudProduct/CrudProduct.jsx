@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from "react-redux";
 import AddProduct from './AddProduct';
 import Search from './Search.jsx';
@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 const CrudProduct = ({ products, categories, state, setState }) => {
 
   const productUpdate = useSelector(state => state.products.getProductUpdate)
-  const [btn, setBtn] = useState(false)
+  // const [btn, setBtn] = useState(false)
 
 
   return (
