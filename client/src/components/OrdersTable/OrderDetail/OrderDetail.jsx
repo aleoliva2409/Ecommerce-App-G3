@@ -161,19 +161,21 @@ const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shipping
         setIsEditingOneElement(false,false,false,false);
         dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
         setShippingStateLocal(ev.target.value);
-      break;
+        break;
       case 'shippingCost':
         setShippingCostLocal(ev.target.value);
-      break;
+        break;
       case 'shippingAddres':
         setShippingAddresLocal(ev.target.value);
-      break;
+        break;
       case 'shippingCity':
         setShippingCityLocal(ev.target.value);
-      break;
+        break;
       case 'shippingZip':
         setShippingZipLocal(ev.target.value);
-      break;
+        break;
+      default:
+        break;
     }
   }
 
@@ -323,13 +325,15 @@ const Comments = ({id, orderState, comments, paymentDetails}) => {
         setIsEditingOneElement(false,false,false,false);
         dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
         setOrderStateLocal(ev.target.value);
-      break;
+        break;
       case 'paymentDetails':
         setPaymentDetailsLocal(ev.target.value);
-      break;
+        break;
       case 'comments':
         setCommentsLocal(ev.target.value);
-      break;
+        break;
+      default:
+        break;
     }
   }
 
@@ -427,7 +431,7 @@ const OrderDetail = ({order}) => {
 
   useEffect(()=>{
     dispatch(getOrder(order.id))
-  },[dispatch])
+  },[dispatch, order])
 
   return (
     <Box

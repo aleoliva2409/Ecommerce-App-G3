@@ -8,17 +8,9 @@ import TextField from '@material-ui/core/TextField'
 import IconButton from '@material-ui/core/IconButton'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    width: '200px',
-  },
-
-}));
 
 const Search = ({ products, product, state, setState, categories }) => {
-  const classes = useStyles();
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("")
 
