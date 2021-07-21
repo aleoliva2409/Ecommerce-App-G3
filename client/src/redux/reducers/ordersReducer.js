@@ -18,8 +18,9 @@ const orderReducer = (state=initialState, action) => {
       return {...state, order: action.payload} //* one order details
     case UPDATE_ORDER:
       return {...state, message: action.payload} //* message with the error or confirmation of put route
+    default:
+      return state;
   }
-  return state
 }
 
 export default orderReducer;

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const SET_CART = "SET_CART";
 export const RESET_CART = "RESET_CART";

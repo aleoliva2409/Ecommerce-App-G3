@@ -22,11 +22,17 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-
 const useStyles = makeStyles({
   table: {
-    // minWidth: 200,
+    minWidth: 400,
+    width: "100%"
   },
+  cells: {
+    width: "10%"
+  },
+  cellsName: {
+    width: "40%"
+  }
 });
 
 export {

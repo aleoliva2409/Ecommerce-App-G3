@@ -1,4 +1,4 @@
-import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, ButtonGroup, Badge, Grid } from '@material-ui/core';
+import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, Badge, Grid } from '@material-ui/core';
 import { Favorite } from '@material-ui/icons';
 import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
@@ -7,20 +7,10 @@ import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
 const useStyles = makeStyles(styleProduct);
 
-// function makeReviews(){
-//   let reviews = [];
-//   for(let i=0; i<5; i++){
-//     reviews.push({
-//       author: `Author${i}`,
-//       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloribus consectetur ex laborum dolore temporibus nostrum eligendi quidem iusto hic.'
-//     })
-//   }
-//   return reviews;
-// }
 
 function Product({product}){
 
-  const amountToBuy = document.getElementById('amountToBuy');
+  // const amountToBuy = document.getElementById('amountToBuy');
 
   const styles = useStyles();
   const dispatch = useDispatch();
@@ -32,7 +22,7 @@ function Product({product}){
   };
 
   const [invisible,setInvisible] = useState(true);
-  const [amount,setAmount] = useState(0);
+  // const [amount,setAmount] = useState(0);
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
