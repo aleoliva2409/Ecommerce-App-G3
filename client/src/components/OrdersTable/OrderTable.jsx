@@ -1,4 +1,5 @@
 import {
+  Grid,
   TableContainer,
   Paper,
   Table,
@@ -9,7 +10,6 @@ import {
   IconButton,
   Typography,
   Collapse,
-  CardMedia
 } from '@material-ui/core';
 import {
   ExpandLess,
@@ -115,38 +115,45 @@ const OrdersTable = () => {
   },[])
 
   return (
-    <TableContainer component={Paper}>
-      <Table>
-        <TableHead
-          className={classes.header}
-        >
-          <TableCell/>
-          <TableCell align={"center"}>
-            <Typography variant={"h5"} className={classes.headerText}>ID</Typography>
-          </TableCell>
-          <TableCell align={"center"}>
-            <Typography variant={"h5"} className={classes.headerText}>Fecha</Typography>
-          </TableCell>
-          <TableCell align={"center"}>
-            <Typography variant={"h5"} className={classes.headerText}>Cliente</Typography>
-          </TableCell>
-          <TableCell align={"right"}>
-            <Typography variant={"h5"} className={classes.headerText}>Costo</Typography>
-          </TableCell>
-          <TableCell align={"right"}>
-            <Typography variant={"h5"} className={classes.headerText}>Estado de Orden</Typography>
-          </TableCell>
-          <TableCell align={"right"}>
-            <Typography variant={"h5"} className={classes.headerText}>Estado de Envio</Typography>
-          </TableCell>
-        </TableHead>
-        <TableBody>
-          {
-            orders.map(el=><RowsTable order={el}/>)
-          }
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <Grid container direction="row" justifyContent="center" alignItems="center">
+      <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Typography variant="h4" color="initial">Ordenes</Typography>
+      </Grid>
+      <Grid item xl={10} lg={10} md={12} sm={12} xs={12}>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead
+              className={classes.header}
+            >
+              <TableCell/>
+              <TableCell align={"center"}>
+                <Typography variant={"h5"} className={classes.headerText}>ID</Typography>
+              </TableCell>
+              <TableCell align={"center"}>
+                <Typography variant={"h5"} className={classes.headerText}>Fecha</Typography>
+              </TableCell>
+              <TableCell align={"center"}>
+                <Typography variant={"h5"} className={classes.headerText}>Cliente</Typography>
+              </TableCell>
+              <TableCell align={"right"}>
+                <Typography variant={"h5"} className={classes.headerText}>Costo</Typography>
+              </TableCell>
+              <TableCell align={"right"}>
+                <Typography variant={"h5"} className={classes.headerText}>Estado de Orden</Typography>
+              </TableCell>
+              <TableCell align={"right"}>
+                <Typography variant={"h5"} className={classes.headerText}>Estado de Envio</Typography>
+              </TableCell>
+            </TableHead>
+            <TableBody>
+              {
+                orders.map(el=><RowsTable order={el}/>)
+              }
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Grid>
+    </Grid>
   )
 }
 

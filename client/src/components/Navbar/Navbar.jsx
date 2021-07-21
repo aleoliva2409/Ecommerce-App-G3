@@ -62,12 +62,12 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-       <Link component={RouterLink} to="/admin"  className={classes.links}>
-          <MenuItem onClick={handleMenuClose}>Agregar producto</MenuItem>
-       </Link>
-       <Link component={RouterLink} to="/categories"  className={classes.links}>
+      <Link component={RouterLink} to="/admin/dashboard"  className={classes.links}>
+          <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
+      </Link>
+      <Link component={RouterLink} to="/categories"  className={classes.links}>
           <MenuItem onClick={handleMenuClose}>Agregar categoria</MenuItem>
-       </Link>
+      </Link>
     </Menu>
   );
 
@@ -83,7 +83,7 @@ export default function PrimarySearchAppBar() {
 
       onClose={handleMobileMenuClose}
     >
-       <Link component={RouterLink} to="/products"  className={classes.links}>
+      <Link component={RouterLink} to="/products"  className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
