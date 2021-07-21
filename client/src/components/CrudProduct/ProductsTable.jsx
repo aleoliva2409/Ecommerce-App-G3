@@ -32,34 +32,34 @@ const ProductsTable = ({ products, state, setState }) => {
       <Table className={classes.table} aria-label="products table">
         <TableHead>
           <TableRow>
-            <StyledTableCell align="center">ID</StyledTableCell>
-            <StyledTableCell align="center">Nombre</StyledTableCell>
-            <StyledTableCell align="center">Medida</StyledTableCell>
-            <StyledTableCell align="center">Stock</StyledTableCell>
-            <StyledTableCell align="center">Precio</StyledTableCell>
-            <StyledTableCell align="center">Editar</StyledTableCell>
-            <StyledTableCell align="center">Eliminar</StyledTableCell>
+            <StyledTableCell className={classes.cells} align="center">ID</StyledTableCell>
+            <StyledTableCell className={classes.cellsName} align="center">Nombre</StyledTableCell>
+            <StyledTableCell className={classes.cells} align="center">Medida</StyledTableCell>
+            <StyledTableCell className={classes.cells} align="center">Stock</StyledTableCell>
+            <StyledTableCell className={classes.cells} align="center">Precio</StyledTableCell>
+            <StyledTableCell className={classes.cells} align="center">Editar</StyledTableCell>
+            <StyledTableCell className={classes.cells} align="center">Eliminar</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {products &&
             products.map((product) => (
               <StyledTableRow key={product.name}>
-                <StyledTableCell align="center">{product.id}</StyledTableCell>
-                <StyledTableCell align="center">{product.name}</StyledTableCell>
-                <StyledTableCell align="center">{product.size}</StyledTableCell>
-                <StyledTableCell align="center">
+                <StyledTableCell className={classes.cells} align="center">{product.id}</StyledTableCell>
+                <StyledTableCell className={classes.cellsName} align="center">{product.name}</StyledTableCell>
+                <StyledTableCell className={classes.cells} align="center">{product.size}</StyledTableCell>
+                <StyledTableCell className={classes.cells} align="center">
                   {product.stock}
                 </StyledTableCell>
-                <StyledTableCell align="center">
+                <StyledTableCell className={classes.cells} align="center">
                   {product.price}
                 </StyledTableCell>
-                <StyledTableCell align="center">
+                <StyledTableCell className={classes.cells} align="center">
                   <IconButton aria-label="edit" color="primary" onClick={() => btnEdit(product.id)}>
                     <EditIcon />
                   </IconButton>
                 </StyledTableCell>
-                <StyledTableCell align="center">
+                <StyledTableCell className={classes.cells} align="center">
                   <IconButton aria-label="delete" color="secondary" onClick={() => btnDelete(product.id)}>
                     <DeleteIcon />
                   </IconButton>
