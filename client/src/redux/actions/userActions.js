@@ -21,7 +21,7 @@ export const userActions = (user) => async (dispatch) => {
 
 export const login = (user) => async (dispatch) => {
   try {
-    const { data } = (await axios.post('/users/login', user)).data;
+    const { data } = (await axios.post('/auth/login', user)).data;
     if (data) {
       localStorage.setItem('jwt', data.token);
       localStorage.setItem('user', data.user.email);

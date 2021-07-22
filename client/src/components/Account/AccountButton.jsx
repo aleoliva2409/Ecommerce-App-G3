@@ -18,6 +18,7 @@ import { signup } from './../../redux/actions/userActions';
 
 // * Style
 import { useStyles } from './AccountStyle';
+import { Redirect } from 'react-router-dom';
 
 export default function FormDialog({ field, setRegister, register }) {
   const dispatch = useDispatch()
