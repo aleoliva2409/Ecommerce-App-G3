@@ -15,7 +15,7 @@ passport.use('login', new LocalStrategy(
       const passwordIsValid = await bcrypt.compare(password, user.password);
       if (!passwordIsValid) return done(null, false, { message: 'Incorrect password' })
 
-      return done(null, user, { message: 'Logged in Successfully' });
+      return done(null, user);
 
     } catch (err) {
       return done(err)

@@ -122,7 +122,46 @@ const getCartAll = async (req, res, next) => {
     console.log(error);
   }
 };
+
+
+const getCartAllByUser = async (req, res, next) => {
+  try {
+    const {email} = req.body;
+
+    const user = await User.findOne({
+      where:{
+        email
+      }
+    });
+
+    if(user)
+    {
+      const cart = await Order.findOne({
+        where:{
+          userId : user.dataValues.id,
+          orderState: 'cart',
+        }
+      })
+
+      if(cart.cart.length)
+      {
+        return res.json(cart.cart).status(200);
+      }
+      else{
+        return res.json({ message: "Carrito vacio" }).status(200);
+      }
+    }else{
+      return res.json({ error: "No existe el usuario" }).status(400);
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
 module.exports = {
   addCart,
-  getCartAll
+  getCartAll,
+  getCartAllByUser
 }

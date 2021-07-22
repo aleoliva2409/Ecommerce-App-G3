@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -20,6 +20,7 @@ import {useStyles} from './ProductCardStyle';
 
 export default function RecipeReviewCard({product}) {
   const classes = useStyles();
+  const [favorites, setFavorites] = useState()
 
   const dispatch = useDispatch();
 
@@ -66,10 +67,10 @@ export default function RecipeReviewCard({product}) {
       </CardContent>
 
       <CardActions >
-        <IconButton aria-label="Agregar a favoritos">
+        <IconButton aria-label="Agregar a favoritos" >
           <FavoriteIcon />
         </IconButton>
-{ noStock? 
+{ noStock?
         <Button
           variant="contained"
           className={classes.button}
