@@ -4,12 +4,14 @@ import categoriesReducer from './reducers/categoriesReducer';
 import productReducer from './reducers/productReducer';
 import shoppingCartReducer from './reducers/shoppingCartReducer';
 import ordersReducer from './reducers/ordersReducer';
+import usersReducer from './reducers/userReducer'
 
 const rootReducers = combineReducers({
 	categories: categoriesReducer,
   products: productReducer,
   cart: shoppingCartReducer,
-  orders: ordersReducer
+  orders: ordersReducer,
+  users: usersReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
