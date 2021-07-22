@@ -20,5 +20,8 @@ export const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   },
   collapse:{
     backgroundColor: "var(--primaryColor30)"
+  },
+  sort:{
+    color: "black",
   }
 }))
