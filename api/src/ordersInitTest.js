@@ -16,7 +16,7 @@ const orders = [
       {
         id: 1,
         name: "Colchón y Sommier Suavegom Merit 80x190",
-        cant: 2,
+        quantity: 2,
         price: 35800.0,
       },
     ],
@@ -37,19 +37,19 @@ const orders = [
       {
         id: 1,
         name: "Colchón y Sommier Suavegom Merit 80x190",
-        cant: 2,
+        quantity: 2,
         price: 35800.0,
       },
       {
         id: 2,
         name: "Colchón y Sommier King Koil Brighton 200x200",
-        cant: 1,
+        quantity: 1,
         price: 158100.0,
       },
       {
         id: 3,
         name: "Colchón y Sommier Elegante Señorial 180x200",
-        cant: 1,
+        quantity: 1,
         price: 86000.0,
       },
     ],
@@ -70,13 +70,13 @@ const orders = [
       {
         id: 1,
         name: "Colchón y Sommier Suavegom Merit 80x190",
-        cant: 2,
+        quantity: 2,
         price: 35800.0,
       },
       {
         id: 3,
         name: "Colchón y Sommier Elegante Señorial 180x200",
-        cant: 1,
+        quantity: 1,
         price: 86000.0,
       },
     ],
@@ -97,13 +97,13 @@ const orders = [
       {
         id: 2,
         name: "Colchón y Sommier King Koil Brighton 200x200",
-        cant: 1,
+        quantity: 1,
         price: 158100.0,
       },
       {
         id: 3,
         name: "Colchón y Sommier Elegante Señorial 180x200",
-        cant: 1,
+        quantity: 1,
         price: 86000.0,
       },
     ],
@@ -124,19 +124,19 @@ const orders = [
       {
         id: 1,
         name: "Colchón y Sommier Suavegom Merit 80x190",
-        cant: 2,
+        quantity: 2,
         price: 35800.0,
       },
       {
         id: 2,
         name: "Colchón y Sommier King Koil Brighton 200x200",
-        cant: 1,
+        quantity: 1,
         price: 158100.0,
       },
       {
         id: 3,
         name: "Colchón y Sommier Elegante Señorial 180x200",
-        cant: 1,
+        quantity: 1,
         price: 86000.0,
       },
     ],
@@ -147,7 +147,7 @@ const orders = [
 const ordersInitTest = async () => {
   try {
     await Order.bulkCreate(orders);
-    // const order = await Order.create({
+    // await Order.create({
     //   orderState: "processing",
     //   shippingState: "initial",
     //   shippingCost: 600.99,
@@ -162,12 +162,14 @@ const ordersInitTest = async () => {
     //     {
     //       id: 1,
     //       name: "Colchón y Sommier Suavegom Merit 80x190",
-    //       cant: 2,
+    //       quantity: 2,
     //       price: 35800.0,
     //     },
     //   ],
     //   userId: 2,
     // })
+
+    // const order = await Order.findByPk(1)
     // const product = await Product.findByPk(5)
     // // await Orderlines.create({
     // //   price: 35800.00,
@@ -175,7 +177,7 @@ const ordersInitTest = async () => {
     // //   orderId: 1,
     // //   productId: 50
     // // })
-    // order.addProduct(product,{ through: {productId: 5,orderId: 1, price: 3500, quantity: 3}})
+    // order.addProduct(product,{ through: { price: 3500, quantity: 3}})
   } catch (e) {
     console.log(e);
   }

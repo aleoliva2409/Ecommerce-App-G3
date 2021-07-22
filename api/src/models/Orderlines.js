@@ -16,17 +16,7 @@ module.exports = (sequelize) => {
       quantity: {
         type: DataTypes.INTEGER,
         allowNull: true,
-      },
-      // productId: {
-      //   type: DataTypes.INTEGER,
-      //   allowNull: false,
-      //   foreignKey: true,
-      // },
-      // orderId: {
-      //   type: DataTypes.INTEGER,
-      //   allowNull: false,
-      //   foreignKey: true,
-      // }
+      }
     },
 
     { timestamps: false }

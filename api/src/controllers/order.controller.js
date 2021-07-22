@@ -1,4 +1,4 @@
-const { Order, User, Product, Orderlines } = require("../db");
+const { Order, User, Product } = require("../db");
 
 const getAllOrders = async (req, res) => {
   try {
@@ -57,8 +57,19 @@ const updateOrder = async (req, res) => {
   }
 }
 
-const setOrderDetail = (req, res) => {
-
+const setOrderDetail = async(req, res) => {
+  try {
+    const { cart, orderId } = req.body;
+    const order = await Order.findByPk(orderId);
+    const idProducts = cart.map( item => ({ id: item.id, quantity: item.quantity }));
+    for(let i = 0; i < idProducts.length; i++) {
+      const product = await Product.findByPk(idProducts[i].id);
+      order.addProduct(product, { through: { price: product.price, quantity: idProducts[i].quantity }})
+    }
+    res.status(200).json([{message: "orderlines was filled correctly"}])
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 module.exports = {
