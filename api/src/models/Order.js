@@ -62,7 +62,7 @@ module.exports = (sequelize) => {
         type: DataTypes.ARRAY(DataTypes.JSON),
       },
       date: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING
       }
     },
     { timestamps: false }
