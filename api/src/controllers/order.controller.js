@@ -53,5 +53,4 @@ module.exports = {
   getAllOrders,
   getOrder,
   updateOrder,
-  getAllOrders2
 }
