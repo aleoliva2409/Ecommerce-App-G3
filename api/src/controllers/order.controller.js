@@ -60,12 +60,18 @@ const updateOrder = async (req, res) => {
 const setOrderDetail = async(req, res) => {
   try {
     const { cart, orderId } = req.body;
+    let dateOfPay = new Date().toLocaleString()
     const order = await Order.findByPk(orderId);
     const idProducts = cart.map( item => ({ id: item.id, quantity: item.quantity }));
     for(let i = 0; i < idProducts.length; i++) {
       const product = await Product.findByPk(idProducts[i].id);
       order.addProduct(product, { through: { price: product.price, quantity: idProducts[i].quantity }})
     }
+    await Order.update({
+      date: dateOfPay
+    },{
+      where: { id: orderId }
+    })
     res.status(200).json([{message: "orderlines was filled correctly"}])
   } catch (error) {
     console.log(error);
