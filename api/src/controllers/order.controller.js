@@ -1,10 +1,17 @@
-const { Order } = require("../db");
-
+const { Order, User, Product, Orderlines } = require("../db");
 
 const getAllOrders = async (req, res) => {
   try {
-    const orders = await Order.findAll();
-
+    const orders = await Order.findAll({
+      include: [
+        {
+          model: User
+        },
+        {
+          model: Product
+        }
+      ]
+    });
     res.status(200).json(orders)
   } catch (error) {
     console.log(error);
@@ -15,7 +22,16 @@ const getAllOrders = async (req, res) => {
 const getOrder = async (req, res) => {
   try {
     const { id } = req.params;
-    const order = await Order.findByPk(id)
+    const order = await Order.findByPk(id,{
+      include: [
+        {
+          model: User
+        },
+        {
+          model: Product
+        }
+      ]
+    })
     res.status(200).json(order)
   } catch (error) {
     console.log(error);
@@ -37,12 +53,17 @@ const updateOrder = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.status(502)
+    res.status(502);
   }
+}
+
+const setOrderDetail = (req, res) => {
+
 }
 
 module.exports = {
   getAllOrders,
   getOrder,
   updateOrder,
+  setOrderDetail
 }
