@@ -2,7 +2,7 @@ const { Order, User, Product } = require("../db");
 
 const addCart = async (req, res, next) => {
   try {
-    //llega del front un obj de guest 
+    //llega del front un obj de guest
     //{ email, cart} cart es un array de objetos, tiene ido, precio y qty
     const { email, cartGuest } = req.body;
     if (email === "") {
@@ -19,7 +19,7 @@ const addCart = async (req, res, next) => {
         //existe el usuario
         //camino 1, Esta el usuario en order y  ya tenia cosas en Order->Cart. Modifico si alguna cambio y agrego las que no estan.
         //camino 2: Esta el usuario en order y no tiene cosas en Order->Cart. Agrego el cartGuest tal cual como está.
-        //camino 3: No esta el usuario, lo agrego y le paso el cartGuest igual. 
+        //camino 3: No esta el usuario, lo agrego y le paso el cartGuest igual.
         const orderUser = await Order.findOne({
           where: {
             userId: user.dataValues.id,
@@ -97,7 +97,7 @@ const addCart = async (req, res, next) => {
               return res.json({ error: `No hay stock disponible del producto ${stockDis.dataValues.name}` }).status(200);
             }
           }
-          const orderNew = Order.create({
+          const orderNew = await Order.create({
             orderState: 'cart',
             userId: user.id,
             cart: cartGuest
@@ -153,7 +153,7 @@ const getCartAllByUser = async (req, res, next) => {
     }else{
       return res.json({ error: "No existe el usuario" }).status(400);
     }
-    
+
   } catch (error) {
     console.log(error);
   }
