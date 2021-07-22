@@ -1,4 +1,5 @@
 import {
+  Grid,
   TableContainer,
   Paper,
   Table,
@@ -300,7 +301,7 @@ const OrdersTable = () => {
 
   useEffect(()=>{
     dispatch(getOrders());
-  },[])
+  },[dispatch])
 
   return (
     <TableContainer component={Paper}>

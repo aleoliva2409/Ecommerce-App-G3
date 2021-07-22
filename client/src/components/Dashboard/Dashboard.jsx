@@ -1,25 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
+import LocalMallIcon from '@material-ui/icons/LocalMall';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import PeopleIcon from '@material-ui/icons/People';
+import CategoryIcon from '@material-ui/icons/Category';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './DashboardStyle';
+import { Link as RouterLink } from 'react-router-dom'
 
 
-function ResponsiveDrawer(props) {
+
+function Dashboard(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -34,21 +37,30 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button component={RouterLink} to="/admin/dashboard/products">
+            <ListItemIcon>
+              <LocalMallIcon />
+            </ListItemIcon>
+            <ListItemText primary="Productos" />
+        </ListItem>
+        <ListItem button component={RouterLink} to="/admin/dashboard/orders">
+            <ListItemIcon>
+              <LibraryBooksIcon />
+            </ListItemIcon>
+            <ListItemText primary="Ordenes" />
+        </ListItem>
+        <ListItem button component={RouterLink} to="/admin/dashboard/categories">
+            <ListItemIcon>
+              <CategoryIcon />
+            </ListItemIcon>
+            <ListItemText primary="Categorias" />
+        </ListItem>
+        <ListItem button component={RouterLink} to="/admin/dashboard/promote">
+            <ListItemIcon>
+              <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Usuarios" />
+        </ListItem>
       </List>
     </div>
   );
@@ -57,7 +69,6 @@ function ResponsiveDrawer(props) {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
@@ -113,7 +124,7 @@ function ResponsiveDrawer(props) {
   );
 }
 
-ResponsiveDrawer.propTypes = {
+Dashboard.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -121,4 +132,4 @@ ResponsiveDrawer.propTypes = {
   window: PropTypes.func,
 };
 
-export default ResponsiveDrawer;
+export default Dashboard;

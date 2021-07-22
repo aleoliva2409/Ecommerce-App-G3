@@ -1,7 +1,7 @@
 const { User, Order } = require("../db");
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const passport = require("passport");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+//const passport = require("passport");
 // const Op = require("sequelize").Op;
 
 const getAllUsers = async (req, res, next) => {
@@ -12,7 +12,6 @@ const getAllUsers = async (req, res, next) => {
     next(error);
   }
 };
-
 
 const addUser = async (req, res, next) => {
   const body = req.body;
@@ -29,8 +28,15 @@ const addUser = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10);
     body.password = await bcrypt.hash(body.password, salt);
     const newUser = await User.create(body);
-
-    res.status(200).json({ message: "User added!" });
+    const payload = {
+      id: newUser.id,
+      exp: Math.floor(Date.now() / 1000) + 3600, //1h
+      email: newUser.email,
+    };
+    const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);
+    res
+      .status(200)
+      .json({ message: "User added!", data: { token, user: newUser } });
   } catch (error) {
     next(error);
   }
@@ -78,47 +84,48 @@ const getOrdersByUser = async (req, res) => {
       include: [
         {
           model: Order,
-        }
-      ]
+        },
+      ],
     });
     res.status(200).json(ordersByUser);
-
   } catch (error) {
     console.log(error);
-    res.status(404)
+    res.status(404);
   }
-}
+};
 
-const login = async (req, res, next) => {
-  passport.authenticate('login', async (err, user, info) => {
-    try {
-      if (err) return next(err);
+// const login = async (req, res, next) => {
+//   passport.authenticate('login', async (err, user, info) => {
+//     try {
+//       if (err) return next(err);
+//       console.log(info)
+//       if (info) return res.json(info).status(500);
 
-      req.login(user, { session: false }, async (error) => {
-        if (error) return next(error);
+//       req.login(user, { session: false }, async (error) => {
+//         if (error) return next(error);
 
-        const payload = {
-          id: user.id,
-          exp: Math.floor(Date.now() / 1000) + (60 * 60), //1h
-          email: user.email
-        }
+//         const payload = {
+//           id: user.id,
+//           exp: Math.floor(Date.now() / 1000) + 3600, //1h
+//           email: user.email
+//         }
 
-        const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);
-        return res.json({ token });
-      })
-    } catch (err) {
-      return next(err)
-    }
-  })(req, res, next)
-}
+//         const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);
+//         return res.json({ data: { user, token } });
+//       })
+//     } catch (err) {
+//       return next(err)
+//     }
+//   })(req, res, next)
+// };
 
 const example = (req, res, next) => {
   res.json({
-    message: 'You made it to the secure route',
+    message: "You made it to the secure route",
     user: req.user,
     //token: req.query.token
-  })
-}
+  });
+};
 
 module.exports = {
   addUser,
@@ -126,6 +133,5 @@ module.exports = {
   deleteUser,
   getAllUsers,
   getOrdersByUser,
-  login,
   example,
 };

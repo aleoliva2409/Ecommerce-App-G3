@@ -1,4 +1,5 @@
 const { Product, Category } = require('./db.js');
+const ordersInitTest = require("./ordersInitTest")
 const fs = require('fs');
 
 const categories = [
@@ -38,6 +39,7 @@ const initDb = async () => {
     } catch (error) {
       console.log(error)
     }
+    ordersInitTest();
   })
 }
 

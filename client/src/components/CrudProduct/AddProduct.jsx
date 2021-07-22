@@ -7,7 +7,7 @@ import useStyles from "./AddProductStyle";
 import { useDispatch } from "react-redux";
 import { updateProduct, addProduct } from "../../redux/actions/productActions";
 
-const AddForm = ({ product, btnState, btnChange, categories, state, setState }) => {
+const AddForm = ({ product, categories, setState }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -77,13 +77,13 @@ const AddForm = ({ product, btnState, btnChange, categories, state, setState }) 
   return (
     <>
       <Button
-        variant='text'
         onClick={handleClickOpen}
-        variant="outlined"
-        className={classes.buttonAddProduct}
+        variant="contained"
+        color="primary"
+        size="large"
         startIcon={<AddIcon />}
       >
-       Agregar producto
+      Agregar producto
       </Button>
     <Dialog open={open} onClose={handleClose}>
       <DialogContent  className={classes.formAddProduct} >

@@ -13,7 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 // * {Actions}
-import { userActions } from './../../redux/actions/userActions';
+import { login } from './../../redux/actions/userActions';
+import { signup } from './../../redux/actions/userActions';
 
 // * Style
 import { useStyles } from './AccountStyle';
@@ -40,7 +41,7 @@ export default function FormDialog({ field, setRegister, register }) {
   //onChange Handle
   const handleChange = (e) => {
     const { name, value } = e.target;
-    SetValuesForm({ [name]: value });
+    SetValuesForm({ ...valuesForm, [name]: value });
     console.log(valuesForm);
   };
 
@@ -50,10 +51,14 @@ export default function FormDialog({ field, setRegister, register }) {
     SetValuesForm({submitted: true });
     const { email, password } = valuesForm;
     //const { dispatch } = this.props;
-    if (email && password) {
-      dispatch(userActions.login(email, password));
-
+    if (email && password && !register) {
+      console.log('ejecutando login')
+      dispatch(login({email, password}));
   }
+    if(register) {
+      console.log('ejecutando register')
+      dispatch(signup({email, password, isadmin: false}))
+    }
   };
 
   return (
