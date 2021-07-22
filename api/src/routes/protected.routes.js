@@ -2,7 +2,7 @@ const { Router } = require("express");
 const { example } = require("../controllers/user.controller");
 const router = Router();
 
-router.get("/profile", example);
-
+router.get("/admin", example);
+router.get("/me", example);
 
 module.exports = router;
