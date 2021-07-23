@@ -1,7 +1,7 @@
 import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE,LOGOUT } from './../actions/userActions';
 
 let user = localStorage.getItem('user');
-const initialState = user ? { loggedIn: true, user } : {};
+const initialState = user ? { loggedIn: true, user } : { };
 
 export function login(state = initialState, action) {
     switch (action.type) {

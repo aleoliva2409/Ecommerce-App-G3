@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
+import { Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+
 export default function Login() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const state = useSelector((state) => state.users.loggedIn);
+  const dispatch = useDispatch()
+
+  /* useEffect(() => {
+
+  }, [state]) */
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -13,6 +22,7 @@ export default function Login() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
 
   return (
     <div>

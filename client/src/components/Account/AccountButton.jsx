@@ -18,7 +18,7 @@ import { signup } from './../../redux/actions/userActions';
 
 // * Style
 import { useStyles } from './AccountStyle';
-import { Redirect } from 'react-router-dom';
+
 
 export default function FormDialog({ field, setRegister, register }) {
   const dispatch = useDispatch()
@@ -56,11 +56,12 @@ export default function FormDialog({ field, setRegister, register }) {
       console.log('ejecutando login')
       dispatch(login({email, password}));
   }
-    if(register) {
+    if(email && password && register) {
       console.log('ejecutando register')
       dispatch(signup({email, password, isadmin: false}))
     }
   };
+
 
   return (
     <div className={classes.root}>

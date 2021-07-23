@@ -25,7 +25,8 @@ export const login = (user) => async (dispatch) => {
     if (data) {
       localStorage.setItem('jwt', data.token);
       localStorage.setItem('user', data.user.email);
-      dispatch({ type: LOGIN_REQUEST, payload: user.email })
+      dispatch({ type: LOGIN_REQUEST, payload: user.email });
+      window.location.replace('http://localhost:3000/users');
     }
   } catch (error) {
     console.log(error)
@@ -38,9 +39,18 @@ export const signup = (user) => async (dispatch) => {
     localStorage.setItem('jwt', data.token);
     localStorage.setItem('user', data.user.email);
     dispatch({ type: LOGIN_REQUEST, payload: user.email })
+    window.location.replace('http://localhost:3000/users');
   } catch (error) {
     console.log(error)
   }
 }
+
+/* export const getUser = (token) => async (dispatch) => {
+  try {
+    const { token } = await axios.get('/users/me', )
+  } catch (err) {
+
+  }
+} */
 
 
