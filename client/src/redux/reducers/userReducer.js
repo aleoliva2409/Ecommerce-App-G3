@@ -13,7 +13,7 @@ export function login(state = initialState, action) {
     case LOGIN_SUCCESS:
         return {
         loggedIn: true,
-        user: action.user
+        user: action.payload
         };
     case LOGIN_FAILURE:
         return {};

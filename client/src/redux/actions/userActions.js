@@ -47,7 +47,7 @@ export const signup = (user) => async (dispatch) => {
 
 export const getUser = (token) => async (dispatch) => {
   try {
-    const user = await axios.get('/users/me', { headers: { Authorization: `Bearer ${token}` } });
+    const { user } = (await axios.get('/users/me', { headers: { Authorization: `Bearer ${token}` } })).data;
     dispatch({ type: LOGIN_SUCCESS, payload: user })
   } catch (error) {
     console.log(error)

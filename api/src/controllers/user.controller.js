@@ -30,6 +30,7 @@ const addUser = async (req, res, next) => {
     const newUser = await User.create(body);
     const payload = {
       id: newUser.id,
+      isadmin: newUser.isadmin,
       //exp: Math.floor(Date.now() / 1000) + 3600, //1h
       email: newUser.email,
     };
@@ -121,7 +122,6 @@ const getOrdersByUser = async (req, res) => {
 
 const getUser = (req, res, next) => {
   res.json({
-    message: "You made it to the secure route",
     user: req.user,
     //token: req.query.token
   });

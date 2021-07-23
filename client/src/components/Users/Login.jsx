@@ -10,17 +10,12 @@ import { getUser } from './../../redux/actions/userActions';
 export default function Login() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.users.loggedIn);
-  const user = useSelector((state) => state.users.user);
-
-  console.log(state);
-  console.log(user)
+  const { state, user } = useSelector((state) => state.users);
 
   useEffect(() => {
     const token = localStorage.getItem('jwt');
-    console.log(token)
     dispatch(getUser(token))
-  })
+  }, [state])
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -29,9 +24,9 @@ export default function Login() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log(user)
 
-  if(!user) return <h1>Inicia Sesión</h1>
+  console.log(anchorEl)
+  if(!user) return <Redirect to='/'/>
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
@@ -48,6 +43,8 @@ export default function Login() {
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
+      <div>id: {user.id}</div>
+      <div>user: {user.email}</div>
     </div>
   );
 }
