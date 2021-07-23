@@ -60,9 +60,12 @@ module.exports = (sequelize) => {
       },
       cart: {
         type: DataTypes.ARRAY(DataTypes.JSON),
+      },
+      date: {
+        type: DataTypes.STRING
       }
     },
-    { timestamps: true }
+    { timestamps: false }
     ,
   );
 };

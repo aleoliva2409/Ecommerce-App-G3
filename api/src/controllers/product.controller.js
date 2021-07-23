@@ -1,4 +1,4 @@
-const { Product, Category } = require("../db");
+const { Product, Category, User, Reviews } = require("../db");
 const Op = require("sequelize").Op;
 
 const getProductsAll = async (req, res, next) => {
@@ -141,33 +141,48 @@ const getProductsByCategory = async (req, res, next) => {
 };
 
 //TODO: Task 54
-const addReview = async (req, res, next) => {
-  try {
-    const { idProduct } = req.params;
-    const { text } = req.body;
-    const review = await Review.create({
-      text,
-    })
+// const addReview = async (req, res, next) => {
+//   try {
+//     const { idProduct } = req.params;
+//     const { idUser,text } = req.body;
 
-    review.addProduct(idProduct);
-    // review.addUser()
+//     const user = await User.findByPk(idUser, {
+//       include: [
+//         {
+//           model: Reviews
+//         }
+//       ]
+//     });
 
-    res.status(200).json(review);
-  } catch (error) {
-    console.log(error);
-    res.status(404).json([{Error: "something was wrong"}]);
-  }
-}
+//     // if(user.reviews[0] === undefined) {
+//     //   const newReview = await Reviews.create({
+//     //     text,
+//     //     productId: idProduct,
+//     //     userId: idUser
+//     //   })
 
-//TODO: Task 55
-const updateReview = async (req, res, next) => {
-  const { idProduct, idReview } = req.params;
+//     //   newReview.addProduct(idProduct);
 
-  const product = await Product.findByPk(idProduct);
-  if(product) {
+//     // }
 
-  }
-}
+
+
+//     res.status(200).json(user);
+//   } catch (error) {
+//     console.log(error);
+//     res.status(404).json([{Error: "something was wrong"}]);
+//   }
+// }
+
+// //TODO: Task 55
+// const updateReview = async (req, res, next) => {
+//   const { idProduct, idReview } = req.params;
+
+//   // const product = await Product.findByPk(idProduct);
+//   // if(product) {
+
+//   // }
+// }
 
 module.exports = {
   getProducts,
@@ -177,6 +192,6 @@ module.exports = {
   deleteProduct,
   getProductsAll,
   getProductsByCategory,
-  addReview,
-  updateReview,
+  // addReview,
+  // updateReview,
 };

@@ -60,7 +60,7 @@ let capsEntries = entries.map((entry) => [
 ]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { Product, Category, Order, Orderlines, User } = sequelize.models;
+const { Product, Category, Order, Orderlines, User, Reviews } = sequelize.models;
 
 // ? relations
 Product.belongsToMany(Category, { through: "product_category" });
@@ -71,6 +71,9 @@ Product.belongsToMany(Order, { through: Orderlines });
 
 User.hasMany(Order);
 Order.belongsTo(User);
+
+Product.belongsToMany(User, { through: Reviews });
+User.belongsToMany(Product, { through: Reviews });
 
 User.belongsToMany(Product, { through: "wishlist" });
 Product.belongsToMany(User, { through: "wishlist" });
