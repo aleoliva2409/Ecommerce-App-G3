@@ -13,11 +13,11 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 // * {Actions}
-import { login } from './../../redux/actions/userActions';
-import { signup } from './../../redux/actions/userActions';
+import { login, signup } from './../../redux/actions/userActions';
 
 // * Style
 import { useStyles } from './AccountStyle';
+
 
 export default function FormDialog({ field, setRegister, register }) {
   const dispatch = useDispatch()
@@ -52,14 +52,13 @@ export default function FormDialog({ field, setRegister, register }) {
     const { email, password } = valuesForm;
     //const { dispatch } = this.props;
     if (email && password && !register) {
-      console.log('ejecutando login')
       dispatch(login({email, password}));
   }
-    if(register) {
-      console.log('ejecutando register')
+    if(email && password && register) {
       dispatch(signup({email, password, isadmin: false}))
     }
   };
+
 
   return (
     <div className={classes.root}>

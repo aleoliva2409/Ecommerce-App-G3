@@ -39,7 +39,8 @@ const login = async (req, res, next) => {
 
         const payload = {
           id: user.id,
-          exp: Math.floor(Date.now() / 1000) + 3600, //1h
+          isadmin: user.isadmin,
+          //exp: Math.floor(Date.now() / 1000) + 3600, //1h
           email: user.email
         }
 

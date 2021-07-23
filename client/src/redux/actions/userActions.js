@@ -21,11 +21,12 @@ export const userActions = (user) => async (dispatch) => {
 
 export const login = (user) => async (dispatch) => {
   try {
-    const { data } = (await axios.post('/users/login', user)).data;
+    const { data } = (await axios.post('/auth/login', user)).data;
     if (data) {
       localStorage.setItem('jwt', data.token);
       localStorage.setItem('user', data.user.email);
-      dispatch({ type: LOGIN_REQUEST, payload: user.email })
+      dispatch({ type: LOGIN_REQUEST, payload: user.email });
+      window.location.replace('http://localhost:3000/users/me');
     }
   } catch (error) {
     console.log(error)
@@ -38,6 +39,16 @@ export const signup = (user) => async (dispatch) => {
     localStorage.setItem('jwt', data.token);
     localStorage.setItem('user', data.user.email);
     dispatch({ type: LOGIN_REQUEST, payload: user.email })
+    window.location.replace('http://localhost:3000/users/me');
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const getUser = (token) => async (dispatch) => {
+  try {
+    const { user } = (await axios.get('/users/me', { headers: { Authorization: `Bearer ${token}` } })).data;
+    dispatch({ type: LOGIN_SUCCESS, payload: user })
   } catch (error) {
     console.log(error)
   }

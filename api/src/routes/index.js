@@ -29,6 +29,7 @@ router.use("/checkout", checkout);
 router.use("/auth", authRouter);
 router.use("/users", passport.authenticate('jwt', { session: false }), protectedRouter);
 
+
 router.use("/wishlist", wishlist);
 
 module.exports = router;
