@@ -30,7 +30,7 @@ const addUser = async (req, res, next) => {
     const newUser = await User.create(body);
     const payload = {
       id: newUser.id,
-      exp: Math.floor(Date.now() / 1000) + 3600, //1h
+      //exp: Math.floor(Date.now() / 1000) + 3600, //1h
       email: newUser.email,
     };
     const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);

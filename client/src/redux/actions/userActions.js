@@ -26,7 +26,7 @@ export const login = (user) => async (dispatch) => {
       localStorage.setItem('jwt', data.token);
       localStorage.setItem('user', data.user.email);
       dispatch({ type: LOGIN_REQUEST, payload: user.email });
-      window.location.replace('http://localhost:3000/users');
+      window.location.replace('http://localhost:3000/users/me');
     }
   } catch (error) {
     console.log(error)
@@ -39,18 +39,19 @@ export const signup = (user) => async (dispatch) => {
     localStorage.setItem('jwt', data.token);
     localStorage.setItem('user', data.user.email);
     dispatch({ type: LOGIN_REQUEST, payload: user.email })
-    window.location.replace('http://localhost:3000/users');
+    window.location.replace('http://localhost:3000/users/me');
   } catch (error) {
     console.log(error)
   }
 }
 
-/* export const getUser = (token) => async (dispatch) => {
+export const getUser = (token) => async (dispatch) => {
   try {
-    const { token } = await axios.get('/users/me', )
-  } catch (err) {
-
+    const user = await axios.get('/users/me', { headers: { Authorization: `Bearer ${token}` } });
+    dispatch({ type: LOGIN_SUCCESS, payload: user })
+  } catch (error) {
+    console.log(error)
   }
-} */
+}
 
 

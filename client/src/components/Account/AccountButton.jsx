@@ -13,8 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 // * {Actions}
-import { login } from './../../redux/actions/userActions';
-import { signup } from './../../redux/actions/userActions';
+import { login, signup } from './../../redux/actions/userActions';
 
 // * Style
 import { useStyles } from './AccountStyle';

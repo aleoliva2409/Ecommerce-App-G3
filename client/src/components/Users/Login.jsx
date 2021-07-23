@@ -5,15 +5,22 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
+import { getUser } from './../../redux/actions/userActions';
 
 export default function Login() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const dispatch = useDispatch();
   const state = useSelector((state) => state.users.loggedIn);
-  const dispatch = useDispatch()
+  const user = useSelector((state) => state.users.user);
 
-  /* useEffect(() => {
+  console.log(state);
+  console.log(user)
 
-  }, [state]) */
+  useEffect(() => {
+    const token = localStorage.getItem('jwt');
+    console.log(token)
+    dispatch(getUser(token))
+  })
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -22,8 +29,9 @@ export default function Login() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  console.log(user)
 
-
+  if(!user) return <h1>Inicia Sesión</h1>
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
