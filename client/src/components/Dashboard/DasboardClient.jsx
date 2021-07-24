@@ -17,8 +17,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
-import useStyles from './DashboardStyle';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import SettingsIcon from '@material-ui/icons/Settings';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Link from '@material-ui/core/Link';
+import LongLogo from '../../assets/img/Logos/long-logo.png';
 import { Link as RouterLink } from 'react-router-dom'
+// * STYLES *
+import useStyles from './DashboardStyle';
 
 
 
@@ -35,31 +42,37 @@ function Dashboard(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <Divider />
+
       <List>
-        <ListItem button component={RouterLink} to="/admin/dashboard/products">
+        <ListItem button component={RouterLink} to="/products">
             <ListItemIcon>
               <LocalMallIcon />
             </ListItemIcon>
-            <ListItemText primary="Productos" />
+            <ListItemText primary="Tienda" />
         </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/orders">
             <ListItemIcon>
-              <LibraryBooksIcon />
+              <FavoriteIcon />
             </ListItemIcon>
-            <ListItemText primary="Ordenes" />
+            <ListItemText primary="Favoritos" />
         </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/categories">
             <ListItemIcon>
-              <CategoryIcon />
+              <ShoppingBasketIcon />
             </ListItemIcon>
-            <ListItemText primary="Categorias" />
+            <ListItemText primary="Mis compras" />
         </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/promote">
             <ListItemIcon>
-              <PeopleIcon />
+              <SettingsIcon />
             </ListItemIcon>
-            <ListItemText primary="Usuarios" />
+            <ListItemText primary="Configuración" />
+        </ListItem>
+        <ListItem button component={RouterLink} to="/admin/dashboard/promote" className={classes.exitClient}>
+            <ListItemIcon>
+              <ExitToAppIcon />
+            </ListItemIcon>
+            <ListItemText primary="Salir" />
         </ListItem>
       </List>
     </div>
@@ -80,9 +93,11 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Dashboard
-          </Typography>
+
+          <Link component={RouterLink} to="/">
+                <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+          </Link>
+
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
