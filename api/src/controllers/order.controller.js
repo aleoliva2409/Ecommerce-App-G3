@@ -60,7 +60,7 @@ const updateOrder = async (req, res) => {
 const setOrderDetail = async(req, res) => {
   try {
     const { cart, orderId } = req.body;
-    let dateOfPay = new Date().toLocaleString()
+    // let dateOfPay = new Date().toLocaleString()
     const order = await Order.findByPk(orderId);
     const idProducts = cart.map( item => ({ id: item.id, quantity: item.quantity }));
     for(let i = 0; i < idProducts.length; i++) {
@@ -68,7 +68,7 @@ const setOrderDetail = async(req, res) => {
       order.addProduct(product, { through: { price: product.price, quantity: idProducts[i].quantity }})
     }
     await Order.update({
-      date: dateOfPay
+      date: new Date().toLocaleString()
     },{
       where: { id: orderId }
     })
