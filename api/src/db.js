@@ -75,8 +75,8 @@ Order.belongsTo(User);
 Product.belongsToMany(User, { through: Reviews });
 User.belongsToMany(Product, { through: Reviews });
 
-User.belongsToMany(Product, { through: "wishlist" });
-Product.belongsToMany(User, { through: "wishlist" });
+// User.belongsToMany(Product, { through: "wishlist" });
+// Product.belongsToMany(User, { through: "wishlist" });
 
 module.exports = {
   ...sequelize.models,
