@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   image:{
     width: 220,
   },
+
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {

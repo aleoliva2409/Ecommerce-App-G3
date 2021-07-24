@@ -12,10 +12,15 @@ const useStyles = makeStyles((theme) => ({
       flexShrink: 0,
     },
   },
+  image:{
+    width: 220,
+  },
   appBar: {
+    backgroundColor: '#00BBC9',
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
+      backgroundColor: '#00BBC9',
     },
   },
   menuButton: {
