@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
@@ -24,20 +24,34 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Link from '@material-ui/core/Link';
 import LongLogo from '../../assets/img/Logos/long-logo.png';
 import { Link as RouterLink } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from './../../redux/actions/userActions';
+
 // * STYLES *
 import useStyles from './DashboardStyle';
 
 
 
 function Dashboard(props) {
+  const dispatch = useDispatch();
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { state, user } = useSelector((state) => state.users);
+
+
+  useEffect(() => {
+    const token = localStorage.getItem('jwt');
+    dispatch(getUser(token))
+  }, [state])
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  if(!user) return <Redirect to='/'/>
 
   const drawer = (
     <div>
