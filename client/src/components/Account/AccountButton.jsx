@@ -51,25 +51,13 @@ export default function FormDialog({ field, setRegister, register }) {
     const { email, password } = valuesForm;
     //const { dispatch } = this.props;
     if (email && password && !register) {
-<<<<<<< HEAD
-      console.log('ejecutando login')
-      dispatch(login({email, password}));
-  }
-    if(register) {
-      console.log('ejecutando register')
-=======
       dispatch(login({email, password}));
   }
     if(email && password && register) {
->>>>>>> 8868dfe11c06856c12de9781aa8c43f4c2e65317
       dispatch(signup({email, password, isadmin: false}))
     }
   };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 8868dfe11c06856c12de9781aa8c43f4c2e65317
   return (
     <div className={classes.root}>
       <Button

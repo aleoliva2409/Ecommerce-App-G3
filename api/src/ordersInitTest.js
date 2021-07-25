@@ -13,6 +13,7 @@ var orders = [
     paymentDetails:"debit",
     firstName:"camila",
     lastName:"bonilla",
+    date: "28/02/2020"
   },
   {
     orderState:"cancelled",
@@ -25,6 +26,7 @@ var orders = [
     paymentDetails:"credit",
     firstName:"felipe",
     lastName:"alvarez",
+    date: "28/02/2021"
   },
   {
     orderState:"pending",
@@ -37,6 +39,7 @@ var orders = [
     paymentDetails:"debit",
     firstName:"camilo",
     lastName:"moralez",
+    date: "28/02/2019"
   },
   {
     orderState:"completed",
@@ -49,6 +52,7 @@ var orders = [
     paymentDetails:"credit",
     firstName:"jaime",
     lastName:"angulo",
+    date: "28/02/2021"
   },
   {
     orderState:"completed",
@@ -61,6 +65,7 @@ var orders = [
     paymentDetails:"mercado pago",
     firstName:"mariana",
     lastName:"corredor",
+    date: "26/02/2021"
   },
 ];
 

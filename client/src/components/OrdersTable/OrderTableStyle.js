@@ -23,5 +23,5 @@ export const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   },
   sort:{
     color: "black",
-  }
+  },
 }))

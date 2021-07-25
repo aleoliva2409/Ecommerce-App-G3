@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getOrder,
   updateOrder,
+  getOrders,
 } from "../../../redux/actions/ordersActions";
 
 
@@ -29,11 +30,11 @@ import {
 const ProductsTable = ({productos}) => {
 
   const styles = useStyles();
-
+  console.log(productos);
   const getTotal = () => {
     let total = 0;
     for(let i = 0; i < productos.length; i++){
-      total += productos[i].price;
+      total += Number(productos[i].price);
     }
     return total;
   }
@@ -160,6 +161,7 @@ const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shipping
       case 'shippingState':
         setIsEditingOneElement(false,false,false,false);
         dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
+        dispatch(getOrders());
         setShippingStateLocal(ev.target.value);
         break;
       case 'shippingCost':
@@ -182,6 +184,7 @@ const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shipping
   const enterKey = (ev) => {
     if(ev.key === "Enter" && ev.target.value!=="") setIsEditingOneElement(false,false,false,false)
     dispatch(updateOrder(id,{[ev.target.name]:ev.target.value}));
+    dispatch(getOrders());
   }
 
   return (
