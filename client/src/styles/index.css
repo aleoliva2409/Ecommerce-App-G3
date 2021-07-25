@@ -12,3 +12,7 @@
   text-align: center;
   background-color: #ebebeb;
 }
+
+.MuiTableSortLabel-root{
+  color: black;
+}

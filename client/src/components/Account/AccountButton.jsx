@@ -18,7 +18,6 @@ import { login, signup } from './../../redux/actions/userActions';
 // * Style
 import { useStyles } from './AccountStyle';
 
-
 export default function FormDialog({ field, setRegister, register }) {
   const dispatch = useDispatch()
   const classes = useStyles();
@@ -58,7 +57,6 @@ export default function FormDialog({ field, setRegister, register }) {
       dispatch(signup({email, password, isadmin: false}))
     }
   };
-
 
   return (
     <div className={classes.root}>

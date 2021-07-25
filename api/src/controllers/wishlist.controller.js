@@ -30,7 +30,7 @@ const addWishlist = async (req, res, next) => {
           wishlist.setUser(user);
           res.status(200).json({ message: "Producto añadido a favoritos!" });
         }
-       
+
       }
       else {
         res.status(404).json({ message: "No se encontró el usuario" });
@@ -68,7 +68,7 @@ const getWishilistByUser = async (req, res, next) => {
       res.status(404).json({ message: "No se encontró el usuario" });
     }
 
-    
+
   } catch (error) {
     console.log(error);
   }
