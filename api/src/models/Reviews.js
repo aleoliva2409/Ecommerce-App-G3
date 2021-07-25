@@ -10,7 +10,6 @@ module.exports = (sequelize) => {
     text: {
       type: DataTypes.TEXT
     },
-  },
-  { timestamps: false }
+  }
   )
 }
