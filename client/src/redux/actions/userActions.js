@@ -26,7 +26,8 @@ export const login = (user) => async (dispatch) => {
       localStorage.setItem('jwt', data.token);
       localStorage.setItem('user', data.user.email);
       dispatch({ type: LOGIN_REQUEST, payload: user.email });
-      window.location.replace('http://localhost:3000/users/me');
+      if(!data.user.isadmin) window.location.replace('http://localhost:3000/users/me');
+      else window.location.replace('http://localhost:3000/admin/dashboard')
     }
   } catch (error) {
     console.log(error)
@@ -49,6 +50,17 @@ export const getUser = (token) => async (dispatch) => {
   try {
     const { user } = (await axios.get('/users/me', { headers: { Authorization: `Bearer ${token}` } })).data;
     dispatch({ type: LOGIN_SUCCESS, payload: user })
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const logout = () => async (dispatch) => {
+  try {
+    const res = await axios.get('auth/logout')
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('user');
+    dispatch({ type: LOGOUT });
   } catch (error) {
     console.log(error)
   }
