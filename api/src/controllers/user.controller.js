@@ -30,7 +30,8 @@ const addUser = async (req, res, next) => {
     const newUser = await User.create(body);
     const payload = {
       id: newUser.id,
-      exp: Math.floor(Date.now() / 1000) + 3600, //1h
+      isadmin: newUser.isadmin,
+      //exp: Math.floor(Date.now() / 1000) + 3600, //1h
       email: newUser.email,
     };
     const token = jwt.sign(payload, process.env.AUTH_JWT_SECRET);
@@ -119,9 +120,8 @@ const getOrdersByUser = async (req, res) => {
 //   })(req, res, next)
 // };
 
-const example = (req, res, next) => {
+const getUser = (req, res, next) => {
   res.json({
-    message: "You made it to the secure route",
     user: req.user,
     //token: req.query.token
   });
@@ -133,5 +133,5 @@ module.exports = {
   deleteUser,
   getAllUsers,
   getOrdersByUser,
-  example,
+  getUser,
 };

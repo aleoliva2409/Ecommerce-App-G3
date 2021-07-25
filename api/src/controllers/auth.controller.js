@@ -39,7 +39,8 @@ const login = async (req, res, next) => {
 
         const payload = {
           id: user.id,
-          exp: Math.floor(Date.now() / 1000) + 3600, //1h
+          isadmin: user.isadmin,
+          //exp: Math.floor(Date.now() / 1000) + 3600, //1h
           email: user.email
         }
 
@@ -52,7 +53,24 @@ const login = async (req, res, next) => {
   })(req, res, next)
 };
 
+const logout = async (req, res) => {
+  try {
+    req.logout();
+    res.json({ message: 'User logout' })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const passwordReset = async (req, res, next) => {
+  try {
+
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 module.exports = {
   login,
+  logout,
 };

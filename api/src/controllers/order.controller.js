@@ -1,14 +1,17 @@
-const { Order, Product, Orderlines } = require("../db");
-
+const { Order, User, Product } = require("../db");
 
 const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.findAll({
-      include:{
-        model: Product
-      }
+      include: [
+        {
+          model: User
+        },
+        {
+          model: Product
+        }
+      ]
     });
-
     res.status(200).json(orders)
   } catch (error) {
     console.log(error);
@@ -19,10 +22,15 @@ const getAllOrders = async (req, res) => {
 const getOrder = async (req, res) => {
   try {
     const { id } = req.params;
-    const order = await Order.findByPk(id, {
-      include:{
-        model: Product
-      }
+    const order = await Order.findByPk(id,{
+      include: [
+        {
+          model: User
+        },
+        {
+          model: Product
+        }
+      ]
     })
     res.status(200).json(order)
   } catch (error) {
@@ -45,7 +53,28 @@ const updateOrder = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.status(502)
+    res.status(502);
+  }
+}
+
+const setOrderDetail = async(req, res) => {
+  try {
+    const { cart, orderId } = req.body;
+    // let dateOfPay = new Date().toLocaleString()
+    const order = await Order.findByPk(orderId);
+    const idProducts = cart.map( item => ({ id: item.id, quantity: item.quantity }));
+    for(let i = 0; i < idProducts.length; i++) {
+      const product = await Product.findByPk(idProducts[i].id);
+      order.addProduct(product, { through: { price: product.price, quantity: idProducts[i].quantity }})
+    }
+    await Order.update({
+      date: new Date().toLocaleString()
+    },{
+      where: { id: orderId }
+    })
+    res.status(200).json([{message: "orderlines was filled correctly"}])
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -53,4 +82,5 @@ module.exports = {
   getAllOrders,
   getOrder,
   updateOrder,
+  setOrderDetail
 }

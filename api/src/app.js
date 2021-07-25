@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const cors = require('cors');
 const morgan = require("morgan");
 const routes = require("./routes/index");
 const passport = require("passport");
@@ -16,6 +17,7 @@ server.name = "API";
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(cookieParser());
+server.use(cors());
 server.use(morgan("dev"));
 
 

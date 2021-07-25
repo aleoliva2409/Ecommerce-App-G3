@@ -62,7 +62,7 @@ var orders = [
     firstName:"mariana",
     lastName:"corredor",
   },
-]
+];
 
 const ordersInitTest = async () => {
   let temp1, temp2, temp3;
