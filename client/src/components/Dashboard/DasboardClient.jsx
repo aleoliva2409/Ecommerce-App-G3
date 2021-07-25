@@ -26,7 +26,7 @@ import LongLogo from '../../assets/img/Logos/long-logo.png';
 import { Link as RouterLink } from 'react-router-dom'
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import { getUser } from './../../redux/actions/userActions';
+import { getUser, logout } from './../../redux/actions/userActions';
 
 // * STYLES *
 import useStyles from './DashboardStyle';
@@ -47,11 +47,15 @@ function Dashboard(props) {
     dispatch(getUser(token))
   }, [state])
 
+  const handleClick = () => {
+    dispatch(logout());
+  }
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  if(!user) return <Redirect to='/'/>
+  if (!user) return <Redirect to='/' />
 
   const drawer = (
     <div>
@@ -59,34 +63,34 @@ function Dashboard(props) {
 
       <List>
         <ListItem button component={RouterLink} to="/products">
-            <ListItemIcon>
-              <LocalMallIcon />
-            </ListItemIcon>
-            <ListItemText primary="Tienda" />
+          <ListItemIcon>
+            <LocalMallIcon />
+          </ListItemIcon>
+          <ListItemText primary="Tienda" />
         </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/orders">
-            <ListItemIcon>
-              <FavoriteIcon />
-            </ListItemIcon>
-            <ListItemText primary="Favoritos" />
+          <ListItemIcon>
+            <FavoriteIcon />
+          </ListItemIcon>
+          <ListItemText primary="Favoritos" />
         </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/categories">
-            <ListItemIcon>
-              <ShoppingBasketIcon />
-            </ListItemIcon>
-            <ListItemText primary="Mis compras" />
+          <ListItemIcon>
+            <ShoppingBasketIcon />
+          </ListItemIcon>
+          <ListItemText primary="Mis compras" />
         </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/promote">
-            <ListItemIcon>
-              <SettingsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Configuración" />
+          <ListItemIcon>
+            <SettingsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Configuración" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/promote" className={classes.exitClient}>
-            <ListItemIcon>
-              <ExitToAppIcon />
-            </ListItemIcon>
-            <ListItemText primary="Salir" />
+        <ListItem button component={RouterLink} to="/products" onClick={handleClick} className={classes.exitClient}>
+          <ListItemIcon>
+            <ExitToAppIcon />
+          </ListItemIcon>
+          <ListItemText primary="Salir" />
         </ListItem>
       </List>
     </div>
@@ -109,7 +113,7 @@ function Dashboard(props) {
           </IconButton>
 
           <Link component={RouterLink} to="/">
-                <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+            <img src={LongLogo} className={classes.image} alt="Pillow Top" />
           </Link>
 
         </Toolbar>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
@@ -18,7 +18,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './DashboardStyle';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { Link as RouterLink } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { getUser, logout } from './../../redux/actions/userActions';
 
 
 
@@ -27,11 +31,23 @@ function Dashboard(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { state, user } = useSelector((state) => state.users);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const token = localStorage.getItem('jwt');
+    dispatch(getUser(token))
+  }, [state])
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleClick = () => {
+    dispatch(logout());
+  };
+
+  if (!user) return <Redirect to='/' />
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -60,6 +76,12 @@ function Dashboard(props) {
               <PeopleIcon />
             </ListItemIcon>
             <ListItemText primary="Usuarios" />
+        </ListItem>
+        <ListItem button component={RouterLink} to="/" onClick={handleClick} className={classes.exitClient}>
+          <ListItemIcon>
+            <ExitToAppIcon />
+          </ListItemIcon>
+          <ListItemText primary="Salir" />
         </ListItem>
       </List>
     </div>
