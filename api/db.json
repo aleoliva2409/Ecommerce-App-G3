@@ -283,323 +283,323 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Belspring 2 - 80x190",
+		"name": "Colchón Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-2-scaled.jpg"
 		],
-		"price": 32200,
+		"price": 33100,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Belspring 2 - 100x190",
+		"name": "Colchón Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-2-scaled.jpg"
 		],
-		"price": 38800,
+		"price": 39700,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Belspring 2 - 140x190",
+		"name": "Colchón Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-2-scaled.jpg"
+		],
+		"price": 52100,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Belspring 2",
+		"color": "Beige, Marrón",
+		"size": "130x190",
+    "sizeMattress": "2 Plazas y Media",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Grande-2.jpg"
+		],
+		"price": 49300,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Belspring 2",
+		"color": "Beige, Marrón",
+		"size": "160x200",
+    "sizeMattress": "Queen",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-2-scaled.jpg"
+		],
+		"price": 65800,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Belspring 3",
+		"color": "Blanco, Gris",
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
+		],
+		"price": 49300,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Belspring 3",
+		"color": "Blanco, Gris",
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
+		],
+		"price": 49300,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Belspring 3",
+		"color": "Blanco, Gris",
+		"size": "180x200",
+    "sizeMattress": "Queen",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
+		],
+		"price": 65800,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Belspring 3",
+		"color": "Blanco, Gris",
+		"size": "200x200",
+    "sizeMattress": "King",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
+		],
+		"price": 73800,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "80x190x14",
+    "sizeMattress": "1 Plaza",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
+		],
+		"price": 17100,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "80x190x18",
+    "sizeMattress": "1 Plaza",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
+		],
+		"price": 20700,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "80x190x22",
+    "sizeMattress": "1 Plaza",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
+		],
+		"price": 24200,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "90x190x22",
+    "sizeMattress": "1 Plaza y Media",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
+		],
+		"price": 26300,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "100x190x22",
+    "sizeMattress": "2 Plazas",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
+		],
+		"price": 28600,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "130x190x22",
+    "sizeMattress": "2 Plazas",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-1.jpg"
+		],
+		"price": 35200,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 1",
+		"color": "Beige, Marrón",
+		"size": "140x190x22",
+    "sizeMattress": "2 Plazas y Media",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-1.jpg"
+		],
+		"price": 37500,
+		"stock": 97
+	},
+	{
+		"name": "Colchón Belmo Density 2",
+		"color": "Beige, Marrón",
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
+		],
+		"price": 34700,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 2",
+		"color": "Beige, Marrón",
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
+		],
+		"price": 38400,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 2",
+		"color": "Beige, Marrón",
+		"size": "100x190",
+    "sizeMattress": "2 Plazas",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
+		],
+		"price": 42300,
+		"stock": 47
+	},
+	{
+		"name": "Colchón Belmo Density 2",
+		"color": "Beige, Marrón",
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
+		"description": "null",
+		"image": [
+			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Grande.jpg",
+			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
 		],
 		"price": 50900,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Belspring 2 - 130x190",
+		"name": "Colchón Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Grande-2.jpg"
-		],
-		"price": 47900,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Belspring 2 - 160x200",
-		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-2-scaled.jpg"
-		],
-		"price": 64300,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Belspring 3 - 140x190",
-		"color": "Blanco, Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
-		],
-		"price": 14999,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Belspring 3 - 160x200",
-		"color": "Blanco, Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
-		],
-		"price": 14999,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Belspring 3 - 180x200",
-		"color": "Blanco, Gris",
-		"size": "Queen",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
-		],
-		"price": 14999,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Belspring 3 - 200x200",
-		"color": "Blanco, Gris",
-		"size": "King",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Belspring-3-1-scaled.jpg"
-		],
-		"price": 14999,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 80x190x14 cm",
-		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
-		],
-		"price": 16800,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 80x190x18 cm",
-		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
-		],
-		"price": 20300,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 80x190x22 cm",
-		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
-		],
-		"price": 23500,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 90x190x22 cm",
-		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
-		],
-		"price": 25700,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 100x190x22 cm",
-		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg"
-		],
-		"price": 27800,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 130x190x22 cm",
-		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-1.jpg"
-		],
-		"price": 34500,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 1 - 140x190x22 cm",
-		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-2-scaled.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-1-1.jpg"
-		],
-		"price": 36600,
-		"stock": 97
-	},
-	{
-		"name": "Colchón Belmo Density 2 - 80x190",
-		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
-		],
-		"price": 33800,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 2 - 90x190",
-		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
-		],
-		"price": 37500,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 2 - 100x190",
-		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
-		],
-		"price": 41300,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Density 2 - 130x190",
-		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
 		],
-		"price": 49700,
+		"price": 54000,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Density 2 - 140x190",
+		"name": "Colchón Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
 		],
-		"price": 52600,
+		"price": 67800,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Density 2 - 160x200",
+		"name": "Colchón Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
 		],
-		"price": 66000,
+		"price": 76100,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Density 2 - 180x200",
+		"name": "Colchón Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
 		],
-		"price": 74300,
+		"price": 84100,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Density 2 - 200x200",
-		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
-		"description": "null",
-		"image": [
-			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Grande.jpg",
-			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg"
-		],
-		"price": 82000,
-		"stock": 47
-	},
-	{
-		"name": "Colchón Belmo Pocket 140x190",
+		"name": "Colchón Belmo Pocket",
 		"color": "Blanco, Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pocket-1-Grande.jpg",
@@ -609,10 +609,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Belmo Pocket 160x200",
+		"name": "Colchón Belmo Pocket",
 		"color": "Blanco, Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pocket-1-Grande.jpg",
@@ -622,10 +622,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Belmo Pocket 180x200",
+		"name": "Colchón Belmo Pocket ",
 		"color": "Blanco, Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pocket-1-Grande.jpg",
@@ -635,10 +635,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Belmo Pocket 200x200",
+		"name": "Colchón Belmo Pocket ",
 		"color": "Blanco, Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pocket-1-Grande.jpg",
@@ -648,10 +648,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Belmo Super Económico 80x190x13 cm",
+		"name": "Colchón Belmo Super Económico",
 		"color": "Amarillo, Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190x13",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Super-Economico.jpg"
@@ -660,10 +660,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Belmo Super Económico 80x190x17 cm",
+		"name": "Colchón Belmo Super Económico",
 		"color": "Amarillo, Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190x17",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Super-Economico.jpg"
@@ -672,10 +672,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Doral Pillow Top  140x190",
+		"name": "Colchón Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Mediano.jpg",
@@ -689,10 +689,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Doral Pillow Top  160x200",
+		"name": "Colchón Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Grande.jpg",
@@ -706,10 +706,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Doral Pillow Top  180x200",
+		"name": "Colchón Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Grande.jpg",
@@ -719,14 +719,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Mediano2.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Mediano1.jpg"
 		],
-		"price": 14999,
+		"price": 89500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Doral Pillow Top  200x200",
+		"name": "Colchón Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Grande.jpg",
@@ -736,14 +736,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Mediano2.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Mediano1.jpg"
 		],
-		"price": 14999,
+		"price": 90050,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive 80x190",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Chico.jpg",
@@ -755,10 +755,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive 90x190",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Chico.jpg",
@@ -766,14 +766,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Detalle-2.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Detalle-1.jpg"
 		],
-		"price": 14999,
+		"price": 31200,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive 100x190",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Chico.jpg",
@@ -785,10 +785,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive 130x190",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Mediano.jpg",
@@ -800,10 +800,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive 140x190",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Mediano.jpg",
@@ -815,10 +815,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive 160x200",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Grande.jpg",
@@ -830,10 +830,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive 180x200",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Grande.jpg",
@@ -845,10 +845,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive 200x200",
+		"name": "Colchón Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Grande.jpg",
@@ -860,10 +860,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 80x190",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-Chico.jpg",
@@ -875,10 +875,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 90x190",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-Chico.jpg",
@@ -886,14 +886,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Exclusive-Pillow-Top-Detalle-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Exclusive-Pillow-Top-Detalle-2.jpg"
 		],
-		"price": 14999,
+		"price": 15999,
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 100x190",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-Chico.jpg",
@@ -901,14 +901,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Exclusive-Pillow-Top-Detalle-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Exclusive-Pillow-Top-Detalle-2.jpg"
 		],
-		"price": 14999,
+		"price": 18500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 130x190",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-grande-1.jpg",
@@ -920,10 +920,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 140x190",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-grande-1.jpg",
@@ -935,10 +935,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 160x200",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-grande-1.jpg",
@@ -950,10 +950,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 180x200",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-grande-1.jpg",
@@ -965,10 +965,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Exclusive Pillow Top 200x200",
+		"name": "Colchón Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-grande-1.jpg",
@@ -980,10 +980,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Lujo - 80x190",
+		"name": "Colchón Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
@@ -992,10 +992,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Lujo - 90x190",
+		"name": "Colchón Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
@@ -1004,66 +1004,66 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Lujo - 100x190",
+		"name": "Colchón Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
 		],
 		"price": 28100,
-		"stock": 47
+		"stock": 50
 	},
 	{
-		"name": "Colchón Cannon Lujo - 130x190",
+		"name": "Colchón Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
 		],
 		"price": 34800,
-		"stock": 47
+		"stock": 48
 	},
 	{
-		"name": "Colchón Cannon Lujo - 140x190",
+		"name": "Colchón Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannonlujito.jpg"
 		],
 		"price": 37300,
-		"stock": 47
+		"stock": 62
 	},
 	{
-		"name": "Colchón Cannon Princess - 80x190",
+		"name": "Colchón Cannon Princess",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/cannon.jpg"],
 		"price": 22300,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Princess - 100x190",
+		"name": "Colchón Cannon Princess",
 		"color": "Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/cannon.jpg"],
 		"price": 25500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Princess - 130x190",
+		"name": "Colchón Cannon Princess",
 		"color": "Blanco",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/princess140.jpeg"
@@ -1072,10 +1072,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Princess - 140x190",
+		"name": "Colchón Cannon Princess",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/princess140.jpeg"
@@ -1084,10 +1084,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Renovation 140x190",
+		"name": "Colchón Cannon Renovation",
 		"color": "Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/renovation.jpg"
@@ -1096,22 +1096,22 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Sublime 180x200",
+		"name": "Colchón Cannon Sublime",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/colchon-cannon-sublime-.jpg"
 		],
 		"price": 114800,
-		"stock": 47
+		"stock": 20
 	},
 	{
-		"name": "Colchón Cannon Tropical - 100x190",
+		"name": "Colchón Cannon Tropical",
 		"color": "Varios",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/tropical.png"
@@ -1120,22 +1120,22 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Cannon Tropical - 130x190",
+		"name": "Colchón Cannon Tropical",
 		"color": "Varios",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/tropi140.jpg"
 		],
-		"price": 14999,
+		"price": 20400,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Cannon Tropical - 140x190",
+		"name": "Colchón Cannon Tropical",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/tropi140.jpg"
@@ -1144,10 +1144,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Elegante Imperial 80x190",
+		"name": "Colchón Elegante Imperial",
 		"color": "Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial.jpg"
@@ -1156,22 +1156,22 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Imperial 100x190",
+		"name": "Colchón Elegante Imperial",
 		"color": "Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial.jpg"
 		],
-		"price": 14999,
+		"price": 19999,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Imperial 140x190",
+		"name": "Colchón Elegante Imperial",
 		"color": "Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial.jpg"
@@ -1180,22 +1180,22 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Imperial 160x200",
+		"name": "Colchón Elegante Imperial",
 		"color": "Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial.jpg"
 		],
-		"price": 14999,
+		"price": 29500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Oasis 140x190",
+		"name": "Colchón Elegante Oasis",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Oasis-Grande.jpg"
@@ -1204,10 +1204,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Elegante Oasis 160x200",
+		"name": "Colchón Elegante Oasis",
 		"color": "Azul",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Oasis-Grande.jpg"
@@ -1216,106 +1216,106 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Elegante Oasis 180x200",
+		"name": "Colchón Elegante Oasis",
 		"color": "Azul",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Oasis-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 89300,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Oasis 200x200",
+		"name": "Colchón Elegante Oasis",
 		"color": "Azul",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Oasis-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 94000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Prince 80x190",
+		"name": "Colchón Elegante Prince",
 		"color": "Negro",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Elegante-Prince.jpg"
 		],
-		"price": 14999,
+		"price": 35999,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Prince 140x190",
+		"name": "Colchón Elegante Prince",
 		"color": "Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Elegante-Prince.jpg"
 		],
-		"price": 14999,
+		"price": 44500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Prince 160x200",
+		"name": "Colchón Elegante Prince",
 		"color": "Negro",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Elegante-Prince.jpg"
 		],
-		"price": 14999,
+		"price": 49200,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Prince 200x200",
+		"name": "Colchón Elegante Prince ",
 		"color": "Negro",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Elegante-Prince.jpg"
 		],
-		"price": 14999,
+		"price": 51000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Señorial 80x190",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 34999,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Señorial 100x190",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 38999,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Señorial 130x190",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
@@ -1324,10 +1324,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Elegante Señorial 140x190",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
@@ -1336,22 +1336,22 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Elegante Señorial 160x200",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 55700,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Señorial 180x200",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
@@ -1360,36 +1360,36 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Elegante Señorial 200x200",
+		"name": "Colchón Elegante Señorial",
 		"color": "Bordo",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 67200,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Gani Sueño Feliz - 80x190",
+		"name": "Colchón Gani Sueño Feliz",
 		"color": "Blanco,Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
-		"image": [],
+		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/WhatsApp-Image-2020-08-05-at-2.54.16-PM-1.jpeg"],
 		"price": 12700,
-		"stock": 47
+		"stock": 30
 	},
 	{
-		"name": "Colchón Gani Sueño Feliz - 100x190",
+		"name": "Colchón Gani Sueño Feliz",
 		"color": "Blanco,Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
-		"image": [],
+		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/WhatsApp-Image-2020-08-05-at-2.54.16-PM-1.jpeg"],
 		"price": 17800,
-		"stock": 47
+		"stock": 30
 	},
 	{
 		"name": "Colchón Inducol April Blanco - 80x190",
