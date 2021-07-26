@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
       },
       color: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       size: {
         type: DataTypes.STRING,
@@ -18,7 +18,11 @@ module.exports = (sequelize) => {
       },
       sizeMattress: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
+      },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: true,
       },
       image: {
         type: DataTypes.ARRAY(DataTypes.STRING),
