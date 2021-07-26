@@ -35,7 +35,7 @@ const initDb = async () => {
         for(let category of categories) {
           await Category.findOrCreate({
             where: { name: category.name},
-            defaults: categories[category]
+            defaults: category
           })
         }
 
