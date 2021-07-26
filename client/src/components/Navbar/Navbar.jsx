@@ -116,6 +116,8 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
+
+    {/* should be see only when is logged  */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-controls="primary-search-account-menu"
@@ -126,6 +128,7 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Login</p>
       </MenuItem>
+      {/* should be see only when is logged  */}
 
       <MenuItem >
         <ValuesAccount />
@@ -179,18 +182,21 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
+            {/* should be see only when is logged  */}
             <Link component={RouterLink} to="#" className={classes.linkDesktop}>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Link>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+            </Link>
+            {/* should be see only when is logged  */}
+
           <ValuesAccount className={classes.linkDesktop}/>
 
           </div>
