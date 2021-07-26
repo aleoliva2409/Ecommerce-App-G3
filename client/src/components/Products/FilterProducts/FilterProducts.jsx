@@ -10,10 +10,21 @@ import { filterProductCategory } from "../../../redux/actions/productActions";
 import Typography from "@material-ui/core/Typography";
 
 // * STYLES *
-import { useStyles } from "./FilterProductStyle";
+import {useStyles} from './FilterProductStyle';
+import {useStylesDark} from './FilterProductStyleDark';
 
 const FilterProducts = ({ setFilter, setCurrentPage }) => {
-  const classes = useStyles();
+    //select color mode
+    const dayMode = useStyles();
+    const darkMode = useStylesDark();
+    let classes;
+    const actualColor = useSelector(state => state.color)
+    console.log(actualColor)
+    if(actualColor){
+      classes = darkMode;
+    } else {
+      classes = dayMode;
+    }
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
 

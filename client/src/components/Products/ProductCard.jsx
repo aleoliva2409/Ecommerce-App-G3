@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -17,9 +17,22 @@ import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
 // * STYLES *
 import {useStyles} from './ProductCardStyle';
+import {useStylesDark} from './ProductCardStyleDark';
 
 export default function RecipeReviewCard({product}) {
-  const classes = useStyles();
+  
+  //select color mode
+  const dayMode = useStyles();
+  const darkMode = useStylesDark();
+  let classes;
+  const actualColor = useSelector(state => state.color)
+  console.log(actualColor)
+  if(actualColor){
+    classes = darkMode;
+  } else {
+    classes = dayMode;
+  }
+
   const [favorites, setFavorites] = useState()
 
   const dispatch = useDispatch();
