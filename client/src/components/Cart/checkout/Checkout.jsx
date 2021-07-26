@@ -1,22 +1,32 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
-import { checkoutStyles } from './CheckoutStyles';
-import { Box, Container, Typography, Button, Link, makeStyles } from '@material-ui/core';
+import { Box, Container, Typography, Button, Link } from '@material-ui/core';
 import { goToCheckout } from '../../../redux/actions/shoppingCartActions';
-
-const useStyles = makeStyles(checkoutStyles);
+// * STYLES *
+import {useStyles} from './CheckoutStyles';
+import {useStylesDark} from './CheckoutSylesDark';
 
 const Checkout = () => {
 
   const dispatch = useDispatch()
 
-  const styles = useStyles()
+  //select color mode
+  const dayMode = useStyles();
+  const darkMode = useStylesDark();
+  let classes;
+  const actualColor = useSelector(state => state.color)
+  console.log(actualColor)
+  if(actualColor){
+    classes = darkMode;
+  } else {
+    classes = dayMode;
+  }
 
   const handleGoToCheckout = () => dispatch(goToCheckout());
 
   return (
-    <Container className={styles.root} maxWidth="lg">
+    <Container className={classes.root} maxWidth="lg">
       <Box component="div">
         <Typography variant="h3">Total:</Typography>
         {/* //! MISSING TOTAL PRICE */}

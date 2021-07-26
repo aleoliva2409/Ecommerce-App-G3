@@ -5,6 +5,7 @@ import productReducer from './reducers/productReducer';
 import shoppingCartReducer from './reducers/shoppingCartReducer';
 import ordersReducer from './reducers/ordersReducer';
 import usersReducer from './reducers/userReducer'
+import colorReducer from './reducers/colorReducer'
 
 const rootReducers = combineReducers({
 	categories: categoriesReducer,
@@ -12,6 +13,7 @@ const rootReducers = combineReducers({
   cart: shoppingCartReducer,
   orders: ordersReducer,
   users: usersReducer,
+  color: colorReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

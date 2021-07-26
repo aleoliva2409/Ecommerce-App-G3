@@ -1,0 +1,201 @@
+[
+  {
+		"name": "Almohada Belmo Memory Foam",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/belmo-memoryfoam-1.jpg",
+    "brand": "Belmo",
+    "description": "Diseño ergonómico con fibras entrelazadas de espuma de alta memoria (memory foam). Delicado confort cervical inalterable, que ayuda a relajar los músculos del cuello y minimiza puntos de presión. Totalmente matelaseada con tela interlock."
+	},
+  {
+		"name": "Almohada Cannon Viscoelástica",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/cannon-visco.png",
+    "brand": "Cannon",
+    "description": "Almohada 100% de espuma viscoelástica de alta tecnología, indeformable, funda desmontable de tela de algodón, efecto antiestrés, hipoalergénica-Ecológica, Termosensible, adaptación a la temperatura corporal, gran comodidad cervical, alta densidad y valor elástico."
+	},
+  {
+		"name": "Almohada Cannon Viscoelástica Cervical",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/cannonalmohada.jpg",
+    "brand": "Cannon",
+    "description": "Almohada 100% de espuma viscoelástica de alta tecnología, Indeformable, Funda desmontable de tela de algodón,Efecto antiestrés, Hipoalergénica-Ecológica, Termosensible, Adaptación a la temperatura corporal, Gran comodidad cervical, Alta densidad y valor elástico."
+	},
+  {
+		"name": "Almohada Nativa Triangular",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/triangulo.jpg",
+    "brand": "Nativa",
+    "description": "Espuma Ecológica de suprema sensación de suavidad, Densidad 18 kg/m3, Funda de tela de sabana estampada, Con canales de ventilación para que circule mayor volumen de aire y se evapore fácilmente la humedad. El complemento más cómodo para brindar un soporte correcto a la cabeza y la espalda, en el momento de la lectura o de mirar televisión en la cama."
+	},
+	{
+		"name": "Almohada Palette Cervical Viscoelástica",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Palette-Viscosmart-Cervical.jpg",
+    "brand": "Palette",
+    "description": "Funda: Lavable de microtowel con cierre, Tecnología de relleno: NASA, Espuma viscoelástica inteligente. Óptima recuperación de volumen y forma., Diseño terapéutico que ayuda a la circulación durante el descanso y permite múltiples posturas."
+	},
+	{
+		"name": "Almohada Palette Extra Firme",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Palette-Boris-Urban-Extra-Firme.jpg",
+    "brand": "Palette",
+    "description": "Tecnología del relleno: Con opciones de relleno y densidades variadas, esta línea proporciona el máximo confort indicando el tipo de soporte más adecuado según el peso y la posición de dormir de cada persona. Esta almohada se recomienda para quienes pesan 60 kilos o más y duermen de costado."
+	},
+	{
+		"name": "Almohada Palette Suave",
+		"size": "50x70",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Palette-Suave.jpg",
+		"brand": "Palette",
+    "description": "La almohada Palette Urban proporciona el maximo nivel de confort. El modelo se elige en base a el peso y la posición de dormir de cada persona"
+	},
+	{
+		"name": "Almohada Palette Visco Smart",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Palette-Viscosmart.jpg",
+    "brand": "Palette",
+    "description": "Funda: Lavable de microtowel con cierre, Tecnología de relleno: NASA, Espuma viscoelástica inteligente. Soporte medio de óptima recuperación de volumen y forma."
+	},
+  {
+		"name": "Almohada Piero Cervical",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/almoha.png",
+    "brand": "Piero",
+    "description": "Almohada de espuma que mejora la postura cervical, Facilita la circulación sanguínea, Ayuda a eliminar dolores de cuello y hombros al dormir"
+	},
+  {
+		"name": "Almohada Simmons Confort Sleep",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/simmons-70x50-1.jpg",
+    "brand": "Simmons",
+    "description": "Almohada hipoalergenica, Relleno de fibra 100% virgen y siliconada, Enfundada de tela percal, Brinda confort extra suave, De máxima calidad y durabilidad"
+	},
+	{
+		"name": "Almohada Simmons Intelligent Cervical",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Simmons-Intelligent-Cervical.jpg",
+    "brand": "Simmons",
+    "description": "Diseño anatómico. La espuma Intelligent copia la forma de la cabeza y el cuello brindando el soporte necesario para conseguir confortables noches de descanso. Su Interior de espuma de alta memoria y una suave funda de tejido de punto aumenta aún más la sensación de suavidad y confort. Ayuda a reducir los puntos de presión que normalmente ejerce la espuma tradicional. Posee Funda Extraíble que facilita el lavado del tejido de punto, lo que permitirá disfrutar de un descanso más saludable e higiénico por más tiempo."
+	},
+	{
+		"name": "Almohada Simmons Intelligent Clásica",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Simmons-Intelligent-Clasica-scaled.jpg",
+    "brand": "Simmons",
+    "description": "Interior de Espuma Inteligente. Funda tejido de punto, 100% poliéster. Antibacterial y Antialérgica."
+	},
+  {
+		"name": "Colchón Baby Belmo",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Baby2.jpg",
+    "brand": "Belmo",
+    "description": "Belmo desarrolló una colorida línea de colchones de cuna y camas funcionales. Ideales para los primeros años de los niños. Confeccionados en espuma de poliuretano y tapizados en coloridas telas de algodón altamente estimulantes visualmente."
+	},
+  {
+		"name": "Colchón Belmo Belspring 1",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-1-Grande.jpg",
+    "brand": "Belmo",
+		"description": "Colchón de Resortes con Marco de Espuma. Resortes bicónicos tejidos unidos sí por un espiral de acero, una estructura confortable y duradera que sostiene perfectamente el peso del cuerpo. Acolchados y rellenos de muy buena calidad, que otorgan una sensación de confort y suavidad sin prescindir de la firmeza que se debe obtener para un descanso sano y saludable."
+	},
+  {
+		"name": "Colchón Belmo Belspring 2",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-2-Chico.jpg",
+    "brand": "Belmo",
+		"description": "Colchón de Resortes con Sistema Europeo. Base de resortes bicónicos templados electrónicamente, unidos entre sí por un espiral de acero y con estabilizadores de espuma de polietileno perimetral. Una estructura interna que no sufre deformaciones con el uso normal del colchón. Marco perimetral de espuma extra firme que brinda la más confortable sensación de confort de acuerdo al sistema europeo. Extra Pillow Interior, una manta extra confortable. La superficie matelaseada en tejido de punto de algodón, jerarquiza la belleza exterior del producto."
+	},
+  {
+		"name": "Colchón Belmo Belspring 3",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Belspring-3-Grande.jpg",
+    "brand": "Belmo",
+		"description": "Colchón de Resortes con Doble Marco de Acero. Diseñado para no ser dado vuelta, firmeza en la base y confort extra en la superficie. Extra Pillow Interior, acolchados y rellenos de la mejor calidad de espuma, combinados en las proporciones adecuadas de firmeza y suavidad, permiten disfrutar un alto índice de firmeza y una excelente sensación de confort. Tejido de punto de algodón en tapa y diseño en composé de Jacquard en laterales y sommier."
+	},
+  {
+		"name": "Colchón Belmo Density 1",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
+    "brand": "Belmo",
+		"description": "Colchón de espuma de poliuretano. Matelaseados en su totalidad y tapizados con diseños exclusivos en tejidos de Jacquard."
+	},
+  {
+		"name": "Colchón Belmo Density 2",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-2-Chico.jpg",
+    "brand": "Belmo",
+    "description": "Colchón de Espuma de Alta Densidad. Colchón para no dar vuelta. Un colchón especialmente diseñado para el cuidado de la espalda, máxima firmeza y soporte. Ideal para mantener una postura saludable durante el descanso."
+	},
+  {
+		"name": "Colchón Belmo Pocket",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pocket-1-Grande.jpg",
+    "brand": "Belmo",
+    "description": "Colchón de Resortes Enfundados Individualmente. La tecnología Belmo Pocket 1 se adapta de manera instantánea al peso y la posición de las dos personas que descansan en este nuevo colchón. Cada una de ellas sentirá la comodidad que sólo un Belmo Pocket 1 puede brindar porque los resortes enfundados se adaptan y mantienen el cuerpo en la posición ideal de descanso, sin contracturas ni puntos de presión, eliminando las molestias ocasionadas por los movimientos de la pareja."
+	},
+  {
+		"name": "Colchón Belmo Super Económico",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Super-Economico.jpg",
+    "brand": "Belmo",
+    "description": "Características: nColchón de calidad económica, forrado en tela fiselina."
+	},
+  {
+		"name": "Colchón Cannon Doral Pillow Top",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Doral-Pillow-Top-Mediano.jpg",
+    "brand": "Cannon",
+		"description": "COLCHÓN: Suave y mullido. Acentúa la sensación de confort - Exclusivo sistema reforzado, realizado en acero templado con doble marco perimetral, estabilizadores longitudinales y transversales. - Doble pillow top. Mantas adicionales de espuma que brinda mayor confort en ambas caras del colchón. - 4 agarraderas laterales - 4 aireadores laterales - Recomendado para personas de hasta 100 kgs. - Tapizado en tela tejido de punto con tratamiento antiácaros. - Totalmente matelaseado."
+	},
+  {
+		"name": "Colchón Cannon Exclusive",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Chico.jpg",
+    "brand": "Cannon",
+    "description": "COLCHÓN: Previene el desarrollo de problemas de columna y contractura muscular - Placa de espuma de Poliuretano flexible de alta densidad (30 kgs/m3). Se adapta al peso de cuerpo otorgando máximo confort y durabilidad. - Recomendado para personas de hasta 100 kgs. - Tapizado en Jacquard Belga totalmente matelaseado con tratamiento ignífugo y proceso antiácaros."
+	},
+  {
+		"name": "Colchón Cannon Exclusive Pillow Top",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Exclusive-Pillow-Top-Chico.jpg",
+    "brand": "Cannon",
+    "description": "COLCHÓN: Previene el desarrollo de problemas de columna y contractura muscular - Placa de espuma de Poliuretano flexible de alta densidad (30 kgs/m3). Se adapta al peso de cuerpo otorgando máximo confort y durabilidad. - Recomendado para personas de hasta 100 kgs. - Tapizado en Jacquard Belga totalmente matelaseado con tratamiento ignífugo y proceso antiácaros."
+	},
+  {
+		"name": "Colchón Cannon Lujo",
+		"image":"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg",
+    "brand": "Cannon",
+    "description": "Placa entera de espuma de poliuretano flexible de alta densidad. Finísimo Jackard Belga con tratamiento ignífugo y proceso antiácaros. Totalmente matelaseados."
+	},
+  {
+		"name": "Colchón Cannon Princess",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/cannon.jpg",
+    "brand": "Cannon",
+		"description": "Placa entera de espuma de poliuretano flexible de alta densidad con tapizado tela de algodón con exclusivo diseño acolchado con matelasse total multicapa."
+	},
+  {
+		"name": "Colchón Cannon Renovation",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/renovation.jpg",
+    "brand": "Cannon",
+    "description": "Placa de espuma de Poliuretano flexible de alta densidad. Mayor durabilidad con inigualable confort y firmeza, Recomendado para personas de hasta 120 kgs y un poco más. Tapizado en Jacquard de diseño exclusivo, con tratamiento ignífugo y proceso antiácaros. Totalmente matelaseado"
+	},
+  {
+		"name": "Colchón Cannon Sublime 180x200",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/colchon-cannon-sublime-.jpg",
+    "brand": "Cannon",
+    "description": "Resortes: System pocket, resortes enfundados individualmente. Este colchón parte de los materiales tecnológicamente más avanzados que ofrece una excelente calidad. Su adaptabilidad total al cuerpo y su firmeza independiente lo convierten en un soporte óptimo para descansar. Su sistema Pillow Top de doble acolchado y tapicería de lujo aumenta el grado de confort y aporta una agradable sensación de suavidad, frescura y bienestar protegiendo su salud"
+	},
+  {
+		"name": "Colchón Cannon Tropical",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/tropical.png",
+    "brand": "Cannon",
+    "description": "Placa entera de espuma de poliuretano flexible. Tapizado con bandas laterales matelaseadas en tela de algodón de diseño exclusivo. Anti ácaros, mantiene el colchón más higiénico y repele los ácaros aun con el paso del tiempo. Anatómico ya que permite una correcta adaptación del cuerpo."
+	},
+  {
+		"name": "Colchón Elegante Imperial",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial.jpg",
+    "brand": "Elegante",
+    "description": "Espuma de Poliuretano de 27 kg de densidad, forrado en tela Jackard completamente matelaseada, brindando elegancia y calidad."
+	},
+  {
+		"name": "Colchón Elegante Oasis",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Oasis-Grande.jpg",
+    "brand": "Elegante",
+		"description": "Espuma de Poliuretano de 35 kg de densidad revestido en tela de punto."
+	},
+  {
+		"name": "Colchón Elegante Prince",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Elegante-Prince.jpg",
+    "brand": "Elegante",
+    "description": "Capa de espuma de Poliuretano de 30 kg de densidad. Posee estructura de Resortes Bicónicos con Marco Perimetral de Acero y Estabilizadores dobles, laterales y esquineros, otorgando a este modelo una resistencia ideal y una buena postura durante el sueño. Revestido en tela Jackard totalmente matelaseada. Aireadores que permiten una excelente ventilación del interior del colchón, eliminando la acumulación de humedad y desarrollo de ácaros y hongos."
+	},
+  {
+		"name": "Colchón Elegante Señorial",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Señorial-Grande.jpg",
+    "brand": "Elegante",
+    "description": "Cuerpo de espuma de Poliuretano de 30 kg de densidad y máxima resistencia. Ideal para cuidar su postura al descansar. Revestido en tela Jackard íntegramente matelaseada."
+	},
+  {
+		"name": "Colchón Gani Sueño Feliz",
+		"image": "https://www.pillowtop.com.ar/wp-content/uploads/WhatsApp-Image-2020-08-05-at-2.54.16-PM-1.jpeg",
+    "brand": "Gani",
+		"description": "Placa de espuma de poliuretano. Espuma de Alta densidad 20 kgs/m3. Soporte 70 Kg Altura: 18 cm. El Cotin (tela externa) puede variar al de la foto. Tela de jackar Totalmente Matelasse"
+	}
+]

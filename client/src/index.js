@@ -1,6 +1,5 @@
 import '@fontsource/roboto';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
-import theme from './styles/themeConfig'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -10,6 +9,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import theme from './styles/themeConfig';
+
+
 dotenv.config();
 
 axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001/api';
@@ -21,13 +23,41 @@ if (!localStorage.cart) {
   localStorage.setItem('cart', localStorage.getItem('cart'));
 }
 
+//color mode in local storage (inital state)
+if (!localStorage.color) {
+  localStorage.setItem('color', JSON.stringify(false));
+} else {
+  localStorage.setItem('color', localStorage.getItem('color'));
+}
+
+
+//create a tag with diferents styles 
+const LigthTheme = React.lazy(() => import('./styles/themeLigth'));
+const DarkTheme = React.lazy(() => import('./styles/themeNigth'));
+
+
+const ThemeSelector = ({ children }) => {
+  const CHOSEN_THEME = JSON.parse(localStorage.getItem('color'));
+  return (
+    <>
+      <React.Suspense fallback={<></>}>
+        {(CHOSEN_THEME === false) && <LigthTheme />}
+        {(CHOSEN_THEME === true) && <DarkTheme />}
+      </React.Suspense>
+      {children}
+    </>
+  )
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <CssBaseline />
         <ThemeProvider theme={theme}>
+        <ThemeSelector>
           <App />
+        </ThemeSelector>
         </ThemeProvider>
       </BrowserRouter>
     </Provider>

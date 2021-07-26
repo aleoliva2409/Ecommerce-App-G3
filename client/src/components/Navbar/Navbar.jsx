@@ -1,29 +1,46 @@
-import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import React, { useState } from "react";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Badge from "@material-ui/core/Badge";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+import SearchIcon from "@material-ui/icons/Search";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import MoreIcon from "@material-ui/icons/MoreVert";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShortLogo from './../../assets/img/Logos/short-logo.png';
-import LongLogo from './../../assets/img/Logos/long-logo.png';
-import SearchBar from './SearchBar/SearchBar';
-import ValuesAccount from '../Account/ValuesAccount';
-import { Link as RouterLink } from 'react-router-dom';
-import Link from '@material-ui/core/Link';
-import { useMediaQuery } from '@material-ui/core';
-import {useStyles} from './Styles';
-import { useSelector } from 'react-redux';
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShortLogo from "./../../assets/img/Logos/short-logo.png";
+import LongLogo from "./../../assets/img/Logos/long-logo.png";
+import SearchBar from "./SearchBar/SearchBar";
+import ValuesAccount from "../Account/ValuesAccount";
+import { Link as RouterLink } from "react-router-dom";
+import Link from "@material-ui/core/Link";
+import { useMediaQuery } from "@material-ui/core";
+import { useStyles } from "./Styles";
+import { useStylesDark } from "./StyleDark";
+import { useDispatch, useSelector } from "react-redux";
+import { changeColor } from "../../redux/actions/colorModeActions";
+import WbSunnyIcon from "@material-ui/icons/WbSunny";
+import Brightness3Icon from '@material-ui/icons/Brightness3';
 
 export default function PrimarySearchAppBar() {
-  const classes = useStyles();
-  const isPhone = useMediaQuery('(max-width: 760px)');
+  const dispatch = useDispatch();
+
+  //select color mode
+  const dayMode = useStyles();
+  const darkMode = useStylesDark();
+  let classes;
+  const actualColor = useSelector(state => state.color)
+  console.log(actualColor)
+  if(actualColor){
+    classes = darkMode;
+  } else {
+    classes = dayMode;
+  }
+
+  const isPhone = useMediaQuery("(max-width: 760px)");
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -31,8 +48,8 @@ export default function PrimarySearchAppBar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  const inLocal = useSelector((state) => state.cart.items)
-  const cartItemsBadge = inLocal.reduce((acc, crr) => acc + (crr.qty), 0)
+  const inLocal = useSelector((state) => state.cart.items);
+  const cartItemsBadge = inLocal.reduce((acc, crr) => acc + crr.qty, 0);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -51,39 +68,42 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = 'primary-search-account-menu';
+  const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={menuId}
       keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <Link component={RouterLink} to="/admin/dashboard"  className={classes.links}>
-          <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
+      <Link
+        component={RouterLink}
+        to="/admin/dashboard"
+        className={classes.links}
+      >
+        <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
       </Link>
-      <Link component={RouterLink} to="/categories"  className={classes.links}>
-          <MenuItem onClick={handleMenuClose}>Agregar categoria</MenuItem>
+      <Link component={RouterLink} to="/categories" className={classes.links}>
+        <MenuItem onClick={handleMenuClose}>Agregar categoria</MenuItem>
       </Link>
     </Menu>
   );
 
-  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
-
       onClose={handleMobileMenuClose}
     >
-      <Link component={RouterLink} to="/products"  className={classes.links}>
+      <Link component={RouterLink} to="/products" className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -94,7 +114,7 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
-      <Link component={RouterLink} to="/cart"  className={classes.links}>
+      <Link component={RouterLink} to="/cart" className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={cartItemsBadge} color="secondary">
@@ -116,8 +136,6 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
 
-
-    {/* should be see only when is logged  */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-controls="primary-search-account-menu"
@@ -128,37 +146,68 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Login</p>
       </MenuItem>
-      {/* should be see only when is logged  */}
 
-      <MenuItem >
+      <MenuItem>
         <ValuesAccount />
       </MenuItem>
     </Menu>
-
-
   );
+
+  const [color, setColor] = useState(JSON.parse(localStorage.getItem("color")));
+
+  const clickColor = () => {
+    if (color) {
+      localStorage.setItem("color", JSON.stringify(false));
+      setColor(JSON.parse(localStorage.getItem("color")));
+    } else {
+      localStorage.setItem("color", JSON.stringify(true));
+      setColor(JSON.parse(localStorage.getItem("color")));
+    }
+    dispatch(changeColor(JSON.parse(localStorage.getItem("color"))))
+  };
 
   return (
     <div className={classes.grow}>
-        <AppBar position="static">
-          <Toolbar className={classes.appbar}>
-
-            <Link component={RouterLink} to="/">
-                {isPhone ?
-                <img src={ShortLogo} className={classes.imageShort} alt="Pillow Top" /> :
-                <img src={LongLogo} className={classes.image} alt="Pillow Top" />
-                }
-            </Link>
+      <AppBar position="static">
+        <Toolbar className={classes.appbar}>
+          <Link component={RouterLink} to="/">
+            {isPhone ? (
+              <img
+                src={ShortLogo}
+                className={classes.imageShort}
+                alt="Pillow Top"
+              />
+            ) : (
+              <img src={LongLogo} className={classes.image} alt="Pillow Top" />
+            )}
+          </Link>
 
           <div className={classes.search}>
-            <div className={classes.searchIcon}> <SearchIcon /> </div>
+            <div className={classes.searchIcon}>
+              {" "}
+              <SearchIcon />{" "}
+            </div>
             {/* Done Search   */}
             <SearchBar />
           </div>
-
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link component={RouterLink} to="/products"  className={classes.linkDesktop}>
+{ color?
+            <IconButton color="inherit"
+            onClick={clickColor}>
+              <Brightness3Icon/>
+            </IconButton>
+            :
+            <IconButton color="inherit"
+            onClick={clickColor}>
+              <WbSunnyIcon />
+            </IconButton>
+}
+            <Link
+              component={RouterLink}
+              to="/products"
+              className={classes.linkDesktop}
+            >
               <IconButton color="inherit">
                 <Badge badgeContent={0} color="secondary">
                   <ShoppingBasketIcon />
@@ -166,7 +215,11 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="/cart" className={classes.linkDesktop}>
+            <Link
+              component={RouterLink}
+              to="/cart"
+              className={classes.linkDesktop}
+            >
               <IconButton color="inherit">
                 <Badge badgeContent={cartItemsBadge} color="secondary">
                   <ShoppingCartIcon />
@@ -182,23 +235,19 @@ export default function PrimarySearchAppBar() {
               </IconButton>
             </Link>
 
-            {/* should be see only when is logged  */}
             <Link component={RouterLink} to="#" className={classes.linkDesktop}>
-                <IconButton
-                  edge="end"
-                  aria-label="account of current user"
-                  aria-controls={menuId}
-                  aria-haspopup="true"
-                  onClick={handleProfileMenuOpen}
-                  color="inherit"
-                >
-                  <AccountCircle />
-                </IconButton>
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
             </Link>
-            {/* should be see only when is logged  */}
-
-          <ValuesAccount className={classes.linkDesktop}/>
-
+            <ValuesAccount className={classes.linkDesktop} />
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
