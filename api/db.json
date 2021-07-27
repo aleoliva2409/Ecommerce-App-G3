@@ -2755,10 +2755,10 @@
 		"stock": 15
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 1 - 80x190",
+		"name": "Colchón y Sommier Belmo Belspring 1",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-1-Chico.jpg",
@@ -2768,10 +2768,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 1 - 90x190",
+		"name": "Colchón y Sommier Belmo Belspring 1",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-1-Chico.jpg",
@@ -2781,10 +2781,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 1 - 140x190",
+		"name": "Colchón y Sommier Belmo Belspring 1",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-1-Grande.jpg",
@@ -2794,10 +2794,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 2 - 80x190",
+		"name": "Colchón y Sommier Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-2-Chico.jpg",
@@ -2807,10 +2807,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 2 - 100x190",
+		"name": "Colchón y Sommier Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-2-Chico.jpg",
@@ -2820,10 +2820,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 2 - 140x190",
+		"name": "Colchón y Sommier Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-2-Mediano.jpg",
@@ -2833,10 +2833,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 2 - 160x200",
+		"name": "Colchón y Sommier Belmo Belspring 2",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-2-Grande.jpg",
@@ -2846,10 +2846,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 3 - 140x190",
+		"name": "Colchón y Sommier Belmo Belspring 3",
 		"color": "Blanco, Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-3-Mediano.jpg",
@@ -2859,10 +2859,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 3 - 160x200",
+		"name": "Colchón y Sommier Belmo Belspring 3",
 		"color": "Blanco, Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-3-Grande.jpg",
@@ -2873,10 +2873,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 3 - 180x200",
+		"name": "Colchón y Sommier Belmo Belspring 3",
 		"color": "Blanco, Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-3-Grande.jpg",
@@ -2887,10 +2887,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Belspring 3 - 200x200",
+		"name": "Colchón y Sommier Belmo Belspring 3",
 		"color": "Blanco, Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Belspring-3-Grande.jpg",
@@ -2901,10 +2901,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 80x190x14 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190x14",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-1-Chico.jpg",
@@ -2914,10 +2914,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 80x190x18 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "80x190x18",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-1-Chico.jpg",
@@ -2927,10 +2927,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 80x190x22 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "80x190x22",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
@@ -2940,10 +2940,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 100x190x22 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190x22",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
@@ -2953,10 +2953,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 90x190x22 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "90x190x22",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Chico.jpg",
@@ -2966,10 +2966,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 130x190x22 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "130x190x22",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Grande.jpg",
@@ -2980,10 +2980,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 1 - 140x190x22 cm",
+		"name": "Colchón y Sommier Belmo Density 1",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190x22",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Density-1-Grande.jpg",
@@ -2994,10 +2994,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 80x190",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-2-Chico.jpg",
@@ -3007,10 +3007,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 90x190",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/1600-×-1200_Density2_1p-1.jpg",
@@ -3020,10 +3020,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 100x190",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/1600-×-1200_Density2_1p-1.jpg",
@@ -3033,10 +3033,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 130x190",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-2-Grande.jpg",
@@ -3046,10 +3046,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 140x190",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-2-Grande.jpg",
@@ -3059,24 +3059,24 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 160x200",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-2-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-1-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Density-2-2.jpg"
 		],
-		"price": 14999,
+		"price": 41500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 180x200",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-2-Mediano.jpg",
@@ -3087,10 +3087,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Density 2 - 200x200",
+		"name": "Colchón y Sommier Belmo Density 2",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Density-2-Mediano.jpg",
@@ -3101,65 +3101,65 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Pocket 140x190",
+		"name": "Colchón y Sommier Belmo Pocket",
 		"color": "Blanco, Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Pocket-1-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-2-scaled.jpg"
 		],
-		"price": 14999,
+		"price": 60400,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Pocket 160x200",
+		"name": "Colchón y Sommier Belmo Pocket",
 		"color": "Blanco, Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Pocket-1-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-2-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-1.jpg"
 		],
-		"price": 14999,
+		"price": 60000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Pocket 180x200",
+		"name": "Colchón y Sommier Belmo Pocket",
 		"color": "Blanco, Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Pocket-1-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-2-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-1.jpg"
 		],
-		"price": 14999,
+		"price": 56000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Pocket 200x200",
+		"name": "Colchón y Sommier Belmo Pocket",
 		"color": "Blanco, Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Pocket-1-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-2-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Pocket-1-1.jpg"
 		],
-		"price": 14999,
+		"price": 56500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Belmo Super Económico 80x190x13 cm",
+		"name": "Colchón y Sommier Belmo Super Económico",
 		"color": "Amarillo, Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190x13",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Super-Economico.jpg"
@@ -3168,10 +3168,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Belmo Super Económico 80x190x17 cm",
+		"name": "Colchón y Sommier Belmo Super Económico",
 		"color": "Amarillo, Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190x17",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Super-Economico.jpg"
@@ -3180,10 +3180,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Doral Pillow Top 140x190",
+		"name": "Colchón y Sommier Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Mediano-1.jpg",
@@ -3196,10 +3196,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Doral Pillow Top 160x200",
+		"name": "Colchón y Sommier Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-1.jpg",
@@ -3212,10 +3212,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Doral Pillow Top 180x200",
+		"name": "Colchón y Sommier Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-1.jpg",
@@ -3224,14 +3224,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-4.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-5.jpg"
 		],
-		"price": 14999,
+		"price": 114000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Doral Pillow Top 200x200",
+		"name": "Colchón y Sommier Cannon Doral Pillow Top",
 		"color": "Blanco, Negro",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-1.jpg",
@@ -3240,14 +3240,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-4.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Doral-Pillow-Top-Grande-5.jpg"
 		],
-		"price": 14999,
+		"price": 125000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 80x190",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Chico-1.jpg",
@@ -3260,10 +3260,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 90x190",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Chico-1.jpg",
@@ -3276,10 +3276,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 100x190",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Chico-1.jpg",
@@ -3292,10 +3292,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 130x190",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Mediano.jpg",
@@ -3308,10 +3308,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 140x190",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Mediano.jpg",
@@ -3324,10 +3324,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 160x200",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Grande.jpg",
@@ -3341,10 +3341,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 180x200",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Grande.jpg",
@@ -3358,10 +3358,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive 200x200",
+		"name": "Colchón y Sommier Cannon Exclusive",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Grande.jpg",
@@ -3375,10 +3375,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 80x190",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pillow-Top-Chico-1.jpg",
@@ -3393,10 +3393,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 90x190",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pillow-Top-Chico-1.jpg",
@@ -3411,10 +3411,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 100x190",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pillow-Top-Chico-1.jpg",
@@ -3429,10 +3429,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 130x190",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pilow-Mediano-1.jpg",
@@ -3444,10 +3444,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 140x190",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pilow-Mediano-1.jpg",
@@ -3459,10 +3459,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 160x200",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pillow-Top-Grande-1.jpg",
@@ -3474,10 +3474,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 180x200",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pillow-Top-Grande-1.jpg",
@@ -3489,10 +3489,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Exclusive Pillow Top 200x200",
+		"name": "Colchón y Sommier Cannon Exclusive Pillow Top",
 		"color": "Beige, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Exclusive-Pillow-Top-Grande-1.jpg",
@@ -3504,10 +3504,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Lujo - 80x190",
+		"name": "Colchón y Sommier Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
@@ -3516,10 +3516,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Lujo - 90x190",
+		"name": "Colchón y Sommier Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
@@ -3528,10 +3528,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Lujo - 100x190",
+		"name": "Colchón y Sommier Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
@@ -3540,10 +3540,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Lujo - 130x190",
+		"name": "Colchón y Sommier Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-lujo.jpg"
@@ -3552,10 +3552,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Lujo - 140x190",
+		"name": "Colchón y Sommier Cannon Lujo",
 		"color": "Beige, Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannonlujito.jpg"
@@ -3564,10 +3564,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Princess 80x190",
+		"name": "Colchón y Sommier Cannon Princess",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/cannon-princess.jpg"
@@ -3576,10 +3576,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Cannon Princess 130x190",
+		"name": "Colchón y Sommier Cannon Princess",
 		"color": "Blanco",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/princess130.jpeg"
@@ -3588,10 +3588,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Princess 140x190",
+		"name": "Colchón y Sommier Cannon Princess",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/princess130.jpeg"
@@ -3600,10 +3600,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Tropical 100x190",
+		"name": "Colchón y Sommier Cannon Tropical",
 		"color": "Varios",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/tropical-100.jpg"
@@ -3612,10 +3612,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Cannon Tropical 130x190",
+		"name": "Colchón y Sommier Cannon Tropical",
 		"color": "Varios",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/sommier-cannon-princess.jpg",
@@ -3625,10 +3625,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Imperial 80x190",
+		"name": "Colchón y Sommier Elegante Imperial",
 		"color": "Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial.jpg"
@@ -3637,10 +3637,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Imperial 100x190",
+		"name": "Colchón y Sommier Elegante Imperial",
 		"color": "Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial.jpg"
@@ -3649,34 +3649,34 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Imperial 140x190",
+		"name": "Colchón y Sommier Elegante Imperial",
 		"color": "Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial.jpg"
 		],
-		"price": 14999,
+		"price": 25600,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Imperial 160x200",
+		"name": "Colchón y Sommier Elegante Imperial",
 		"color": "Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial.jpg"
 		],
-		"price": 14999,
+		"price": 45000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Oasis 140x190",
+		"name": "Colchón y Sommier Elegante Oasis",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Oasis-Grande.jpg"
@@ -3685,10 +3685,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Elegante Oasis 160x200",
+		"name": "Colchón y Sommier Elegante Oasis",
 		"color": "Azul",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Oasis-Grande.jpg"
@@ -3697,10 +3697,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Elegante Oasis 180x200",
+		"name": "Colchón y Sommier Elegante Oasis",
 		"color": "Azul",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Oasis-Grande.jpg"
@@ -3709,10 +3709,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Oasis 200x200",
+		"name": "Colchón y Sommier Elegante Oasis",
 		"color": "Azul",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Oasis-Grande.jpg"
@@ -3721,10 +3721,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Prince 80x190",
+		"name": "Colchón y Sommier Elegante Prince",
 		"color": "Negro",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Elegante-Prince.jpg"
@@ -3733,10 +3733,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Prince 140x190",
+		"name": "Colchón y Sommier Elegante Prince ",
 		"color": "Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Elegante-Prince.jpg"
@@ -3745,10 +3745,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Prince 160x200",
+		"name": "Colchón y Sommier Elegante Prince",
 		"color": "Negro",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Elegante-Prince.jpg"
@@ -3757,10 +3757,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Prince 200x200",
+		"name": "Colchón y Sommier Elegante Prince",
 		"color": "Negro",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Elegante-Prince.jpg"
@@ -3769,10 +3769,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 80x190",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3781,10 +3781,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 100x190",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3793,10 +3793,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 130x190",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3805,10 +3805,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 140x190",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3817,10 +3817,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 160x200",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3829,10 +3829,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 180x200",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3841,10 +3841,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Elegante Señorial 200x200",
+		"name": "Colchón y Sommier Elegante Señorial",
 		"color": "Bordo",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Señorial-Grande.jpg"
@@ -3853,30 +3853,30 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Gani Sueño Feliz - 80x190",
+		"name": "Colchón y Sommier Gani Sueño Feliz",
 		"color": "Blanco,Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [],
 		"price": 20900,
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Gani Sueño Feliz - 100x190",
+		"name": "Colchón y Sommier Gani Sueño Feliz",
 		"color": "Blanco,Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [],
 		"price": 27100,
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Inducol April Blanco - 80x190",
+		"name": "Colchón y Sommier Inducol April Blanco",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Blanco-Chico-1.jpg"
@@ -3885,32 +3885,32 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol April Blanco - 100x190",
+		"name": "Colchón y Sommier Inducol April Blanco",
 		"color": "Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [""],
 		"price": 14999,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol April Blanco - 140x190",
+		"name": "Colchón y Sommier Inducol April Blanco",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Blanco-Mediano-1.jpg"
 		],
-		"price": 14999,
+		"price": 55000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol April Color 80x190",
+		"name": "Colchón y Sommier Inducol April Color",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Azul-Chico.jpg",
@@ -3922,10 +3922,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol April Color 100x190",
+		"name": "Colchón y Sommier Inducol April Color",
 		"color": "Varios",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Azul-Chico.jpg",
@@ -3933,14 +3933,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Borde-Azul-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Borde-Bordo-Chico.jpg"
 		],
-		"price": 14999,
+		"price": 28000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol April Color 140x190",
+		"name": "Colchón y Sommier Inducol April Color",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Borde-Bordo-Mediano.jpg",
@@ -3948,14 +3948,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Granada-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-April-Azul-Mediano.jpg"
 		],
-		"price": 14999,
+		"price": 41000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol Family Plus 80x190",
+		"name": "Colchón y Sommier Inducol Family Plus",
 		"color": "Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Family-Chico.jpg",
@@ -3965,10 +3965,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Inducol Family Plus 140x190",
+		"name": "Colchón y Sommier Inducol Family Plus",
 		"color": "Celeste",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Family-Mediano.jpg",
@@ -3978,10 +3978,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Inducol Imperial 80x190",
+		"name": "Colchón y Sommier Inducol Imperial",
 		"color": "Negro",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial-Chico.jpg"
@@ -3990,10 +3990,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol Imperial 100x190",
+		"name": "Colchón y Sommier Inducol Imperial",
 		"color": "Negro",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial-Grande.jpg"
@@ -4002,10 +4002,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Inducol Imperial 140x190",
+		"name": "Colchón y Sommier Inducol Imperial",
 		"color": "Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Imperial-Grande.jpg"
@@ -4014,10 +4014,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Inducol Pravia 100x190",
+		"name": "Colchón y Sommier Inducol Pravia",
 		"color": "Azul, Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Pravia-Chico.jpg"
@@ -4026,48 +4026,48 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Inducol Pravia 140x190",
+		"name": "Colchón y Sommier Inducol Pravia",
 		"color": "Azul, Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Pravia-Mediano.jpg"
 		],
-		"price": 14999,
+		"price": 50400,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Aspen 140x190",
+		"name": "Colchón y Sommier King Koil Aspen",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Aspen-Color-Blanco.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Aspen.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Aspen-1.jpg"
 		],
-		"price": 14999,
+		"price": 71000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Brighton 180x200",
+		"name": "Colchón y Sommier King Koil Brighton",
 		"color": "Blanco, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Brighton-Grande.jpg"
 		],
-		"price": 14999,
+		"price": 64000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Brighton 200x200",
+		"name": "Colchón y Sommier King Koil Brighton",
 		"color": "Blanco, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Brighton-Grande.jpg"
@@ -4076,75 +4076,75 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier King Koil Devon 140x190",
+		"name": "Colchón y Sommier King Koil Devon",
 		"color": "Blanco, Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Devon-Mediano-2.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Devon-Mediano-1.jpg"
 		],
-		"price": 14999,
+		"price": 85000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Finesse Pillow Top 140x190",
+		"name": "Colchón y Sommier King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Finesse-Mediano-Blanco.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
+		"price": 80000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Finesse Pillow Top 160x200",
+		"name": "Colchón y Sommier King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Finesse-Grande-Blanco.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
+		"price": 85000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Finesse Pillow Top 180x200",
+		"name": "Colchón y Sommier King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Finesse-Grande-Blanco.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
+		"price": 97000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Finesse Pillow Top 200x200",
+		"name": "Colchón y Sommier King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Finesse-Grande-Blanco.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
+		"price": 110000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier King Koil Kensington 160x200",
+		"name": "Colchón y Sommier King Koil Kensington",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Kensington-Grande.jpg"
@@ -4153,10 +4153,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier King Koil Kensington 180x200",
+		"name": "Colchón y Sommier King Koil Kensington",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Kensington-Grande.jpg"
@@ -4165,10 +4165,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier King Koil Kensington 200x200",
+		"name": "Colchón y Sommier King Koil Kensington",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Kensington-Grande.jpg"
@@ -4177,10 +4177,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier King Koil Kingsbury 160x200",
+		"name": "Colchón y Sommier King Koil Kingsbury",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Kingsbury-Grande.jpg"
@@ -4189,10 +4189,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier King Koil Kingsbury 180x200",
+		"name": "Colchón y Sommier King Koil Kingsbury",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Kingsbury-Grande.jpg"
@@ -4201,10 +4201,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier King Koil Kingsbury 200x200",
+		"name": "Colchón y Sommier King Koil Kingsbury",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Kingsbury-Grande.jpg"
@@ -4213,10 +4213,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Esmeralda 80x190",
+		"name": "Colchón y Sommier Maxiking Esmeralda",
 		"color": "Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Chico.jpg",
@@ -4226,36 +4226,36 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Esmeralda 100x190",
+		"name": "Colchón y Sommier Maxiking Esmeralda",
 		"color": "Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 35000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Esmeralda 140x190",
+		"name": "Colchón y Sommier Maxiking Esmeralda",
 		"color": "Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 54000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo 80x190",
+		"name": "Colchón y Sommier Maxiking Espejo",
 		"color": "Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-Chico.jpg",
@@ -4266,10 +4266,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo 100x190",
+		"name": "Colchón y Sommier Maxiking Espejo",
 		"color": "Azul",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-Chico.jpg",
@@ -4280,10 +4280,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo 140x190",
+		"name": "Colchón y Sommier Maxiking Espejo",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-Grande.jpg",
@@ -4294,10 +4294,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo Pillow Top 80x190",
+		"name": "Colchón y Sommier Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Chico.jpg",
@@ -4307,10 +4307,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo Pillow Top 100x190",
+		"name": "Colchón y Sommier Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Chico.jpg",
@@ -4320,113 +4320,113 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo Pillow Top 140x190",
+		"name": "Colchón y Sommier Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 50000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo Pillow Top 160x200",
+		"name": "Colchón y Sommier Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 64900,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo Pillow Top 180x200",
+		"name": "Colchón y Sommier Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 78500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Espejo Pillow Top 200x200",
+		"name": "Colchón y Sommier Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Espejo-con-Pillow-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 85000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Leicester 140x190",
+		"name": "Colchón y Sommier Maxiking Leicester",
 		"color": "Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Leicester.jpg"
 		],
-		"price": 14999,
+		"price": 55000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Siesta 80x190",
+		"name": "Colchón y Sommier Maxiking Siesta",
 		"color": "Blanco, Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Siesta-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Maxiking-Detalle.jpg"
 		],
-    "price":0,
+    "price": 16000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Siesta 100x190",
+		"name": "Colchón y Sommier Maxiking Siesta",
 		"color": "Blanco, Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Siesta-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Maxiking-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 18500,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Maxiking Siesta 140x190",
+		"name": "Colchón y Sommier Maxiking Siesta",
 		"color": "Blanco, Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Siesta-Grande.JPG",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Maxiking-Detalle.jpg"
 		],
-		"price": 14999,
+		"price": 74000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Piero Body Pro 80x190",
+		"name": "Colchón y Sommier Piero Body Pro",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Body-Pro-Mediano.jpg"
@@ -4435,10 +4435,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Body Pro 140x190",
+		"name": "Colchón y Sommier Piero Body Pro",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Body-Pro-Chico.jpg"
@@ -4447,50 +4447,50 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Corona 80x190",
+		"name": "Colchón y Sommier Piero Corona",
 		"color": "Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 33800,
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Corona 100x190",
+		"name": "Colchón y Sommier Piero Corona",
 		"color": "Celeste",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 39600,
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Corona 130x190",
+		"name": "Colchón y Sommier Piero Corona",
 		"color": "Celeste",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 49400,
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Corona 140×190",
+		"name": "Colchón y Sommier Piero Corona",
 		"color": "Celeste",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140×190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 52500,
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Fleur 80x190",
+		"name": "Colchón y Sommier Piero Fleur",
 		"color": "Gris",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleur100.jpg"
@@ -4499,10 +4499,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Fleur 90x190",
+		"name": "Colchón y Sommier Piero Fleur",
 		"color": "Gris",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleur100.jpg"
@@ -4511,10 +4511,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Fleur 100x190",
+		"name": "Colchón y Sommier Piero Fleur",
 		"color": "Gris",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleur100.jpg"
@@ -4523,10 +4523,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Fleur 130x190",
+		"name": "Colchón y Sommier Piero Fleur",
 		"color": "Gris",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleursom.jpg"
@@ -4535,10 +4535,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Fleur 140x190",
+		"name": "Colchón y Sommier Piero Fleur",
 		"color": "Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleursom.jpg"
@@ -4547,10 +4547,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Foam 80x190",
+		"name": "Colchón y Sommier Piero Foam",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Foam-Grande.jpg"
@@ -4559,10 +4559,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Foam 140x190",
+		"name": "Colchón y Sommier Piero Foam",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Foam-Mediano.jpg"
@@ -4571,10 +4571,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Le Grand 140x190",
+		"name": "Colchón y Sommier Piero Le Grand",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-grand.png"
@@ -4583,10 +4583,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Le Grand con Pillow 160x200",
+		"name": "Colchón y Sommier Piero Le Grand con Pillow",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-grand.png"
@@ -4595,10 +4595,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Le Rever 140x190",
+		"name": "Colchón y Sommier Piero Le Rever",
 		"color": "Blanco,Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-rever.jpg"
@@ -4607,10 +4607,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Le Rever 160x200",
+		"name": "Colchón y Sommier Piero Le Rever",
 		"color": "Blanco,Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-rever.jpg"
@@ -4619,10 +4619,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Le Rever 200x200",
+		"name": "Colchón y Sommier Piero Le Rever",
 		"color": "Blanco,Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-rever.jpg"
@@ -4631,10 +4631,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Piero Mattina 80x190",
+		"name": "Colchón y Sommier Piero Mattina",
 		"color": "Gris",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Mattina-Paraiso-C-P-SIN-FONDO.png"
@@ -4643,10 +4643,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Mattina 100x190",
+		"name": "Colchón y Sommier Piero Mattina",
 		"color": "Gris",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Mattina-Paraiso-C-P-SIN-FONDO.png"
@@ -4655,10 +4655,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Mattina 140x190",
+		"name": "Colchón y Sommier Piero Mattina",
 		"color": "Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Mattina-Paraiso-C-P-SIN-FONDO.png"
@@ -4667,10 +4667,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso 80x190",
+		"name": "Colchón y Sommier Piero Paraíso",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraiso80.jpg"
@@ -4679,10 +4679,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso 90x190",
+		"name": "Colchón y Sommier Piero Paraíso",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraiso80.jpg"
@@ -4691,10 +4691,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso 100x190",
+		"name": "Colchón y Sommier Piero Paraíso",
 		"color": "Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraiso80.jpg"
@@ -4703,10 +4703,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso 140x190",
+		"name": "Colchón y Sommier Piero Paraíso",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/piero-paraiso.jpg"
@@ -4715,10 +4715,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso 160x200",
+		"name": "Colchón y Sommier Piero Paraíso",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/sommier-paraiso-1.jpg"
@@ -4727,10 +4727,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso Pillow Top 140x190",
+		"name": "Colchón y Sommier Piero Paraíso Pillow Top",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/sommier-paraiso-1.jpg"
@@ -4739,20 +4739,20 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Piero Paraíso Pillow Top 200x200",
+		"name": "Colchón y Sommier Piero Paraíso Pillow Top",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/2x2.jpg"],
 		"price": 110600,
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Eden 140x190",
+		"name": "Colchón y Sommier Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Eden.jpg"
@@ -4761,10 +4761,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Eden 160x200",
+		"name": "Colchón y Sommier Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Eden.jpg"
@@ -4773,10 +4773,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Eden 180x200",
+		"name": "Colchón y Sommier Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Eden.jpg"
@@ -4785,10 +4785,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Eden 200x200",
+		"name": "Colchón y Sommier Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Eden.jpg"
@@ -4797,10 +4797,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Lincoln 140x190",
+		"name": "Colchón y Sommier Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Lincoln.jpg",
@@ -4810,10 +4810,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Lincoln 160x200",
+		"name": "Colchón y Sommier Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Lincoln.jpg",
@@ -4823,10 +4823,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Lincoln 180x200",
+		"name": "Colchón y Sommier Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Lincoln.jpg",
@@ -4836,10 +4836,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Sealy Meyer Lincoln 200x200",
+		"name": "Colchón y Sommier Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Sealy-Meyer-Lincoln.jpg",
@@ -4849,10 +4849,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Comfort Florencia 80×190",
+		"name": "Colchón y Sommier Suavegom Comfort Florencia",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80×190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Comfort-sommier.jpg"
@@ -4861,10 +4861,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Comfort Florencia 140x190",
+		"name": "Colchón y Sommier Suavegom Comfort Florencia",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/somcomfort140.jpg"
@@ -4873,10 +4873,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Fashion 80x190",
+		"name": "Colchón y Sommier Suavegom Fashion",
 		"color": "Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Fashion-Chico-SIN-FONDO.png",
@@ -4889,10 +4889,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Fashion 140x190",
+		"name": "Colchón y Sommier Suavegom Fashion",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Fashion-Chico-SIN-FONDO.png",
@@ -4905,10 +4905,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Merit 80x190",
+		"name": "Colchón y Sommier Suavegom Merit",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Sommier-Mediano.jpg",
@@ -4918,10 +4918,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Merit 100x190",
+		"name": "Colchón y Sommier Suavegom Merit",
 		"color": "Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Sommier-Mediano.jpg",
@@ -4931,10 +4931,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Merit 130x190",
+		"name": "Colchón y Sommier Suavegom Merit",
 		"color": "Blanco",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Sommier-Grande.jpg",
@@ -4944,10 +4944,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Merit 140x190",
+		"name": "Colchón y Sommier Suavegom Merit",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Sommier-Grande.jpg",
@@ -4957,10 +4957,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Merit 140x190 con Pillow Top",
+		"name": "Colchón y Sommier Suavegom Merit con Pillow Top",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Grande.jpg",
@@ -4970,10 +4970,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Preston 80x190",
+		"name": "Colchón y Sommier Suavegom Preston",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/som.jpg",
@@ -4988,10 +4988,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Preston 100x190",
+		"name": "Colchón y Sommier Suavegom Preston",
 		"color": "Varios",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/som.jpg",
@@ -5006,10 +5006,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Preston 130x190",
+		"name": "Colchón y Sommier Suavegom Preston",
 		"color": "Varios",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Grande.jpg",
@@ -5022,10 +5022,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Preston 140x190",
+		"name": "Colchón y Sommier Suavegom Preston",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Grande.jpg",
@@ -5038,10 +5038,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Splendid 80x190",
+		"name": "Colchón y Sommier Suavegom Splendid",
 		"color": "Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Splendid-Chico.jpg",
@@ -5051,10 +5051,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Splendid 100x190",
+		"name": "Colchón y Sommier Suavegom Splendid",
 		"color": "Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Splendid-Chico.jpg",
@@ -5064,10 +5064,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Splendid 130x190",
+		"name": "Colchón y Sommier Suavegom Splendid",
 		"color": "Bordo",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Splendid-Mediano.jpg",
@@ -5077,10 +5077,10 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón y Sommier Suavegom Splendid 140x190",
+		"name": "Colchón y Sommier Suavegom Splendid",
 		"color": "Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Splendid-Mediano.jpg",
