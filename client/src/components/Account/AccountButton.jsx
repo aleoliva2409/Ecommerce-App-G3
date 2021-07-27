@@ -119,6 +119,7 @@ export default function FormDialog({ field, setRegister, register }) {
                     size='small'
                     name='google'
                     id='google'
+                    href='http://localhost:3001/api/authGoogle/login/google'
                   >
                     {field.google}
                   </Button>

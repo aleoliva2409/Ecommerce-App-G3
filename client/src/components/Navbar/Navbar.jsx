@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -24,6 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeColor } from "../../redux/actions/colorModeActions";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import Brightness3Icon from '@material-ui/icons/Brightness3';
+import jwt from 'jsonwebtoken';
 
 export default function PrimarySearchAppBar() {
   const dispatch = useDispatch();
@@ -33,12 +34,21 @@ export default function PrimarySearchAppBar() {
   const darkMode = useStylesDark();
   let classes;
   const actualColor = useSelector(state => state.color)
-  console.log(actualColor)
   if(actualColor){
     classes = darkMode;
   } else {
     classes = dayMode;
   }
+
+useEffect(() => {
+  const url = window.location.href;
+  if (url.includes('loginGoogle')){
+    const token = url.split('=')[2].split('#')[0];
+    window.localStorage.setItem('jwt', token)
+    window.localStorage.setItem('user', jwt.decode(token).email)
+    window.location.replace('/')
+  }
+}, [])
 
   const isPhone = useMediaQuery("(max-width: 760px)");
 

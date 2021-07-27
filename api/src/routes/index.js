@@ -13,7 +13,7 @@ const checkout = require('./checkout.routes')
 const protectedRouter = require('./protected.routes');
 const authRouter = require('./auth.routes');
 const wishlist = require('./wishlist.routes');
-
+const authGoogle = require('./authGoogle.routes')
 
 const router = Router();
 
@@ -28,8 +28,7 @@ router.use("/orders", orderRouter);
 router.use("/checkout", checkout);
 router.use("/auth", authRouter);
 router.use("/users", passport.authenticate('jwt', { session: false }), protectedRouter);
-
-
+router.use("/authGoogle", authGoogle);
 router.use("/wishlist", wishlist);
 
 module.exports = router;
