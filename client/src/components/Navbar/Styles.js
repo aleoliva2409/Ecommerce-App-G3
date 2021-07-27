@@ -3,6 +3,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root:{
     padding:'0px',
+
   },
   links:{
     color:'#232020',
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#00BBC9',
   },
   grow: {
-    flexGrow: 2,
+    flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
