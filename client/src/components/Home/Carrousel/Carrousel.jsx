@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
-import Button from '@material-ui/core/Button';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import img1 from '../../../assets/img/Banner/desktop1-min.png';
@@ -31,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
     flexGrow: 1,
     height: 'auto',
+  },
+  progress:{
     background: 'none',
     justifyContent:'center',
 
-
   },
-
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -46,10 +43,9 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     maxHeight: 400,
-    display: 'block',
     maxWidth: "100%",
     overflow: 'hidden',
-    width: '100%',
+    width:'auto'
   },
   styleArrows:{
     color:'transparent',
@@ -109,7 +105,7 @@ function SwipeableTextMobileStepper() {
         steps={3}
         position="static"
         activeStep={activeStep}
-        className={classes.root}
+        className={classes.progress}
 
         // nextButton={
         //   <Button  size="small" onClick={handleNext}  className={classes.styleArrows} disabled={activeStep === 2}>
