@@ -37,5 +37,6 @@ const initDB = async () => {
   } catch (error) {
     console.log(error);
   }
+}
 
-module.exports = initDB
+module.exports = initDB;
