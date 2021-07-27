@@ -1,63 +1,41 @@
-const { Product, Category } = require('./db.js');
+const { Product, Category, Model } = require('./db.js');
 const fs = require('fs');
 
-const categories = [
-  {
-    name: 'Colchones',
-    description: '',
-    image: null
-  },
-  {
-    name: 'Blanquería',
-    description: '',
-    image: null
-  },
-  {
-    name: 'Sommiers',
-    description: '',
-    image: null
-  },
-  {
-    name: 'Muebles',
-    description: '',
-    image: null
-  }
-];
 
+const initDB = async () => {
+  try {
 
+    const newCategories = await Category.findAll()
+    const productsDB = await Product.findAll()
 
-const initDb = async () => {
-  fs.readFile('db.json', async (err, data) => {
-    const products = JSON.parse(data)
-    try {
-      // const newCategory = await Category.findOrCreate(categories)
-      // const categories = await Category.findAll()
-        for(let category of categories) {
-          await Category.findOrCreate({
-            where: { name: category.name},
-            defaults: category
-          })
+    fs.readFile('db.json', async (err, data) => {
+      const products = JSON.parse(data)
+      try {
+        if(productsDB[0] === undefined) {
+          const modelsDB = await Model.findAll()
+          // console.log(modelsDB);
+          for(let product of products) {
+            const newProduct = await Product.create(product)
+            for(let model of modelsDB) {
+              if(newProduct.name === model.name) {
+                newProduct.setModel(model)
+                // console.log("entre");
+              }
+              // console.log("no entre");
+            }
+            if (newProduct.name.includes('Colchón')) await newProduct.addCategory(newCategories[0])
+            if (newProduct.name.includes('Almohada')) await newProduct.addCategory(newCategories[1])
+            if (newProduct.name.includes('Sommier')) await newProduct.addCategory(newCategories[2])
+          };
+          console.log("products loaded");
         }
-
-      const newCategories = await Category.findAll()
-      const productsDB = await Product.findAll()
-
-      if(productsDB[0] === undefined) {
-        for(let product of products) {
-          const newProduct = await Product.create(product)
-          if (newProduct.name.includes('Colchón')) await newProduct.addCategory(newCategories[0])
-          if (newProduct.name.includes('Almohada')) await newProduct.addCategory(newCategories[1])
-          if (newProduct.name.includes('Sommier')) await newProduct.addCategory(newCategories[2])
-        };
+      } catch (error) {
+        console.log(error)
       }
-
-
-
-
-    } catch (error) {
-      console.log(error)
-    }
-  })
+    })
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-module.exports = initDb
+module.exports = initDB
