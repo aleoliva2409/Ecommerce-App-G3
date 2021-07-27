@@ -18,8 +18,7 @@ const useStylesDark = makeStyles((theme) => ({
     backgroundColor: '#6c6c6c',
   },
   grow: {
-    flexGrow: 1,
-    marginBottom: "3rem",
+    flexGrow: 1
   },
   menuButton: {
     marginRight: theme.spacing(2),
