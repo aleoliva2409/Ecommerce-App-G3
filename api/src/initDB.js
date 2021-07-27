@@ -1,4 +1,5 @@
 const { Product, Category, Model } = require('./db.js');
+
 const fs = require('fs');
 
 
@@ -36,6 +37,5 @@ const initDB = async () => {
   } catch (error) {
     console.log(error);
   }
-}
 
 module.exports = initDB

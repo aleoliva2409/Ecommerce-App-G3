@@ -1,14 +1,9 @@
-:root{
-  --primaryColor:#00BBC9;
-  --primaryColor10: rgba(0, 187, 201, .1);
-  --primaryColor20: rgba(0, 187, 201, .2);
-  --primaryColor30: rgba(0, 187, 201, .3);
-  --primaryColorDarker: #1ba1ab;
-  --primaryColorDarker2: #336064;
-}
-
 .container {
   min-height: 100vh;
   text-align: center;
   background-color: #ebebeb;
+}
+
+.MuiTableSortLabel-root{
+  color: black;
 }

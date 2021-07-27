@@ -1,13 +1,13 @@
 import {makeStyles} from '@material-ui/core/styles';
 
-const useStyles = makeStyles(({ breakpoints, spacing, theme }) => ({
+const useStylesDark = makeStyles(({ breakpoints, spacing, theme }) => ({
     root: {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       },
       cardItem: {
-        backgroundColor: "white",
+        backgroundColor: "#7E7E7E",
         display: "grid",
         gridTemplateRows: "repeat(4, auto)",
         margin: spacing(1),
@@ -25,7 +25,7 @@ const useStyles = makeStyles(({ breakpoints, spacing, theme }) => ({
       name: {
         fontSize: "16px",
         lineHeight: "19px",
-        color: "#000000",
+        color: "white",
         opacity: "80.0%",
         paddingBottom: spacing(1)
       },
@@ -45,10 +45,11 @@ const useStyles = makeStyles(({ breakpoints, spacing, theme }) => ({
         gridColumn: "1/2",
         fontSize: "26px",
         lineHeight: "36px",
-        color: "#000000",
+        color: "white",
         opacity: "80.0%"
       },
       quantity: {
+        color: "white",
         border: "solid 1px #aaaaaa",
         fontSize: "15px"
       },
@@ -68,4 +69,4 @@ const useStyles = makeStyles(({ breakpoints, spacing, theme }) => ({
       }
 }))
 
-export { useStyles };
+export { useStylesDark };

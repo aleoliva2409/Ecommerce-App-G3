@@ -4,6 +4,9 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt
+const server = require("express").Router();
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
 
 passport.use('login', new LocalStrategy(
   { usernameField: 'email', passwordField: 'password' },
@@ -37,3 +40,34 @@ passport.use(new JwtStrategy({
     return done(err)
   }
 }))
+
+/// ESTRATEGIA GOOGLE ///
+passport.use(
+  new GoogleStrategy({
+    clientID: GOOGLE_CLIENT_ID,
+    clientSecret: GOOGLE_CLIENT_SECRET,
+    callbackURL: 'http://localhost:3001/api/authGoogle/login/google/callback',
+    session: false
+  },
+    async function (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, profile, done) {
+      try {
+        const user = {
+          email: profile._json.email,
+          isadmin: false,
+          password: 'Mm,SHtBBW]j5*%`'
+        }
+        const foundUser = await User.findOne({ where: { email: user.email } })
+        if (foundUser) {
+          const updatedUser = await foundUser.update(user);
+          done(null, updatedUser)
+        }
+        else {
+          const createdUser = await User.create(user)
+          done(null, createdUser)
+        }
+      } catch (err) {
+        done(err, null)
+      }
+    }
+  )
+);
