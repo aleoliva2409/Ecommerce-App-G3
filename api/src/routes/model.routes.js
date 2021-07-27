@@ -1,8 +1,9 @@
 const { Router } = require("express");
-const { getAllModels } = require("../controllers/model.controllers")
+const { getAllModels, getModelSearch } = require("../controllers/model.controllers")
 
 const router = Router();
 
-router.get('/', getAllModels);
+router.get('/all', getAllModels);
+router.get('/', getModelSearch)
 
 module.exports = router;
