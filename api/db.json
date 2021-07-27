@@ -622,7 +622,7 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Belmo Pocket ",
+		"name": "Colchón Belmo Pocket",
 		"color": "Blanco, Gris",
 		"size": "180x200",
     "sizeMattress": "King",
@@ -635,7 +635,7 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Belmo Pocket ",
+		"name": "Colchón Belmo Pocket",
 		"color": "Blanco, Gris",
 		"size": "200x200",
     "sizeMattress": "King",
@@ -1276,7 +1276,7 @@
 		"stock": 97
 	},
 	{
-		"name": "Colchón Elegante Prince ",
+		"name": "Colchón Elegante Prince",
 		"color": "Negro",
 		"size": "200x200",
     "sizeMattress": "King",
@@ -1392,82 +1392,82 @@
 		"stock": 30
 	},
 	{
-		"name": "Colchón Inducol April Blanco - 80x190",
+		"name": "Colchón Inducol April Blanco",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-April-Blanco-Chico-1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 19800,
+		"stock": 45
 	},
 	{
-		"name": "Colchón Inducol April Blanco - 100x190",
+		"name": "Colchón Inducol April Blanco",
 		"color": "Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-April-Blanco-Mediano-1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 22000,
+		"stock": 58
 	},
 	{
-		"name": "Colchón Inducol April Blanco - 140x190",
+		"name": "Colchón Inducol April Blanco",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-April-Blanco-Mediano-1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 27000,
+		"stock": 25
 	},
 	{
-		"name": "Colchón Inducol April Color - 80x190",
+		"name": "Colchón Inducol April Color",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-April-Azul-Chico-1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 30000,
+		"stock": 45
 	},
 	{
-		"name": "Colchón Inducol April Color - 100x190",
+		"name": "Colchón Inducol April Color",
 		"color": "Varios",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-April-Azul-Mediano-1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 35000,
+		"stock": 12
 	},
 	{
-		"name": "Colchón Inducol April Color - 140x190",
+		"name": "Colchón Inducol April Color",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-April-Azul-Mediano-1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 40000,
+		"stock": 32
 	},
 	{
-		"name": "Colchón Inducol Family Plus 140x190",
+		"name": "Colchón Inducol Family Plus",
 		"color": "Celeste",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Family-Chico.jpg",
@@ -1477,22 +1477,22 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Inducol Imperial 80x190",
+		"name": "Colchón Inducol Imperial",
 		"color": "Negro",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial-Chico.jpg"
 		],
-		"price": 14999,
+		"price": 18000,
 		"stock": 97
 	},
 	{
-		"name": "Colchón Inducol Imperial 100x190",
+		"name": "Colchón Inducol Imperial",
 		"color": "Negro",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial-Mediano.jpg"
@@ -1501,10 +1501,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Inducol Imperial 140x190",
+		"name": "Colchón Inducol Imperial",
 		"color": "Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Imperial-Mediano.jpg"
@@ -1513,172 +1513,172 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Inducol Pravia 100x190",
+		"name": "Colchón Inducol Pravia",
 		"color": "Azul, Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pravia-Chico.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 25000,
+		"stock": 25
 	},
 	{
-		"name": "Colchón Inducol Pravia 140x190",
+		"name": "Colchón Inducol Pravia",
 		"color": "Azul, Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Pravia-Mediano.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 32000,
+		"stock": 13
 	},
 	{
-		"name": "Colchón King Koil Aspen 140x190",
+		"name": "Colchón King Koil Aspen",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Aspen-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Aspen.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Aspen-1.jpg"
 		],
-		"price": 14999,
-		"stock": 47
+		"price": 45000,
+		"stock": 24
 	},
 	{
-		"name": "Colchón King Koil Brighton 180x190",
+		"name": "Colchón King Koil Brighton",
 		"color": "Blanco, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x190",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Brighton-Mediano.jpg"
 		],
 		"price": 138200,
-		"stock": 47
+		"stock": 10
 	},
 	{
-		"name": "Colchón King Koil Brighton 200x200",
+		"name": "Colchón King Koil Brighton",
 		"color": "Blanco, Marrón",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Brighton-Mediano.jpg"
 		],
 		"price": 149600,
-		"stock": 47
+		"stock": 12
 	},
 	{
-		"name": "Colchón King Koil Devon 140x190",
+		"name": "Colchón King Koil Devon",
 		"color": "Blanco, Negro",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Devon-Grande.jpg"
 		],
 		"price": 31915,
-		"stock": 47
+		"stock": 22
 	},
 	{
-		"name": "Colchón King Koil Finesse Pillow Top 140x190",
+		"name": "Colchón King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Finesse-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 90000,
+		"stock": 12
 	},
 	{
-		"name": "Colchón King Koil Finesse Pillow Top 160x200",
+		"name": "Colchón King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Finesse-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 97000,
+		"stock": 15
 	},
 	{
-		"name": "Colchón King Koil Finesse Pillow Top 180x200",
+		"name": "Colchón King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Finesse-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 104500,
+		"stock": 24
 	},
 	{
-		"name": "Colchón King Koil Finesse Pillow Top 200x200",
+		"name": "Colchón King Koil Finesse Pillow Top",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Finesse-Mediano.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Finesse.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 106500,
+		"stock": 15
 	},
 	{
-		"name": "Colchón King Koil Kensington 160x200",
+		"name": "Colchón King Koil Kensington",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Kensington.jpg"
 		],
 		"price": 83200,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón King Koil Kensington 180x200",
+		"name": "Colchón King Koil Kensington",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Kensington.jpg"
 		],
 		"price": 96300,
-		"stock": 47
+		"stock": 17
 	},
 	{
-		"name": "Colchón King Koil Kensington 200x200",
+		"name": "Colchón King Koil Kensington",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Kensington.jpg"
 		],
 		"price": 102900,
-		"stock": 47
+		"stock": 35
 	},
 	{
-		"name": "Colchón King Koil Kingsbury 160x200",
+		"name": "Colchón King Koil Kingsbury",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Kingsbury-Mediano.jpg"
@@ -1687,10 +1687,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón King Koil Kingsbury 180x200",
+		"name": "Colchón King Koil Kingsbury",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Kingsbury-Mediano.jpg"
@@ -1699,10 +1699,10 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón King Koil Kingsbury 200x200",
+		"name": "Colchón King Koil Kingsbury",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Kingsbury-Mediano.jpg"
@@ -1711,77 +1711,77 @@
 		"stock": 47
 	},
 	{
-		"name": "Colchón Maxiking Esmeralda 80x190",
+		"name": "Colchón Maxiking Esmeralda",
 		"color": "Marrón",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Esmeralda-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 15999,
+		"stock": 24
 	},
 	{
-		"name": "Colchón Maxiking Esmeralda 100x190",
+		"name": "Colchón Maxiking Esmeralda",
 		"color": "Marrón",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Esmeralda-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 18999,
+		"stock": 12
 	},
 	{
-		"name": "Colchón Maxiking Esmeralda 140x190",
+		"name": "Colchón Maxiking Esmeralda",
 		"color": "Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Esmeralda-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sommier-Esmeralda-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 24000,
+		"stock": 53
 	},
 	{
-		"name": "Colchón Maxiking Espejo 80x190",
+		"name": "Colchón Maxiking Espejo",
 		"color": "Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Espejo-Detalle-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Espejo-Detalle-2.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 21999,
+		"stock": 26
 	},
 	{
-		"name": "Colchón Maxiking Espejo 100x190",
+		"name": "Colchón Maxiking Espejo",
 		"color": "Azul",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Espejo-Detalle-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Espejo-Detalle-2.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 24999,
+		"stock": 24
 	},
 	{
-		"name": "Colchón Maxiking Espejo 140x190",
+		"name": "Colchón Maxiking Espejo",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-Grande.jpg",
@@ -1789,767 +1789,767 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Espejo-Detalle-2.jpg"
 		],
 		"price": 29520,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Maxiking Espejo Pillow Top 80x190",
+		"name": "Colchón Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Chico1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 42000,
+		"stock": 37
 	},
 	{
-		"name": "Colchón Maxiking Espejo Pillow Top 100x190",
+		"name": "Colchón Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Chico1.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 45000,
+		"stock": 27
 	},
 	{
-		"name": "Colchón Maxiking Espejo Pillow Top 140x190",
+		"name": "Colchón Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-2.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 50000,
+		"stock": 16
 	},
 	{
-		"name": "Colchón Maxiking Espejo Pillow Top 160x200",
+		"name": "Colchón Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-2.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 54000,
+		"stock": 15
 	},
 	{
-		"name": "Colchón Maxiking Espejo Pillow Top 180x200",
+		"name": "Colchón Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "180x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-2.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 57000,
+		"stock": 35
 	},
 	{
-		"name": "Colchón Maxiking Espejo Pillow Top 200x200",
+		"name": "Colchón Maxiking Espejo Pillow Top",
 		"color": "Azul",
-		"size": "King",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Espejo-con-Pillow-Grande-2.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 62000,
+		"stock": 24
 	},
 	{
-		"name": "Colchón Maxiking Leicester 140x190",
+		"name": "Colchón Maxiking Leicester",
 		"color": "Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Leicester.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 87200,
+		"stock": 25
 	},
 	{
-		"name": "Colchón Maxiking Siesta 80x190",
+		"name": "Colchón Maxiking Siesta",
 		"color": "Blanco, Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Siesta-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Maxiking-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 19700,
+		"stock": 15
 	},
 	{
-		"name": "Colchón Maxiking Siesta 100x190",
+		"name": "Colchón Maxiking Siesta",
 		"color": "Blanco, Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Siesta-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Maxiking-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 24700,
+		"stock": 15
 	},
 	{
-		"name": "Colchón Maxiking Siesta 140x190",
+		"name": "Colchón Maxiking Siesta",
 		"color": "Blanco, Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Siesta-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Maxiking-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 28900,
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Body Matelasse 80x190",
+		"name": "Colchón Piero Body Matelasse",
 		"color": "Blanco, Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Body-Matelasse-Chico.jpg"
 		],
 		"price": 19200,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Body Pro - 80x190",
+		"name": "Colchón Piero Body Pro",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Body-Pro-Chico.jpg"
 		],
 		"price": 14500,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Body Pro - 140x190",
+		"name": "Colchón Piero Body Pro",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Body-Pro-Grande-SIN-FONDO.png"
 		],
 		"price": 25600,
-		"stock": 47
+		"stock": 27
 	},
 	{
-		"name": "Colchón Piero Corona 80x190",
+		"name": "Colchón Piero Corona",
 		"color": "Celeste",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 25600,
-		"stock": 47
+		"stock": 27
 	},
 	{
-		"name": "Colchón Piero Corona 100x190",
+		"name": "Colchón Piero Corona",
 		"color": "Celeste",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 30300,
-		"stock": 47
+		"stock": 17
 	},
 	{
-		"name": "Colchón Piero Corona 130x190",
+		"name": "Colchón Piero Corona",
 		"color": "Celeste",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 39100,
-		"stock": 47
+		"stock": 19
 	},
 	{
-		"name": "Colchón Piero Corona 140×190",
+		"name": "Colchón Piero Corona",
 		"color": "Celeste",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140×190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/corona.jpg"],
 		"price": 41300,
-		"stock": 47
+		"stock": 28
 	},
 	{
-		"name": "Colchón Piero Fleur 80x190",
+		"name": "Colchón Piero Fleur",
 		"color": "Gris",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleur-1.jpg"
 		],
 		"price": 25300,
-		"stock": 47
+		"stock": 19
 	},
 	{
-		"name": "Colchón Piero Fleur 90x190",
+		"name": "Colchón Piero Fleur",
 		"color": "Gris",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "90x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleur-2.jpg"
 		],
-		"price": 14999,
-		"stock": 47
+		"price": 27300,
+		"stock": 17
 	},
 	{
-		"name": "Colchón Piero Fleur 100x190",
+		"name": "Colchón Piero Fleur",
 		"color": "Gris",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+		"size": "100x190",
+    "sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/fleur-2.jpg"
 		],
 		"price": 30300,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Fleur 130x190",
+		"name": "Colchón Piero Fleur",
 		"color": "Gris",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+		"size": "130x190",
+    "sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Fleur-2-plazas-SIN-FONDO.png"
 		],
 		"price": 39700,
-		"stock": 47
+		"stock": 10
 	},
 	{
-		"name": "Colchón Piero Fleur 140x190",
+		"name": "Colchón Piero Fleur",
 		"color": "Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Fleur-2-plazas-SIN-FONDO.png"
 		],
 		"price": 42100,
-		"stock": 47
+		"stock": 7
 	},
 	{
-		"name": "Colchón Piero Foam 80x190",
+		"name": "Colchón Piero Foam",
 		"color": "Blanco,Gris",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+		"size": "80x190",
+    "sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/foam1-1.jpg"
 		],
 		"price": 25300,
-		"stock": 47
+		"stock": 18
 	},
 	{
-		"name": "Colchón Piero Foam 140x190",
+		"name": "Colchón Piero Foam",
 		"color": "Blanco,Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Foam-Chico.jpg"
 		],
 		"price": 42100,
-		"stock": 47
+		"stock": 33
 	},
 	{
-		"name": "Colchón Piero Le Grand 140x190",
+		"name": "Colchón Piero Le Grand",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-grand.png"
 		],
 		"price": 96700,
-		"stock": 47
+		"stock": 20
 	},
 	{
-		"name": "Colchón Piero Le Grand con Pillow 160x200",
+		"name": "Colchón Piero Le Grand con Pillow",
 		"color": "Blanco",
-		"size": "Queen, Colchones",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-grand.png"
 		],
 		"price": 135800,
-		"stock": 47
+		"stock": 19
 	},
 	{
-		"name": "Colchón Piero Le Rever 140x190",
+		"name": "Colchón Piero Le Rever",
 		"color": "Blanco,Marrón",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-rever.jpg"
 		],
 		"price": 71800,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Le Rever 160x200",
+		"name": "Colchón Piero Le Rever",
 		"color": "Blanco,Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "160x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-rever.jpg"
 		],
 		"price": 90700,
-		"stock": 47
+		"stock": 11
 	},
 	{
-		"name": "Colchón Piero Le Rever 200x200",
+		"name": "Colchón Piero Le Rever",
 		"color": "Blanco,Marrón",
-		"size": "Queen",
-    "sizeMattress": null,
+		"size": "200x200",
+    "sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/le-rever.jpg"
 		],
 		"price": 103100,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Piero Mattina 80x190",
+		"name": "Colchón Piero Mattina",
 		"color": "Gris",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Mattina-Paraiso-C-P-SIN-FONDO.png"
 		],
 		"price": 37400,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Mattina 100x190",
+		"name": "Colchón Piero Mattina",
 		"color": "Gris",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "100x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Mattina-Paraiso-C-P-SIN-FONDO.png"
 		],
 		"price": 44300,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Piero Mattina 140x190",
+		"name": "Colchón Piero Mattina",
 		"color": "Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Mattina-Paraiso-C-P-SIN-FONDO.png"
 		],
 		"price": 61300,
-		"stock": 47
+		"stock": 22
 	},
 	{
-		"name": "Colchón Piero Paraíso 80x190",
+		"name": "Colchón Piero Paraíso",
 		"color": "Blanco,Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraiso.jpg"
 		],
 		"price": 32700,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Piero Paraíso 90x190",
+		"name": "Colchón Piero Paraíso",
 		"color": "Blanco,Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "90x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraiso.jpg"
 		],
 		"price": 36400,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Paraíso 100x190",
+		"name": "Colchón Piero Paraíso",
 		"color": "Blanco,Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "100x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraiso-1.jpg"
 		],
 		"price": 40100,
-		"stock": 47
+		"stock": 43
 	},
 	{
-		"name": "Colchón Piero Paraíso 140x190",
+		"name": "Colchón Piero Paraíso",
 		"color": "Blanco,Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/awe00.jpg"],
 		"price": 55400,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Paraíso 160x200",
+		"name": "Colchón Piero Paraíso",
 		"color": "Blanco,Bordo",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "160x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraisotop.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 65200,
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Paraíso 200x200",
+		"name": "Colchón Piero Paraíso",
 		"color": "Blanco,Bordo",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "200x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/awe00.jpg"],
 		"price": 80800,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Piero Paraíso Pillow Top 140x190",
+		"name": "Colchón Piero Paraíso Pillow Top",
 		"color": "Blanco,Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/piero2.jpg"],
 		"price": 67400,
-		"stock": 47
+		"stock": 33
 	},
 	{
-		"name": "Colchón Piero Paraíso Pillow Top 200x200",
+		"name": "Colchón Piero Paraíso Pillow Top",
 		"color": "Blanco,Bordo",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "200x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/paraisotop.jpg"
 		],
 		"price": 95200,
-		"stock": 97
+		"stock": 27
 	},
 	{
-		"name": "Colchón Piero Spring 140x190",
+		"name": "Colchón Piero Spring",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": ["https://www.pillowtop.com.ar/wp-content/uploads/spring.jpg"],
 		"price": 41300,
-		"stock": 47
+		"stock": 11
 	},
 	{
-		"name": "Colchón Sealy Meyer Eden 140x190",
+		"name": "Colchón Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Eden.jpg"
 		],
 		"price": 67800,
-		"stock": 47
+		"stock": 22
 	},
 	{
-		"name": "Colchón Sealy Meyer Eden 160x200",
+		"name": "Colchón Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "160x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Eden.jpg"
 		],
 		"price": 68558,
-		"stock": 47
+		"stock": 33
 	},
 	{
-		"name": "Colchón Sealy Meyer Eden 180x200",
+		"name": "Colchón Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "180x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Eden.jpg"
 		],
 		"price": 79381,
-		"stock": 47
+		"stock": 11
 	},
 	{
-		"name": "Colchón Sealy Meyer Eden 200x200",
+		"name": "Colchón Sealy Meyer Eden",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "200x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Eden.jpg"
 		],
 		"price": 96659,
-		"stock": 47
+		"stock": 8
 	},
 	{
-		"name": "Colchon Sealy Meyer Lincoln 100x190",
+		"name": "Colchón Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "100x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/lincoln.jpg"
 		],
 		"price": 35852,
-		"stock": 47
+		"stock": 33
 	},
 	{
-		"name": "Colchón Sealy Meyer Lincoln 140x190",
+		"name": "Colchón Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Lincoln.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sealy-Meyer-Lincoln-Detalle.jpg"
 		],
 		"price": 49878,
-		"stock": 47
+		"stock": 15
 	},
 	{
-		"name": "Colchón Sealy Meyer Lincoln 160x200",
+		"name": "Colchón Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "160x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Lincoln.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sealy-Meyer-Lincoln-Detalle.jpg"
 		],
 		"price": 60636,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Sealy Meyer Lincoln 180x200",
+		"name": "Colchón Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "180x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Lincoln.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sealy-Meyer-Lincoln-Detalle.jpg"
 		],
 		"price": 80995,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Sealy Meyer Lincoln 200x200",
+		"name": "Colchón Sealy Meyer Lincoln",
 		"color": "Blanco,Gris",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "200x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Sealy-Meyer-Lincoln.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Sealy-Meyer-Lincoln-Detalle.jpg"
 		],
 		"price": 68460,
-		"stock": 47
+		"stock": 24
 	},
 	{
-		"name": "Colchón Simmons BackTheraphy 140x190",
+		"name": "Colchón Simmons BackTheraphy",
 		"color": "Blanco,Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Backtherapy-colchon-1-scaled.jpg"
 		],
 		"price": 95900,
-		"stock": 47
+		"stock": 16
 	},
 	{
-		"name": "Colchón Simmons BackTheraphy 160x200",
+		"name": "Colchón Simmons BackTheraphy",
 		"color": "Blanco,Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "160x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Backtherapy-colchon-scaled.jpg"
 		],
 		"price": 108300,
-		"stock": 47
+		"stock": 25
 	},
 	{
-		"name": "Colchón Simmons BackTheraphy 180x200",
+		"name": "Colchón Simmons BackTheraphy",
 		"color": "Blanco,Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "180x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Backtherapy-colchon-scaled.jpg"
 		],
 		"price": 119900,
-		"stock": 47
+		"stock": 4277
 	},
 	{
-		"name": "Colchón Simmons BackTheraphy 200x200",
+		"name": "Colchón Simmons BackTheraphy",
 		"color": "Blanco,Gris",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "200x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Backtherapy-colchon-scaled.jpg"
 		],
 		"price": 124000,
-		"stock": 47
+		"stock": 37
 	},
 	{
-		"name": "Colchón Simmons Beauty Sleep 140x190",
+		"name": "Colchón Simmons Beauty Sleep",
 		"color": "Blanco,Gris",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Beauty-sleep-200x180-colchon-scaled.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 80000,
+		"stock": 28
 	},
 	{
-		"name": "Colchón Simmons Beauty Sleep 160x200",
+		"name": "Colchón Simmons Beauty Sleep",
 		"color": "Blanco,Gris",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "160x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Beauty-sleep-200x180-colchon-1-scaled.jpg"
 		],
 		"price": 89700,
-		"stock": 47
+		"stock": 15
 	},
 	{
-		"name": "Colchón Simmons Beauty Sleep 180x200",
+		"name": "Colchón Simmons Beauty Sleep",
 		"color": "Blanco,Gris",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "180x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Beauty-1-scaled.jpg"
 		],
 		"price": 99900,
-		"stock": 47
+		"stock": 11
 	},
 	{
-		"name": "Colchón Simmons Beautyrest Recharge Smart Ultra  140x190",
+		"name": "Colchón Simmons Beautyrest Recharge Smart Ultra",
 		"color": "Blanco,Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+		"size": "140x190",
+    "sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/recharge.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 131200,
+		"stock": 7
 	},
 	{
-		"name": "Colchón Simmons Deepsleep 140x190",
+		"name": "Colchón Simmons Deepsleep",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Deepsleep-Mediano-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Deepsleep-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 33400,
+		"stock": 35
 	},
 	{
-		"name": "Colchón Simmons Deepsleep 160x200",
+		"name": "Colchón Simmons Deepsleep",
 		"color": "Blanco",
-		"size": "Queen",
-    "sizeMattress": null,
+    "size": "160x200",
+		"sizeMattress": "Queen",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Deepsleep-Grande-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Deepsleep-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 42000,
+		"stock": 54
 	},
 	{
-		"name": "Colchón Simmons Deepsleep 180x200",
+		"name": "Colchón Simmons Deepsleep",
 		"color": "Blanco",
-		"size": "King",
-    "sizeMattress": null,
+    "size": "180x200",
+		"sizeMattress": "King",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Deepsleep-Grande-scaled.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Deepsleep-Detalle.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 46000,
+		"stock": 21
 	},
 	{
-		"name": "Colchón Suavegom Comfort Florencia 80x190",
+		"name": "Colchón Suavegom Comfort Florencia",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/comfort.jpg"
 		],
 		"price": 22500,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Suavegom Comfort Florencia 140x190",
+		"name": "Colchón Suavegom Comfort Florencia",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/comfort140.jpg"
 		],
 		"price": 35400,
-		"stock": 47
+		"stock": 52
 	},
 	{
-		"name": "Colchón Suavegom Fashion 80x190",
+		"name": "Colchón Suavegom Fashion",
 		"color": "Azul",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Fashion-Chico-SIN-FONDO.png",
@@ -2558,14 +2558,14 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Fashion-2.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Fashion-3.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 42000,
+		"stock": 37
 	},
 	{
-		"name": "Colchón Suavegom Fashion 140x190",
+		"name": "Colchón Suavegom Fashion",
 		"color": "Azul",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Fashion-Chico-SIN-FONDO.png",
@@ -2574,79 +2574,79 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Fashion-2.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Fashion-3.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 54000,
+		"stock": 27
 	},
 	{
-		"name": "Colchón Suavegom Merit 80x190",
+		"name": "Colchón Suavegom Merit",
 		"color": "Blanco",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Detalle.jpg"
 		],
 		"price": 27600,
-		"stock": 97
+		"stock": 14
 	},
 	{
-		"name": "Colchón Suavegom Merit 100x190",
+		"name": "Colchón Suavegom Merit",
 		"color": "Blanco",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "100x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Detalle.jpg"
 		],
 		"price": 33300,
-		"stock": 47
+		"stock": 18
 	},
 	{
-		"name": "Colchón Suavegom Merit 130x190",
+		"name": "Colchón Suavegom Merit",
 		"color": "Blanco",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+    "size": "130x190",
+		"sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Detalle.jpg"
 		],
 		"price": 42600,
-		"stock": 47
+		"stock": 18
 	},
 	{
-		"name": "Colchón Suavegom Merit 140x190",
+		"name": "Colchón Suavegom Merit",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Detalle.jpg"
 		],
 		"price": 45500,
-		"stock": 47
+		"stock": 15
 	},
 	{
-		"name": "Colchón Suavegom Merit 140x190 con Pillow Top",
+		"name": "Colchón Suavegom Merit con Pillow Top",
 		"color": "Blanco",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Merit-Detalle.jpg"
 		],
 		"price": 54700,
-		"stock": 47
+		"stock": 14
 	},
 	{
-		"name": "Colchón Suavegom Preston 80x190",
+		"name": "Colchón Suavegom Preston",
 		"color": "Varios",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/colchon-suavegom-preston-190x80x25-resorte-doble-marco-acero_iZ1066063853XvZgrandeXpZ1XfZ29759822-785135491-1XsZ297598.jpg",
@@ -2656,13 +2656,13 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-4.jpg"
 		],
 		"price": 22200,
-		"stock": 47
+		"stock": 15
 	},
 	{
-		"name": "Colchón Suavegom Preston 100x190",
+		"name": "Colchón Suavegom Preston",
 		"color": "Varios",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "100x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/colchon-suavegom-preston-190x80x25-resorte-doble-marco-acero_iZ1066063853XvZgrandeXpZ1XfZ29759822-785135491-1XsZ297598.jpg",
@@ -2671,88 +2671,88 @@
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-4.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 27000,
+		"stock": 35
 	},
 	{
-		"name": "Colchón Suavegom Preston 130x190",
+		"name": "Colchón Suavegom Preston",
 		"color": "Varios",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+    "size": "130x190",
+		"sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Colchon-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-4.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 33500,
+		"stock": 25
 	},
 	{
-		"name": "Colchón Suavegom Preston 140x190",
+		"name": "Colchón Suavegom Preston",
 		"color": "Varios",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Colchon-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-1.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Suavegom-Preston-Sommier-Detalles-4.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 38200,
+		"stock": 24
 	},
 	{
-		"name": "Colchón Suavegom Splendid 80x190",
+		"name": "Colchón Suavegom Splendid",
 		"color": "Bordo",
-		"size": "1 Plaza",
-    "sizeMattress": null,
+    "size": "80x190",
+		"sizeMattress": "1 Plaza",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Splendid-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Splendid.jpg"
 		],
 		"price": 21800,
-		"stock": 47
+		"stock": 15
 	},
 	{
-		"name": "Colchón Suavegom Splendid 100x190",
+		"name": "Colchón Suavegom Splendid",
 		"color": "Bordo",
-		"size": "1 Plaza y Media",
-    "sizeMattress": null,
+    "size": "100x190",
+		"sizeMattress": "1 Plaza y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Splendid-Chico.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Splendid.jpg"
 		],
 		"price": 26500,
-		"stock": 47
+		"stock": 18
 	},
 	{
-		"name": "Colchón Suavegom Splendid 130x190",
+		"name": "Colchón Suavegom Splendid",
 		"color": "Bordo",
-		"size": "2 Plazas",
-    "sizeMattress": null,
+    "size": "130x190",
+		"sizeMattress": "2 Plazas",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Splendid-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Splendid.jpg"
 		],
-		"price": 14999,
-		"stock": 97
+		"price": 30000,
+		"stock": 28
 	},
 	{
-		"name": "Colchón Suavegom Splendid 140x190",
+		"name": "Colchón Suavegom Splendid",
 		"color": "Bordo",
-		"size": "2 Plazas y Media",
-    "sizeMattress": null,
+    "size": "140x190",
+		"sizeMattress": "2 Plazas y Media",
 		"description": "null",
 		"image": [
 			"https://www.pillowtop.com.ar/wp-content/uploads/Colchon-Splendid-Grande.jpg",
 			" https://www.pillowtop.com.ar/wp-content/uploads/Detalle-Splendid.jpg"
 		],
 		"price": 36100,
-		"stock": 97
+		"stock": 15
 	},
 	{
 		"name": "Colchón y Sommier Belmo Belspring 1 - 80x190",

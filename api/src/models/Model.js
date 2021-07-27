@@ -10,6 +10,7 @@ module.exports = (sequelize) => {
       },
       brand: {
         type: DataTypes.STRING,
+        allowNull: false,
       },
       image: {
         type: DataTypes.STRING,
@@ -17,8 +18,9 @@ module.exports = (sequelize) => {
       },
       description: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
-    }
+    },
+    { timestamps: false }
   );
 };

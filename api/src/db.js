@@ -67,6 +67,9 @@ const { Model, Product, Category, Order, Orderlines, User, Reviews, Wishlist } =
 Model.hasMany(Product);
 Product.belongsTo(Model);
 
+Category.hasMany(Model);
+Model.belongsTo(Category);
+
 Product.belongsToMany(Category, { through: "product_category" });
 Category.belongsToMany(Product, { through: "product_category" });
 
