@@ -45,12 +45,12 @@ const initModels = async () => {
         if(modelsDB[0] === undefined) {
           for(let model of models) {
             const newModel = await Model.create(model)
-            if (newModel.name.includes('Colchón')) {
-              await newModel.setCategory(newCategories[0])
+            if (newModel.name.includes('Sommier')) {
+              await newModel.setCategory(newCategories[2])
             } else if (newModel.name.includes('Almohada')) {
               await newModel.setCategory(newCategories[1])
-            } else if (newModel.name.includes('Sommier')) {
-              await newModel.setCategory(newCategories[2])
+            } else if (newModel.name.includes('Colchón')) {
+              await newModel.setCategory(newCategories[0])
             }
           }
           console.log("Models loaded");
