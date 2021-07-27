@@ -4,9 +4,9 @@ import categoriesReducer from './reducers/categoriesReducer';
 import productReducer from './reducers/productReducer';
 import shoppingCartReducer from './reducers/shoppingCartReducer';
 import ordersReducer from './reducers/ordersReducer';
-import usersReducer from './reducers/userReducer'
-import colorReducer from './reducers/colorReducer'
-
+import usersReducer from './reducers/userReducer';
+import colorReducer from './reducers/colorReducer';
+import modelReducer from './reducers/modelReducer';
 const rootReducers = combineReducers({
 	categories: categoriesReducer,
   products: productReducer,
@@ -14,6 +14,7 @@ const rootReducers = combineReducers({
   orders: ordersReducer,
   users: usersReducer,
   color: colorReducer,
+  models:modelReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

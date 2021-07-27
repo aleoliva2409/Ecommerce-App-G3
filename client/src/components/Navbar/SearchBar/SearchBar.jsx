@@ -3,6 +3,7 @@ import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSearchProducts, getProducts } from '../../../redux/actions/productActions';
+import { getModels } from '../../../redux/actions/modelAction';
 import { Redirect } from 'react-router-dom';
 // * STYLES *
 import {useStyles} from './Styles';
@@ -13,9 +14,11 @@ const SearchBar = () => {
   const [redirect,setRedirect]= useState(false);
 
 const allProducts = useSelector(state => state.products.allProducts)
+const allModels = useSelector(state => state.models.modelList)
 
 useEffect(() => {
   dispatch(getProducts())
+  dispatch(getModels())
 }, [dispatch])
 
   const onChange = (e) => {
@@ -38,7 +41,7 @@ useEffect(() => {
         freeSolo
         className ={classes.autocomplet}
         onKeyDown={onChange}
-        options={allProducts.map((option) => option.name)}
+        options={allModels.map((option) => option.name)}
         renderInput={(params) => (
             <TextField {...params}
               InputProps={{...params.InputProps, disableUnderline: true}}

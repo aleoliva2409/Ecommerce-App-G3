@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#FCEB45',
     },
   },
+  cardact:{
+    justifyContent:'space-around',
+  },
+
   media: {
     height: 0,
     paddingTop: "56.25%" // 16:9
