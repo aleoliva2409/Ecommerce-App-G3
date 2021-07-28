@@ -5,7 +5,7 @@ module.exports = (sequelize) => {
     "wishlist",
     {
       products: {
-        type: DataTypes.ARRAY(DataTypes.STRING)
+        type: DataTypes.ARRAY(DataTypes.INTEGER)
       },
     },
     { timestamps: false }
