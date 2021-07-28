@@ -4,8 +4,8 @@ export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT = 'USERS_LOGOUT';
-
-
+export const GET_USERS = 'GET_USERS';
+export const ADMINS = 'ADMINS';
 
 export const userActions = (user) => async (dispatch) => {
   try {
@@ -66,4 +66,36 @@ export const logout = () => async (dispatch) => {
   }
 }
 
+export const getAllUsers = () => async (dispatch) => {
+  const {data} = await axios.get('/users')
+  console.log(data)
+  dispatch({
+    type: GET_USERS,
+    payload: data
+  });
+}
+  
+export const selectAdmins = (id, act) => async (dispatch) => {
+    let datos = {}
+    if (act) {
+      datos = {
+        "isAdmin": true
+      }
+    } else {
+      datos = {
+        "isAdmin": false
+      }
+    }
+    const { data } = await axios (`/users/${id}`, datos)
+    // const res = await fetch("http://localhost:3001/user/changeAdmin", {
+    //   method: "PUT",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(datos),
+    // });
+  
+    dispatch({
+      type: ADMINS,
+      payload: data,
+    });
+  }
 
