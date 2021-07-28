@@ -1,28 +1,25 @@
-const { User, Wishlist} = require("../db");
+const { Order, User, Product, Wishlist } = require("../db");
 
 const addWishlist = async (req, res, next) => {
   try {
-    //me llega un mail y un id_producto
-    const { email, products } = req.body;
-    const newWishlist = { products };
-
+    //? Me llega un mail y un array con id_producto
+    const { email, idProd } = req.body;
+    const newWishlist = { products: [idProd] };
     if (email === "") {
-      res.status(400).json({ error: "No se puede agregar a su lista de deseos. Inicie sesion" });
+      res.status(400).json({ error: "No se puede agregar a favoritos. Inicie sesion" });
     }
     else {
       const user = await User.findOne({
         where: { email }
       })
-
       if (user) {
-        //busco si esta en wishlist
-
+        //? Busco si esta en wishlist
         const info = await Wishlist.findOne({ where: { userId: user.dataValues.id } });
         if (info) {
-
-          info.update({ products }, { where: { userId: user } })
+          const update = [...info.dataValues.products, idProd]
+          info.update({ products: update }, { where: { userId: user } })
             .then((response) => {
-              res.send('Wishlist actualizada');
+              res.json({ message: 'Lista de favoritos actualizada' });
             })
             .catch((e) => next(e));
         } else {
@@ -30,7 +27,6 @@ const addWishlist = async (req, res, next) => {
           wishlist.setUser(user);
           res.status(200).json({ message: "Producto añadido a favoritos!" });
         }
-
       }
       else {
         res.status(404).json({ message: "No se encontró el usuario" });
@@ -51,20 +47,18 @@ const getWishilistByUser = async (req, res, next) => {
       where: { email }
     });
 
-    if(user)
-    {
+    if (user) {
       //si existe el usuario, me fijo que este en wishlist
       const dbWishlist = await Wishlist.findOne(
         {
-            where:{
-              userId: user.dataValues.id
-            }
+          where: {
+            userId: user.dataValues.id
+          }
         });
 
-        res.status(200).json(dbWishlist);
+      res.status(200).json(dbWishlist);
     }
-    else
-    {
+    else {
       res.status(404).json({ message: "No se encontró el usuario" });
     }
 
@@ -74,7 +68,25 @@ const getWishilistByUser = async (req, res, next) => {
   }
 };
 
+const removeFromWishlist = async (req, res, next) => {
+  try {
+    const { id, email } = req.body;
+    const user = await User.findOne({
+      where: { email }
+    })
+    const wishlist = await Wishlist.findOne({ where: { userId: user.dataValues.id } });
+    const update = wishlist.dataValues.products.filter(item => item != id);
+    wishlist.update({ products: update }, { where: { userId: user } })
+      .then((response) => {
+        res.json({ message: 'Lista de favoritos actualizada' });
+      })
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   addWishlist,
-  getWishilistByUser
+  getWishilistByUser,
+  removeFromWishlist
 }
