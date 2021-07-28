@@ -79,14 +79,14 @@ export const selectAdmins = (id, act) => async (dispatch) => {
     let datos = {}
     if (act) {
       datos = {
-        "isAdmin": true
+        "isadmin": true
       }
     } else {
       datos = {
-        "isAdmin": false
+        "isadmin": false
       }
     }
-    const { data } = await axios (`/users/${id}`, datos)
+    const { data } = await axios.put (`/users/${id}`, datos)
     // const res = await fetch("http://localhost:3001/user/changeAdmin", {
     //   method: "PUT",
     //   headers: { "Content-Type": "application/json" },
