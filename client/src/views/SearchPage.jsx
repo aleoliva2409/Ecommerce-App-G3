@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import FilterProducts from "../components/Products/FilterProducts/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
 import { Container, Grid, Typography } from "@material-ui/core";
-import { getSearchProducts } from "../redux/actions/productActions";
+import { getSearchModels } from "../redux/actions/productActions";
 
 const SearchPage = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const SearchPage = () => {
   filter ? render = searchProducts : render = filterproducts || [];
 
   useEffect(() => {
-    dispatch(getSearchProducts());
+    dispatch(getSearchModels());
   }, [dispatch]);
 
   return (

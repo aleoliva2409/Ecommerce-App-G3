@@ -2,8 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSearchProducts, getProducts } from '../../../redux/actions/productActions';
-import { getModels } from '../../../redux/actions/modelAction';
+import { getSearchModels, getModels } from '../../../redux/actions/productActions';
 import { Redirect } from 'react-router-dom';
 // * STYLES *
 import {useStyles} from './Styles';
@@ -17,7 +16,7 @@ const allProducts = useSelector(state => state.products.allProducts)
 const allModels = useSelector(state => state.models.modelList)
 
 useEffect(() => {
-  dispatch(getProducts())
+  dispatch(getModels())
   dispatch(getModels())
 }, [dispatch])
 
@@ -25,7 +24,7 @@ useEffect(() => {
     console.log(e.target.value)
     if(e.keyCode === 13){
       if (e.target.value !== ""){
-        dispatch(getSearchProducts(e.target.value));
+        dispatch(getSearchModels(e.target.value));
         setRedirect(true);
         e.target.value = "";
       }

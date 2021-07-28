@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CrudProduct from "../components/CrudProduct/CrudProduct";
 import Table from '../components/OrdersTable/OrderTable';
 import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
-import { getProducts } from "../redux/actions/productActions";
+import { getModels } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
 import { Container } from "@material-ui/core";
@@ -17,14 +17,14 @@ const Me = () => {
   const location = useLocation();
 
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getModels());
     dispatch(getCategories());
   }, [dispatch]);
 
   useEffect(() => {
     if(render) {
       setRender(false)
-      dispatch(getProducts());
+      dispatch(getModels());
     }
   }, [dispatch, render]);
 
