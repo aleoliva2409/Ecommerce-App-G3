@@ -8,7 +8,7 @@ import { getSearchModels } from "../redux/actions/productActions";
 const SearchPage = () => {
   const dispatch = useDispatch();
   const searchProducts = useSelector((state) => state.products.searchProducts);
-  const filterproducts = useSelector((state) => state.products.filterproducts.products);
+  const filterproducts = useSelector((state) => state.products.filterproducts.models);
 
   let render
   const [filter,setFilter] = useState(true);
@@ -30,7 +30,7 @@ const SearchPage = () => {
           <FilterProducts setFilter={setFilter} setCurrentPage={setCurrentPage}/>
         </Grid>
         <Grid item xl={10} lg={10} md={9} sm={12} xs={12}>
-          <Catalogue products={render} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+          <Catalogue productModels={render} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         </Grid>
       </Grid>
     </Container>

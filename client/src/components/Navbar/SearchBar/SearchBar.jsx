@@ -12,11 +12,9 @@ const SearchBar = () => {
   const classes = useStyles();
   const [redirect,setRedirect]= useState(false);
 
-const allProducts = useSelector(state => state.products.allProducts)
-const allModels = useSelector(state => state.models.modelList)
+const allModels = useSelector(state => state.products.allProducts)
 
 useEffect(() => {
-  dispatch(getModels())
   dispatch(getModels())
 }, [dispatch])
 
@@ -48,7 +46,7 @@ useEffect(() => {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
-               placeholder="Search…"
+              placeholder="Search…"
 
             />
         )}
