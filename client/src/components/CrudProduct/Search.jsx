@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ProductsTable from './ProductsTable';
+import Table from './Table';
 import AddProduct from './AddProduct';
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
@@ -10,16 +11,16 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 
-const Search = ({ products, product, state, setState, categories }) => {
+const Search = ({ productsAll, productUpdate, state, setState, categories }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [search, setSearch] = useState("")
 
   const paginations = () => {
     if (search.length === 0) {
-      return products.slice(currentPage, currentPage + 5);
+      return productsAll.slice(currentPage, currentPage + 5);
     }
 
-    const filteredProducts = products.filter((product) =>
+    const filteredProducts = productsAll.filter((product) =>
       product.name.toLowerCase().includes(search.toLowerCase())
     );
 
@@ -45,7 +46,7 @@ const Search = ({ products, product, state, setState, categories }) => {
   };
 
   const nextBtn = () => {
-    if (products.filter((product) => product.name.includes(search)).length > currentPage + 8) {
+    if (productsAll.filter((product) => product.name.includes(search)).length > currentPage + 8) {
       return false;
     } else {
       return true;
@@ -65,7 +66,7 @@ const Search = ({ products, product, state, setState, categories }) => {
       </Grid>
       <Grid container direction="row" justifyContent="center" alignItems="center">
         <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
-          <AddProduct product={product} categories={categories} state={state} setState={setState} />
+          <AddProduct product={productUpdate} categories={categories} state={state} setState={setState} />
         </Grid>
         <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
           <TextField
@@ -80,7 +81,8 @@ const Search = ({ products, product, state, setState, categories }) => {
         </Grid>
       </Grid>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <ProductsTable products={paginations()} state={state} setState={setState}/>
+        {/* <ProductsTable products={paginations()} state={state} setState={setState}/> */}
+        <Table />
       </Grid>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Box display="flex" justifyContent="space-evenly" mt={1}>

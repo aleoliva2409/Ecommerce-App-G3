@@ -10,6 +10,9 @@ module.exports = (sequelize) => {
     text: {
       type: DataTypes.TEXT
     },
+    score: {
+      type: DataTypes.INTEGER
+    }
   }
   )
 }

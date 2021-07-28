@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
   activeLoading,
-  getProductDetails,
+  getModelDetails,
 } from "../redux/actions/productActions.js";
 import { useDispatch, useSelector } from "react-redux";
 import ModelProduct from "./../components/ProductDetails/Product.jsx";
@@ -17,7 +17,7 @@ const ProductPage = () => {
 
   useEffect(() => {
       dispatch(activeLoading());
-      dispatch(getProductDetails(id));
+      dispatch(getModelDetails(id));
   }, [dispatch,id]);
 
   return isLoading ? (

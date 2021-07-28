@@ -1,8 +1,6 @@
 const { User, Order } = require("../db");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-//const passport = require("passport");
-// const Op = require("sequelize").Op;
 
 const getAllUsers = async (req, res, next) => {
   try {

@@ -38,7 +38,7 @@ const initModels = async () => {
 
     const newCategories = await Category.findAll()
 
-    fs.readFile('db1.json', async (err, data) => {
+    fs.readFile('dbModels.json', async (err, data) => {
       const models = JSON.parse(data)
       try {
         const modelsDB = await Model.findAll()

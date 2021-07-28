@@ -9,6 +9,12 @@ const useStyles = makeStyles((theme) => ({
   cardHeaderP:{
     height: 150,
   },
+  size:{
+    display:'flex',
+    alignItems: 'center',
+    justifyContent:'center'
+  }
+  ,
   headertitle:{
     fontWeight:'900',
     justifyContent:"center",
@@ -19,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   subheader:{
     color: '#232323'
 
+  },
+  tamanio:{
+    marginRight:'7px'
   },
   button:{
     color: '#FFF',
