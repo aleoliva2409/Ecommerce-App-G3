@@ -15,6 +15,7 @@ function Product({product}){
   const styles = useStyles();
   const dispatch = useDispatch();
 
+  // ! corregir lo que se le envia a carrito, tiene que ser el producto con sus variantes
   const pushToCart = () => dispatch(addToCart(product,1));
 
   function handlerFavoriteButton(){

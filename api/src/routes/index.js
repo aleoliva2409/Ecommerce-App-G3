@@ -9,6 +9,7 @@ const productRouter = require("./product.routes");
 const categoryRouter = require('./category.routes');
 const userRouter = require('./user.routes');
 const orderRouter = require('./order.routes');
+const reviewRouter = require('./review.routes');
 const cartRouter = require('./cart.routes');
 const checkout = require('./checkout.routes')
 const protectedRouter = require('./protected.routes');
@@ -22,6 +23,7 @@ const router = Router();
 // ? router.use("/products" , productRouter)
 
 router.use("/models", modelRouter)
+router.use("/models", reviewRouter)
 router.use("/products", productRouter);
 router.use("/categories", categoryRouter);
 router.use("/users", userRouter);
