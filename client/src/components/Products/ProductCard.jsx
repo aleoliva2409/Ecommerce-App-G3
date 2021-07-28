@@ -15,6 +15,9 @@ import { Link } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from './../../redux/actions/shoppingCartActions.js';
 import Box from '@material-ui/core/Box';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
 // * STYLES *
 import { useStyles } from './ProductCardStyle';
 import { useStylesDark } from './ProductCardStyleDark';
@@ -63,9 +66,22 @@ const ProductCard = ({ productModel }) => {
           </Link>
         }
         subheader={
-          <Typography component="p" className={classes.subheader}>
-            {`Marca : ${productModel.brand}`}
-          </Typography>
+          <div className={classes.size}>
+            < Typography component="p" className={classes.tamanio}>
+              {`Tamaño : `}
+            </Typography>
+            <TextField id="select" value="1" select className={classes.subheader}>
+              <MenuItem value="1">80x190</MenuItem>
+              <MenuItem value="2">100x190</MenuItem>
+              <MenuItem value="3">130x190</MenuItem>
+              <MenuItem value="4">140x190</MenuItem>
+            </TextField>
+          </div>
+
+          // <Typography component="p" className={classes.subheader}>
+
+          //   {`Tamaño : ${productModel.brand}`}
+          // </Typography>
         }
       />
 
