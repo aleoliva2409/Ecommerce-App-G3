@@ -10,7 +10,9 @@ module.exports = (sequelize) => {
     text: {
       type: DataTypes.TEXT
     },
-  },
-  { timestamps: false }
+    score: {
+      type: DataTypes.INTEGER
+    }
+  }
   )
 }

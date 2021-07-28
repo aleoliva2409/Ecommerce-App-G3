@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import FilterProducts from "../components/Products/FilterProducts/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
 import { Container, Grid, Typography } from "@material-ui/core";
-import { getSearchProducts } from "../redux/actions/productActions";
+import { getSearchModels } from "../redux/actions/productActions";
 
 const SearchPage = () => {
   const dispatch = useDispatch();
   const searchProducts = useSelector((state) => state.products.searchProducts);
-  const filterproducts = useSelector((state) => state.products.filterproducts.products);
+  const filterproducts = useSelector((state) => state.products.filterproducts.models);
 
   let render
   const [filter,setFilter] = useState(true);
@@ -17,7 +17,7 @@ const SearchPage = () => {
   filter ? render = searchProducts : render = filterproducts || [];
 
   useEffect(() => {
-    dispatch(getSearchProducts());
+    dispatch(getSearchModels());
   }, [dispatch]);
 
   return (
@@ -30,7 +30,7 @@ const SearchPage = () => {
           <FilterProducts setFilter={setFilter} setCurrentPage={setCurrentPage}/>
         </Grid>
         <Grid item xl={10} lg={10} md={9} sm={12} xs={12}>
-          <Catalogue products={render} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+          <Catalogue productModels={render} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         </Grid>
       </Grid>
     </Container>

@@ -10,15 +10,15 @@ module.exports = (sequelize) => {
       },
       color: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       size: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      description: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+      sizeMattress: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
       image: {
         type: DataTypes.ARRAY(DataTypes.STRING),

@@ -10,7 +10,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import { StyledTableCell, StyledTableRow, useStyles } from "./ProductsTableStyle";
 import { useDispatch } from 'react-redux';
-import { deleteProduct, getProductDetails } from "../../redux/actions/productActions";
+import { deleteProduct, getModelDetails } from "../../redux/actions/productActions";
 
 const ProductsTable = ({ products, state, setState }) => {
   const classes = useStyles();
@@ -24,7 +24,7 @@ const ProductsTable = ({ products, state, setState }) => {
 
   const btnEdit = (id) => {
     // ? uso 2do parametro para que editAction
-    dispatch(getProductDetails(id,true));
+    dispatch(getModelDetails(id,true));
   }
 
   return (

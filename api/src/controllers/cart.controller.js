@@ -153,7 +153,6 @@ const getCartAllByUser = async (req, res, next) => {
     }else{
       return res.json({ error: "No existe el usuario" }).status(400);
     }
-
   } catch (error) {
     console.log(error);
   }

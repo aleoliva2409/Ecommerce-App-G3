@@ -1,7 +1,7 @@
 const { User } = require('./db.js');
 
 async function setUser(){
-  let user = [
+  let users = [
     {
       email: 'admin@admin.com',
       password: '$2b$10$KVoI0V12wOwuWd8lcjSGR.sYVEL/SZtE6cqPHh7xjJkBc0V34jfpC', //zR$yuWa!BnNX
@@ -28,11 +28,16 @@ async function setUser(){
       password: 'test',
       isadmin: false,
     }
-
   ]
 
-  let newuser = await User.bulkCreate(user);
-  console.log(newuser.length+" User Created to Test");
+  for(let us of users) {
+    await User.findOrCreate({
+      where: { email: us.email,password: us.password, isadmin: us.isadmin},
+      defaults: users[us]
+    })
+  }
+  console.log(users.length+" User Created to Test");
+  //let newuser = await User.bulkCreate(users);
 }
 
 module.exports = async () => { await setUser()};

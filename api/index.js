@@ -2,8 +2,10 @@ require('dotenv').config()
 const server = require("./src/app");
 const { sequelize } = require("./src/db")
 
-const initDb = require('./src/initDB')
+const initDB = require('./src/initDB')
+const initModels = require('./src/initModels')
 const ordersInitTest = require("./src/ordersInitTest")
+
 
 // TESTING USER
 const setUser = require('./src/UserInitTest');
@@ -18,9 +20,14 @@ const connectDB = async() => {
     await server.listen(process.env.PORT, () => {
       console.log(`Listening on PORT ${process.env.PORT}`);
     });
-    initDb();
-    setUser();
-    ordersInitTest();
+
+    await initModels();
+    setTimeout(() => {
+      initDB();
+    },4000)
+    await setUser();
+    await ordersInitTest();
+
   } catch (error) {
     console.error("Unable to connect to the database:", error);
   }

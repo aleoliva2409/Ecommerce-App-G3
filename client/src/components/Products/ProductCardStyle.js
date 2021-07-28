@@ -9,6 +9,12 @@ const useStyles = makeStyles((theme) => ({
   cardHeaderP:{
     height: 150,
   },
+  size:{
+    display:'flex',
+    alignItems: 'center',
+    justifyContent:'center'
+  }
+  ,
   headertitle:{
     fontWeight:'900',
     justifyContent:"center",
@@ -20,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#232323'
 
   },
+  tamanio:{
+    marginRight:'7px'
+  },
   button:{
     color: '#FFF',
     backgroundColor: '#00BBC9',
@@ -29,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#FCEB45',
     },
   },
+  cardact:{
+    justifyContent:'space-around',
+  },
+
   media: {
     height: 0,
     paddingTop: "56.25%" // 16:9
