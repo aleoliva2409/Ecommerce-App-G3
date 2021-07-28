@@ -1,4 +1,4 @@
-const { Order, User, Product, Model } = require("../db");
+const { Order, User, Model } = require("../db");
 
 const getAllOrders = async (req, res) => {
   try {

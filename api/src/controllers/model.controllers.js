@@ -111,9 +111,9 @@ const getModelSearch = async (req, res) => {
 }
 
 const getModelById = async (req, res) => {
-  const { id } = req.params;
+  const { idModel } = req.params;
   try {
-    const model = await Model.findByPk(id,{
+    const model = await Model.findByPk(idModel,{
       include: [
         {
           model: Category,

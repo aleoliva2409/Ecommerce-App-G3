@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/all', getAllModels);
 router.get('/', getModelSearch);
-router.get('/:id', getModelById);
+router.get('/:idModel', getModelById);
 router.get('/category/:id', getModelsByCategory)
 router.post('/', addModelAndProduct);
 router.post('/:idModel', addProductOnly)
