@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { getAllModels, getModelSearch, getModelById, getModelsByCategory } = require("../controllers/model.controllers")
+const { getAllModels, getModelSearch, getModelById, getModelsByCategory, addModelAndProduct, addProductOnly } = require("../controllers/model.controllers")
 
 const router = Router();
 
@@ -7,5 +7,7 @@ router.get('/all', getAllModels);
 router.get('/', getModelSearch);
 router.get('/:id', getModelById);
 router.get('/category/:id', getModelsByCategory)
+router.post('/', addModelAndProduct);
+router.post('/:idModel', addProductOnly)
 
 module.exports = router;
