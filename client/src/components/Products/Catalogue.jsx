@@ -47,7 +47,6 @@ const Catalogue = ({ productModels, currentPage, setCurrentPage }) => {
       <Grid container spacing={6} >
         {paginations() &&
           paginations().map((productModel) => (
-            productModel.price !== "0.00" &&
             <Grid item xl={3} lg={4} md={6} sm={6} xs={12} key={productModel.id}>
               <ProductCard productModel={productModel} />
             </Grid>

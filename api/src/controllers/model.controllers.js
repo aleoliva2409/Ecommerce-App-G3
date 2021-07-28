@@ -78,6 +78,9 @@ const getAllModels = async (req, res) => {
         {
           model: Category,
           attributes: ["name"]
+        },
+        {
+          model: Product
         }
       ],
     });
@@ -97,6 +100,9 @@ const getModelSearch = async (req, res) => {
       include: [
         {
           model: Category
+        },
+        {
+          model: Product
         }
       ],
     });
@@ -121,7 +127,6 @@ const getModelById = async (req, res) => {
         },
         {
           model: Product,
-          // where: { id: 66 }
         }
       ],
     });
@@ -135,6 +140,28 @@ const getModelById = async (req, res) => {
   }
 };
 
+const getModelAndProduct = async (req, res) => {
+  try {
+    const { idModel, idProduct } = req.params;
+    const modelProduct = await Model.findByPk(idModel,{
+      include: [
+        {
+          model: Product,
+          where: { id: idProduct }
+        }
+      ],
+    })
+
+    if(modelProduct.products[0] !== undefined) {
+      return res.status(200).json(modelProduct)
+    } else {
+      return res.status(404).json({message: "No existe el producto"})
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 const getModelsByCategory = async (req, res) => {
   const { id } = req.params;
   try {
@@ -142,11 +169,11 @@ const getModelsByCategory = async (req, res) => {
       include: [
         {
           model: Model,
-          // include: [
-          //   {
-          //     model: Product
-          //   }
-          // ]
+          include: [
+            {
+              model: Product
+            }
+          ]
         }
       ]
     });
@@ -161,6 +188,7 @@ module.exports = {
   getAllModels,
   getModelSearch,
   getModelById,
+  getModelAndProduct,
   getModelsByCategory,
   addModelAndProduct,
   addProductOnly,
