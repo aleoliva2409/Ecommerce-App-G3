@@ -46,8 +46,10 @@ const updateUser = async (req, res, next) => {
   const body = req.body;
   try {
     const update = await User.findByPk(id);
-    const salt = await bcrypt.genSalt(10);
-    body.password = await bcrypt.hash(body.password, salt);
+    if(body.password) {
+      const salt = await bcrypt.genSalt(10);
+      body.password = await bcrypt.hash(body.password, salt);
+    }
     if (update) {
       User.update(req.body, {
         where: { id },
