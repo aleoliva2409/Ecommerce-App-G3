@@ -41,7 +41,6 @@ export default function FormDialog({ field, setRegister, register }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     SetValuesForm({ ...valuesForm, [name]: value });
-    console.log(valuesForm);
   };
 
   //Form Submit

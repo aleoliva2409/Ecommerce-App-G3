@@ -7,7 +7,6 @@ const login = async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
       if (err) return next(err);
-      console.log(info)
       if (info) return res.json(info).status(500);
 
       req.login(user, { session: false }, async (error) => {
@@ -16,6 +15,7 @@ const login = async (req, res, next) => {
         const payload = {
           id: user.id,
           isadmin: user.isadmin,
+          passwordReset: user.passwordReset,
           //exp: Math.floor(Date.now() / 1000) + 3600, //1h
           email: user.email
         }
@@ -38,13 +38,6 @@ const logout = async (req, res) => {
   }
 }
 
-const passwordReset = async (req, res, next) => {
-  try {
-
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 module.exports = {
   login,

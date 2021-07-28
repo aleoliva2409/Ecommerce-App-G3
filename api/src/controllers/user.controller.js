@@ -43,13 +43,19 @@ const addUser = async (req, res, next) => {
 
 const updateUser = async (req, res, next) => {
   const { id } = req.params;
+  const body = req.body;
   try {
     const update = await User.findByPk(id);
+    if(body.password) {
+      const salt = await bcrypt.genSalt(10);
+      body.password = await bcrypt.hash(body.password, salt);
+    }
     if (update) {
       User.update(req.body, {
         where: { id },
       });
-      res.status(200).json({ message: "User update" });
+      const user = await User.findByPk(id)
+      res.status(200).json({ message: "User update", data: user });
     } else {
       res.status(404).json({ error: "User not found" });
     }
@@ -124,6 +130,7 @@ const getUser = (req, res, next) => {
     //token: req.query.token
   });
 };
+
 
 module.exports = {
   addUser,
