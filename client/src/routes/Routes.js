@@ -6,6 +6,7 @@ import HomePage from "../views/HomePage";
 import CartPage from "../views/CartPage";
 import DashboardPage from "../views/DashboardPage";
 import Me from "../views/Me"
+import PasswordReset from "../views/PasswordReset";
 
 const Routes = () => (
   <Switch>
@@ -16,6 +17,7 @@ const Routes = () => (
     <Route path="/products/:id" component={ProductPage} />
     <Route path="/admin/dashboard" component={DashboardPage} />
     <Route exact path="/users/me" component={Me} />
+    <Route exact path="/users/password-reset" component={PasswordReset} />
   </Switch>
 );
 

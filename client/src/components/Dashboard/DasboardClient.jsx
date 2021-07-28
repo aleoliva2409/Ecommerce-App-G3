@@ -56,6 +56,7 @@ function Dashboard(props) {
   };
 
   if (!user) return <Redirect to='/' />
+  if(user.passwordReset) return <Redirect to='/users/password-reset' />
 
   const drawer = (
     <div>
