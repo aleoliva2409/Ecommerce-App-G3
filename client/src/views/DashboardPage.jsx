@@ -4,27 +4,27 @@ import { useDispatch, useSelector } from "react-redux";
 import CrudProduct from "../components/CrudProduct/CrudProduct";
 import Table from '../components/OrdersTable/OrderTable';
 import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
-import { getProducts } from "../redux/actions/productActions";
+import { getModels } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import Dashboard from "../components/Dashboard/Dashboard";
 import { Container } from "@material-ui/core";
 
 const DashboardPage = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.allProducts);
+  const productsAll = useSelector((state) => state.products.allProducts);
   const categories = useSelector((state) => state.categories.categories);
   const [render, setRender] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getModels());
     dispatch(getCategories());
   }, [dispatch]);
 
   useEffect(() => {
     if(render) {
       setRender(false)
-      dispatch(getProducts());
+      dispatch(getModels());
     }
   }, [dispatch, render]);
 
@@ -33,7 +33,7 @@ const DashboardPage = () => {
       case "/admin/dashboard/products":
         return (
           <CrudProduct
-            products={products}
+            productsAll={productsAll}
             categories={categories}
             state={render}
             setState={setRender}
