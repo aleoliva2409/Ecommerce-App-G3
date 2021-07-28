@@ -16,7 +16,6 @@ const protectedRouter = require('./protected.routes');
 const authRouter = require('./auth.routes');
 const wishlist = require('./wishlist.routes');
 const authGoogle = require('./authGoogle.routes')
-
 const router = Router();
 
 // ? config routers

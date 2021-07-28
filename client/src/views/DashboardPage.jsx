@@ -8,6 +8,7 @@ import { getModels } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import Dashboard from "../components/Dashboard/Dashboard";
 import { Container } from "@material-ui/core";
+import Promote from '../components/Promote/Promote';
 
 const DashboardPage = () => {
   const dispatch = useDispatch();
@@ -52,7 +53,7 @@ const DashboardPage = () => {
 
       case "/admin/dashboard/promote":
         return (
-          <></>
+          <Promote/>
         )
 
       default:
