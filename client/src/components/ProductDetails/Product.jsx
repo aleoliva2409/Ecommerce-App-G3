@@ -5,8 +5,9 @@ import { styleProduct } from './ProductStyle.js';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 
-const useStyles = makeStyles(styleProduct);
+//PRODUCT DETAIL
 
+const useStyles = makeStyles(styleProduct);
 
 function Product({product}){
 
@@ -43,7 +44,7 @@ function Product({product}){
       >
         <CardMedia
           className={styles.media}
-          image={product.image[0]}
+          image={product.image}
         />
         <CardContent
           className={styles.content}
@@ -52,7 +53,7 @@ function Product({product}){
             variant={'button'}
             className={styles.price}
           >
-            {`$${product.price}`}
+            {`Marca : ${product.brand}`}
           </Typography>
           <Typography
             variant={'caption'}
