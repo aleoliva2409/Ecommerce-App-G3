@@ -1,27 +1,34 @@
+import { Box, Container, makeStyles, Typography } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategories } from '../../../redux/actions/categoriesActions';
 import CategoryCard from '../CategoryCard/CategoryCard';
-import useStyles from './ShowAndDeleteCategoriesStyle.js';
+import { categoriesShow_Delete } from './ShowAndDeleteCategoriesStyle';
+
+const useStyles = makeStyles(categoriesShow_Delete)
 
 const ShowAndDeleteCategories = () => {
-    const dispatch = useDispatch()
+  const styles = useStyles()
+  const dispatch = useDispatch()
+  const categoriesList = useSelector(state => state.categories.categories)
+  const reloaded = useSelector(state => state.categories.reloaded)
 
-    const categoriesList = useSelector(state => state.categories.categories)
-    const reloaded = useSelector(state => state.categories.reloaded)
-    const classes = useStyles();
+  useEffect(() => {
+      dispatch(getCategories())
+  }, [dispatch, reloaded])
 
-    useEffect(() => {
-        dispatch(getCategories())
-    }, [dispatch, reloaded])
-
-    return (
-        <div className={classes.container}>
-            {categoriesList.map((e)=>(
+  return (
+    <Container className={styles.categoriesContainer}>
+      <Box component="div" className={styles.categoriesBox}>
+        <Typography variant="h5"> Categorias: </Typography>
+        <Box component="div" className={styles.categoriesCards}>
+          {categoriesList.map((e)=>(
             <CategoryCard name={e.name} description={e.description} id={e.id} image={e.image} />
             ))}
-        </div>
-    )
+        </Box>
+      </Box>
+    </Container>
+  )
 }
 
 export default ShowAndDeleteCategories
