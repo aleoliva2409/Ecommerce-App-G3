@@ -23,8 +23,8 @@ export const userActions = (user) => async (dispatch) => {
 
 export const login = (user) => async (dispatch) => {
   try {
-    if(user === 'empty'){ 
-      dispatch({type: ERROR, payload: ''}) 
+    if(user === 'empty'){
+      dispatch({type: ERROR, payload: ''})
     } else {
     const { data } = (await axios.post('/auth/login', user)).data;
     console.log(data)
@@ -75,6 +75,7 @@ export const logout = () => async (dispatch) => {
     const res = await axios.get('auth/logout')
     localStorage.removeItem('jwt');
     localStorage.removeItem('user');
+    localStorage.removeItem('id');
     dispatch({ type: LOGOUT });
   } catch (error) {
     console.log(error)
