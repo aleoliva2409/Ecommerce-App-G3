@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -11,6 +11,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from './../../redux/actions/shoppingCartActions.js';
+import { addFavorite, deleteFavorite } from './../../redux/actions/wishlistAction';
 // * STYLES *
 import { useStyles } from './ProductCardStyle';
 import { useStylesDark } from './ProductCardStyleDark';
@@ -28,9 +29,20 @@ const ProductCard = ({ product }) => {
     classes = dayMode;
   }
 
-  const dispatch = useDispatch();
+  const [favorites, setFavorites] = useState(false)
 
+  const dispatch = useDispatch();
   const pushToCart = () => dispatch(addToCart(product,1));
+
+  const handleFavorites = () => {
+    if(favorites) {
+      dispatch(deleteFavorite(product));
+      setFavorites(false);
+    } else {
+      dispatch(addFavorite(product));
+      setFavorites(true);
+    }
+  }
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
@@ -63,8 +75,12 @@ const ProductCard = ({ product }) => {
                 <div>
                   <Typography variant="h6">Medida(cm): {product.size}</Typography>
                   <Typography variant="h6">Medida: {product.sizeMattress}</Typography>
+                  <Typography variant="h6" className={classes.price}>{`$ ${product.price}`}</Typography>
                 </div> :
-                <Typography variant="h6">Medida(cm): {product.size}</Typography>
+                <div>
+                  <Typography variant="h6">Medida(cm): {product.size}</Typography>
+                  <Typography variant="h6" className={classes.price}>{`$ ${product.price}`}</Typography>
+                </div>
               }
             </Fragment>
         }
@@ -75,8 +91,8 @@ const ProductCard = ({ product }) => {
         title={`image ${product.name}`}
       />
       <CardActions className={classes.cardact}>
-        <IconButton aria-label="Agregar a favoritos">
-          <FavoriteIcon />
+        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} >
+          <FavoriteIcon style={favorites ? {color: "red"} : {}} />
         </IconButton>
         <Button
           variant="contained"
