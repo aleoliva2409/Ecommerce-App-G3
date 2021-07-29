@@ -22,7 +22,6 @@ const ProductCard = ({ product }) => {
   const darkMode = useStylesDark();
   let classes;
   const actualColor = useSelector(state => state.color);
-  console.log(actualColor);
   if (actualColor) {
     classes = darkMode;
   } else {
@@ -30,9 +29,10 @@ const ProductCard = ({ product }) => {
   }
 
   const [favorites, setFavorites] = useState(false)
+const dispatch = useDispatch();
 
-  const dispatch = useDispatch();
-  const pushToCart = () => dispatch(addToCart(product,1));
+  const user = localStorage.getItem('user');
+    const pushToCart = () => dispatch(addToCart(product,1,user));
 
   const handleFavorites = () => {
     if(favorites) {

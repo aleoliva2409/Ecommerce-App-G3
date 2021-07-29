@@ -72,11 +72,14 @@ export const getUser = (token) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
+    localStorage.setItem('cart', JSON.stringify([]));
     const res = await axios.get('auth/logout')
+    console.log(res)
     localStorage.removeItem('jwt');
     localStorage.removeItem('user');
     localStorage.removeItem('id');
     dispatch({ type: LOGOUT });
+    window.location.replace('/')
   } catch (error) {
     console.log(error)
   }

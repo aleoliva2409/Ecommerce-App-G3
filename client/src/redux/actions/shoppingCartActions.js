@@ -3,7 +3,7 @@ import axios from "axios";
 export const SET_CART = "SET_CART";
 export const RESET_CART = "RESET_CART";
 
-export const addToCart = ({ id, name, image, price, stock }, qty) => async (dispatch) => {
+export const addToCart = ({ id, name, image, price, stock }, qty, user) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem('cart'));
   let exist = false;
   for (let each of inLocal) {
@@ -15,10 +15,10 @@ export const addToCart = ({ id, name, image, price, stock }, qty) => async (disp
   if (!exist) inLocal.push({ id, name, image, price, stock, qty })
   dispatch({ type: SET_CART, payload: inLocal })
   localStorage.setItem('cart', JSON.stringify(inLocal)) //guest
-  const { data } = await axios.post('/cart/add', { email: 'test@gmail.com', cartGuest: inLocal }) //hardcore x1000000000 hahahaha
+  const { data } = await axios.post('/cart/add', { email: user, cartGuest: inLocal }) //hardcore x1000000000 hahahaha
 }
 
-export const adjustQuantity = ({ id }, value) => async (dispatch) => {
+export const adjustQuantity = ({ id }, value,user) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem('cart'));
   for (let each of inLocal) {
     if (each.id === id) {
@@ -27,28 +27,28 @@ export const adjustQuantity = ({ id }, value) => async (dispatch) => {
   }
   dispatch({ type: SET_CART, payload: inLocal })
   localStorage.setItem('cart', JSON.stringify(inLocal))
-  const { data } = await axios.post('/cart/add', { email: 'test@gmail.com', cartGuest: inLocal }) //hardcore x1000000000 hahahaha
+  const { data } = await axios.post('/cart/add', { email: user, cartGuest: inLocal }) //hardcore x1000000000 hahahaha
 }
 
-export const removeFromCart = ({ id }) => async (dispatch) => {
+export const removeFromCart = ({ id },user) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem('cart')).filter((each) => each.id !== id);
   dispatch({ type: SET_CART, payload: inLocal })
   localStorage.setItem('cart', JSON.stringify(inLocal))
-  const { data } = await axios.post('/cart/add', { email: 'test@gmail.com', cartGuest: inLocal }) //hardcore x1000000000 hahahaha
+  const { data } = await axios.post('/cart/add', { email: user, cartGuest: inLocal }) //hardcore x1000000000 hahahaha
 }
 
-export const resetCart = () => async (dispatch) => {
+export const resetCart = (user) => async (dispatch) => {
   localStorage.setItem("cart", JSON.stringify([]));
   dispatch({ type: RESET_CART })
   window.location.replace('http://localhost:3000/products')
-  const { data } = await axios.post('/cart/add', { email: 'test@gmail.com', cartGuest: [] }) //hardcore x1000000000 hahahaha
+  const { data } = await axios.post('/cart/add', { email: user, cartGuest: [] }) //hardcore x1000000000 hahahaha
 }
 
 export const goToCheckout = () => async (dispatch) => {
   const productsInCart = JSON.parse(localStorage.getItem("cart"))
   console.log(productsInCart)
-  const { data } = await axios.post('/checkout', { productsInCart })
-  console.log(data)
-  window.location = data.init_point
+  //const { data } = await axios.post('/checkout', { productsInCart })
+  //console.log(data)
+  //window.location = data.init_point
 
 }
