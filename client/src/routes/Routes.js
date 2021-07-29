@@ -7,6 +7,7 @@ import CartPage from "../views/CartPage";
 import DashboardPage from "../views/DashboardPage";
 import Me from "../views/Me"
 import PasswordReset from "../views/PasswordReset";
+import LoginPage from "../views/LoginPage";
 
 const Routes = () => (
   <Switch>
@@ -18,6 +19,8 @@ const Routes = () => (
     <Route path="/admin/dashboard" component={DashboardPage} />
     <Route exact path="/users/me" component={Me} />
     <Route exact path="/users/password-reset" component={PasswordReset} />
+    <Route exact path="/review" component={LoginPage} />
+
   </Switch>
 );
 
