@@ -2,6 +2,7 @@ import {
   GET_PRODUCT_DETAILS,
   ACTIVE_LOADING,
   GET_PRODUCTS,
+  GET_MODELS,
   SEARCH_PRODUCTS,
   DELETE_PRODUCT,
   UPDATE_PRODUCT,
@@ -9,10 +10,10 @@ import {
   GET_PRODUCT_UPDATE,
   FILTER_PRODUCT_CATEGORY,
   GET_ONE_PRODUCT
-
 } from "../actions/productActions";
 
 const initialState = {
+  allModels: [],
   allProducts: [],
   searchProducts: [],
   productDetail: {},
@@ -47,8 +48,8 @@ const productReducer = (state = initialState, action) => {
       return { ...state, filterproducts: action.payload };
     case GET_ONE_PRODUCT:
       return { ...state, productDetailOne: action.payload };
-
-
+    case GET_MODELS:
+      return { ...state, allModels: action.payload }
     default:
       return state;
   }
