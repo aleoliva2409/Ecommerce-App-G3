@@ -71,6 +71,29 @@ const addProductOnly = async(req, res) => {
   }
 }
 
+const updateProduct = async (req, res, next) => {
+  try {
+    const { idModel, idProduct } = req.params;
+    const updateModel = await Model.findByPk(idModel);
+    const updateProduct = await Product.findByPk(idProduct);
+    if (updateModel && updateProduct) {
+      await Model.update(req.body, {
+        where: { id: idModel }
+      })
+      await Product.update(req.body, {
+        where: { id: idProduct },
+      });
+      updateUpdate.setCategories(req.body.categories);
+      updateModel.setCategory(req.body.categories[0]);
+      res.status(200).json({ message: "Product update" });
+    } else {
+      res.status(404).json({ error: "Product not found" });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 const getAllModels = async (req, res) => {
   try {
     const models = await Model.findAll({
@@ -148,6 +171,9 @@ const getModelAndProduct = async (req, res) => {
         {
           model: Product,
           where: { id: idProduct }
+        },
+        {
+          model: Category,
         }
       ],
     })
@@ -192,4 +218,5 @@ module.exports = {
   getModelsByCategory,
   addModelAndProduct,
   addProductOnly,
+  updateProduct,
 }

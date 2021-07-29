@@ -5,17 +5,18 @@ import {
   MenuItem,
   Button,
   Box,
+  FormControl,
 } from "@material-ui/core";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
-import AddIcon from "@material-ui/icons/Add";
 import useStyles from "./AddProductStyle";
 import { useDispatch } from "react-redux";
-import { addModelAndProduct, addProductOnly } from "../../redux/actions/productActions";
+import { updateProduct } from "../../redux/actions/productActions";
 
-const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClose }) => {
+const EditProduct = ({ productsAll, product, categories, setState, open, formClose }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+
 
   const [formProduct, setFormProduct] = useState({
     model: "",
@@ -38,13 +39,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
     })
   }
 
-  const addProductForm = (e) => {
-    if(formProduct.model) {
-      dispatch(addProductOnly(formProduct,formProduct.model))
-    } else {
-      dispatch(addModelAndProduct(formProduct))
-    }
-    setState(true);
+  const editProduct = (e) => {
+    dispatch(updateProduct(product.id, product.products[0].id, formProduct));
     setFormProduct({
       model: "",
       name: "",
@@ -63,32 +59,20 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
 
   return (
     <>
-      <Button
-        onClick={formOpen}
-        variant="contained"
-        color="primary"
-        size="large"
-        startIcon={<AddIcon />}
-      >
-        Agregar producto
-      </Button>
       <Dialog open={open} onClose={formClose}>
         <DialogContent className={classes.formAddProduct}>
-          <form onSubmit={addProductForm}>
+          <form onSubmit={editProduct}>
             <Select
               id="model"
               label="Modelo de Producto"
               variant="outlined"
-              defaultValue={productsAll}
+              defaultValue={product.id}
               onChange={handleForm}
               name="model"
               required
             >
-              <MenuItem value="DEFAULT" selected disabled>
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={false}>
-                Nuevo producto +
+              <MenuItem value={product.id} selected >
+                {product.name}
               </MenuItem>
               {productsAll &&
                 productsAll.map((product) => (
@@ -98,34 +82,13 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
                 ))}
             </Select>
             <TextField
-              id="name"
-              name="name"
-              label="Nombre"
-              variant="outlined"
-              margin="normal"
-              className={classes.textField}
-              value={formProduct.name}
-              onChange={handleForm}
-              required
-            />
-            <TextField
-              id="brand"
-              name="brand"
-              label="Marca"
-              variant="outlined"
-              margin="normal"
-              className={classes.textField}
-              value={formProduct.brand}
-              onChange={handleForm}
-            />
-            <TextField
               id="size"
               name="size"
               label="Medida(cm)"
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.size}
+              value={product.products ? product.products[0].size : formProduct.size}
               onChange={handleForm}
               required
             />
@@ -136,7 +99,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.sizeMattress}
+              value={product.products ? product.products[0].sizeMattress : formProduct.sizeMattress}
               onChange={handleForm}
             />
             <TextField
@@ -146,7 +109,11 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.description}
+              value={
+                product.description ?
+                product.description :
+                formProduct.description
+              }
               onChange={handleForm}
               multiline
               rows={4}
@@ -159,7 +126,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.color}
+              value={product.products ? product.products[0].color : formProduct.color }
               onChange={handleForm}
               required
             />
@@ -170,7 +137,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.image}
+              value={ product.image ? product.image : formProduct.image }
               onChange={handleForm}
               required
             />
@@ -181,7 +148,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.stock}
+              value={ product.products ? product.products[0].stock : formProduct.stock}
               onChange={handleForm}
               required
             />
@@ -192,7 +159,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               variant="outlined"
               margin="normal"
               className={classes.textField}
-              value={formProduct.price}
+              value={product.products ? product.products[0].price : formProduct.price }
               onChange={handleForm}
               required
             />
@@ -200,18 +167,18 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               id="category"
               label="Category"
               variant="outlined"
-              defaultValue={formProduct.categories}
+              defaultValue={categories}
               onChange={handleForm}
               name="categories"
               multiple
               required
             >
-              <MenuItem value="DEFAULT" selected disabled>
+              <MenuItem value={categories} disabled selected>
                 <em>None</em>
               </MenuItem>
               {categories &&
                 categories.map((category) => (
-                  <MenuItem value={category.id} key={category.name}>
+                  <MenuItem value={category.id} key={category.name} selected={category.id === product.categoryId ? true : false}>
                     {category.name}
                   </MenuItem>
                 ))}
@@ -222,8 +189,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               alignItems="center"
               my={2}
             >
-              <Button variant="contained" type="submit">
-                Agregar
+              <Button variant="contained" color="primary" type="submit" >
+                Editar
               </Button>
             </Box>
           </form>
@@ -233,4 +200,4 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
   );
 };
 
-export default AddProduct;
+export default EditProduct;
