@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import { useDispatch } from 'react-redux'
+import React,{useEffect, useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -12,6 +12,7 @@ import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import MuiAlert from "@material-ui/lab/Alert";
 // * {Actions}
 import { login, signup } from './../../redux/actions/userActions';
 
@@ -28,6 +29,14 @@ export default function FormDialog({ field, setRegister, register }) {
     password: '',
     submitted: false
   })
+  
+  
+  const message = useSelector(state => state.users.message)
+  console.log(message)
+  
+  const blockedUser = () => {
+    return <MuiAlert elevation={6} onClose={() => {dispatch(login('empty'))}} variant="filled" severity="error" color="error">{message}</MuiAlert>;
+  }
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -57,6 +66,7 @@ export default function FormDialog({ field, setRegister, register }) {
     }
   };
 
+
   return (
     <div className={classes.root}>
       <Button
@@ -68,6 +78,7 @@ export default function FormDialog({ field, setRegister, register }) {
         Mi cuenta
       </Button>
       <Dialog open={open} onClose={handleClose}>
+      {message? <>{blockedUser()}</>:<></>}
         <DialogContent>
           <div className={classes.paper}>
             <Avatar className={classes.avatar}>

@@ -10,7 +10,6 @@ export default function Promote() {
   const users = useSelector((store) => store.users.allUsers);
   const log = useSelector((store) => store.users.loging);
   
- console.log('promote ',users)
 useEffect(() => {
     dispatch(getAllUsers());
 }, [dispatch,log])
@@ -22,6 +21,7 @@ useEffect(() => {
       userName={e.userName}
       email={e.email}
       isAdmin={e.isadmin}
+      blocked={e.blocked}
     />
   ));
   return (

@@ -27,6 +27,10 @@ module.exports = (sequelize) => {
       passwordReset: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
+      },
+      blocked: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       }
     },
     { timestamps: false }

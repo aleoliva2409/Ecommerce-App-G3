@@ -71,7 +71,7 @@ export default function AddCategory() {
         />{" "}
         <hr />
         {state.success ? (
-          <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
+          <Snackbar open={open} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
               {state.success}
             </Alert>

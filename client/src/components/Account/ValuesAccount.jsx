@@ -3,7 +3,7 @@ import AccountButton from './AccountButton';
 
 const ValuesAccount = () => {
 
-  const [register,setRegister] = useState(true);
+  const [register,setRegister] = useState(false);
   //onClick={() => setIsOpen(!isOpen)}
   let data;
   if (register===true){

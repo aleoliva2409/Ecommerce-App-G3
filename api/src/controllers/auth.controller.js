@@ -6,8 +6,8 @@ const passport = require("passport");
 const login = async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
-      if (err) return next(err);
-      if (info) return res.json(info).status(500);
+      if (err) return res.json(err);
+      if (info) return res.json(info).status(200);
 
       req.login(user, { session: false }, async (error) => {
         if (error) return next(error);

@@ -6,6 +6,8 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT = 'USERS_LOGOUT';
 export const GET_USERS = 'GET_USERS';
 export const ADMINS = 'ADMINS';
+export const BLOCKED = 'BLOCKED';
+export const ERROR = 'ERROR';
 
 export const userActions = (user) => async (dispatch) => {
   try {
@@ -21,16 +23,27 @@ export const userActions = (user) => async (dispatch) => {
 
 export const login = (user) => async (dispatch) => {
   try {
+    if(user === 'empty'){ 
+      dispatch({type: ERROR, payload: ''}) 
+    } else {
     const { data } = (await axios.post('/auth/login', user)).data;
+    console.log(data)
     if (data) {
-      localStorage.setItem('jwt', data.token);
-      localStorage.setItem('user', data.user.email);
-      localStorage.setItem('id', data.user.id)
-      dispatch({ type: LOGIN_REQUEST, payload: user.email });
-      if (!data.user.isadmin && !data.user.passwordReset) window.location.replace('http://localhost:3000/users/me');
-      if (!data.user.isadmin && data.user.passwordReset) window.location.replace('http://localhost:3000/users/password-reset');
-      if (data.user.isadmin) window.location.replace('http://localhost:3000/admin/dashboard')
+      if (data.user.blocked) {
+        dispatch({type: BLOCKED, payload: 'USUARIO BLOQUEADO'})
+      } else {
+        localStorage.setItem('jwt', data.token);
+        localStorage.setItem('user', data.user.email);
+        localStorage.setItem('id', data.user.id)
+        dispatch({ type: LOGIN_REQUEST, payload: user.email });
+        if (!data.user.isadmin && !data.user.passwordReset) window.location.replace('http://localhost:3000/users/me');
+        if (!data.user.isadmin && data.user.passwordReset) window.location.replace('http://localhost:3000/users/password-reset');
+        if (data.user.isadmin) window.location.replace('http://localhost:3000/admin/dashboard')
+      }
+    } else {
+      dispatch({type: ERROR, payload: 'USUARIO Y/O CONTRACEÑA INCORRECTOS'})
     }
+  }
   } catch (error) {
     console.log(error)
   }
@@ -81,8 +94,7 @@ export const passwordReset = (password) => async (dispatch) => {
   }
 }
 export const getAllUsers = () => async (dispatch) => {
-  const {data} = await axios.get('/users')
-  console.log(data)
+  const { data } = await axios.get('/users')
   dispatch({
     type: GET_USERS,
     payload: data
@@ -90,26 +102,37 @@ export const getAllUsers = () => async (dispatch) => {
 }
 
 export const selectAdmins = (id, act) => async (dispatch) => {
-    let datos = {}
-    if (act) {
-      datos = {
-        "isadmin": true
-      }
-    } else {
-      datos = {
-        "isadmin": false
-      }
+  let datos = {}
+  if (act) {
+    datos = {
+      "isadmin": true
     }
-    const { data } = await axios.put (`/users/${id}`, datos)
-    // const res = await fetch("http://localhost:3001/user/changeAdmin", {
-    //   method: "PUT",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(datos),
-    // });
-
-    dispatch({
-      type: ADMINS,
-      payload: data,
-    });
+  } else {
+    datos = {
+      "isadmin": false
+    }
   }
+  const { data } = await axios.put(`/users/${id}`, datos)
+  dispatch({
+    type: ADMINS,
+    payload: data,
+  });
+}
 
+export const setBlocks = (id, act) => async (dispatch) => {
+  let datos = {}
+  if (act) {
+    datos = {
+      "blocked": true
+    }
+  } else {
+    datos = {
+      "blocked": false
+    }
+  }
+  const { data } = await axios.put(`/users/${id}`, datos)
+  dispatch({
+    type: ADMINS,
+    payload: data,
+  });
+}
