@@ -6,8 +6,6 @@ import { Grid } from '@material-ui/core';
 const CrudProduct = ({ productsAll, categories, state, setState }) => {
 
   const productUpdate = useSelector(state => state.products.getProductUpdate)
-  // const [btn, setBtn] = useState(false)
-
 
   return (
     <Grid container direction="column" justifyContent="center" alignItems="center" >

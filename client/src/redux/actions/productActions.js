@@ -78,6 +78,26 @@ export const getModelDetails = (id,update = false) => async (dispatch) => {
 };
 
 
+export const getModelAndProductDetail = (idModel, idProduct,update = false) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/models/${idModel}/product/${idProduct}`);
+    if(update) {
+      dispatch({
+        type: GET_PRODUCT_UPDATE,
+        payload: data
+      })
+    } else {
+      dispatch({
+        type: GET_PRODUCT_DETAILS,
+        payload: data,
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
 // export const getModels = () => async (dispatch) => {
 //   try {
 //     const { data } = await axios.get(`/products/all`);
@@ -124,9 +144,23 @@ export const deleteProduct = (id) => async (dispatch) => {
   }
 }
 
-export const addProduct = (product) => async (dispatch) => {
+// export const addProduct = (product) => async (dispatch) => {
+//   try {
+//     const { data } = await axios.post(`/products` , product)
+
+//     dispatch({
+//       type: ADD_PRODUCT,
+//       payload: data
+//     })
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+
+export const addModelAndProduct = (product) => async (dispatch) => {
   try {
-    const { data } = await axios.post(`/products` , product)
+    const { data } = await axios.post(`/models` , product)
 
     dispatch({
       type: ADD_PRODUCT,
@@ -137,9 +171,36 @@ export const addProduct = (product) => async (dispatch) => {
   }
 }
 
-export const updateProduct = (id, product) => async (dispatch) => {
+export const addProductOnly = (product,id) => async (dispatch) => {
   try {
-    const { data } = await axios.put(`/products/${id}`, product)
+    const { data } = await axios.post(`/models/${id}` , product)
+
+    dispatch({
+      type: ADD_PRODUCT,
+      payload: data
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// export const updateProduct = (id, product) => async (dispatch) => {
+//   try {
+//     const { data } = await axios.put(`/products/${id}`, product)
+
+//     dispatch({
+//       type: UPDATE_PRODUCT,
+//       payload: data
+//     })
+
+//   } catch (error) {
+
+//   }
+// }
+
+export const updateProduct = (idModel, idProduct, product) => async (dispatch) => {
+  try {
+    const { data } = await axios.put(`/models/${idModel}/product/${idProduct}`, product)
 
     dispatch({
       type: UPDATE_PRODUCT,
