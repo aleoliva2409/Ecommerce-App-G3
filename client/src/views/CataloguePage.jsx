@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import FilterProducts from "../components/Products/FilterProducts/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container, Grid, Typography, Box } from "@material-ui/core";
 
 const CataloguePage = () => {
   const products = useSelector((state) => state.products.allProducts);
@@ -16,7 +16,9 @@ const CataloguePage = () => {
 
   return (
     <Container maxWidth="xl">
-      <Typography variant="h3" color="initial">Tienda</Typography>
+      <Box mt={5}>
+        <Typography variant="h3" color="initial">Tienda</Typography>
+      </Box>
       <Grid container spacing={2}>
         <Grid item xl={2} lg={2} md={3} sm={12} xs={12}>
           <FilterProducts setFilter={setFilter} setCurrentPage={setCurrentPage}/>
