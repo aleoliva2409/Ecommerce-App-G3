@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "cover",
     width: "100%",
     height: "100%",
+    "&:hover": {
+      opacity: .75
+    }
   },
 }));
 const itemData = [
@@ -56,7 +59,7 @@ export default function BasicImageList() {
                 alt="img not found"
                 className={classes.img}
               />
-              <ImageListItemBar title={itemData[0].title} />
+              <ImageListItemBar title={itemData[0].title.toUpperCase()} />
             </ImageListItem>
           </Link>
         </Grid>
@@ -69,7 +72,7 @@ export default function BasicImageList() {
                   alt="img not found"
                   className={classes.img}
                 />
-                <ImageListItemBar title={itemData[1].title} />
+                <ImageListItemBar title={itemData[1].title.toUpperCase()} />
               </ImageListItem>
             </Link>
           </Grid>
@@ -81,7 +84,7 @@ export default function BasicImageList() {
                   alt="img not found"
                   className={classes.img}
                 />
-                <ImageListItemBar title={itemData[2].title} />
+                <ImageListItemBar title={itemData[2].title.toUpperCase()} />
               </ImageListItem>
             </Link>
           </Grid>
@@ -93,7 +96,7 @@ export default function BasicImageList() {
                   alt="img not found"
                   className={classes.img}
                 />
-                <ImageListItemBar title={itemData[3].title} />
+                <ImageListItemBar title={itemData[3].title.toUpperCase()} />
               </ImageListItem>
             </Link>
           </Grid>
@@ -105,7 +108,7 @@ export default function BasicImageList() {
                   alt="img not found"
                   className={classes.img}
                 />
-                <ImageListItemBar title={itemData[4].title} />
+                <ImageListItemBar title={itemData[4].title.toUpperCase()} />
               </ImageListItem>
             </Link>
           </Grid>
