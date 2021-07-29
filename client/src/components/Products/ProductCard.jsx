@@ -12,6 +12,7 @@ import { Link } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from './../../redux/actions/shoppingCartActions.js';
 import { addFavorite, deleteFavorite } from './../../redux/actions/wishlistAction';
+import { useToken } from '../../hooks/useToken'
 // * STYLES *
 import { useStyles } from './ProductCardStyle';
 import { useStylesDark } from './ProductCardStyleDark';
@@ -20,6 +21,7 @@ const ProductCard = ({ product }) => {
   //select color mode
   const dayMode = useStyles();
   const darkMode = useStylesDark();
+  const { email } = useToken()
   let classes;
   const actualColor = useSelector(state => state.color);
   if (actualColor) {
@@ -29,17 +31,20 @@ const ProductCard = ({ product }) => {
   }
 
   const [favorites, setFavorites] = useState(false)
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const user = localStorage.getItem('user');
-    const pushToCart = () => dispatch(addToCart(product,1,user));
+  const pushToCart = () => dispatch(addToCart(product,1,user));
+
+  // const addProduct = () => dispatch(addFavorite(product, email))
+  // const deleteProduct = () => dispatch(deleteFavorite(product, email))
 
   const handleFavorites = () => {
     if(favorites) {
-      dispatch(deleteFavorite(product));
+      dispatch(deleteFavorite(product, email));
       setFavorites(false);
     } else {
-      dispatch(addFavorite(product));
+      dispatch(addFavorite(product, email));
       setFavorites(true);
     }
   }
@@ -91,8 +96,8 @@ const dispatch = useDispatch();
         title={`image ${product.name}`}
       />
       <CardActions className={classes.cardact}>
-        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} >
-          <FavoriteIcon style={favorites ? {color: "red"} : {}} />
+        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} disable={email ? true : false}>
+          <FavoriteIcon style={favorites && email ? {color: "red"} : {}} />
         </IconButton>
         <Button
           variant="contained"
