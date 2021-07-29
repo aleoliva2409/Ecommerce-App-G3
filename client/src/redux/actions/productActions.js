@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS";
 export const GET_PRODUCTS = "GET_PRODUCTS";
+export const GET_MODELS = "GET_MODELS";
 export const ACTIVE_LOADING = "ACTIVE_LOADING";
 export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
@@ -115,7 +116,7 @@ export const getAllModels = () => async (dispatch) => {
   try {
     const { data } = await axios.get(`/models/all`);
     dispatch({
-      type: GET_PRODUCTS,
+      type: GET_MODELS,
       payload: data,
     });
   } catch (error) {
