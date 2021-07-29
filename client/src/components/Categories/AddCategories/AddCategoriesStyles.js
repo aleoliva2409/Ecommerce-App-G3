@@ -18,7 +18,10 @@ export const categoryStyles = ({ breakpoints, spacing, theme }) => ({
     alignItems: "center",
     backgroundColor: "#ffffff",
     padding: spacing(2),
-    borderRadius: "15px"
+    borderRadius: "15px",
+    [breakpoints.down("md")]: {
+      width: "100%"
+    }
   },
   item: {
     width: "100%",

@@ -34,9 +34,12 @@ export const cartStyle = ({ breakpoints, spacing, theme }) => ({
       justifyContent: "space-around",
     }
   },
+  nameBox: {
+    alignSelf: "center"
+  },
   name: {
-    fontSize: "16px",
     lineHeight: "19px",
+    textAlign: "center",
     color: "#000000",
     opacity: "80.0%",
     paddingBottom: spacing(1)
@@ -88,7 +91,8 @@ export const cartStyle = ({ breakpoints, spacing, theme }) => ({
       backgroundColor: "#D22626",
     },
     [breakpoints.up("md")]: {
-      gridColumn: "1/13"
+      gridColumn: "2/3",
+      borderRadius: spacing(3),
     }
   }
 })

@@ -76,8 +76,8 @@ const handleOpen = () => {
   return (
     <div className={styles.cardContainer}>
       <Typography variant={"h4"} className={styles.title}>{name}</Typography>
-      <Typography variant={"subtitle2"} className={styles.description}>{description}</Typography>
-      <Typography>{image}</Typography>
+      {/* <Typography variant={"subtitle2"} className={styles.description}>{description}</Typography> */}
+      {/* <Typography>{image}</Typography> */}
       <IconButton onClick={handleOpen} className={styles.close}><Close /></IconButton>
       <Modal open={open} onClose={handleClose} aria-labelledby="simple-modal-title" aria-describedby="simple-modal-description" >
         {body}

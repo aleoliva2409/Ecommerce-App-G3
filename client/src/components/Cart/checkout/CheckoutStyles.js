@@ -2,7 +2,7 @@ export const checkoutStyles = ({ breakpoints, spacing, theme }) => ({
   root: {
     width: "20rem",
     height: "15rem",
-    backgroundColor: "var(--primaryColor30)",
+    backgroundColor: "var(--primaryColor10)",
     marginTop: spacing(1),
     borderRadius: "10px",
     display: "flex",

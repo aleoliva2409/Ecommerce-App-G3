@@ -1,10 +1,11 @@
 :root{
   --primaryColor:#00BBC9;
-  --primaryColor10: rgba(0, 187, 201, .1);
-  --primaryColor20: rgba(0, 187, 201, .2);
-  --primaryColor30: rgba(0, 187, 201, .3);
-  --primaryColorDarker: #1ba1ab;
-  --primaryColorDarker2: #336064;
+  --primaryColor10: rgba(0, 187, 201, .5);
+  --primaryColor20: rgba(0, 187, 201, .3);
+  --primaryColor30: rgba(0, 187, 201, .2);
+  --primaryColor40: rgb(0, 119, 128);
+  --primaryColorDarker: rgb(27, 161, 171);
+  --primaryColorDarker2: rgb(51, 96, 100);
   --primaryColorYellow: rgb(252, 235, 69);
   --secondaryColorYellow:rgba(252, 235, 69, .3);
 }

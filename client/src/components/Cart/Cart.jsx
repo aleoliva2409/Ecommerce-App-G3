@@ -27,7 +27,6 @@ const Cart = () => {
   }
 
   const emptyCart = () => {
-    console.log('cart')
     dispatch (resetCart())
   }
   return (
@@ -36,8 +35,8 @@ const Cart = () => {
         {
           cartItems.map(item => (
               <Grid container className={styles.cardItem}>
-                <Box component="div">
-                  <Typography className={styles.name} variant="h4">{item.name}</Typography>
+                <Box className={styles.nameBox} component="div">
+                  <Typography className={styles.name} variant="h6">{item.name}</Typography>
                 </Box>
                 <Box component="div">
                   <Box component="img" className={styles.img} src={item.image[0]} />
