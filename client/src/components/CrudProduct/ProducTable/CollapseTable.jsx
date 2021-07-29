@@ -48,6 +48,7 @@ const CollapseTable = ({ model, setState, formOpen}) => {
           {model.id}
         </TableCell>
         <TableCell className={classes.cellsName} align="center">{model.name}</TableCell>
+        <TableCell className={classes.cells} align="center">{model.category.name}</TableCell>
         <TableCell className={classes.cells} align="center">{model.brand}</TableCell>
         <TableCell className={classes.cellsImg} align="center" >
           <img className={classes.img} src={model.image} alt="img not found" />

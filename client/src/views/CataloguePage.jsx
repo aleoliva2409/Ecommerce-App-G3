@@ -6,7 +6,7 @@ import { Container, Grid, Typography } from "@material-ui/core";
 
 const CataloguePage = () => {
   const products = useSelector((state) => state.products.allProducts);
-  const filterproducts = useSelector((state) => state.products.filterproducts.models);
+  const filterproducts = useSelector((state) => state.products.filterproducts.products);
 
   let render
   const [filter,setFilter] = useState(true);

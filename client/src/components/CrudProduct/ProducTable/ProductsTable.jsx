@@ -18,6 +18,7 @@ const ProductsTable = ({ products, setState, formOpen }) => {
             <TableCell />
             <TableCell align="center">Producto</TableCell>
             <TableCell align="center">Nombre</TableCell>
+            <TableCell align="center">Categoria/s</TableCell>
             <TableCell align="center">Marca</TableCell>
             <TableCell align="center">Imagen</TableCell>
           </TableRow>

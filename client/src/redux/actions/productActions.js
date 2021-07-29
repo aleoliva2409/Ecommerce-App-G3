@@ -111,17 +111,17 @@ export const getAllProducts = () => async (dispatch) => {
   }
 };
 
-// export const getModels = () => async (dispatch) => {
-//   try {
-//     const { data } = await axios.get(`/models/all`);
-//     dispatch({
-//       type: GET_PRODUCTS,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+export const getAllModels = () => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/models/all`);
+    dispatch({
+      type: GET_PRODUCTS,
+      payload: data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 // * SetLoading on true to display the loading component
