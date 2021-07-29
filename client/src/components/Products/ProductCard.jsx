@@ -34,15 +34,19 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const pushToCart = () => dispatch(addToCart(product,1));
 
-  const handleFavorites = () => {
-    if(favorites) {
-      dispatch(deleteFavorite(product));
-      setFavorites(false);
-    } else {
-      dispatch(addFavorite(product));
-      setFavorites(true);
-    }
-  }
+
+  const addProduct = () => dispatch(addFavorite(product))
+  const deleteProduct = () => dispatch(deleteFavorite(product))
+
+  // const handleFavorites = () => {
+  //   if(favorites) {
+  //     dispatch(deleteFavorite(product));
+  //     setFavorites(false);
+  //   } else {
+  //     dispatch(addFavorite(product));
+  //     setFavorites(true);
+  //   }
+  // }
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
@@ -91,7 +95,10 @@ const ProductCard = ({ product }) => {
         title={`image ${product.name}`}
       />
       <CardActions className={classes.cardact}>
-        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} >
+        <IconButton aria-label="Agregar a favoritos" onClick={addProduct} >
+          <FavoriteIcon style={favorites ? {color: "red"} : {}} />
+        </IconButton>
+        <IconButton aria-label="Agregar a favoritos" onClick={deleteProduct} >
           <FavoriteIcon style={favorites ? {color: "red"} : {}} />
         </IconButton>
         <Button
