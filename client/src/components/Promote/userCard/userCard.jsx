@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, CardContent, Grid, Typography, Snackbar } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
-import { selectAdmins } from "../../../redux/actions/userActions";
+import { selectAdmins, setBlocks } from "../../../redux/actions/userActions";
 import { useDispatch } from "react-redux";
 import { useStyles } from './userCardStyles';
 
@@ -9,22 +9,26 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-export default function UserCard({ id, email, isAdmin }) {
-    console.log(id, email, isAdmin)
+export default function UserCard({ id, email, isAdmin, blocked }) {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  const [open, setOpen] = useState(false);
+  const [openAdmin, setOpenAdmin] = useState(false);
+  const [openBlock, setOpenBlock] = useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
+  const handleClickAdmin = () => {
+    setOpenAdmin(true);
   };
+  const handleClickBlock = () => {
+    setOpenBlock(true)
+  }
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
-    setOpen(false);
+    setOpenAdmin(false);
+    setOpenBlock(false)
   };
 
   const addAdmin = (id, act) => {
@@ -33,13 +37,25 @@ export default function UserCard({ id, email, isAdmin }) {
 
   function allOnClicksTrue() {
     addAdmin(id, true);
-    handleClick();
+    handleClickAdmin();
   }
 
   function allOnClicksFalse() {
     addAdmin(id, false);
-    handleClick();
+    handleClickAdmin();
   }
+
+  function blockTrue () {
+    block(id, true);
+    handleClickBlock();
+  }
+  function blockFalse () {
+    block(id, false);
+    handleClickBlock();
+  }
+  const block = (id, act) => {
+    dispatch(setBlocks(id, act));
+  };
 
   return (
     <Card className={classes.root}>
@@ -54,14 +70,39 @@ export default function UserCard({ id, email, isAdmin }) {
         </CardContent>
       </Grid>
       <Grid item xs={3} className={classes.buttons}>
+        {!blocked ? (
+          <>
+            <Button onClick={blockTrue} autoHideDuration={2000} className={classes.blockFalse} variant="contained">
+              Bloquear usuario
+            </Button>
+             <Snackbar open={openBlock} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                {email} desbloqueado
+              </Alert>
+            </Snackbar>
+          </>
+        ) : (
+          <>
+            <Button onClick={blockFalse} autoHideDuration={2000} className={classes.blockTrue} variant="contained">
+            Desbloquear usuario
+            </Button>
+           <Snackbar open={openBlock} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="error">
+                {email} bloqueado
+              </Alert>
+            </Snackbar>
+          </>
+        )}
+      </Grid>
+      <Grid item xs={3} className={classes.buttons}>
         {!isAdmin ? (
           <>
             <Button onClick={allOnClicksTrue} color="primary" variant="contained">
               Designar Admin
             </Button>
-            <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
-              <Alert onClose={handleClose} severity="success">
-                {email} ahora es administrador
+            <Snackbar open={openAdmin} autoHideDuration={2000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="error">
+                {email} no es mas administrador
               </Alert>
             </Snackbar>
           </>
@@ -70,9 +111,9 @@ export default function UserCard({ id, email, isAdmin }) {
             <Button onClick={allOnClicksFalse} color="secondary" variant="contained">
               Descartar Admin
             </Button>
-            <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
-              <Alert onClose={handleClose} severity="error">
-                {email} no es mas administrador
+            <Snackbar open={openAdmin} autoHideDuration={2000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                {email} ahora es administrador
               </Alert>
             </Snackbar>
           </>

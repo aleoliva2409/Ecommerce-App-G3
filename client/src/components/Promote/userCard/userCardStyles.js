@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(2),
       },
     },
+    blockFalse: {
+      backgroundColor: '#40C203'
+    },
+    blockTrue: {
+      backgroundColor: '#FE0108'
+    }
   }));
 
   export { useStyles };

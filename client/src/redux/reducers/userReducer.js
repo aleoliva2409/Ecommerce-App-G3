@@ -1,12 +1,14 @@
-import { LOGIN_REQUEST, GET_USERS, ADMINS, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from './../actions/userActions';
+import { LOGIN_REQUEST, GET_USERS, ADMINS, ERROR, LOGIN_SUCCESS, BLOCKED, LOGIN_FAILURE, LOGOUT } from './../actions/userActions';
 
 let user = localStorage.getItem('user');
-const initialState = user ? {
+const initialState = {
     loggedIn: true,
     user,
     allUsers: [],
-    loging: false
-} : {};
+    loging: false,
+    message: '',
+}
+//: {};
 
 export function login(state = initialState, action) {
     switch (action.type) {
@@ -34,6 +36,16 @@ export function login(state = initialState, action) {
             return {
                 ...state,
                 loging: true
+            };
+        case BLOCKED:
+            return {
+                ...state,
+                message: action.payload
+            };
+        case ERROR:
+            return {
+                ...state,
+                message: action.payload
             };
         default:
             return state
