@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, CardContent, Grid, Typography, Snackbar } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
-import { selectAdmins, setBlocks } from "../../../redux/actions/userActions";
+import { selectAdmins, setBlocks, setReset } from "../../../redux/actions/userActions";
 import { useDispatch } from "react-redux";
 import { useStyles } from './userCardStyles';
 
@@ -9,12 +9,13 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-export default function UserCard({ id, email, isAdmin, blocked }) {
+export default function UserCard({ id, email, isAdmin, blocked, resetPw }) {
   const classes = useStyles();
   const dispatch = useDispatch();
 
   const [openAdmin, setOpenAdmin] = useState(false);
   const [openBlock, setOpenBlock] = useState(false);
+  const [openReset, setOpenReset] = useState(false);
 
   const handleClickAdmin = () => {
     setOpenAdmin(true);
@@ -23,12 +24,17 @@ export default function UserCard({ id, email, isAdmin, blocked }) {
     setOpenBlock(true)
   }
 
+  const handleClickReset = () => {
+    setOpenReset(true)
+  }
+
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
     setOpenAdmin(false);
     setOpenBlock(false)
+    setOpenReset(false);
   };
 
   const addAdmin = (id, act) => {
@@ -57,6 +63,20 @@ export default function UserCard({ id, email, isAdmin, blocked }) {
     dispatch(setBlocks(id, act));
   };
 
+  function resetTrue () {
+    reset(id, true);
+    handleClickReset();
+  };
+
+  function resetFalse () {
+    reset(id, false);
+    handleClickReset();
+  };
+
+  const reset = (id, act) => {
+    dispatch(setReset(id, act))
+  }
+
   return (
     <Card className={classes.root}>
       <Grid item xs={3}>
@@ -68,6 +88,31 @@ export default function UserCard({ id, email, isAdmin, blocked }) {
         <CardContent>
           <Typography>{!isAdmin ? "" : "ADMINISTRADOR"}</Typography>
         </CardContent>
+      </Grid>
+      <Grid item xs={3} className={classes.buttons}>
+        {!resetPw ? (
+          <>
+            <Button onClick={resetTrue} autoHideDuration={2000} className={classes.blockFalse} variant="contained">
+              Reset contraseña
+            </Button>
+             <Snackbar open={openReset} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                {email} cambiara contraseña
+              </Alert>
+            </Snackbar>
+          </>
+        ) : (
+          <>
+            <Button onClick={resetFalse} autoHideDuration={2000} className={classes.blockTrue} variant="contained">
+            Olvidar Reset
+            </Button>
+           <Snackbar open={openReset} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="error">
+                {email} No cambiara contraseña
+              </Alert>
+            </Snackbar>
+          </>
+        )}
       </Grid>
       <Grid item xs={3} className={classes.buttons}>
         {!blocked ? (
