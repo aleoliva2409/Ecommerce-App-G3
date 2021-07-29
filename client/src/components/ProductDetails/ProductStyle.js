@@ -1,19 +1,16 @@
-import {makeStyles} from '@material-ui/core/styles';
-
-
-const useStyles = makeStyles((theme) => ({
+export const styleProduct = ({breakpoints, spacing, theme}) => ({
   root: {
-    //backgroundColor: '#232323',
-    margin: 0,
-    width: '100%',
-    overflow: 'hidden',
-    marginTop: '3rem'
-  },
-  names:{
-    color:'#232020'
-  },
-  ChooseSize:{
-    backgroundColor:'#00BBC9'
+    margin: '1rem auto 1rem auto',
+    width: '80%',
+    height: 'auto',
+    display: 'grid',
+    gridTemplateColumns: '100%',
+    gridTemplateRows: 'auto auto auto auto auto',
+    [breakpoints.up('md')]:{
+      gridTemplateColumns: '1fr 1fr',
+      gridTemplateRows: 'auto auto auto',
+      gridGap: spacing(3),
+    }
   },
   cardRoot:{
     width: '80%',
@@ -23,11 +20,7 @@ const useStyles = makeStyles((theme) => ({
     gridRow: '1/2',
     gridColumn: '1/2',
     backgroundColor: 'transparent',
-    margin: theme.spacing(3),
-  },
-  img:{
-    maxWidth:'400px',
-    maxHeight:'400px'
+    margin: spacing(3),
   },
   media:{
     width: '70%',
@@ -51,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#6b8dc8',
     gridRow: '2/3',
     gridColumn: '1/2',
-    [theme.breakpoints.up('md')]:{
+    [breakpoints.up('md')]:{
       gridColumn: '2/3',
       gridRow: '1/2',
       alignSelf: 'center',
@@ -64,9 +57,9 @@ const useStyles = makeStyles((theme) => ({
     gridRow: '4/5',
     width: '100%',
     height: 'auto',
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    [theme.breakpoints.up('md')]:{
+    marginTop: spacing(2),
+    marginBottom: spacing(2),
+    [breakpoints.up('md')]:{
       gridColumn: '2/3',
       gridRow: '2/3',
     }
@@ -78,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     gridColumn: '1/2',
     gridRow: '5/6',
     overflowY: 'scroll',
-    [theme.breakpoints.up('md')]:{
+    [breakpoints.up('md')]:{
       gridColumn: '1/3',
       gridRow: '3/4',
     }
@@ -99,10 +92,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     border: `1px solid #3F51B5`,
-    borderRadius:  theme.spacing(3)
+    borderRadius:  spacing(3)
   },
   addControllerButtons:{
     margin: '1rem'
   }
-}));
-export { useStyles };
+})

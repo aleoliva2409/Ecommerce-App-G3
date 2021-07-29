@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSearchModels, getModels } from '../../../redux/actions/productActions';
+import { getSearchProducts, getAllProducts } from '../../../redux/actions/productActions';
 import { Redirect } from 'react-router-dom';
 // * STYLES *
 import {useStyles} from './Styles';
@@ -15,14 +15,14 @@ const SearchBar = () => {
 const allModels = useSelector(state => state.products.allProducts)
 
 useEffect(() => {
-  dispatch(getModels())
+  dispatch(getAllProducts())
 }, [dispatch])
 
   const onChange = (e) => {
     console.log(e.target.value)
     if(e.keyCode === 13){
       if (e.target.value !== ""){
-        dispatch(getSearchModels(e.target.value));
+        dispatch(getSearchProducts(e.target.value));
         setRedirect(true);
         e.target.value = "";
       }
