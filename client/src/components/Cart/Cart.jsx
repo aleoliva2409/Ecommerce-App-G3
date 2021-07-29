@@ -11,7 +11,6 @@ import {useStyles} from './CartStyles';
 import {useStylesDark} from './CartStylesDark';
 
 const Cart = () => {
-
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items)
   //const totalPrice = cartItems.reduce((acc, crr) => acc + (crr.product.price * crr.amount), 0)
@@ -21,7 +20,6 @@ const dayMode = useStyles();
 const darkMode = useStylesDark();
 let classes;
 const actualColor = useSelector(state => state.color)
-console.log(actualColor)
 if(actualColor){
   classes = darkMode;
 } else {
@@ -37,40 +35,41 @@ if(actualColor){
   }
 
   const emptyCart = () => {
-    console.log('cart')
     dispatch (resetCart())
   }
   return (
     <Container className={classes.root}>
-      {
-        cartItems.map(item => (
-            <Grid container className={classes.cardItem}>
-              <Box component="div">
-                <Typography className={classes.name} variant="h4">{item.name}</Typography>
-              </Box>
-              <Box component="div">
-                <Box component="img" className={classes.img} src={item.image[0]} />
-              </Box>
-              <Box className={classes.priceQuantity} component="div">
-                <Typography className={classes.price} variant="h4">$ {item.price}</Typography>
-                <ButtonGroup color={'primary'} orientation={'horizontal'} className={classes.quantityController}>
-                  <Button onClick={()=>setAmount(item,-1)} disabled={(item.qty===1)? true : false}>
-                    <Remove/>
-                  </Button>
-                  <Typography className={classes.quantity} variant="overline">
-                    {item.qty}
-                  </Typography>
-                  <Button onClick={()=>setAmount(item,1)} disabled={(item.stock===item.qty) ? true : false}>
-                    <Add/>
-                  </Button>
-                </ButtonGroup>
-              </Box>
-              <Button className={classes.clearItem} onClick={()=>remove(item)}>
-                <ClearIcon/>
-              </Button>
-            </Grid>
-        ))}
-        <Checkout />
+      <Box component="div" className={classes.cardsContainer}>
+        {
+          cartItems.map(item => (
+              <Grid container className={classes.cardItem}>
+                <Box className={classes.nameBox} component="div">
+                  <Typography className={classes.name} variant="h6">{item.name}</Typography>
+                </Box>
+                <Box component="div">
+                  <Box component="img" className={classes.img} src={item.image[0]} />
+                </Box>
+                <Box className={classes.priceQuantity} component="div">
+                  <Typography className={classes.price} variant="h4">$ {item.price}</Typography>
+                  <ButtonGroup color={'primary'} orientation={'horizontal'} className={classes.quantityController}>
+                    <Button onClick={()=>setAmount(item,-1)} disabled={(item.qty===1)? true : false}>
+                      <Remove/>
+                    </Button>
+                    <Typography className={classes.quantity} variant="overline">
+                      {item.qty}
+                    </Typography>
+                    <Button onClick={()=>setAmount(item,1)} disabled={(item.stock===item.qty) ? true : false}>
+                      <Add/>
+                    </Button>
+                  </ButtonGroup>
+                </Box>
+                <Button className={classes.clearItem} onClick={()=>remove(item)}>
+                  <ClearIcon/>
+                </Button>
+              </Grid>
+          ))}
+        </Box>
+        <Checkout className={classes.checkout} />
         <Button className={classes.deleteForever} onClick={emptyCart}>
           <DeleteForeverIcon fontSize="large"/>
         </Button>

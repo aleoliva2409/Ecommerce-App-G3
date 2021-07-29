@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Container, Typography, Button, Link } from '@material-ui/core';
+import { Box, Typography, Button, Link } from '@material-ui/core';
 import { goToCheckout } from '../../../redux/actions/shoppingCartActions';
 // * STYLES *
 import {useStyles} from './CheckoutStyles';
@@ -26,7 +26,7 @@ const Checkout = () => {
   const handleGoToCheckout = () => dispatch(goToCheckout());
 
   return (
-    <Container className={classes.root} maxWidth="lg">
+    <Box component="div" className={classes.root} maxWidth="lg">
       <Box component="div">
         <Typography variant="h3">Total:</Typography>
         {/* //! MISSING TOTAL PRICE */}
@@ -38,11 +38,11 @@ const Checkout = () => {
         </Button>
       </Box>
       <Box component="div">
-        <Link component={RouterLink} to="/products">
-          <Typography paragraph={true}>Seguir Comprando</Typography>
+        <Link component={RouterLink} color="inherit" className={classes.linkContainer} to="/products">
+          <Typography className={classes.link} paragraph={true}>SEGUIR COMPRANDO</Typography>
         </Link>
       </Box>
-    </Container>
+    </Box>
   )
 }
 
