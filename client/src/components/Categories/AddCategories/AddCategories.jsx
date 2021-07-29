@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TextField, Container, Snackbar, Typography } from "@material-ui/core";
+import { TextField, Container, Snackbar, Typography, makeStyles, Button, Box } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
 import { createCategory } from "../../../redux/actions/categoriesActions.js";
+import { categoryStyles } from "./AddCategoriesStyles.js";
+
+const useStyles = makeStyles(categoryStyles)
 
 export default function AddCategory() {
+  const styles = useStyles();
+
   const dispatch = useDispatch();
 
   const state = useSelector((state) => state.categories.message);
@@ -41,37 +46,17 @@ export default function AddCategory() {
   };
 
   return (
-    <Container>
-      <Typography variant="h5" color="initial">
+    <Container className={styles.categoryContainer}>
+      <Typography align="center" variant="h5" color="initial">
         AGREGAR CATEGORIA
       </Typography>
-      <hr />
-      <form onSubmit={enviarDatos}>
-        <TextField
-          type="text"
-          placeholder="Nombre"
-          name="name"
-          variant="outlined"
-          required
-          onChange={handleInputChange}
-        />
-        <TextField
-          type="text"
-          placeholder="Descripción"
-          name="description"
-          variant="outlined"
-          multiline
-          onChange={handleInputChange}
-        />
-        <TextField
-          type="submit"
-          value="Agregar"
-          variant="outlined"
-          onClick={handleClick}
-        />{" "}
-        <hr />
+      <div className={styles.line}/>
+      <Box className={styles.textField} component="form" onSubmit={enviarDatos}>
+        <TextField className={styles.item} type="text" placeholder="Nombre" name="name" variant="outlined" required onChange={handleInputChange}/>
+        <TextField className={styles.item} type="text" placeholder="Descripción" name="description" variant="outlined" multiline onChange={handleInputChange}/>
+        <Button className={styles.item} size="large" variant="contained" color="primary" type="submit" onClick={handleClick}>Agregar</Button>
         {state.success ? (
-          <Snackbar open={open} onClose={handleClose}>
+          <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
               {state.success}
             </Alert>
@@ -83,7 +68,7 @@ export default function AddCategory() {
             </Alert>
           </Snackbar>
         )}
-      </form>
+      </Box>
     </Container>
   );
 }
