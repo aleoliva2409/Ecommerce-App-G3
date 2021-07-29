@@ -7,7 +7,6 @@ import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
@@ -29,21 +28,19 @@ const ProductCard = ({ product }) => {
     classes = dayMode;
   }
 
-  const [favorites, setFavorites] = useState();
-
   const dispatch = useDispatch();
 
-  //const pushToCart = () => dispatch(addToCart(product,1));
+  const pushToCart = () => dispatch(addToCart(product,1));
 
-  // const inLocal = useSelector(state => state.cart.items)
-  // let noStock = false
-  // for(let each of inLocal){
-  //   if(each.id === product.id){
-  //     if(each.stock === each.qty){
-  //       noStock = true;
-  //     }
-  //   }
-  // }
+  const inLocal = useSelector(state => state.cart.items)
+  let noStock = false
+  for(let each of inLocal){
+    if(each.id === product.id){
+      if(each.stock === each.qty){
+        noStock = true;
+      }
+    }
+  }
 
   return (
     <Card className={classes.root}>
@@ -72,18 +69,11 @@ const ProductCard = ({ product }) => {
             </Fragment>
         }
       />
-
       <CardMedia
         className={classes.media}
         image={product.image[0]}
         title={`image ${product.name}`}
       />
-
-      {/* <CardContent>
-        <Typography  variant="h5" component="h5"  className={classes.price}>
-          {`$ ${product.price}`}
-        </Typography>
-      </CardContent> */}
       <CardActions className={classes.cardact}>
         <IconButton aria-label="Agregar a favoritos">
           <FavoriteIcon />
@@ -92,10 +82,9 @@ const ProductCard = ({ product }) => {
           variant="contained"
           className={classes.button}
           disabled={false}
-          component={RouterLink}
-          to={`/products/${product.id}`}
+          onClick={pushToCart}
         >
-          Ver Producto
+          Agregar a carrito
         </Button>
       </CardActions>
     </Card>

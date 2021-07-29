@@ -30,7 +30,7 @@ const SearchPage = () => {
           <FilterProducts setFilter={setFilter} setCurrentPage={setCurrentPage}/>
         </Grid>
         <Grid item xl={10} lg={10} md={9} sm={12} xs={12}>
-          <Catalogue productModels={render} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+          <Catalogue products={render} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         </Grid>
       </Grid>
     </Container>
