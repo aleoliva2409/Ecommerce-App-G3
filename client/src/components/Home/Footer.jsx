@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Box, Link } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,11 +20,9 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Box>
-      <Container maxWidth="xl" color="secondary" className={classes.root}>
-        <Grid>E-Commerce Pillow Top © 2021</Grid>
-      </Container>
-    </Box>
+    <Container maxWidth="xl" color="secondary" className={classes.root}>
+      <Grid>E-Commerce Pillow Top © 2021</Grid>
+    </Container>
   );
 };
 
