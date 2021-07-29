@@ -4,11 +4,21 @@ import { useState } from 'react';
 import { styleProduct } from './ProductStyle.js';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
-
+import jwt from 'jsonwebtoken';
+import Review from '../Review/Review';
 const useStyles = makeStyles(styleProduct);
 
 
 function Product({product}){
+
+  const token = localStorage.getItem("jwt");
+  const {id,isadmin} = jwt.decode(token);
+
+  //console.log("product" + product);
+  // console.log("id :" + id);
+  // console.log("isadmin :" + isadmin);
+
+  // const amountToBuy = document.getElementById('amountToBuy');
 
   const styles = useStyles();
   const dispatch = useDispatch();
@@ -112,35 +122,35 @@ function Product({product}){
           {product.model.description}
         </Typography>
       </Container>
-      <Container
-        className={styles.reviews}
-      >
-        <Typography
-          variant={'subtitle2'}
-        >
-          Comentarios
-        </Typography>
-        {
-          (product.reviews && product.reviews.length>0) ?
-            product.reviews.map((el,i) => {
-              return <Box
-                key={i}
-                component={'fieldset'}
-              >
-                <legend>{el.author}</legend>
-                <Typography
-                  variant={'body2'}
-                >
-                  {el.description}
+
+      <Grid container spacing={3}>
+           <Grid item md={6} xs={12}>
+              <Review />
+          </Grid>
+      </Grid>
+      <Grid container spacing={3}>
+           <Grid item md={6} xs={12}>
+                <Container className={styles.reviews} >
+                <Typography variant={'subtitle2'}>
+                  Comentarios
                 </Typography>
-              </Box>
-            })
-            :
-            <Typography
-              variant={'h3'}
-            >No hay comentarios para este producto</Typography>
-        }
-      </Container>
+                {
+                  (product.reviews && product.reviews.length>0) ?
+                    product.reviews.map((el,i) => {
+                      return <Box key={i} component={'fieldset'}
+                      >
+                        <legend>{el.author}</legend>
+                        <Typography variant={'body2'} >
+                          {el.description}
+                        </Typography>
+                      </Box>
+                    })
+                    :
+                    <Typography variant={'h3'}>No hay comentarios para este producto</Typography>
+                }
+                </Container>
+          </Grid>
+      </Grid>
     </Container>
   )
 }

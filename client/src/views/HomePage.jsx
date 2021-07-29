@@ -10,7 +10,7 @@ const HomePage = () => {
     <Container maxWidth="xl" style={{padding: 0}}>
       <Carrousel />
       <ImagesFilter />
-      <Footer/>
+      <Footer />
     </Container>
   )
 }

@@ -1,4 +1,4 @@
-const { Order, User, Product, Wishlist } = require("../db");
+const { User, Wishlist } = require("../db");
 
 const addWishlist = async (req, res, next) => {
   try {

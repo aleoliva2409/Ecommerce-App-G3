@@ -12,7 +12,7 @@ import Promote from '../components/Promote/Promote';
 
 const DashboardPage = () => {
   const dispatch = useDispatch();
-  const productsAll = useSelector((state) => state.products.allProducts);
+  const productsAll = useSelector((state) => state.products.allModels);
   const categories = useSelector((state) => state.categories.categories);
   const [render, setRender] = useState(false);
   const location = useLocation();

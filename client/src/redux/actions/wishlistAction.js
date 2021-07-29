@@ -18,7 +18,7 @@ export const addFavorite = ({ id }) => async (dispatch) => {
 export const deleteFavorite = ({ id }) => async (dispatch) => {
   let inLocal = JSON.parse(localStorage.getItem("user"));
   if (inLocal) {
-    const { data } = axios.put("/wishlist/remove", { email: inLocal, id });
+    const { data } = await axios.put("/wishlist/remove", { email: inLocal, id });
     if (inLocal.mail.includes("@")) {
       dispatch({
         type: REMOVE_FAVORITE,
