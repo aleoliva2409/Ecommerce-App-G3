@@ -1,4 +1,4 @@
-const { Product, Category } = require("../db");
+const { Product, Category, Model } = require("../db");
 const Op = require("sequelize").Op;
 
 const getProductsAll = async (req, res, next) => {
@@ -48,6 +48,9 @@ const getById = async (req, res, next) => {
       include:[
       {
         model: Category
+      },
+      {
+        model: Model
       }
     ]
     });
@@ -57,6 +60,47 @@ const getById = async (req, res, next) => {
     next(err);
   }
 };
+
+const deleteProduct = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const remove = await Product.findByPk(id);
+    if (remove) {
+      await Product.destroy({
+        where: { id },
+      });
+      res.status(200).json({ message: "Producto Eliminado" });
+    } else {
+      res.status(404).json({ error: "Producto no encontrado" });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+const getProductsByCategory = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const category = await Category.findOne({
+      where: {
+        id,
+      },
+      include: [
+        {
+          model: Product,
+          through: {
+            attributes: [],
+          },
+        },
+      ],
+    });
+    res.send(category);
+  } catch (err) {
+    next(err);
+  }
+};
+
+//! las rutas de abajo no se usan
 
 const addProduct = async (req, res, next) => {
   const { name, color, size, description, image, price, stock, categories } =
@@ -106,44 +150,6 @@ const updateProduct = async (req, res, next) => {
   }
 };
 
-const deleteProduct = async (req, res, next) => {
-  const { id } = req.params;
-  try {
-    const remove = await Product.findByPk(id);
-    if (remove) {
-      await Product.destroy({
-        where: { id },
-      });
-      res.status(200).json({ message: "Product delete" });
-    } else {
-      res.status(404).json({ error: "Product not found" });
-    }
-  } catch (err) {
-    next(err);
-  }
-};
-
-const getProductsByCategory = async (req, res, next) => {
-  const { id } = req.params;
-  try {
-    const category = await Category.findOne({
-      where: {
-        id,
-      },
-      include: [
-        {
-          model: Product,
-          through: {
-            attributes: [],
-          },
-        },
-      ],
-    });
-    res.send(category);
-  } catch (err) {
-    next(err);
-  }
-};
 
 
 module.exports = {
