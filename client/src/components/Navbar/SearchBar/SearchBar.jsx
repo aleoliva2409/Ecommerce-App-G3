@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSearchProducts, getAllProducts } from '../../../redux/actions/productActions';
+import { getSearchProducts, getAllProducts, getAllModels } from '../../../redux/actions/productActions';
 import { Redirect } from 'react-router-dom';
 // * STYLES *
 import {useStyles} from './Styles';
@@ -12,11 +12,12 @@ const SearchBar = () => {
   const classes = useStyles();
   const [redirect,setRedirect]= useState(false);
 
-const allModels = useSelector(state => state.products.allProducts)
+  const allModels = useSelector(state => state.products.allModels)
 
-useEffect(() => {
-  dispatch(getAllProducts())
-}, [dispatch])
+  useEffect(() => {
+    dispatch(getAllProducts())
+    dispatch(getAllModels())
+  }, [dispatch])
 
   const onChange = (e) => {
     console.log(e.target.value)

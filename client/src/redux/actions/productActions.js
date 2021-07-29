@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const GET_PRODUCT_DETAILS = "GET_PRODUCT_DETAILS";
 export const GET_PRODUCTS = "GET_PRODUCTS";
+export const GET_MODELS = "GET_MODELS";
 export const ACTIVE_LOADING = "ACTIVE_LOADING";
 export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
@@ -111,17 +112,17 @@ export const getAllProducts = () => async (dispatch) => {
   }
 };
 
-// export const getModels = () => async (dispatch) => {
-//   try {
-//     const { data } = await axios.get(`/models/all`);
-//     dispatch({
-//       type: GET_PRODUCTS,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+export const getAllModels = () => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/models/all`);
+    dispatch({
+      type: GET_MODELS,
+      payload: data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 // * SetLoading on true to display the loading component

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CrudProduct from "../components/CrudProduct/CrudProduct";
 import Table from '../components/OrdersTable/OrderTable';
 import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
-import { getAllProducts } from "../redux/actions/productActions";
+import { getAllModels } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import Dashboard from "../components/Dashboard/Dashboard";
 import { Container } from "@material-ui/core";
@@ -18,14 +18,14 @@ const DashboardPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    dispatch(getAllProducts());
+    dispatch(getAllModels());
     dispatch(getCategories());
   }, [dispatch]);
 
   useEffect(() => {
     if(render) {
       setRender(false)
-      dispatch(getAllProducts());
+      dispatch(getAllModels());
     }
   }, [dispatch, render]);
 

@@ -42,10 +42,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    maxHeight: 400,
+    maxHeight: 550,
     maxWidth: "100%",
     overflow: 'hidden',
-    width:'auto'
+    width:'100%',
+    objectFit: "cover"
   },
   styleArrows:{
     color:'transparent',
@@ -60,13 +61,13 @@ function SwipeableTextMobileStepper() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
+  // const handleNext = () => {
+  //   setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  // };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+  // const handleBack = () => {
+  //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  // };
 
   const handleStepChange = (step) => {
     setActiveStep(step);
@@ -82,7 +83,7 @@ function SwipeableTextMobileStepper() {
         enableMouseEvents
 
       >
-     {(matches)?
+    {(matches)?
           tutorialSteps.map((step, index) => (
             <div className={classes.carrousel} key={index}>
               {Math.abs(activeStep - index) <= 2 ? (
