@@ -66,9 +66,6 @@ const FilterProducts = ({ setFilter, setCurrentPage }) => {
             ))}
         </List>
       </Box>
-
-      <Box></Box>
-      <Box></Box>
     </Box>
   );
 };
