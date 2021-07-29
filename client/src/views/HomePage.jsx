@@ -7,15 +7,11 @@ import Footer from '../components/Home/Footer';
 
 const HomePage = () => {
   return (
-    <>
-    <div component='div' maxWidth="xl" fixed={false}>
+    <Container maxWidth="xl" style={{padding: 0}}>
       <Carrousel />
-    </div>
-     <Container maxWidth="xl" fixed={false} style={{ paddingLeft: "0px", paddingRight: "0px" }}>
       <ImagesFilter />
+      <Footer/>
     </Container>
-    <Footer/>
-    </>
   )
 }
 

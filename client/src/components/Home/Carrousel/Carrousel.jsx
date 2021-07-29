@@ -42,10 +42,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    maxHeight: 400,
+    maxHeight: 550,
     maxWidth: "100%",
     overflow: 'hidden',
-    width:'auto'
+    width:'100%',
+    objectFit: "cover"
   },
   styleArrows:{
     color:'transparent',
@@ -82,7 +83,7 @@ function SwipeableTextMobileStepper() {
         enableMouseEvents
 
       >
-     {(matches)?
+    {(matches)?
           tutorialSteps.map((step, index) => (
             <div className={classes.carrousel} key={index}>
               {Math.abs(activeStep - index) <= 2 ? (
