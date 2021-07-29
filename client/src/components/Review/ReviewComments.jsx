@@ -4,11 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 function ReviewComments() {
+
   const [value, setValue] = React.useState(2);
   return (
     <div>
         <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography component="legend">Read only</Typography>
+          <Typography component="legend">Comentarios</Typography>
+
           <Rating name="read-only" value={value} readOnly />
         </Box>
 

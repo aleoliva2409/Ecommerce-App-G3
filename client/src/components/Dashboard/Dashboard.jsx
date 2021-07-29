@@ -23,6 +23,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from './../../redux/actions/userActions';
+import jwt from "jsonwebtoken";
 
 
 
@@ -31,11 +32,12 @@ function Dashboard(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { state, user } = useSelector((state) => state.users);
+  const { state } = useSelector((state) => state.users);
   const dispatch = useDispatch();
+  const token = localStorage.getItem('jwt')
+  const user = jwt.decode(token)
 
   useEffect(() => {
-    const token = localStorage.getItem('jwt');
     dispatch(getUser(token))
   }, [state])
 
@@ -90,6 +92,8 @@ function Dashboard(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
+    <>
+    {user.isadmin ?
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -143,6 +147,9 @@ function Dashboard(props) {
         {props.children}
       </main>
     </div>
+    :
+    <Redirect to='/users/me' />}
+    </>
   );
 }
 

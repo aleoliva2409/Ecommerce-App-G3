@@ -23,8 +23,8 @@ export const userActions = (user) => async (dispatch) => {
 
 export const login = (user) => async (dispatch) => {
   try {
-    if(user === 'empty'){ 
-      dispatch({type: ERROR, payload: ''}) 
+    if(user === 'empty'){
+      dispatch({type: ERROR, payload: ''})
     } else {
     const { data } = (await axios.post('/auth/login', user)).data;
     console.log(data)
@@ -72,10 +72,14 @@ export const getUser = (token) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
+    localStorage.setItem('cart', JSON.stringify([]));
     const res = await axios.get('auth/logout')
+    console.log(res)
     localStorage.removeItem('jwt');
     localStorage.removeItem('user');
+    localStorage.removeItem('id');
     dispatch({ type: LOGOUT });
+    window.location.replace('/')
   } catch (error) {
     console.log(error)
   }

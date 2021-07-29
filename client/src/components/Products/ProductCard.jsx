@@ -22,7 +22,6 @@ const ProductCard = ({ product }) => {
   const darkMode = useStylesDark();
   let classes;
   const actualColor = useSelector(state => state.color);
-  console.log(actualColor);
   if (actualColor) {
     classes = darkMode;
   } else {
@@ -30,23 +29,20 @@ const ProductCard = ({ product }) => {
   }
 
   const [favorites, setFavorites] = useState(false)
+const dispatch = useDispatch();
 
-  const dispatch = useDispatch();
-  const pushToCart = () => dispatch(addToCart(product,1));
+  const user = localStorage.getItem('user');
+    const pushToCart = () => dispatch(addToCart(product,1,user));
 
-
-  const addProduct = () => dispatch(addFavorite(product))
-  const deleteProduct = () => dispatch(deleteFavorite(product))
-
-  // const handleFavorites = () => {
-  //   if(favorites) {
-  //     dispatch(deleteFavorite(product));
-  //     setFavorites(false);
-  //   } else {
-  //     dispatch(addFavorite(product));
-  //     setFavorites(true);
-  //   }
-  // }
+  const handleFavorites = () => {
+    if(favorites) {
+      dispatch(deleteFavorite(product));
+      setFavorites(false);
+    } else {
+      dispatch(addFavorite(product));
+      setFavorites(true);
+    }
+  }
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
@@ -95,10 +91,7 @@ const ProductCard = ({ product }) => {
         title={`image ${product.name}`}
       />
       <CardActions className={classes.cardact}>
-        <IconButton aria-label="Agregar a favoritos" onClick={addProduct} >
-          <FavoriteIcon style={favorites ? {color: "red"} : {}} />
-        </IconButton>
-        <IconButton aria-label="Agregar a favoritos" onClick={deleteProduct} >
+        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} >
           <FavoriteIcon style={favorites ? {color: "red"} : {}} />
         </IconButton>
         <Button

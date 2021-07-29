@@ -25,6 +25,7 @@ export default function FormDialog() {
   //const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { state, user } = useSelector((state) => state.users);
+
   const [password, SetPassword] = useState({
     password_1: '',
     password_2: '',
@@ -45,6 +46,7 @@ export default function FormDialog() {
   };
 
   if (!user) return <Redirect to='/' />
+  if(user && !user.passwordReset) return <Redirect to='/users/me' />
 
   return (
     <div className={classes.root}>
