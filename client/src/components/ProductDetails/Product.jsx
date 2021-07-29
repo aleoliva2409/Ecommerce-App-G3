@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, Badge, Grid } from '@material-ui/core';
 import { Favorite } from '@material-ui/icons';
 import { useState } from 'react';
@@ -11,6 +11,8 @@ import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { Add, Remove } from '@material-ui/icons';
+import {getModelByProduct} from  '../../redux/actions/productActions';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 // * STYLES *
 import { useStyles } from './ProductStyle.js';
 
@@ -18,8 +20,10 @@ import { useStyles } from './ProductStyle.js';
 
 const Product = ({product}) => {
   const classes = useStyles();
+
+  const [size, setSize] = useState('');
   const dispatch = useDispatch();
-  console.log(product);
+
   // ! corregir lo que se le envia a carrito, tiene que ser el producto con sus variantes
   const pushToCart = () => dispatch(addToCart(product,1));
 
@@ -29,13 +33,21 @@ const Product = ({product}) => {
 
   const [invisible,setInvisible] = useState(true);
 
-  const [age, setAge] = React.useState('');
+  useEffect(() => {
+    dispatch(getModelByProduct(product.id,product.products[0].id));
+  }, [dispatch])
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const handleChange = (e) => {
+    setSize(e.target.value);
+    //console.log("VALUE " + e.target.value);
+    dispatch(getModelByProduct(product.id,size));
+
   };
-
+  const detailOne = useSelector((state) => state.productDetailOne);
+  let algo = {...detailOne};
+  console.log(algo);
   const inLocal = useSelector(state => state.cart.items)
+
   let noStock = false
   for(let each of inLocal){
     if(each.id === product.id){
@@ -54,7 +66,12 @@ const Product = ({product}) => {
           </Grid>
 
           <Grid container item md={4}  direction='column'>
-                <Typography variant={'h2'} className={classes.name}
+
+                <Grid container  direction='row' justifyContent="flex-end">
+                     <FavoriteIcon/>
+                </Grid>
+
+                <Typography variant={'h2'} className={classes.names}
                   > {product.name}
                 </Typography>
                 <Box>
@@ -63,10 +80,11 @@ const Product = ({product}) => {
                       {`Tamaño : `}
                     </Typography>
 
-                    <TextField id="select" select className={classes.subheader}>
-                        {product &&
+                    <TextField id="select" defaultValue={product.products[0].id} onChange={(e)=>handleChange(e)} select className={classes.subheader}>
+                       <MenuItem key={size.id}  value={size.id}>{size.size}</MenuItem>
+                       {product &&
                         product.products?.map((size) => (
-                              <MenuItem key={size.id}  value={size.size}>{size.size}</MenuItem>
+                              <MenuItem key={size.id}  value={size.id}>{size.size}</MenuItem>
                         ))}
 
                     </TextField>
@@ -85,15 +103,14 @@ const Product = ({product}) => {
                 < Typography component="p" className={classes.tamanio}>
                       {`Cantidad: `}
                 </Typography>
-                <TextField id="select" select className={classes.subheader}>
-                        {product &&
-                        product.products?.map((size) => (
-                              <MenuItem key={size.id}  value={size.stock}>{`(${size.stock} disponibles)`}</MenuItem>
-                        ))}
-                 </TextField>
-                 < Typography component="p" className={classes.tamanio}>
-                      {`(${product.products.stock} disponibles)`}
-                 </Typography>
+
+                {/* <Typography variant={'h4'} className={classes.name}>
+                        {`(${detailOne.product} disponibles)`}
+                </Typography> */}
+
+                 {/* < Typography component="p" className={classes.tamanio}>
+                      {`(${detailOne.stock} disponibles)`}
+                 </Typography> */}
           </Grid>
       </Grid>
 

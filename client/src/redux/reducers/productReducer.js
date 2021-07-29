@@ -8,12 +8,15 @@ import {
   ADD_PRODUCT,
   GET_PRODUCT_UPDATE,
   FILTER_PRODUCT_CATEGORY,
+  GET_ONE_PRODUCT
+
 } from "../actions/productActions";
 
 const initialState = {
   allProducts: [],
   searchProducts: [],
   productDetail: {},
+  productDetailOne: {},
   getProductUpdate: {},
   updatedProduct: {},
   addProduct: {},
@@ -42,6 +45,8 @@ const productReducer = (state = initialState, action) => {
       return { ...state, getProductUpdate: action.payload };
     case FILTER_PRODUCT_CATEGORY:
       return { ...state, filterproducts: action.payload };
+    case GET_ONE_PRODUCT:
+      return { ...state, productDetailOne: action.payload };
 
 
     default:
