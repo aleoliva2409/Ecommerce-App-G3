@@ -83,7 +83,7 @@ const updateProduct = async (req, res, next) => {
       await Product.update(req.body, {
         where: { id: idProduct },
       });
-      updateUpdate.setCategories(req.body.categories);
+      updateProduct.setCategories(req.body.categories);
       updateModel.setCategory(req.body.categories[0]);
       res.status(200).json({ message: "Product update" });
     } else {
@@ -93,6 +93,8 @@ const updateProduct = async (req, res, next) => {
     next(err);
   }
 };
+
+//! las rutas de abajo ya no se usan
 
 const getAllModels = async (req, res) => {
   try {

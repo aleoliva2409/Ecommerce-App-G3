@@ -22,7 +22,7 @@ const router = Router();
 // ? router.use("/products" , productRouter)
 
 router.use("/models", modelRouter)
-router.use("/models", reviewRouter)
+router.use("/products", reviewRouter)
 router.use("/products", productRouter);
 router.use("/categories", categoryRouter);
 router.use("/users", userRouter);

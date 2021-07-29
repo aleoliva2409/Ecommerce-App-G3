@@ -9,9 +9,9 @@ const {
 const router = Router();
 
 //* Task 54,55,56,57
-router.post("/:idModel/reviews", addReview);
-router.get("/:idModel/reviews", getReview);
-router.put("/:idModel/reviews/:idReview", updateReview);
-router.delete("/:idModel/reviews/:idReview", deleteReview);
+router.post("/:idProduct/reviews", addReview);
+router.get("/:idProduct/reviews", getReview);
+router.put("/:idProduct/reviews/:idReview", updateReview);
+router.delete("/:idProduct/reviews/:idReview", deleteReview);
 
 module.exports = router;

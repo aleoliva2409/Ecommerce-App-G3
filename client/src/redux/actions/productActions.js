@@ -14,23 +14,10 @@ export const GET_ONE_PRODUCT = "GET_ONE_PRODUCT";
 
 // * Set data of each product
 
-// export const getSearchProducts = (name) => async (dispatch) => {
-//   console.log(name)
-//   try {
-//     const { data } = await axios.get(`/products?name=${name}`);
-//     dispatch({
-//       type: SEARCH_PRODUCTS,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-export const getSearchModels = (name) => async (dispatch) => {
+export const getSearchProducts = (name) => async (dispatch) => {
   console.log(name)
   try {
-    const { data } = await axios.get(`/models?name=${name}`);
+    const { data } = await axios.get(`/products?name=${name}`);
     dispatch({
       type: SEARCH_PRODUCTS,
       payload: data,
@@ -40,28 +27,22 @@ export const getSearchModels = (name) => async (dispatch) => {
   }
 };
 
-// export const getProductDetails = (id,update = false) => async (dispatch) => {
+// export const getSearchModels = (name) => async (dispatch) => {
+//   console.log(name)
 //   try {
-//     const { data } = await axios.get(`/products/${id}`);
-//     if(update) {
-//       dispatch({
-//         type: GET_PRODUCT_UPDATE,
-//         payload: data
-//       })
-//     } else {
-//       dispatch({
-//         type: GET_PRODUCT_DETAILS,
-//         payload: data,
-//       });
-//     }
+//     const { data } = await axios.get(`/models?name=${name}`);
+//     dispatch({
+//       type: SEARCH_PRODUCTS,
+//       payload: data,
+//     });
 //   } catch (error) {
 //     console.log(error);
 //   }
 // };
 
-export const getModelDetails = (id,update = false) => async (dispatch) => {
+export const getProductDetails = (id,update = false) => async (dispatch) => {
   try {
-    const { data } = await axios.get(`/models/${id}`);
+    const { data } = await axios.get(`/products/${id}`);
     if(update) {
       dispatch({
         type: GET_PRODUCT_UPDATE,
@@ -77,6 +58,25 @@ export const getModelDetails = (id,update = false) => async (dispatch) => {
     console.log(error);
   }
 };
+
+// export const getModelDetails = (id,update = false) => async (dispatch) => {
+//   try {
+//     const { data } = await axios.get(`/models/${id}`);
+//     if(update) {
+//       dispatch({
+//         type: GET_PRODUCT_UPDATE,
+//         payload: data
+//       })
+//     } else {
+//       dispatch({
+//         type: GET_PRODUCT_DETAILS,
+//         payload: data,
+//       });
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 
 export const getModelAndProductDetail = (idModel, idProduct,update = false) => async (dispatch) => {
@@ -99,21 +99,9 @@ export const getModelAndProductDetail = (idModel, idProduct,update = false) => a
 };
 
 
-// export const getModels = () => async (dispatch) => {
-//   try {
-//     const { data } = await axios.get(`/products/all`);
-//     dispatch({
-//       type: GET_PRODUCTS,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-export const getModels = () => async (dispatch) => {
+export const getAllProducts = () => async (dispatch) => {
   try {
-    const { data } = await axios.get(`/models/all`);
+    const { data } = await axios.get(`/products/all`);
     dispatch({
       type: GET_PRODUCTS,
       payload: data,
@@ -122,6 +110,18 @@ export const getModels = () => async (dispatch) => {
     console.log(error);
   }
 };
+
+// export const getModels = () => async (dispatch) => {
+//   try {
+//     const { data } = await axios.get(`/models/all`);
+//     dispatch({
+//       type: GET_PRODUCTS,
+//       payload: data,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 
 // * SetLoading on true to display the loading component
@@ -227,24 +227,9 @@ export const getModelByProduct = (id, product) => async (dispatch) => {
   }
 }
 
-
-
-
-
-// export const filterProductCategory = (id) => async (dispatch) => {
-//   try {
-//     const { data } = await axios.get(`/products/category/${id}`)
-//     dispatch({
-//       type: FILTER_PRODUCT_CATEGORY,
-//       payload: data
-//     })
-//   } catch (error) {
-//   }
-// }
-
-export const filterModelsByCategory = (id) => async (dispatch) => {
+export const filterProductCategory = (id) => async (dispatch) => {
   try {
-    const { data } = await axios.get(`/models/category/${id}`)
+    const { data } = await axios.get(`/products/category/${id}`)
     dispatch({
       type: FILTER_PRODUCT_CATEGORY,
       payload: data
@@ -252,3 +237,14 @@ export const filterModelsByCategory = (id) => async (dispatch) => {
   } catch (error) {
   }
 }
+
+// export const filterModelsByCategory = (id) => async (dispatch) => {
+//   try {
+//     const { data } = await axios.get(`/models/category/${id}`)
+//     dispatch({
+//       type: FILTER_PRODUCT_CATEGORY,
+//       payload: data
+//     })
+//   } catch (error) {
+//   }
+// }

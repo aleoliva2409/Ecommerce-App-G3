@@ -1,4 +1,4 @@
-const { Order, User, Model } = require("../db");
+const { Order, User, Product } = require("../db");
 
 const getAllOrders = async (req, res) => {
   try {
@@ -8,7 +8,7 @@ const getAllOrders = async (req, res) => {
           model: User
         },
         {
-          model: Model
+          model: Product
         }
       ]
     });
@@ -28,7 +28,7 @@ const getOrder = async (req, res) => {
           model: User
         },
         {
-          model: Model
+          model: Product
         }
       ]
     })
@@ -61,10 +61,10 @@ const setOrderDetail = async(req, res) => {
   try {
     const { cart, orderId } = req.body;
     const order = await Order.findByPk(orderId);
-    const idModels = cart.map( item => ({ id: item.id, quantity: item.quantity, price: item.price}));
-    for(let i = 0; i < idModels.length; i++) {
-      const model = await Model.findByPk(idModels[i].id);
-      order.addModel(model, { through: { price: idModels[i].price, quantity: idModels[i].quantity }})
+    const idProducts = cart.map( item => ({ id: item.id, quantity: item.quantity}));
+    for(let i = 0; i < idProducts.length; i++) {
+      const product = await Product.findByPk(idProducts[i].id);
+      order.addProduct(product, { through: { price: product.price, quantity: idProducts[i].quantity }})
     }
     await Order.update({
       date: new Date().toLocaleString()

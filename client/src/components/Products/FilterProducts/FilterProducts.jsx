@@ -6,7 +6,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../../redux/actions/categoriesActions";
-import { filterModelsByCategory } from "../../../redux/actions/productActions";
+import { filterProductCategory } from "../../../redux/actions/productActions";
 import Typography from "@material-ui/core/Typography";
 
 // * STYLES *
@@ -33,7 +33,7 @@ const FilterProducts = ({ setFilter, setCurrentPage }) => {
   }, [dispatch]);
 
   const handleClick = (id) => {
-    dispatch(filterModelsByCategory(id));
+    dispatch(filterProductCategory(id));
     setFilter(false);
     setCurrentPage(0)
   };
