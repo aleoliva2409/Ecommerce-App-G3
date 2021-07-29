@@ -1,17 +1,19 @@
+import {makeStyles} from '@material-ui/core/styles';
 
-export const styleProduct = ({breakpoints, spacing, theme}) => ({
+
+const useStyles = makeStyles((theme) => ({
   root: {
-    margin: '1rem auto 1rem auto',
-    width: '80%',
-    height: 'auto',
-    display: 'grid',
-    gridTemplateColumns: '100%',
-    gridTemplateRows: 'auto auto auto auto auto',
-    [breakpoints.up('md')]:{
-      gridTemplateColumns: '1fr 1fr',
-      gridTemplateRows: 'auto auto auto',
-      gridGap: spacing(3),
-    }
+    //backgroundColor: '#232323',
+    margin: 0,
+    width: '100%',
+    overflow: 'hidden',
+    marginTop: '3rem'
+  },
+  names:{
+    color:'#232020'
+  },
+  ChooseSize:{
+    backgroundColor:'#00BBC9'
   },
   cardRoot:{
     width: '80%',
@@ -21,7 +23,11 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
     gridRow: '1/2',
     gridColumn: '1/2',
     backgroundColor: 'transparent',
-    margin: spacing(3),
+    margin: theme.spacing(3),
+  },
+  img:{
+    maxWidth:'400px',
+    maxHeight:'400px'
   },
   media:{
     width: '70%',
@@ -45,7 +51,7 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
     color: '#6b8dc8',
     gridRow: '2/3',
     gridColumn: '1/2',
-    [breakpoints.up('md')]:{
+    [theme.breakpoints.up('md')]:{
       gridColumn: '2/3',
       gridRow: '1/2',
       alignSelf: 'center',
@@ -58,9 +64,9 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
     gridRow: '4/5',
     width: '100%',
     height: 'auto',
-    marginTop: spacing(2),
-    marginBottom: spacing(2),
-    [breakpoints.up('md')]:{
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    [theme.breakpoints.up('md')]:{
       gridColumn: '2/3',
       gridRow: '2/3',
     }
@@ -72,7 +78,7 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
     gridColumn: '1/2',
     gridRow: '5/6',
     overflowY: 'scroll',
-    [breakpoints.up('md')]:{
+    [theme.breakpoints.up('md')]:{
       gridColumn: '1/3',
       gridRow: '3/4',
     }
@@ -93,9 +99,10 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
     display: 'flex',
     alignItems: 'center',
     border: `1px solid #3F51B5`,
-    borderRadius:  spacing(3)
+    borderRadius:  theme.spacing(3)
   },
   addControllerButtons:{
     margin: '1rem'
   }
-})
+}));
+export { useStyles };

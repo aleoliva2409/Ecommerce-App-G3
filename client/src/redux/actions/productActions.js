@@ -9,6 +9,7 @@ export const ADD_PRODUCT = "ADD_PRODUCT";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 export const GET_PRODUCT_UPDATE = "GET_PRODUCT_UPDATE";
 export const FILTER_PRODUCT_CATEGORY = "FILTER_PRODUCT_CATEGORY";
+export const GET_ONE_PRODUCT = "GET_ONE_PRODUCT";
 
 
 // * Set data of each product
@@ -211,6 +212,24 @@ export const updateProduct = (idModel, idProduct, product) => async (dispatch) =
 
   }
 }
+
+export const getModelByProduct = (id, product) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/models/${id}/product/${product}`)
+    console.log(data);
+    dispatch({
+      type: GET_ONE_PRODUCT,
+      payload: data
+    })
+
+  } catch (error) {
+
+  }
+}
+
+
+
+
 
 // export const filterProductCategory = (id) => async (dispatch) => {
 //   try {
