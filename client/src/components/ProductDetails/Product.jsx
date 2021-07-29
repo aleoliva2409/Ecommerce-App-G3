@@ -10,19 +10,17 @@ const useStyles = makeStyles(styleProduct);
 
 function Product({product}){
 
-  // const amountToBuy = document.getElementById('amountToBuy');
-
   const styles = useStyles();
   const dispatch = useDispatch();
-
-  const pushToCart = () => dispatch(addToCart(product,1));
+  
+  const user = localStorage.getItem('user');
+  const pushToCart = () => dispatch(addToCart(product,1,user));
 
   function handlerFavoriteButton(){
     setInvisible(!invisible);
   };
 
   const [invisible,setInvisible] = useState(true);
-  // const [amount,setAmount] = useState(0);
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
