@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     //height:500
   },
   cardHeaderP:{
-    height: 150,
+    height: 170,
   },
   size:{
     display:'flex',
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardact:{
-    justifyContent:'space-around',
+    justifyContent:'space-evenly',
   },
 
   media: {
@@ -48,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
   },
   price:{
     fontWeight:'700'
+  },
+  price: {
+    color: "black",
+    fontWeight: "700"
   }
 
 }));
