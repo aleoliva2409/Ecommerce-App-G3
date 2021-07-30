@@ -1,27 +1,27 @@
 import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, Badge, Grid } from '@material-ui/core';
-import { Favorite } from '@material-ui/icons';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
 import Review from '../Review/Review';
 import { styleProduct } from './ProductStyle.js';
 import ReviewComments from '../Review/ReviewComments.jsx';
+import { addFavorite, deleteFavorite } from '../../redux/actions/wishlistAction';
+import { useToken } from '../../hooks/useToken';
+
 const useStyles = makeStyles(styleProduct);
 
 
 function Product({product}){
 
   // const amountToBuy = document.getElementById('amountToBuy');
-
+  const { isadmin,email } = useToken()
   const styles = useStyles();
   const dispatch = useDispatch();
-
+  const [open, setOpen] = useState(false)
+  const [favorites, setFavorites] = useState(false)
   const user = localStorage.getItem('user');
   const pushToCart = () => dispatch(addToCart(product,1,user));
-
-  function handlerFavoriteButton(){
-    setInvisible(!invisible);
-  };
 
   const [invisible,setInvisible] = useState(true);
 
@@ -34,6 +34,21 @@ function Product({product}){
       }
     }
   }
+
+  const handleFavorites = () => {
+    if(email) {
+      if(favorites) {
+        dispatch(deleteFavorite(product, email));
+        setFavorites(false);
+      } else {
+        dispatch(addFavorite(product, email));
+        setFavorites(true);
+      }
+    } else {
+      setOpen(true)
+    }
+  }
+
   return (
     <Container
       className={styles.root}
@@ -52,7 +67,7 @@ function Product({product}){
             variant={'button'}
             className={styles.price}
           >
-            {`$${product.price}`}
+            {`$ ${product.price}`}
           </Typography>
           <Typography
             variant={'caption'}
@@ -76,10 +91,8 @@ function Product({product}){
         <Grid item direction="row"
           className={styles.options}
         >
-          <IconButton color={'primary'} onClick={handlerFavoriteButton}>
-            <Badge color="secondary" variant={'dot'} invisible={invisible}>
-              <Favorite />
-            </Badge>
+          <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} disable={email ? "true" : false}>
+              <FavoriteIcon style={favorites && email ? {color: "red"} : {}} />
           </IconButton>
         </Grid>
         <Grid item className={styles.buyButtonContainer}>
@@ -118,12 +131,12 @@ function Product({product}){
 
       <Grid container spacing={3}>
            <Grid item md={6} xs={12}>
-              <Review />
+              <Review idproduct={product.id}/>
           </Grid>
       </Grid>
       <Grid container spacing={3}>
            <Grid item md={6} xs={12}>
-                <ReviewComments />
+                <ReviewComments idproduct={product.id} />
                 {/* <Container className={styles.reviews} >
                 <Typography variant={'subtitle2'}>
                   Comentarios

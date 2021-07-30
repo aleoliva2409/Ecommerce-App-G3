@@ -1,21 +1,27 @@
 import React,{ useState, useEffect} from 'react';
 import Rating from '@material-ui/lab/Rating';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { Button, FormControl,FormLabel ,Box} from '@material-ui/core';
 import {postReview} from '../../redux/actions/ReviewActions';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import { useToken } from '../../hooks/useToken';
-
+import { getOrdersByUser } from "../../redux/actions/ordersActions";
 // * STYLES *
 import { useStyles } from './ReviewStyle';
 
-function Review() {
+function Review({idproduct}) {
 
   const { id,isadmin } = useToken()
-  // console.log("idUser " + id);
-  // console.log("isadmin " + isadmin);
   const classes = useStyles();
   const dispatch = useDispatch();
+  const shoppingUser = useSelector((state) => state.orders.ordersByUser);
+  //console.log("shoppingUser " + shoppingUser.isadmin);
+  //console.log("shoppingUser compra " + shoppingUser.orders[0].cart[0].id);
+
+  useEffect(() => {
+    dispatch(getOrdersByUser(id));
+  }, [dispatch]);
+
 
   const [valuesForm,SetValuesForm] = useState({
     score: '',
@@ -36,12 +42,13 @@ function Review() {
     // console.log("texarea " + text);
     if (score && text ) {
       const idUser = id;
-      dispatch(postReview(2,{idUser,text,score}));
+      dispatch(postReview(idproduct,{idUser,text,score}));
 
   }
 
   };
   return (
+
     <Box component='div' display={isadmin===false ? 'block' : 'none'}>
        <form onSubmit={handleSubmit} >
         <FormControl className={classes.formControl}>
