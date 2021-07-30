@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -7,6 +7,8 @@ import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import Snackbar from '@material-ui/core/Snackbar';
+import Alert from '@material-ui/lab/Alert';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,6 +24,7 @@ const ProductCard = ({ product }) => {
   const dayMode = useStyles();
   const darkMode = useStylesDark();
   const { email } = useToken()
+  console.log(email)
   let classes;
   const actualColor = useSelector(state => state.color);
   if (actualColor) {
@@ -30,6 +33,7 @@ const ProductCard = ({ product }) => {
     classes = dayMode;
   }
 
+  const [open, setOpen] = useState(false)
   const [favorites, setFavorites] = useState(false)
   const dispatch = useDispatch();
 
@@ -40,14 +44,25 @@ const ProductCard = ({ product }) => {
   // const deleteProduct = () => dispatch(deleteFavorite(product, email))
 
   const handleFavorites = () => {
-    if(favorites) {
-      dispatch(deleteFavorite(product, email));
-      setFavorites(false);
+    if(email) {
+      if(favorites) {
+        dispatch(deleteFavorite(product, email));
+        setFavorites(false);
+      } else {
+        dispatch(addFavorite(product, email));
+        setFavorites(true);
+      }
     } else {
-      dispatch(addFavorite(product, email));
-      setFavorites(true);
+      setOpen(true)
     }
   }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
@@ -96,7 +111,7 @@ const ProductCard = ({ product }) => {
         title={`image ${product.name}`}
       />
       <CardActions className={classes.cardact}>
-        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} disable={email ? true : false}>
+        <IconButton aria-label="Agregar a favoritos" onClick={handleFavorites} disable={email ? "true" : false}>
           <FavoriteIcon style={favorites && email ? {color: "red"} : {}} />
         </IconButton>
         <Button
@@ -107,6 +122,11 @@ const ProductCard = ({ product }) => {
         >
           Agregar a carrito
         </Button>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+          <Alert severity="error" variant="filled" onClose={handleClose}>
+            Inicie sesión!
+          </Alert>
+        </Snackbar>
       </CardActions>
     </Card>
   );

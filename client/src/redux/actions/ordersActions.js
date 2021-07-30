@@ -3,6 +3,7 @@ import axios from "axios";
 export const GET_ALL_ORDERS = "GET_ALL_ORDERS";
 export const UPDATE_ORDER = "UPDATE_ORDER";
 export const GET_ORDER = "GET_ORDER";
+export const GET_ORDERS_BY_USER = "GET_ORDERS_BY_USER";
 
 export const getOrders = () => async (dispatch) => {
   try{
@@ -37,5 +38,17 @@ export const updateOrder = (id, update) => async (dispatch) => {
     })
   } catch (error) {
     console.log(error);
+  }
+}
+
+export const getOrdersByUser = (id) => async (dispatch) => {
+  try {
+    const { data } = await axios.get(`/orders/user/${id}`)
+    dispatch({
+      type: GET_ORDERS_BY_USER,
+      payload: data
+    })
+  } catch (error) {
+    console.log(error)
   }
 }

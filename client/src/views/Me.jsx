@@ -1,60 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import CrudProduct from "../components/CrudProduct/CrudProduct";
-import Table from '../components/OrdersTable/OrderTable';
-import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
-import { getAllProducts } from "../redux/actions/productActions";
+import { getOrdersByUser } from "../redux/actions/ordersActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
 import { Container } from "@material-ui/core";
+import ShoppingTable from "../components/Me/ShoppingTable";
+import { useToken } from "../hooks/useToken"
 
 const Me = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.allProducts);
-  const categories = useSelector((state) => state.categories.categories);
-  const [render, setRender] = useState(false);
+  const { id } = useToken()
+  const shoppingUser = useSelector((state) => state.orders.ordersByUser);
   const location = useLocation();
 
   useEffect(() => {
-    dispatch(getAllProducts());
+    dispatch(getOrdersByUser(id));
     dispatch(getCategories());
   }, [dispatch]);
 
-  useEffect(() => {
-    if(render) {
-      setRender(false)
-      dispatch(getAllProducts());
-    }
-  }, [dispatch, render]);
+  // useEffect(() => {
+  //   if(render) {
+  //     setRender(false)
+  //     dispatch(getAllProducts());
+  //   }
+  // }, [dispatch, render]);
 
   const views = (url) => {
     switch(url) {
-      case "/admin/dashboard/products":
+      case "/users/me/shopping":
         return (
-          <CrudProduct
-            products={products}
-            categories={categories}
-            state={render}
-            setState={setRender}
-          />
+          <ShoppingTable user={shoppingUser}/>
         )
-
-      case "/admin/dashboard/orders":
-        return (
-          <Table />
-        )
-
-      case "/admin/dashboard/categories":
-        return (
-          <Categories />
-        )
-
-      case "/admin/dashboard/promote":
+      case "/users/me/favorites":
         return (
           <></>
         )
-
+      case "/users/me/settings":
+        return (
+          <></>
+        )
       default:
         break;
     }
