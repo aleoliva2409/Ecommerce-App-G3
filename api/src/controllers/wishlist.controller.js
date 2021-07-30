@@ -1,4 +1,4 @@
-const { User, Wishlist } = require("../db");
+const { User, Wishlist, Product } = require("../db");
 
 const addWishlist = async (req, res, next) => {
   try {
@@ -56,7 +56,22 @@ const getWishilistByUser = async (req, res, next) => {
           }
         });
 
-      res.status(200).json(dbWishlist);
+      let favorites = []
+
+      if(dbWishlist) {
+        console.log(dbWishlist)
+        let favs = dbWishlist.products.filter((item,index)=>{
+          return dbWishlist.products.indexOf(item) === index;
+        })
+        for(let product of favs) {
+          const favorite = await Product.findByPk(product)
+          favorites.push(favorite)
+        }
+        res.status(200).json(favorites);
+      } else {
+        return res.status(404).json({message: 'No hay favoritos'})
+      }
+
     }
     else {
       res.status(404).json({ message: "No se encontró el usuario" });
