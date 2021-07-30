@@ -34,12 +34,10 @@ const CollapseTable = ({ order }) => {
         <TableCell align="center">{order.date}</TableCell>
         <TableCell align="center">{order.orderState}</TableCell>
         <TableCell align="center">{`${order.firstName} ${order.lastName}`}</TableCell>
-        <TableCell align="center">{order.paymentDetails}</TableCell>
         <TableCell align="center">{order.shippingAddres}</TableCell>
         <TableCell align="center">{order.shippingCity}</TableCell>
         <TableCell align="center">{order.shippingZip}</TableCell>
         <TableCell align="center">{order.shippingState}</TableCell>
-        <TableCell align="center">{order.shippingCost}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={11}>
