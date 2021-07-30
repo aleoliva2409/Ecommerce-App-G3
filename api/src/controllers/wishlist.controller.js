@@ -59,7 +59,6 @@ const getWishilistByUser = async (req, res, next) => {
       let favorites = []
 
       if(dbWishlist) {
-        console.log(dbWishlist)
         let favs = dbWishlist.products.filter((item,index)=>{
           return dbWishlist.products.indexOf(item) === index;
         })
