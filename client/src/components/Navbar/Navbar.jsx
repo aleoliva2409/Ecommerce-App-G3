@@ -34,21 +34,21 @@ export default function PrimarySearchAppBar() {
   const darkMode = useStylesDark();
   let classes;
   const actualColor = useSelector(state => state.color)
-  if(actualColor){
+  if (actualColor) {
     classes = darkMode;
   } else {
     classes = dayMode;
   }
 
-useEffect(() => {
-  const url = window.location.href;
-  if (url.includes('loginGoogle')){
-    const token = url.split('=')[2].split('#')[0];
-    window.localStorage.setItem('jwt', token)
-    window.localStorage.setItem('user', jwt.decode(token).email)
-    window.location.replace('/')
-  }
-}, [])
+  useEffect(() => {
+    const url = window.location.href;
+    if (url.includes('loginGoogle')) {
+      const token = url.split('=')[2].split('#')[0];
+      window.localStorage.setItem('jwt', token)
+      window.localStorage.setItem('user', jwt.decode(token).email)
+      window.location.replace('/')
+    }
+  }, [])
 
   const isPhone = useMediaQuery("(max-width: 760px)");
 
@@ -145,7 +145,7 @@ useEffect(() => {
           <p>Favoritos</p>
         </MenuItem>
       </Link>
-     {/* should be see only when is logged  */}
+      {/* should be see only when is logged  */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-controls="primary-search-account-menu"
@@ -177,7 +177,7 @@ useEffect(() => {
   };
 
   return (
-    <div className={classes.grow}>
+    <div>
       <AppBar position="static">
         <Toolbar className={classes.appbar}>
           <Link component={RouterLink} to="/">
@@ -191,7 +191,7 @@ useEffect(() => {
               <img src={LongLogo} className={classes.image} alt="Pillow Top" />
             )}
           </Link>
-
+          <div className={classes.grow} />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               {" "}
@@ -202,17 +202,17 @@ useEffect(() => {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-{ color?
-            <IconButton color="inherit"
-            onClick={clickColor}>
-              <Brightness3Icon/>
-            </IconButton>
-            :
-            <IconButton color="inherit"
-            onClick={clickColor}>
-              <WbSunnyIcon />
-            </IconButton>
-}
+            {color ?
+              <IconButton color="inherit"
+                onClick={clickColor}>
+                <Brightness3Icon />
+              </IconButton>
+              :
+              <IconButton color="inherit"
+                onClick={clickColor}>
+                <WbSunnyIcon />
+              </IconButton>
+            }
             <Link
               component={RouterLink}
               to="/products"
@@ -245,7 +245,7 @@ useEffect(() => {
               </IconButton>
             </Link>
 
-             {/* should be see only when is logged  */}
+            {/* should be see only when is logged  */}
             <Link component={RouterLink} to="#" className={classes.linkDesktop}>
               <IconButton
                 edge="end"
