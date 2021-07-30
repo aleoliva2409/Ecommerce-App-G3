@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { checkout } = require('../controllers/checkout.controller.js')
+const { checkout, sendMail } = require('../controllers/checkout.controller.js')
 
 router.post('/', checkout)
+router.post('/send', sendMail)
 
 module.exports = router;
