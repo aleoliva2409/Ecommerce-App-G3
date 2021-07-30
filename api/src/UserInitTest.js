@@ -9,23 +9,23 @@ async function setUser(){
     },
     {
       email: 'test@gmail.com',
-      password: 'test',
+      password: '$2b$10$yaMYBy6txhKM.20JsEMDN.3UZUSIUMLjR0l.1PkOdEEKQrNOsc3vC', // prueba
       isadmin: false,
     },
     {
       email: 'test1@gmail.com',
-      password: 'test',
+      password: '$2b$10$yaMYBy6txhKM.20JsEMDN.3UZUSIUMLjR0l.1PkOdEEKQrNOsc3vC', // prueba
       isadmin: true,
     },
     {
       email: 'test2@gmail.com',
-      password: 'test',
+      password: '$2b$10$yaMYBy6txhKM.20JsEMDN.3UZUSIUMLjR0l.1PkOdEEKQrNOsc3vC', // prueba
       isadmin: false,
 
     },
     {
       email: 'test3@gmail.com',
-      password: 'test',
+      password: '$2b$10$yaMYBy6txhKM.20JsEMDN.3UZUSIUMLjR0l.1PkOdEEKQrNOsc3vC', // prueba
       isadmin: false,
     }
   ]

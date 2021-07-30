@@ -50,5 +50,4 @@ export const goToCheckout = () => async (dispatch) => {
   //const { data } = await axios.post('/checkout', { productsInCart })
   //console.log(data)
   //window.location = data.init_point
-
 }
