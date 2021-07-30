@@ -1,19 +1,19 @@
-import React,{ useState} from 'react';
+import React,{ useState, useEffect} from 'react';
 import Rating from '@material-ui/lab/Rating';
 import { useDispatch } from 'react-redux';
 import { Button, FormControl,FormLabel ,Box} from '@material-ui/core';
 import {postReview} from '../../redux/actions/ReviewActions';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
-import jwt from 'jsonwebtoken';
+import { useToken } from '../../hooks/useToken';
 
 // * STYLES *
 import { useStyles } from './ReviewStyle';
 
 function Review() {
-  const token = localStorage.getItem("jwt");
-  const {id,isadmin} = jwt.decode(token);
-  const idUser = id;
 
+  const { id,isadmin } = useToken()
+  // console.log("idUser " + id);
+  // console.log("isadmin " + isadmin);
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -35,13 +35,15 @@ function Review() {
     // console.log("score " + score);
     // console.log("texarea " + text);
     if (score && text ) {
+      const idUser = id;
       dispatch(postReview(2,{idUser,text,score}));
+
   }
 
   };
   return (
-    <div>
-       <form onSubmit={handleSubmit}>
+    <Box component='div' display={isadmin===false ? 'block' : 'none'}>
+       <form onSubmit={handleSubmit} >
         <FormControl className={classes.formControl}>
             <Box className={classes.review1}>
             <FormLabel className={classes.labbel}>Tu puntuación :</FormLabel>
@@ -65,7 +67,7 @@ function Review() {
         </FormControl>
         </form>
 
-    </div>
+    </Box>
   )
 }
 
