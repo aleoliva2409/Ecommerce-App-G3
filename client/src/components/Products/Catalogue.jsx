@@ -9,8 +9,6 @@ import { Typography } from '@material-ui/core';
 
 const Catalogue = ({ products, currentPage, setCurrentPage }) => {
 
-  // const [currentPage, setCurrentPage] = useState(0);
-
   const paginations = () => {
     if(products.length > 0) {
       return products.slice(currentPage, currentPage + 12);
