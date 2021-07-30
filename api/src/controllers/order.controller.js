@@ -85,6 +85,18 @@ const updateOrder = async (req, res) => {
   }
 }
 
+const updateOrderByUser = async (req,res) => {
+  console.log('---------------------------------------------------------------------------------')
+  try{
+    const{userId, orderState} = req.body;
+    console.log(orderState)
+    const order = await Order.findOne({ where:{ userId:userId ,orderState:'cart' }})
+    order.update({orderState:orderState})
+  }catch (error){
+    console.log(error)
+  }
+}
+
 const setOrderDetail = async(req, res) => {
   try {
     const { cart, orderId } = req.body;
@@ -110,5 +122,6 @@ module.exports = {
   getOrder,
   updateOrder,
   setOrderDetail,
-  getOrdersByUser
+  getOrdersByUser,
+  updateOrderByUser
 }

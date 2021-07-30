@@ -1,4 +1,4 @@
-import { LOGIN_REQUEST, GET_USERS, ADMINS, ERROR, LOGIN_SUCCESS, BLOCKED, LOGIN_FAILURE, LOGOUT } from './../actions/userActions';
+import { LOGIN_REQUEST, GET_SHIPPING, GET_USERS, ADMINS, ERROR, LOGIN_SUCCESS, BLOCKED, LOGIN_FAILURE, LOGOUT } from './../actions/userActions';
 
 let user = localStorage.getItem('user');
 const initialState = {
@@ -7,6 +7,7 @@ const initialState = {
     allUsers: [],
     loging: false,
     message: '',
+    shippingData: {}
 }
 //: {};
 
@@ -42,10 +43,15 @@ export function login(state = initialState, action) {
                 ...state,
                 message: action.payload
             };
-        case ERROR:
+            case ERROR:
+                return {
+                    ...state,
+                    message: action.payload
+                };
+                case GET_SHIPPING:
             return {
                 ...state,
-                message: action.payload
+                shippingData: action.payload
             };
         default:
             return state

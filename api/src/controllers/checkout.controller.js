@@ -1,5 +1,6 @@
 const mercadopago = require("mercadopago");
 const sgMail = require("@sendgrid/mail");
+const { Product } = require("../db")
 const SENDGRID_API_KEY = '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'
 const { ACCESS_TOKEN } = process.env;
 
@@ -33,11 +34,10 @@ async function checkout(req, res, next) {
 }
 
 //send mail and set new stock
-function sendMail(req, res, next) {
+async function sendMail (req, res, next) {
     try {
         const { prods, user } = req.body
-        const html = `
-        <div>
+        const html = ` <div>
             <h1>Order</h1>
             <table>
                 <tr>
@@ -49,15 +49,13 @@ function sendMail(req, res, next) {
                 </tr>
                 ${prods.map(({ name, size, price, qty }) => {
             return (
-                `
-                        <tr>
-                            <td>${name}${' '}${size}</td>
-                            <td> | </td>
-                            <td>${qty}</td>
-                            <td> | </td>
-                            <td>${price * qty}</td>
-                        </tr>
-                        `
+                `<tr>
+                    <td>${name}${' '}${size}</td>
+                    <td> | </td>
+                    <td>${qty}</td>
+                    <td> | </td>
+                    <td>${price * qty}</td>
+                </tr>`
             )
         })}
             </table>
@@ -75,7 +73,6 @@ function sendMail(req, res, next) {
             <h3>¡Gracias por su compra!</h3>
         </div>
     `;
-
         const message = {
             to: user,
             from: 'kevin.queiro@outlook.com',
@@ -83,7 +80,6 @@ function sendMail(req, res, next) {
             text: 'Ésta es su orden de Pillow Top',
             html: html
         };
-
         sgMail.send(message)
         .then(response => res.send(response))
         .catch(err => console.log("ERROR ENVIANDO ORDEN: ", err));
@@ -92,7 +88,20 @@ function sendMail(req, res, next) {
     }
 }
 
+async function setStock (req,res,next){
+const {prods} = req.body
+
+    for (each of prods){
+        const prod = await Product.findOne({
+            where:{ id:each.id }
+        })
+        prod.update({stock:each.stock-each.qty})
+    }
+
+}
+
 module.exports = {
     checkout,
-    sendMail
+    sendMail,
+    setStock
 };

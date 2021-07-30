@@ -42,6 +42,7 @@ const addUser = async (req, res, next) => {
 };
 
 const updateUser = async (req, res, next) => {
+  console.log('-----------------------------------------')
   const { id } = req.params;
   const body = req.body;
   try {
@@ -131,7 +132,36 @@ const getUser = (req, res, next) => {
   });
 };
 
+async function getShippingData (req, res, next){
+  try {
+    const userEmail = req.query.user;
+    const user = await User.findOne({where:{email:userEmail}});
+    const order = await Order.findOne({where:{userId:user.dataValues.id,orderState:'cart'}})
+    console.log(order)
+    objShipping = {
+      shippingAddress: order.shippingAddress,
+      shippingZip: order.shippingZip,
+      shippingCity: order.shippingCity,
+      shippingState: order.shippingState,
+      comments: order.comments,
+    }
+    return res.json(objShipping);
+  }catch(error){
+    next(error);
+  }
+}
 
+async function updateShippingData (req, res, next){
+try{
+  const userEmail = req.query.user;
+  const user = await User.findOne({where:{email:userEmail}});
+  const order = await Order.findOne({where:{userId:user.dataValues.id,orderState:'cart'}})
+  order.update(req.body);
+  console.log('done')
+}catch (error){
+  next(error);
+}
+}
 module.exports = {
   addUser,
   updateUser,
@@ -139,4 +169,6 @@ module.exports = {
   getAllUsers,
   getOrdersByUser,
   getUser,
+  getShippingData,
+  updateShippingData
 };
