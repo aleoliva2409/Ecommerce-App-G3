@@ -11,7 +11,8 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
       gridTemplateColumns: '1fr 1fr',
       gridTemplateRows: 'auto auto auto',
       gridGap: spacing(3),
-    }
+    },
+
   },
   cardRoot:{
     width: '80%',
@@ -30,6 +31,7 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
     height: '16rem',
     margin: 'auto',
     backgroundSize: 'contain',
+
   },
   content:{
     display: 'flex',
@@ -38,8 +40,9 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
   },
   price:{
     fontSize: '1.5rem',
-    textDecoration: 'underline',
-    color: '#6b8dc8',
+    textDecoration: 'none',
+    fontWeight: '700',
+    color: '#232020',
   },
   name: {
     fontSize: '2rem',

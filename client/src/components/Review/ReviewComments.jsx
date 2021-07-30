@@ -15,16 +15,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useStyles } from './ReviewCommentsStyle';
 
 
-function ReviewComments() {
+function ReviewComments({idproduct}) {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const [value, setValue] = React.useState(2);
+  const reviews = useSelector(state => state.reviews.reviews);
 
   useEffect(() => {
-    dispatch(getAllReview(2))
+    dispatch(getAllReview(idproduct))
   }, [dispatch])
 
-   const reviews = useSelector(state => state.reviews.reviews);
 
 
   return (
@@ -33,22 +32,27 @@ function ReviewComments() {
 
         <Box component="fieldset" mb={3} borderColor="transparent">
 
-        {reviews.map((review) => (
-           <>
-          <Rating name="read-only" className={classes.stars} value={review.score} readOnly />
-          <ListItem alignItems="flex-start">
-                <ListItemText primary={
-                  <>
-                    <Typography component="span" variant="body2" className={classes.inline} color="textPrimary" >
-                        {review.text}
-                    </Typography>
-                  </>
-                  }
-                />
-              </ListItem>
-          </>
-        ))}
-
+            {(!reviews || reviews.length == 0)  ?
+              <Typography component="h5" variant="h5" className={classes.inline} color="textPrimary" >
+                      El producto no tiene reviews
+              </Typography>
+            :
+            (reviews && reviews.map(review => (
+              <>
+                <Rating name="read-only" className={classes.stars} value={review.score} readOnly />
+                <ListItem alignItems="flex-start">
+                      <ListItemText primary={
+                        <>
+                          <Typography component="span" variant="body2" className={classes.inline} color="textPrimary" >
+                              {review.text}
+                          </Typography>
+                        </>
+                        }
+                      />
+                    </ListItem>
+              </>
+              )))
+            }
         </Box>
 
     </div>

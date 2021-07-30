@@ -41,7 +41,7 @@ export const login = (user) => async (dispatch) => {
         if (data.user.isadmin) window.location.replace('http://localhost:3000/admin/dashboard')
       }
     } else {
-      dispatch({type: ERROR, payload: 'USUARIO Y/O CONTRACEÑA INCORRECTOS'})
+      dispatch({type: ERROR, payload: 'USUARIO Y/O CONTRASEÑA INCORRECTOS'})
     }
   }
   } catch (error) {
