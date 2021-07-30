@@ -91,10 +91,10 @@ useEffect(() => {
     >
       <Link
         component={RouterLink}
-        to="/admin/dashboard"
+        to="/users/me"
         className={classes.links}
       >
-        <MenuItem onClick={handleMenuClose}>Admin</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Mi cuenta</MenuItem>
       </Link>
       <Link component={RouterLink} to="/categories" className={classes.links}>
         <MenuItem onClick={handleMenuClose}>Agregar categoria</MenuItem>
@@ -135,7 +135,7 @@ useEffect(() => {
         </MenuItem>
       </Link>
 
-      <Link component={RouterLink} to="#" className={classes.links}>
+      <Link component={RouterLink} to="/favorites" className={classes.links}>
         <MenuItem>
           <IconButton color="inherit">
             <Badge badgeContent={0} color="secondary">
@@ -237,7 +237,7 @@ useEffect(() => {
               </IconButton>
             </Link>
 
-            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
+            <Link component={RouterLink} to="/favorites" className={classes.linkDesktop}>
               <IconButton color="inherit">
                 <Badge badgeContent={0} color="secondary">
                   <FavoriteIcon />
