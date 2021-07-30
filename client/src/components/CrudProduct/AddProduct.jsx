@@ -39,8 +39,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
   }
 
   const addProductForm = (e) => {
-    if(formProduct.model) {
-      dispatch(addProductOnly(formProduct,formProduct.model))
+    if (formProduct.model) {
+      dispatch(addProductOnly(formProduct, formProduct.model))
     } else {
       dispatch(addModelAndProduct(formProduct))
     }
@@ -73,8 +73,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
         Agregar producto
       </Button>
       <Dialog open={open} onClose={formClose}>
-        <DialogContent className={classes.formAddProduct}>
-          <form onSubmit={addProductForm}>
+        <DialogContent>
+          <form className={classes.formAddProduct} onSubmit={addProductForm}>
             <Select
               id="model"
               label="Modelo de Producto"
@@ -83,6 +83,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               onChange={handleForm}
               name="model"
               required
+              className={classes.field}
             >
               <MenuItem value="DEFAULT" selected disabled>
                 <em>None</em>
@@ -103,7 +104,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               label="Nombre"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.name}
               onChange={handleForm}
               required
@@ -114,38 +116,45 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               label="Marca"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.brand}
               onChange={handleForm}
             />
-            <TextField
-              id="size"
-              name="size"
-              label="Medida(cm)"
-              variant="outlined"
-              margin="normal"
-              className={classes.textField}
-              value={formProduct.size}
-              onChange={handleForm}
-              required
-            />
-            <TextField
-              id="sizeMattress"
-              name="sizeMattress"
-              label="Medida"
-              variant="outlined"
-              margin="normal"
-              className={classes.textField}
-              value={formProduct.sizeMattress}
-              onChange={handleForm}
-            />
+            <Box component="div" className={classes.measures}>
+              <TextField
+                id="size"
+                name="size"
+                label="Medida(cm)"
+                variant="outlined"
+                margin="normal"
+                fullWidth="true"
+                className={classes.measuresField}
+                value={formProduct.size}
+                onChange={handleForm}
+                required
+              />
+              X
+              <TextField
+                id="sizeMattress"
+                name="sizeMattress"
+                label="Medida"
+                variant="outlined"
+                margin="normal"
+                fullWidth="true"
+                className={classes.measuresField}
+                value={formProduct.sizeMattress}
+                onChange={handleForm}
+              />
+            </Box>
             <TextField
               id="description"
               name="description"
               label="Descripción"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.description}
               onChange={handleForm}
               multiline
@@ -158,7 +167,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               label="Color"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.color}
               onChange={handleForm}
               required
@@ -169,7 +179,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               label="URL imagen"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.image}
               onChange={handleForm}
               required
@@ -180,7 +191,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               label="Stock"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.stock}
               onChange={handleForm}
               required
@@ -191,7 +203,8 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               label="Price"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullWidth="true"
+              className={classes.field}
               value={formProduct.price}
               onChange={handleForm}
               required
@@ -205,6 +218,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               name="categories"
               multiple
               required
+              className={classes.field}
             >
               <MenuItem value="DEFAULT" selected disabled>
                 <em>None</em>
@@ -222,7 +236,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
               alignItems="center"
               my={2}
             >
-              <Button variant="contained" type="submit">
+              <Button variant="contained" color="primary" type="submit">
                 Agregar
               </Button>
             </Box>
