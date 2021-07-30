@@ -6,7 +6,7 @@ import { getWishlist } from '../redux/actions/wishlistAction';
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
 import { Box, Container, Typography } from "@material-ui/core";
-import ShoppingTable from "../components/Me/ShoppingTable";
+//import ShoppingTable from "../components/Me/ShoppingTable";
 import Table from "../components/Me/ProducTable/Table";
 import ListFavorites from '../components/Favorites/ListFavorites';
 import { useToken } from "../hooks/useToken"
