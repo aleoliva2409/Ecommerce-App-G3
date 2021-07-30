@@ -4,7 +4,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { Box, Typography, Button, Link } from "@material-ui/core";
 import { goToCheckout } from "../../../redux/actions/shoppingCartActions";
 import jwt from "jsonwebtoken";
-import ValuesAccount from '../../Account/ValuesAccount'
 // * STYLES *
 import { useStyles } from "./CheckoutStyles";
 import { useStylesDark } from "./CheckoutSylesDark";

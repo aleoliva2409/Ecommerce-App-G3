@@ -10,7 +10,7 @@ const useStyles = makeStyles(styleProduct);
 
 
 function Product({product}){
-
+  console.log(product)
   const token = localStorage.getItem("jwt");
   const {id,isadmin} = jwt.decode(token);
 

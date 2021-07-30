@@ -69,7 +69,7 @@ console.log(!!cartItems.length)
             <Grid container className={classes.cardItem}>
               <Box className={classes.nameBox} component="div">
                 <Typography className={classes.name} variant="h6">
-                  {item.name}
+                  {item.name}{' '}{item.size}{'(cm)'}
                 </Typography>
               </Box>
               <Box component="div">
