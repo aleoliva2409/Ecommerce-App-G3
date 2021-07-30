@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import FilterProducts from "../components/Products/FilterProducts/FilterProducts";
 import Catalogue from "../components/Products/Catalogue";
 import { Container, Grid, Typography, Box, Button, Link } from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";

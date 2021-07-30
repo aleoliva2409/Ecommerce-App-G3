@@ -1,40 +1,50 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { getOrdersByUser } from "../redux/actions/ordersActions";
+import { getWishlist } from '../redux/actions/wishlistAction';
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
-import { Container } from "@material-ui/core";
-import ShoppingTable from "../components/Me/ShoppingTable";
+import { Container, Typography } from "@material-ui/core";
+import Table from "../components/Me/ProducTable/Table";
+import ListFavorites from '../components/Favorites/ListFavorites';
 import { useToken } from "../hooks/useToken"
+import { user } from '../components/Me/ProducTable/user';
 
 const Me = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [render, setRender] = useState(false)
   const dispatch = useDispatch();
-  const { id } = useToken()
+  const { id, email } = useToken()
   const shoppingUser = useSelector((state) => state.orders.ordersByUser);
+  const favorites = useSelector((state) => state.wishlists.favorites);
   const location = useLocation();
 
   useEffect(() => {
     dispatch(getOrdersByUser(id));
+    dispatch(getWishlist(email));
     dispatch(getCategories());
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   if(render) {
-  //     setRender(false)
-  //     dispatch(getAllProducts());
-  //   }
-  // }, [dispatch, render]);
+  useEffect(() => {
+    if(render) {
+      dispatch(getWishlist(email))
+      setRender(false)
+    }
+  }, [render])
 
   const views = (url) => {
     switch(url) {
       case "/users/me/shopping":
         return (
-          <ShoppingTable user={shoppingUser}/>
+          <Table user={shoppingUser} />
         )
       case "/users/me/favorites":
         return (
-          <></>
+          <Fragment>
+            <Typography  variant="h3" color="initial">Favoritos</Typography>
+            <ListFavorites products={favorites} currentPage={currentPage} setCurrentPage={setCurrentPage} setRender={setRender}/>
+          </Fragment>
         )
       case "/users/me/settings":
         return (

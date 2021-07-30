@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  TextField,
-  Select,
-  MenuItem,
-  Button,
-  Box,
-  FormControl,
-} from "@material-ui/core";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
+import { DialogContent, Dialog, TextField, Select, MenuItem, Button, Box } from "@material-ui/core";
 import useStyles from "./AddProductStyle";
 import { useDispatch } from "react-redux";
 import { updateProduct } from "../../redux/actions/productActions";
@@ -60,8 +51,8 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
   return (
     <>
       <Dialog open={open} onClose={formClose}>
-        <DialogContent className={classes.formAddProduct}>
-          <form onSubmit={editProduct}>
+        <DialogContent>
+          <form className={classes.formAddProduct} onSubmit={editProduct}>
             <Select
               id="model"
               label="Modelo de Producto"
@@ -70,6 +61,7 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
               onChange={handleForm}
               name="model"
               required
+              className={classes.field}
             >
               <MenuItem value={product.id} selected >
                 {product.name}
@@ -81,38 +73,42 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
                   </MenuItem>
                 ))}
             </Select>
-            <TextField
-              id="size"
-              name="size"
-              label="Medida(cm)"
-              variant="outlined"
-              margin="normal"
-              className={classes.textField}
-              value={product.products ? product.products[0].size : formProduct.size}
-              onChange={handleForm}
-              required
-            />
-            <TextField
-              id="sizeMattress"
-              name="sizeMattress"
-              label="Medida"
-              variant="outlined"
-              margin="normal"
-              className={classes.textField}
-              value={product.products ? product.products[0].sizeMattress : formProduct.sizeMattress}
-              onChange={handleForm}
-            />
+            <Box component="div" className={classes.measures}>
+              <TextField
+                id="size"
+                name="size"
+                label="Medida(cm)"
+                variant="outlined"
+                margin="normal"
+                value={product.products ? product.products[0].size : formProduct.size}
+                onChange={handleForm}
+                required
+                className={classes.measuresField}
+              />
+              X
+              <TextField
+                id="sizeMattress"
+                name="sizeMattress"
+                label="Medida"
+                variant="outlined"
+                margin="normal"
+                value={product.products ? product.products[0].sizeMattress : formProduct.sizeMattress}
+                onChange={handleForm}
+                className={classes.measuresField}
+              />
+            </Box>
             <TextField
               id="description"
               name="description"
               label="Descripción"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
+              fullwidth="true"
+              className={classes.field}
               value={
                 product.description ?
-                product.description :
-                formProduct.description
+                  product.description :
+                  formProduct.description
               }
               onChange={handleForm}
               multiline
@@ -125,8 +121,9 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
               label="Color"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
-              value={product.products ? product.products[0].color : formProduct.color }
+              fullwidth="true"
+              className={classes.field}
+              value={product.products ? product.products[0].color : formProduct.color}
               onChange={handleForm}
               required
             />
@@ -136,8 +133,9 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
               label="URL imagen"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
-              value={ product.image ? product.image : formProduct.image }
+              fullwidth="true"
+              className={classes.field}
+              value={product.image ? product.image : formProduct.image}
               onChange={handleForm}
               required
             />
@@ -147,8 +145,9 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
               label="Stock"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
-              value={ product.products ? product.products[0].stock : formProduct.stock}
+              fullwidth="true"
+              className={classes.field}
+              value={product.products ? product.products[0].stock : formProduct.stock}
               onChange={handleForm}
               required
             />
@@ -158,8 +157,9 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
               label="Price"
               variant="outlined"
               margin="normal"
-              className={classes.textField}
-              value={product.products ? product.products[0].price : formProduct.price }
+              fullwidth="true"
+              className={classes.field}
+              value={product.products ? product.products[0].price : formProduct.price}
               onChange={handleForm}
               required
             />
@@ -172,6 +172,7 @@ const EditProduct = ({ productsAll, product, categories, setState, open, formClo
               name="categories"
               multiple
               required
+              className={classes.field}
             >
               <MenuItem value={categories} disabled selected>
                 <em>None</em>

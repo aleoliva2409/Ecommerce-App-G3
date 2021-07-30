@@ -10,6 +10,7 @@ import PasswordReset from "../views/PasswordReset";
 import LoginPage from "../views/LoginPage";
 import WishlistByUser from "../components/wishlistByUser/WishlistByUser";
 import ShippingForm from "../components/ShippingForm/ShippingForm";
+import FavoritesPage from '../views/FavoritesPage';
 
 const Routes = () => (
   <Switch>
@@ -24,6 +25,8 @@ const Routes = () => (
     <Route exact path="/review" component={LoginPage} />
     <Route exact path="/render" component={WishlistByUser} />
     <Route exact path="/shipping" component={ShippingForm} />
+    <Route exact path="/favorites" component={FavoritesPage} />
+
   </Switch>
 );
 
