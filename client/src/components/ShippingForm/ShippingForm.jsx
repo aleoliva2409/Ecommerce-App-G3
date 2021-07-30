@@ -21,6 +21,8 @@ export default function ShippingForm() {
   let userEmail = localStorage.getItem('user')
   
   const [datos, setDatos] = useState({
+    firstName:"",
+    lastName:"",
     shippingAddress: "",
     shippingZip: "",
     shippingCity: "",
@@ -30,6 +32,8 @@ export default function ShippingForm() {
   useEffect(() => {
     dispatch(userShipping(userEmail));
     setDatos({
+      firstName: shippingData.firstName,
+      lastName: shippingData.lastName,
       shippingAddress: shippingData.shippingAddress,
       shippingZip: shippingData.shippingZip,
       shippingCity: shippingData.shippingCity,
@@ -37,6 +41,8 @@ export default function ShippingForm() {
     });
   }, [
     userEmail,
+    shippingData.firstName,
+    shippingData.lastName,
     shippingData.shippingAddress,
     shippingData.shippingZip,
     shippingData.shippingCity,
@@ -73,7 +79,31 @@ export default function ShippingForm() {
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <Box m={1} className={classes.shippingForm}>
+        <Box m={1} className={classes.shippingForm}>
+            <TextField
+              required
+              name="firstName"
+              placeholder="Nombre"
+              value={datos.firstName}
+              onChange={handleInputChange}
+              variant="outlined"
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+        <Box m={1} className={classes.shippingForm}>
+            <TextField
+              required
+              name="lastName"
+              placeholder="Apellido"
+              value={datos.shippingAddress}
+              onChange={handleInputChange}
+              variant="outlined"
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+        <Box m={1} className={classes.shippingForm}>
             <TextField
               required
               name="shippingAddress"

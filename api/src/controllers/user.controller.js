@@ -139,11 +139,14 @@ async function getShippingData (req, res, next){
     const order = await Order.findOne({where:{userId:user.dataValues.id,orderState:'cart'}})
     console.log(order)
     objShipping = {
+      firstName: order.firstName,
+      lastName: order.lastName,
       shippingAddress: order.shippingAddress,
       shippingZip: order.shippingZip,
       shippingCity: order.shippingCity,
       shippingState: order.shippingState,
       comments: order.comments,
+      shippingState: "created"
     }
     return res.json(objShipping);
   }catch(error){

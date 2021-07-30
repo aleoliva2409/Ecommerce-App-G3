@@ -98,6 +98,7 @@ const {prods} = req.body
         prod.update({stock:each.stock-each.qty})
     }
 
+    res.status(200)
 }
 
 module.exports = {
