@@ -9,10 +9,8 @@ import { Typography } from '@material-ui/core';
 
 const Catalogue = ({ products, currentPage, setCurrentPage }) => {
 
-  // const [currentPage, setCurrentPage] = useState(0);
-
   const paginations = () => {
-    if(products.length > 0) {
+    if(products?.length > 0) {
       return products.slice(currentPage, currentPage + 12);
     }
     return []
@@ -37,7 +35,7 @@ const Catalogue = ({ products, currentPage, setCurrentPage }) => {
   };
 
   const nextBtn = () => {
-    if (products.length > currentPage + 12) {
+    if (products?.length > currentPage + 12) {
       return false;
     } else {
       return true;

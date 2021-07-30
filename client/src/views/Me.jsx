@@ -1,52 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import { getAllProducts } from "../redux/actions/productActions";
+import { getOrdersByUser } from "../redux/actions/ordersActions";
+import { getWishlist } from '../redux/actions/wishlistAction';
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
-import { Container } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
+import ShoppingTable from "../components/Me/ShoppingTable";
+import ListFavorites from '../components/Favorites/ListFavorites';
+import { useToken } from "../hooks/useToken"
 
 const Me = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [render, setRender] = useState(false)
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.allProducts);
-  const categories = useSelector((state) => state.categories.categories);
-  const [render, setRender] = useState(false);
+  const { id, email } = useToken()
+  const shoppingUser = useSelector((state) => state.orders.ordersByUser);
+  const favorites = useSelector((state) => state.wishlists.favorites);
   const location = useLocation();
 
   useEffect(() => {
-    dispatch(getAllProducts());
+    dispatch(getOrdersByUser(id));
+    dispatch(getWishlist(email));
     dispatch(getCategories());
   }, [dispatch]);
 
   useEffect(() => {
     if(render) {
+      dispatch(getWishlist(email))
       setRender(false)
-      dispatch(getAllProducts());
     }
-  }, [dispatch, render]);
+  }, [render])
 
   const views = (url) => {
     switch(url) {
-      case "/users/me/products":
+      case "/users/me/shopping":
         return (
-          <div><h1>hola</h1></div>
+          <ShoppingTable user={shoppingUser}/>
         )
-
-      case "/users/me/orders":
+      case "/users/me/favorites":
         return (
-          <></>
+          <Fragment>
+            <Typography  variant="h3" color="initial">Favoritos</Typography>
+            <ListFavorites products={favorites} currentPage={currentPage} setCurrentPage={setCurrentPage} setRender={setRender}/>
+          </Fragment>
         )
-
-      case "/users/me/categories":
-        return (
-          <></>
-        )
-
-      case "/users/me/promote":
+      case "/users/me/settings":
         return (
           <></>
         )
-
       default:
         break;
     }

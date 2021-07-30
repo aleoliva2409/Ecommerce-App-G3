@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -10,21 +10,21 @@ import { filterProductCategory } from "../../../redux/actions/productActions";
 import Typography from "@material-ui/core/Typography";
 
 // * STYLES *
-import {useStyles} from './FilterProductStyle';
-import {useStylesDark} from './FilterProductStyleDark';
+import { useStyles } from './FilterProductStyle';
+import { useStylesDark } from './FilterProductStyleDark';
 
 const FilterProducts = ({ setFilter, setCurrentPage }) => {
-    //select color mode
-    const dayMode = useStyles();
-    const darkMode = useStylesDark();
-    let classes;
-    const actualColor = useSelector(state => state.color)
-    console.log(actualColor)
-    if(actualColor){
-      classes = darkMode;
-    } else {
-      classes = dayMode;
-    }
+  //select color mode
+  const dayMode = useStyles();
+  const darkMode = useStylesDark();
+  let classes;
+  const actualColor = useSelector(state => state.color)
+  console.log(actualColor)
+  if (actualColor) {
+    classes = darkMode;
+  } else {
+    classes = dayMode;
+  }
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
 
@@ -39,9 +39,7 @@ const FilterProducts = ({ setFilter, setCurrentPage }) => {
   };
   return (
     <Box>
-      <Box component="button" onClick={() => setFilter(true)}>
-        <Typography>Ver todos</Typography>
-      </Box>
+      <Button onClick={() => setFilter(true)} variant="contained" className={classes.button}> Ver todos </Button>
       <Box component="div">
         <List
           component="nav"
