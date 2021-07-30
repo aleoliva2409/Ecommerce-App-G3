@@ -92,6 +92,7 @@ const updateOrderByUser = async (req,res) => {
     console.log(orderState)
     const order = await Order.findOne({ where:{ userId:userId ,orderState:'cart' }})
     order.update({orderState:orderState})
+    res.json({message:'updated OrderState'})
   }catch (error){
     console.log(error)
   }
