@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import PersonIcon from '@material-ui/icons/Person';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Checkbox from '@material-ui/core/Checkbox';
 import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { Redirect } from 'react-router-dom';
+import MuiAlert from "@material-ui/lab/Alert";
 // * {Actions}
 import { passwordReset } from './../../redux/actions/userActions';
 
 // * Style
-import { useStyles } from './AccountStyle';
+import { useStyles } from './ResetStyle';
 
 export default function FormDialog() {
   const dispatch = useDispatch()
@@ -25,7 +20,8 @@ export default function FormDialog() {
   //const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { state, user } = useSelector((state) => state.users);
-
+  const [errors, setErrors] = useState('Hace mucho no cambias tu contraseña!. Por tu seguridad debes cambiarla');
+  const [message, setMessage] = useState('0');
   const [password, SetPassword] = useState({
     password_1: '',
     password_2: '',
@@ -35,22 +31,49 @@ export default function FormDialog() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     SetPassword({ ...password, [name]: value });
+    setErrors(validate({ ...password, [name]: value }));
   };
 
   //Form Submit
   const handleSubmit = e => {
     e.preventDefault();
-    const { password_1, password_2 } = password;
-    if (password_1 === password_2) dispatch(passwordReset(password))
-    else alert('los campos no coinciden')
+    setMessage(errors)
+    if (!errors) dispatch(passwordReset(password));
   };
+
+  const blockedUser = () => {
+    return (
+      <MuiAlert
+        elevation={6}
+        onClose={() => {
+          setMessage('')
+        }}
+        variant="filled"
+        severity="error"
+        color="error"
+      >
+        {errors}
+      </MuiAlert>
+    );
+  };
+
+  const validate = (input) => {
+    let errors = '';
+    if (input.password_1 !== input.password_2) errors = 'Los campos no coinciden'
+    if (input.password_1.length < 5 && input.password_2.length < 5) errors = 'La contraseña debe tener almenos cinco caracteres';
+    if (!/(?=.*[0-9])/.test(input.password_1)) errors = 'La contraseña debe tener almenos un número';
+    if (!input.password_1 || !input.password_2) errors = 'Uno o mas campos estan vacios';
+    return errors;
+  }
 
   if (!user) return <Redirect to='/' />
   if(user && !user.passwordReset) return <Redirect to='/users/me' />
 
   return (
+    <>
     <div className={classes.root}>
       <div className={classes.paper}>
+    {message ? <>{blockedUser()}</> : <></>}
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
@@ -65,7 +88,7 @@ export default function FormDialog() {
                 required
                 fullWidth
                 name='password_1'
-                label='Contraseña'
+                label='Nueva contraseña'
                 type='password'
                 id='password_1'
                 autoComplete='current-password'
@@ -79,7 +102,7 @@ export default function FormDialog() {
                 required
                 fullWidth
                 name='password_2'
-                label='Contraseña'
+                label='Confirmar contraseña'
                 type='password'
                 id='password_2'
                 autoComplete='current-password'
@@ -110,5 +133,6 @@ export default function FormDialog() {
         </form>
       </div>
     </div>
+    </>
   );
 }
