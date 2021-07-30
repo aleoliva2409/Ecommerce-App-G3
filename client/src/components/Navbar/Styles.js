@@ -1,24 +1,24 @@
 import { fade, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root:{
-    padding:'0px',
+  root: {
+    padding: '0px',
 
   },
-  links:{
-    color:'#232020',
+  links: {
+    color: '#232020',
   },
-  linkDesktop:{
-    color:'#FFF',
+  linkDesktop: {
+    color: '#FFF',
   },
-  imageShort:{
+  imageShort: {
     width: 70,
   },
-  image:{
+  image: {
     width: 220,
   }
   ,
-  appbar:{
+  appbar: {
     backgroundColor: '#00BBC9',
   },
   grow: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    margin:'auto',
+    margin: 'auto',
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(3),

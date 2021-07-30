@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import PersonIcon from "@material-ui/icons/Person";
-import Link from "@material-ui/core/Link";
-import Grid from "@material-ui/core/Grid";
-import Checkbox from "@material-ui/core/Checkbox";
-import Avatar from "@material-ui/core/Avatar";
+import { Avatar, Button, IconButton, Checkbox, Dialog, DialogContent, FormControlLabel, Grid, Link, Menu, MenuItem, TextField, Typography } from "@material-ui/core";
+import AccountCircle from "@material-ui/icons/AccountCircle";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Typography from "@material-ui/core/Typography";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import MuiAlert from "@material-ui/lab/Alert";
+import { Link as RouterLink } from "react-router-dom";
 // * {Actions}
 import { login, signup, logout } from "./../../redux/actions/userActions";
 
@@ -29,6 +21,41 @@ export default function FormDialog({ field, setRegister, register }) {
     password: "",
     submitted: false,
   });
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const closeUser = () => dispatch(logout())
+
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+  const isMenuOpen = Boolean(anchorEl);
+
+  const menuId = "primary-search-account-menu";
+  const renderMenu = ( //! MENU MOBILE
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <Link
+        component={RouterLink}
+        to="/users/me"
+        className={classes.links}
+      >
+        <MenuItem onClick={handleMenuClose}>Mi cuenta</MenuItem>
+      </Link>
+      <Link component={RouterLink} to="/" className={classes.links}>
+        <MenuItem onClick={closeUser}>Cerrar Sesión</MenuItem>
+      </Link>
+    </Menu>
+  );
 
   const message = useSelector((state) => state.users.message);
 
@@ -76,32 +103,21 @@ export default function FormDialog({ field, setRegister, register }) {
     }
   };
 
-  const closeUser = () => dispatch(logout())
-
   if (localStorage.getItem("user")) {
     return (
       <>
-    <Button
-    variant="text"
-    onClick={closeUser}
-    className={classes.button}
-    startIcon={<PersonIcon />}
-  >
-    Cerrar Sesion
-  </Button>
-  </>
+        <IconButton variant="text" onClick={handleProfileMenuOpen} className={classes.button}>
+          <AccountCircle />
+        </IconButton>
+        {renderMenu}
+      </>
     )
   } else {
     return (
       <div className={classes.root}>
-        <Button
-          variant="text"
-          onClick={handleClickOpen}
-          className={classes.button}
-          startIcon={<PersonIcon />}
-        >
-          Iniciar Sesion
-        </Button>
+        <IconButton variant="text" onClick={handleClickOpen} className={classes.button}>
+          <AccountCircle />
+        </IconButton>
         <Dialog open={open} onClose={handleClose}>
           {message ? <>{blockedUser()}</> : <></>}
           <DialogContent>

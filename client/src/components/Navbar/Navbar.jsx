@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
+import { AppBar, Badge, IconButton, Menu, MenuItem, Toolbar } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MoreIcon from "@material-ui/icons/MoreVert";
@@ -52,55 +47,21 @@ export default function PrimarySearchAppBar() {
 
   const isPhone = useMediaQuery("(max-width: 760px)");
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const inLocal = useSelector((state) => state.cart.items);
   const cartItemsBadge = inLocal.reduce((acc, crr) => acc + crr.qty, 0);
 
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
   };
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = "primary-search-account-menu";
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <Link
-        component={RouterLink}
-        to="/users/me"
-        className={classes.links}
-      >
-        <MenuItem onClick={handleMenuClose}>Mi cuenta</MenuItem>
-      </Link>
-      <Link component={RouterLink} to="/categories" className={classes.links}>
-        <MenuItem onClick={handleMenuClose}>Agregar categoria</MenuItem>
-      </Link>
-    </Menu>
-  );
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
@@ -112,6 +73,7 @@ export default function PrimarySearchAppBar() {
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
+      className={classes.mobileMenu}
     >
       <Link component={RouterLink} to="/products" className={classes.links}>
         <MenuItem>
@@ -146,19 +108,10 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       </Link>
       {/* should be see only when is logged  */}
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Login</p>
-      </MenuItem>
-      {/* should be see only when is logged  */}
       <MenuItem>
+        <AccountCircle />
         <ValuesAccount />
+        <p>Cuenta</p>
       </MenuItem>
     </Menu>
   );
@@ -246,19 +199,6 @@ export default function PrimarySearchAppBar() {
             </Link>
 
             {/* should be see only when is logged  */}
-            <Link component={RouterLink} to="#" className={classes.linkDesktop}>
-              <IconButton
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </Link>
-            {/* should be see only when is logged  */}
 
             <ValuesAccount className={classes.linkDesktop} />
           </div>
@@ -276,7 +216,6 @@ export default function PrimarySearchAppBar() {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
     </div>
   );
 }
