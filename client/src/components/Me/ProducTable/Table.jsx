@@ -1,48 +1,29 @@
-import React, { useState } from 'react'
-import ProductsTable from './ProducTable/ProductsTable';
-import AddProduct from './AddProduct';
-import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
-import Grid from '@material-ui/core/Grid'
-import TextField from '@material-ui/core/TextField'
-import IconButton from '@material-ui/core/IconButton'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import EditProduct from './EditProduct';
+import React, { useState } from "react";
+import OrdersTable from "./OrdersTable";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
+import IconButton from "@material-ui/core/IconButton";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 
 
-const Search = ({ productsAll, productUpdate, state, setState, categories }) => {
+// ! user viene por props,
+const Search = ({ user }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [search, setSearch] = useState("")
-  const [stateAddProduct, setStateAddProduct] = useState(false);
-  const [stateEditProduct, setStateEditProduct] = useState(false);
-
-  const openAddProduct = () => {
-    setStateAddProduct(true);
-  };
-
-  const closeAddProduct = () => {
-    setStateAddProduct(false);
-  };
-
-  const openEditProduct = () => {
-    setStateEditProduct(true)
-  }
-
-  const closeEditProduct = () => {
-    setStateEditProduct(false)
-  }
+  const [search, setSearch] = useState("");
 
   const paginations = () => {
     if (search.length === 0) {
-      return productsAll.slice(currentPage, currentPage + 5);
+      return user.orders?.slice(currentPage, currentPage + 5);
     }
 
-    const filteredProducts = productsAll.filter((product) =>
-      product.name.toLowerCase().includes(search.toLowerCase())
+    const filteredOrders = user.orders.filter((order) =>
+      order.name.toLowerCase().includes(search.toLowerCase())
     );
 
-    return filteredProducts.slice(currentPage, currentPage + 5);
+    return filteredOrders.slice(currentPage, currentPage + 5);
   };
 
   const prevPage = (e) => {
@@ -64,7 +45,10 @@ const Search = ({ productsAll, productUpdate, state, setState, categories }) => 
   };
 
   const nextBtn = () => {
-    if (productsAll.filter((product) => product.name.includes(search)).length > currentPage + 8) {
+    if (
+      user.orders?.filter((order) => order.name?.includes(search)).length >
+      currentPage + 8
+    ) {
       return false;
     } else {
       return true;
@@ -78,33 +62,35 @@ const Search = ({ productsAll, productUpdate, state, setState, categories }) => 
   };
 
   return (
-    <Grid container>
+    <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <Typography variant="h4" color="initial">Lista de productos</Typography>
+        <Typography variant="h4" color="initial">
+          Lista de productos
+        </Typography>
       </Grid>
-      <Grid container direction="row" justifyContent="center" alignItems="center">
-        <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
-          <AddProduct productsAll={productsAll} categories={categories} state={state} setState={setState} open={stateAddProduct} formOpen={openAddProduct} formClose={closeAddProduct}/>
-          <EditProduct productsAll={productsAll} product={productUpdate} categories={categories} state={state} setState={setState} open={stateEditProduct} formOpen={openEditProduct} formClose={closeEditProduct}/>
-        </Grid>
-        <Grid item xl={6} lg={6} md={6} sm={6} xs={12}>
-          <TextField
-            id="search"
-            label="Search"
-            variant="outlined"
-            margin="normal"
-            onChange={handleSearch}
-            value={search}
-            fullWidth
-          />
-        </Grid>
+      <Grid item xl={5} lg={5} md={5} sm={5} xs={12}>
+        <TextField
+          id="search"
+          label="Search"
+          variant="outlined"
+          margin="normal"
+          onChange={handleSearch}
+          value={search}
+          fullWidth
+        />
       </Grid>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <ProductsTable products={paginations()} state={state} setState={setState} formOpen={openEditProduct}/>
+        <OrdersTable
+          orders={paginations()}
+        />
       </Grid>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Box display="flex" justifyContent="space-evenly" mt={1}>
-          <IconButton aria-label="previous" onClick={prevPage} disabled={prevBtn()}>
+          <IconButton
+            aria-label="previous"
+            onClick={prevPage}
+            disabled={prevBtn()}
+          >
             <NavigateBeforeIcon />
           </IconButton>
           <IconButton aria-label="next" onClick={nextPage} disabled={nextBtn()}>
@@ -113,8 +99,7 @@ const Search = ({ productsAll, productUpdate, state, setState, categories }) => 
         </Box>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
 
-export default Search
-
+export default Search;

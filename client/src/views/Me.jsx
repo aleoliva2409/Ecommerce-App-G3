@@ -6,9 +6,10 @@ import { getWishlist } from '../redux/actions/wishlistAction';
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
 import { Container, Typography } from "@material-ui/core";
-import ShoppingTable from "../components/Me/ShoppingTable";
+import Table from "../components/Me/ProducTable/Table";
 import ListFavorites from '../components/Favorites/ListFavorites';
 import { useToken } from "../hooks/useToken"
+import { user } from '../components/Me/ProducTable/user';
 
 const Me = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -36,7 +37,7 @@ const Me = () => {
     switch(url) {
       case "/users/me/shopping":
         return (
-          <ShoppingTable user={shoppingUser}/>
+          <Table user={shoppingUser} />
         )
       case "/users/me/favorites":
         return (

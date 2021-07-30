@@ -5,6 +5,7 @@ const useStyles = makeStyles({
     '& > *': {
       borderBottom: 'unset',
     },
+    width: "100%",
   },
   cellsImg: {
     width: "12%",
@@ -16,12 +17,13 @@ const useStyles = makeStyles({
     height: '100%',
     objectFit: "cover"
   },
-  cells: {
-    width: "12%",
-    height: "75px",
+  link: {
+    color: "black",
+    textDecoration: "none",
   },
-  cellsName: {
-    width: "30%"
+  th: {
+    fontWeight: 700,
+    fontSize: "18px",
   }
 });
 
