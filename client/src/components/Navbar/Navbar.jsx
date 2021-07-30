@@ -130,7 +130,7 @@ export default function PrimarySearchAppBar() {
   };
 
   return (
-    <div className={classes.grow}>
+    <div>
       <AppBar position="static">
         <Toolbar className={classes.appbar}>
           <Link component={RouterLink} to="/">
