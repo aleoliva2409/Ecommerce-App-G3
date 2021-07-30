@@ -140,3 +140,21 @@ export const setBlocks = (id, act) => async (dispatch) => {
     payload: data,
   });
 }
+
+export const setReset = (id, act) => async (dispatch) => {
+  let datos = {}
+  if (act) {
+    datos = {
+      "passwordReset": true
+    }
+  } else {
+    datos = {
+      "passwordReset": false
+    }
+  }
+  const { data } = await axios.put(`/users/${id}`, datos)
+  dispatch({
+    type: ADMINS,
+    payload: data,
+  });
+}

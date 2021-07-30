@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container } from "@material-ui/core";
 
 export default function Promote() {
-  
+
   const dispatch = useDispatch();
   const users = useSelector((store) => store.users.allUsers);
   const log = useSelector((store) => store.users.loging);
-  
+
 useEffect(() => {
     dispatch(getAllUsers());
 }, [dispatch,log])
@@ -22,6 +22,7 @@ useEffect(() => {
       email={e.email}
       isAdmin={e.isadmin}
       blocked={e.blocked}
+      resetPw={e.passwordReset}
     />
   ));
   return (
