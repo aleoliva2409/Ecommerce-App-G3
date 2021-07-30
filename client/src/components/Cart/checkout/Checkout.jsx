@@ -26,7 +26,8 @@ const Checkout = ({ total }) => {
   console.log(!!user);
 
   const handleGoToCheckout = () => {
-    dispatch(goToCheckout());
+    window.location.replace('/shipping')
+    //dispatch(goToCheckout());
   };
 
   if (localStorage.getItem("jwt") && user.isadmin) {

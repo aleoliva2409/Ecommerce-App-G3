@@ -52,19 +52,24 @@ export const goToCheckout = () => async (dispatch) => {
 
 export const changeOrderStatus = (userId, status) => async (dispatch) => {
   const states = {
-    'approved' : 'completed',
-    'refected' : 'cancelled',
-    null : 'cancelled',
-    'pending' : 'pending'
+    "approved" : "completed",
+    "refected" : "cancelled",
+    null : "cancelled",
+    "pending" : "pending"
   }
   const user = (localStorage.getItem('user'))
   const prods = JSON.parse(localStorage.getItem('cart'))
   console.log(prods)
   if(status === 'approved' || status === 'pending'){
-    await axios.post ('/checkout/send', {user, prods})
+    if(status === 'approved'){
+      axios.put('/checkout/stock', {prods})
+    }
+      axios.post('/checkout/send', {user, prods})
     localStorage.setItem('cart',JSON.stringify([]))
   }
-  await axios.put (`/orders/${userId}`, {orderState:states[status]})
+  console.log(typeof userId)
+  const {data} = await axios.put ('/orders/status', {userId,orderState:states[status]})
+  console.log(data)
   window.location.replace('/')
 }
 

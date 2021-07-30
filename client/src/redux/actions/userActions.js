@@ -8,6 +8,7 @@ export const GET_USERS = 'GET_USERS';
 export const ADMINS = 'ADMINS';
 export const BLOCKED = 'BLOCKED';
 export const ERROR = 'ERROR';
+export const GET_SHIPPING = 'GET_SHIPPING';
 
 export const userActions = (user) => async (dispatch) => {
   try {
@@ -157,4 +158,14 @@ export const setReset = (id, act) => async (dispatch) => {
     type: ADMINS,
     payload: data,
   });
+}
+
+export const userShipping = (userEmail) => async (dispatch) => {
+  const shippingData = await axios.get(`/users/shipping?user=${userEmail}`)
+  dispatch({ type: GET_SHIPPING, payload: shippingData.data })
+}
+
+export const uploadShippingData = (userEmail, datos) => async () => {
+  console.log(datos)
+  await axios.put(`/users/shipping/update?user=${userEmail}`, datos)
 }

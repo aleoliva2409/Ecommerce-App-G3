@@ -9,6 +9,7 @@ import Me from "../views/Me"
 import PasswordReset from "../views/PasswordReset";
 import LoginPage from "../views/LoginPage";
 import WishlistByUser from "../components/wishlistByUser/WishlistByUser";
+import ShippingForm from "../components/ShippingForm/ShippingForm";
 
 const Routes = () => (
   <Switch>
@@ -22,6 +23,7 @@ const Routes = () => (
     <Route exact path="/users/password-reset" component={PasswordReset} />
     <Route exact path="/review" component={LoginPage} />
     <Route exact path="/render" component={WishlistByUser} />
+    <Route exact path="/shipping" component={ShippingForm} />
   </Switch>
 );
 
