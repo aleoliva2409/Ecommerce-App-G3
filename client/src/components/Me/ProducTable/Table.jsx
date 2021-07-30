@@ -62,22 +62,11 @@ const Search = ({ user }) => {
   };
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
+    <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2}>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Typography variant="h4" color="initial">
-          Lista de productos
+          Lista de compras/ordenes
         </Typography>
-      </Grid>
-      <Grid item xl={5} lg={5} md={5} sm={5} xs={12}>
-        <TextField
-          id="search"
-          label="Search"
-          variant="outlined"
-          margin="normal"
-          onChange={handleSearch}
-          value={search}
-          fullWidth
-        />
       </Grid>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <OrdersTable
