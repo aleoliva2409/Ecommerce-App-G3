@@ -97,18 +97,18 @@ export default function UserCard({ id, email, isAdmin, blocked, resetPw }) {
             </Button>
              <Snackbar open={openReset} onClose={handleClose}>
               <Alert onClose={handleClose} severity="success">
-                {email} cambiara contraseña
+                Condición establecida
               </Alert>
             </Snackbar>
           </>
         ) : (
           <>
             <Button onClick={resetFalse} autoHideDuration={2000} className={classes.blockTrue} variant="contained">
-            Olvidar Reset
+            Descartar Reset
             </Button>
            <Snackbar open={openReset} onClose={handleClose}>
               <Alert onClose={handleClose} severity="error">
-                {email} No cambiara contraseña
+                Condición establecida
               </Alert>
             </Snackbar>
           </>
