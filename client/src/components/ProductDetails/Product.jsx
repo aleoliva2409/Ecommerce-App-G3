@@ -1,28 +1,21 @@
 import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, Badge, Grid } from '@material-ui/core';
 import { Favorite } from '@material-ui/icons';
 import { useState } from 'react';
-import { styleProduct } from './ProductStyle.js';
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./../../redux/actions/shoppingCartActions.js";
-import jwt from 'jsonwebtoken';
 import Review from '../Review/Review';
+import { styleProduct } from './ProductStyle.js';
+import ReviewComments from '../Review/ReviewComments.jsx';
 const useStyles = makeStyles(styleProduct);
 
 
 function Product({product}){
-  console.log(product)
-  const token = localStorage.getItem("jwt");
-  const {id,isadmin} = jwt.decode(token);
-
-  //console.log("product" + product);
-  // console.log("id :" + id);
-  // console.log("isadmin :" + isadmin);
 
   // const amountToBuy = document.getElementById('amountToBuy');
 
   const styles = useStyles();
   const dispatch = useDispatch();
-  
+
   const user = localStorage.getItem('user');
   const pushToCart = () => dispatch(addToCart(product,1,user));
 
@@ -130,7 +123,8 @@ function Product({product}){
       </Grid>
       <Grid container spacing={3}>
            <Grid item md={6} xs={12}>
-                <Container className={styles.reviews} >
+                <ReviewComments />
+                {/* <Container className={styles.reviews} >
                 <Typography variant={'subtitle2'}>
                   Comentarios
                 </Typography>
@@ -148,7 +142,7 @@ function Product({product}){
                     :
                     <Typography variant={'h3'}>No hay comentarios para este producto</Typography>
                 }
-                </Container>
+                </Container> */}
           </Grid>
       </Grid>
     </Container>
@@ -156,3 +150,4 @@ function Product({product}){
 }
 
 export default Product;
+
