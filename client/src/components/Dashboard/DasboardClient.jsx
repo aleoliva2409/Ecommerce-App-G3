@@ -62,27 +62,27 @@ function Dashboard(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-
+      <Divider />
       <List>
-        <ListItem button component={RouterLink} to="/products">
+        <ListItem button component={RouterLink} to="/">
           <ListItemIcon>
             <LocalMallIcon />
           </ListItemIcon>
-          <ListItemText primary="Tienda" />
+          <ListItemText primary="Ir a la tienda" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/orders">
+        <ListItem button component={RouterLink} to="/users/me/favorites">
           <ListItemIcon>
             <FavoriteIcon />
           </ListItemIcon>
           <ListItemText primary="Favoritos" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/categories">
+        <ListItem button component={RouterLink} to="/users/me/shopping">
           <ListItemIcon>
             <ShoppingBasketIcon />
           </ListItemIcon>
           <ListItemText primary="Mis compras" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/promote">
+        <ListItem button component={RouterLink} to="/users/me/settings">
           <ListItemIcon>
             <SettingsIcon />
           </ListItemIcon>
@@ -92,7 +92,7 @@ function Dashboard(props) {
           <ListItemIcon>
             <ExitToAppIcon />
           </ListItemIcon>
-          <ListItemText primary="Salir" />
+          <ListItemText primary="Cerrar sesión" />
         </ListItem>
       </List>
     </div>

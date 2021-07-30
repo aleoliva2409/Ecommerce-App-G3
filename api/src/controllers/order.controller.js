@@ -19,6 +19,34 @@ const getAllOrders = async (req, res) => {
   }
 }
 
+const getOrdersByUser = async (req, res) => {
+  try {
+    const { idUser } = req.params;
+    const user = await User.findByPk(idUser, {
+      include: [
+        {
+          model: Order,
+          include: [
+            {
+              model: Product
+            }
+          ]
+        }
+      ]
+    });
+
+    if(user) {
+      return res.status(200).json(user)
+    } else {
+      return res.status(404).json({ message: "No existe el usuario" })
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+
 const getOrder = async (req, res) => {
   try {
     const { id } = req.params;
@@ -81,5 +109,6 @@ module.exports = {
   getAllOrders,
   getOrder,
   updateOrder,
-  setOrderDetail
+  setOrderDetail,
+  getOrdersByUser
 }

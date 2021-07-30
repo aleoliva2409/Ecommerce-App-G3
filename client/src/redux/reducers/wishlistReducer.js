@@ -12,7 +12,7 @@ const wishlistReducer = (state = initialState, action) => {
     case REMOVE_FAVORITE:
       return { ...state, message: action.payload.message };
     case GET_WISHLIST:
-      return { ...state, favorite: action.payload.products };
+      return { ...state, favorites: action.payload };
     default:
       return state;
   }
