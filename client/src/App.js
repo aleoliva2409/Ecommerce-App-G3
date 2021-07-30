@@ -16,10 +16,9 @@ const App = () => {
       location.pathname === "/admin/dashboard/promote" ||
       location.pathname === "/admin/dashboard" ||
       location.pathname === "/admin" ||
-      location.pathname === "/users/me/products" ||
-      location.pathname === "/users/me/orders" ||
-      location.pathname === "/users/me/categories" ||
-      location.pathname === "/users/me/promote" ||
+      location.pathname === "/users/me/shopping" ||
+      location.pathname === "/users/me/favorites" ||
+      location.pathname === "/users/me/settings" ||
       location.pathname === "/users/me" ||
       location.pathname === "/users"
       ?
