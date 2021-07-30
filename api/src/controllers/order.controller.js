@@ -98,6 +98,7 @@ const updateOrderByUser = async (req,res) => {
     }
     order.update({orderState:orderState})
     order.update({date:new Date().toLocaleString()})
+    res.json({message:'updated OrderState'})
   }catch (error){
     console.log(error)
   }

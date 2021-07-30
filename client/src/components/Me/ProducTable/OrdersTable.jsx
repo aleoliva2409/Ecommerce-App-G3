@@ -22,12 +22,10 @@ const ProductsTable = ({ orders }) => {
             <TableCell className={classes.th} align="center">Fecha</TableCell>
             <TableCell className={classes.th} align="center">Estado de orden</TableCell>
             <TableCell className={classes.th} align="center">Recibe</TableCell>
-            <TableCell className={classes.th} align="center">Tipo de pago</TableCell>
             <TableCell className={classes.th} align="center">Dirección</TableCell>
             <TableCell className={classes.th} align="center">Ciudad</TableCell>
             <TableCell className={classes.th} align="center">Codigo postal</TableCell>
             <TableCell className={classes.th} align="center">Estado de envío</TableCell>
-            <TableCell className={classes.th} align="center">Costo de envío</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

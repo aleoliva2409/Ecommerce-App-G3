@@ -34,7 +34,7 @@ function ReviewComments({idproduct}) {
 
             {(!reviews || reviews.length == 0)  ?
               <Typography component="h5" variant="h5" className={classes.inline} color="textPrimary" >
-                      El producto no tiene reviews
+                El producto no tiene reviews
               </Typography>
             :
             (reviews && reviews.map(review => (
