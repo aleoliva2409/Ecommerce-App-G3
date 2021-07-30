@@ -88,10 +88,16 @@ const updateOrder = async (req, res) => {
 const updateOrderByUser = async (req,res) => {
   console.log('---------------------------------------------------------------------------------')
   try{
-    const{userId, orderState} = req.body;
+    const{userId, orderState, cart} = req.body;
     console.log(orderState)
     const order = await Order.findOne({ where:{ userId:userId ,orderState:'cart' }})
+    const idProducts = cart.map( item => ({ id: item.id, quantity: item.quantity}));
+    for(let i = 0; i < idProducts.length; i++) {
+      const product = await Product.findByPk(idProducts[i].id);
+      order.addProduct(product, { through: { price: product.price, quantity: idProducts[i].quantity }})
+    }
     order.update({orderState:orderState})
+    order.update({date:new Date().toLocaleString()})
   }catch (error){
     console.log(error)
   }
