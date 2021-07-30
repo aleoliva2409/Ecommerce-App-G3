@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import CrudProduct from "../components/CrudProduct/CrudProduct";
-import Table from '../components/OrdersTable/OrderTable';
-import Categories from '../components/Categories/CategoriesOptions/CategoriesOptions';
 import { getAllProducts } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoriesActions";
 import DasboardClient from "../components/Dashboard/DasboardClient";
@@ -30,27 +27,22 @@ const Me = () => {
 
   const views = (url) => {
     switch(url) {
-      case "/admin/dashboard/products":
+      case "/users/me/products":
         return (
-          <CrudProduct
-            products={products}
-            categories={categories}
-            state={render}
-            setState={setRender}
-          />
+          <div><h1>hola</h1></div>
         )
 
-      case "/admin/dashboard/orders":
+      case "/users/me/orders":
         return (
-          <Table />
+          <></>
         )
 
-      case "/admin/dashboard/categories":
+      case "/users/me/categories":
         return (
-          <Categories />
+          <></>
         )
 
-      case "/admin/dashboard/promote":
+      case "/users/me/promote":
         return (
           <></>
         )

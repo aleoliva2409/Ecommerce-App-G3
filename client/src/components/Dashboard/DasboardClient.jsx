@@ -70,19 +70,19 @@ function Dashboard(props) {
           </ListItemIcon>
           <ListItemText primary="Tienda" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/orders">
+        <ListItem button component={RouterLink} to="/users/me/orders">
           <ListItemIcon>
             <FavoriteIcon />
           </ListItemIcon>
           <ListItemText primary="Favoritos" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/categories">
+        <ListItem button component={RouterLink} to="/users/me/categories">
           <ListItemIcon>
             <ShoppingBasketIcon />
           </ListItemIcon>
           <ListItemText primary="Mis compras" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/admin/dashboard/promote">
+        <ListItem button component={RouterLink} to="/users/me/promote">
           <ListItemIcon>
             <SettingsIcon />
           </ListItemIcon>
@@ -92,7 +92,7 @@ function Dashboard(props) {
           <ListItemIcon>
             <ExitToAppIcon />
           </ListItemIcon>
-          <ListItemText primary="Salir" />
+          <ListItemText primary="Cerrar sesión" />
         </ListItem>
       </List>
     </div>

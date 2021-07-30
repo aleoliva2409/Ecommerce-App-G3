@@ -19,6 +19,7 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './DashboardStyle';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import StoreIcon from '@material-ui/icons/Store';
 import { Link as RouterLink } from 'react-router-dom'
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
@@ -55,6 +56,12 @@ function Dashboard(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
+      <ListItem button component={RouterLink} to="/">
+          <ListItemIcon>
+            <StoreIcon />
+          </ListItemIcon>
+          <ListItemText primary="Ir a la tienda" />
+        </ListItem>
         <ListItem button component={RouterLink} to="/admin/dashboard/products">
             <ListItemIcon>
               <LocalMallIcon />
@@ -83,7 +90,7 @@ function Dashboard(props) {
           <ListItemIcon>
             <ExitToAppIcon />
           </ListItemIcon>
-          <ListItemText primary="Salir" />
+          <ListItemText primary="Cerrar sesión" />
         </ListItem>
       </List>
     </div>
