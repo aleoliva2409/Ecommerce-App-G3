@@ -11,12 +11,12 @@ export const addFavorite = ({ id }, email) => async (dispatch) => {
   })
 }
 
-export const deleteFavorite = ({ id }, email ) => async (dispatch) => {
+export const deleteFavorite = ({ id }, email) => async (dispatch) => {
   const { data } = await axios.put("/wishlist/remove", { email, id });
-    dispatch({
-      type: REMOVE_FAVORITE,
-      payload: { id, message: data.message }
-    })
+  dispatch({
+    type: REMOVE_FAVORITE,
+    payload: { id, message: data.message }
+  })
 }
 
 export const getWishlist = () => async (dispatch) => {
@@ -25,7 +25,7 @@ export const getWishlist = () => async (dispatch) => {
   if (inLocal) {
     dispatch({
       type: GET_WISHLIST,
-      payload: { products: data.products }
+      payload: data.products
     })
   }
 }
