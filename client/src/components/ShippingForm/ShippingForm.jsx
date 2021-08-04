@@ -19,7 +19,7 @@ export default function ShippingForm() {
   const shippingData = useSelector((store) => store.users.shippingData);
 
   let userEmail = localStorage.getItem('user')
-  
+
   const [datos, setDatos] = useState({
     firstName:"",
     lastName:"",
@@ -96,7 +96,7 @@ export default function ShippingForm() {
               required
               name="lastName"
               placeholder="Apellido"
-              value={datos.shippingAddress}
+              value={datos.lastName}
               onChange={handleInputChange}
               variant="outlined"
             />
