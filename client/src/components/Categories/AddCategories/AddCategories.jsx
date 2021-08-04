@@ -54,7 +54,7 @@ export default function AddCategory() {
       <Box className={styles.textField} component="form" onSubmit={enviarDatos}>
         <TextField className={styles.item} type="text" placeholder="Nombre" name="name" variant="outlined" required onChange={handleInputChange}/>
         <TextField className={styles.item} type="text" placeholder="Descripción" name="description" variant="outlined" multiline onChange={handleInputChange}/>
-        <Button className={styles.item} size="large" variant="contained" color="primary" type="submit" onClick={handleClick}>Agregar</Button>
+        <Button className={styles.button} size="large" variant="contained" type="submit" onClick={handleClick}>Agregar</Button>
         {state.success ? (
           <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">

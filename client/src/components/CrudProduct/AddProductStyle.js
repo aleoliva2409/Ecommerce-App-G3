@@ -20,7 +20,17 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   },
   measuresField: {
     width: "30%"
-  }
+  },
+  button: {
+    margin: spacing(2),
+    color: '#FFF',
+    backgroundColor: '#00BBC9',
+    fontWeight: '900',
+    '&:hover': {
+      color: '#232020',
+      backgroundColor: '#FCEB45',
+    },
+  },
 }))
 
 export default useStyles;

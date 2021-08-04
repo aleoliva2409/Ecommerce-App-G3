@@ -46,9 +46,6 @@ const useStyles = makeStyles((theme) => ({
     height: 0,
     paddingTop: "56.25%" // 16:9
   },
-  price:{
-    fontWeight:'700'
-  },
   price: {
     color: "black",
     fontWeight: "700"

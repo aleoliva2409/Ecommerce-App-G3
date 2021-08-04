@@ -147,7 +147,8 @@ const ProductsTable = ({productos}) => {
 const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shippingCity, shippingZip}) => {
 
   const styles = useStyles();
-  const [isEditing, setIsEditing] = useState(false);
+  // const [isEditing, setIsEditing] = useState(false);
+  const isEditing = false
   const [isEditingOneElement, setIsEditingOneElement] = useState([false,false,false,false,false]);
   const [shippingStateLocal, setShippingStateLocal] = useState(shippingState);
   const [shippingCostLocal, setShippingCostLocal] = useState(shippingCost);
@@ -315,7 +316,8 @@ const ShippingData = ({id, shippingState, shippingCost, shippingAddres, shipping
 const Comments = ({id, orderState, comments, paymentDetails}) => {
 
   const styles = useStyles();
-  const [isEditing, setIsEditing] = useState(false);
+  // const [isEditing, setIsEditing] = useState(false);
+  const isEditing = false
   const [isEditingOneElement, setIsEditingOneElement] = useState([false,false,false]);
   const [orderStateLocal, setOrderStateLocal] = useState(orderState);
   const [paymentDetailsLocal, setPaymentDetailsLocal] = useState(paymentDetails);

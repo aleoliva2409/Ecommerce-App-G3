@@ -3,7 +3,6 @@ import OrdersTable from "./OrdersTable";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
@@ -12,18 +11,9 @@ import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 // ! user viene por props,
 const Search = ({ user }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [search, setSearch] = useState("");
 
   const paginations = () => {
-    if (search.length === 0) {
-      return user.orders?.slice(currentPage, currentPage + 5);
-    }
-
-    const filteredOrders = user.orders.filter((order) =>
-      order.name.toLowerCase().includes(search.toLowerCase())
-    );
-
-    return filteredOrders.slice(currentPage, currentPage + 5);
+    return user.orders?.slice(currentPage, currentPage + 5);
   };
 
   const prevPage = (e) => {
@@ -46,19 +36,13 @@ const Search = ({ user }) => {
 
   const nextBtn = () => {
     if (
-      user.orders?.filter((order) => order.name?.includes(search)).length >
+      user.orders?.length >
       currentPage + 8
     ) {
       return false;
     } else {
       return true;
     }
-  };
-
-  const handleSearch = (e) => {
-    setCurrentPage(0);
-    setSearch(e.target.value);
-    e.preventDefault();
   };
 
   return (

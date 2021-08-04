@@ -4,7 +4,7 @@ export const categoryCardStyle = ({ breakpoints, spacing, shadows }) => ({
     alignItems: "center",
     justifyContent: "space-between",
     border: "1px solid var(--primaryColor)",
-    borderRadius: spacing(4),
+    borderRadius: spacing(1),
     padding: spacing(0.5),
     margin: spacing(1),
     boxShadow: shadows[3],
@@ -22,10 +22,12 @@ export const categoryCardStyle = ({ breakpoints, spacing, shadows }) => ({
   },
   close: {
     padding: spacing(1),
-    color: "red",
+    color: "#d13d3d",
     "&:hover": {
-      backgroundColor: "#f96262",
-      color: "#ab0000"
+      // backgroundColor: "red",
+      backgroundColor: "#d13d3d",
+      // color: "#ab0000",
+      color: "white"
     }
   },
   paper: {

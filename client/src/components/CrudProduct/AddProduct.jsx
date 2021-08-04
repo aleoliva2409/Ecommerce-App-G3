@@ -68,6 +68,7 @@ const AddProduct = ({ productsAll, categories, setState, open, formOpen, formClo
         variant="contained"
         color="primary"
         size="large"
+        className={classes.button}
         startIcon={<AddIcon />}
       >
         Agregar producto

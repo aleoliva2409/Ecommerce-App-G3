@@ -64,15 +64,15 @@ const ProductCard = ({ product }) => {
     setOpen(false);
   };
 
-  const inLocal = useSelector(state => state.cart.items)
-  let noStock = false
-  for(let each of inLocal){
-    if(each.id === product.id){
-      if(each.stock === each.qty){
-        noStock = true;
-      }
-    }
-  }
+  // const inLocal = useSelector(state => state.cart.items)
+  // let noStock = false
+  // for(let each of inLocal){
+  //   if(each.id === product.id){
+  //     if(each.stock === each.qty){
+  //       noStock = true;
+  //     }
+  //   }
+  // }
 
   return (
     <Card className={classes.root}>
