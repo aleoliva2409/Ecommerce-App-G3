@@ -18,8 +18,7 @@ export default function FormDialog() {
   const dispatch = useDispatch()
   const classes = useStyles();
   //const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { state, user } = useSelector((state) => state.users);
+  const { user } = useSelector((state) => state.users);
   const [errors, setErrors] = useState('Hace mucho no cambias tu contraseña!. Por tu seguridad debes cambiarla');
   const [message, setMessage] = useState('0');
   const [password, SetPassword] = useState({

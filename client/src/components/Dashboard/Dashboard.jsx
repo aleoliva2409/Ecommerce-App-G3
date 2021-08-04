@@ -32,7 +32,7 @@ function Dashboard(props) {
 
   useEffect(() => {
     dispatch(getUser(token))
-  }, [state])
+  }, [state,dispatch,token])
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

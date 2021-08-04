@@ -72,31 +72,51 @@ const useStyles = makeStyles(({ breakpoints, spacing, theme }) => ({
     fontSize: "15px"
   },
   deleteForever: {
-    backgroundColor: "#FF6868",
+    color: "white",
+    // backgroundColor: "#FF6868",
+    backgroundColor: "#d13d3d",
     border: "solid 1px #cccccc",
-    borderRadius: "10px",
-    width: "100%",
+    borderRadius: "5px",
+    width: "15%",
     gridColumn: "1/2",
     gridRow: "3/4",
     justifySelf: "center",
     "&:hover": {
-      backgroundColor: "#D22626",
-    }
+      backgroundColor: "#d13d3d90",
+    },
   },
   checkout: {
     gridColumn: "2/3",
     gridRow: "1/2",
   },
   clearItem: {
-    backgroundColor: "#FF6868",
+    color: "white",
+    borderRadius: "5px",
+    // backgroundColor: "#FF6868",
+    backgroundColor: "#d13d3d",
+    width: "45%",
+    justifySelf: "center",
     "&:hover": {
-      backgroundColor: "#D22626",
+      backgroundColor: "#d13d3d90",
     },
     [breakpoints.up("md")]: {
       gridColumn: "2/3",
       borderRadius: spacing(3),
+    },
+    [breakpoints.down("sm")]: {
+      width: "20%",
     }
-  }
+  },
+  button: {
+    margin: spacing(2),
+    color: '#FFF',
+    backgroundColor: '#00BBC9',
+    fontWeight: '900',
+    '&:hover': {
+      color: '#232020',
+      backgroundColor: '#FCEB45',
+    },
+  },
 }))
 
 export { useStyles };

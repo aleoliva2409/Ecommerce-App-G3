@@ -15,7 +15,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { useTheme } from '@material-ui/core/styles';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import SettingsIcon from '@material-ui/icons/Settings';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Link from '@material-ui/core/Link';
 import LongLogo from '../../assets/img/Logos/long-logo.png';
@@ -42,7 +41,7 @@ function Dashboard(props) {
 
   useEffect(() => {
     dispatch(getUser(token))
-  }, [state])
+  }, [state,dispatch,token])
 
   const handleClick = () => {
     dispatch(logout());
@@ -78,12 +77,12 @@ function Dashboard(props) {
           </ListItemIcon>
           <ListItemText primary="Mis compras" />
         </ListItem>
-        <ListItem button component={RouterLink} to="/users/me/settings">
+        {/* <ListItem button component={RouterLink} to="/users/me/settings">
           <ListItemIcon>
             <SettingsIcon />
           </ListItemIcon>
           <ListItemText primary="Configuración" />
-        </ListItem>
+        </ListItem> */}
         <ListItem button component={RouterLink} to="/products" onClick={handleClick} className={classes.exitClient}>
           <ListItemIcon>
             <ExitToAppIcon />

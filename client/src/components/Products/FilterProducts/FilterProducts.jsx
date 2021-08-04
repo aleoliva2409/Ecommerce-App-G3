@@ -7,7 +7,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../../redux/actions/categoriesActions";
 import { filterProductCategory } from "../../../redux/actions/productActions";
-import Typography from "@material-ui/core/Typography";
 
 // * STYLES *
 import { useStyles } from './FilterProductStyle';

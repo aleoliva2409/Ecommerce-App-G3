@@ -15,8 +15,6 @@ export const styleProduct = ({breakpoints, spacing, theme}) => ({
 
   },
   cardRoot:{
-    width: '80%',
-    height: '14rem',
     alignSelf: 'center',
     justifySelf: 'center',
     gridRow: '1/2',

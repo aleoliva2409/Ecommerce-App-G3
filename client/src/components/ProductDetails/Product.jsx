@@ -1,4 +1,4 @@
-import { Card, CardMedia, CardContent, Box, makeStyles, Container, Typography, Button, IconButton, Badge, Grid } from '@material-ui/core';
+import { Card, CardMedia, CardContent, makeStyles, Container, Typography, Button, IconButton, Grid } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
@@ -15,15 +15,15 @@ const useStyles = makeStyles(styleProduct);
 function Product({product}){
 
   // const amountToBuy = document.getElementById('amountToBuy');
-  const { isadmin,email } = useToken()
+  const { email } = useToken()
   const styles = useStyles();
   const dispatch = useDispatch();
-  const [open, setOpen] = useState(false)
+  // const [open, setOpen] = useState(false)
   const [favorites, setFavorites] = useState(false)
   const user = localStorage.getItem('user');
   const pushToCart = () => dispatch(addToCart(product,1,user));
 
-  const [invisible,setInvisible] = useState(true);
+  // const [invisible,setInvisible] = useState(true);
 
   const inLocal = useSelector(state => state.cart.items)
   let noStock = false
@@ -45,7 +45,7 @@ function Product({product}){
         setFavorites(true);
       }
     } else {
-      setOpen(true)
+      // setOpen(true)
     }
   }
 

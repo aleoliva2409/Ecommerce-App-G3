@@ -1,15 +1,15 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link as RouterLink } from "react-router-dom";
 import { Box, Typography, Button, Link } from "@material-ui/core";
-import { goToCheckout } from "../../../redux/actions/shoppingCartActions";
+// import { goToCheckout } from "../../../redux/actions/shoppingCartActions";
 import jwt from "jsonwebtoken";
 // * STYLES *
 import { useStyles } from "./CheckoutStyles";
 import { useStylesDark } from "./CheckoutSylesDark";
 
 const Checkout = ({ total }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   //select color mode
   const dayMode = useStyles();
@@ -37,7 +37,7 @@ const Checkout = ({ total }) => {
           <Typography variant="h3">Total: ${total}</Typography>
         </Box>
         <Box component="div">
-          <Button fullWidth={true} variant="contained" disabled>
+          <Button fullWidth={true} variant="contained" disabled className={classes.button}>
             No puede realizar la compra
           </Button>
         </Box>
@@ -68,6 +68,7 @@ const Checkout = ({ total }) => {
             onClick={handleGoToCheckout}
             fullWidth={true}
             variant="contained"
+            className={classes.button}
           >
             COMPRAR
           </Button>
@@ -98,11 +99,12 @@ const Checkout = ({ total }) => {
           <Button
             fullWidth={true}
             variant="contained"
+            className={classes.button}
           >
             Por favor inisie sesion
           </Button>
         </Box>
-        <Box component="div">
+        <Box component="div" >
           <Link
             component={RouterLink}
             color="inherit"
@@ -117,7 +119,7 @@ const Checkout = ({ total }) => {
       </Box>
     );
   }
-  
+
 };
 
 export default Checkout;

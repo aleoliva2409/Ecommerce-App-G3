@@ -43,7 +43,7 @@ const HeaderCell = (props) => {
 
   function handleSortDirection(id){
     console.log("¬params: "+id)
-    if(id!=="Estado de Orden" && id!="Estado de Envio"){
+    if(id!=="Estado de Orden" && id!=="Estado de Envio"){
       setOrderBy(id);
       setOrder((order==="asc") ? "desc" : "asc");
     }else{
@@ -267,6 +267,7 @@ const OrdersTable = () => {
           }
           return 0
         })
+        break;
       case 'Total':
         ordersLocal = orders.map(order => {
           order.total = getTotal(order);
@@ -288,6 +289,8 @@ const OrdersTable = () => {
           ordersLocal = orders.filter(el => el.shippingState === filter);
         }
         break;
+      default:
+        return;
     }
     return (order === "asc") ? ordersLocal : ordersLocal.reverse();
   }

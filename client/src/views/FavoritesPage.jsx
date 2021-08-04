@@ -14,14 +14,14 @@ const FavoritesPage = () => {
 
   useEffect(() => {
     dispatch(getWishlist(email));
-  }, [dispatch]);
+  }, [dispatch,email]);
 
   useEffect(() => {
     if(render) {
       dispatch(getWishlist(email))
       setRender(false)
     }
-  }, [render])
+  }, [render,email,dispatch])
 
   return (
     <Container maxWidth="xl">

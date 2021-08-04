@@ -23,11 +23,28 @@ export const categoryStyles = ({ breakpoints, spacing, theme }) => ({
       width: "100%"
     }
   },
-  item: {
-    width: "100%",
-    margin: spacing(1),
-    '&::placeholder': {
-      textAlign: "center"
-    }
-  }
+  // item: {
+  //   width: "100%",
+  //   margin: spacing(1),
+  //   color: '#FFF',
+  //   backgroundColor: '#00BBC9',
+  //   fontWeight: '900',
+  //   '&::placeholder': {
+  //     textAlign: "center"
+  //   },
+  //   '&:hover': {
+  //     color: '#232020',
+  //     backgroundColor: '#FCEB45',
+  //   },
+  // },
+  button: {
+    // margin: spacing(2),
+    color: '#FFF',
+    backgroundColor: '#00BBC9',
+    fontWeight: '900',
+    '&:hover': {
+      color: '#232020',
+      backgroundColor: '#FCEB45',
+    },
+  },
 })

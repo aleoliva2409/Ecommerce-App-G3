@@ -40,27 +40,31 @@ const Cart = () => {
     classes = dayMode;
   }
 
-  const user = localStorage.getItem('user');
+  const user = localStorage.getItem("user");
 
   const setAmount = (item, num) => {
-    dispatch(adjustQuantity(item, num,user));
+    dispatch(adjustQuantity(item, num, user));
   };
 
   const remove = (item) => {
-    dispatch(removeFromCart(item,user));
+    dispatch(removeFromCart(item, user));
   };
 
   const emptyCart = () => {
     dispatch(resetCart(user));
   };
-console.log(!!cartItems.length)
+  console.log(!!cartItems.length);
   if (!cartItems.length) {
     return (
       <>
-      <Typography className={classes.name} variant="h6">Carrito vacio</Typography>
-      <Button href={'/products'}>volver</Button>
-</>
-    )
+        <Box m={7}>
+          <Typography className={classes.name} variant="h6">
+            Carrito vacio
+          </Typography>
+        </Box>
+        <Button href={"/products"} className={classes.button}>volver</Button>
+      </>
+    );
   } else {
     return (
       <Container className={classes.root}>
@@ -69,7 +73,8 @@ console.log(!!cartItems.length)
             <Grid container className={classes.cardItem}>
               <Box className={classes.nameBox} component="div">
                 <Typography className={classes.name} variant="h6">
-                  {item.name}{' '}{item.size}{'(cm)'}
+                  {item.name} {item.size}
+                  {"(cm)"}
                 </Typography>
               </Box>
               <Box component="div">
