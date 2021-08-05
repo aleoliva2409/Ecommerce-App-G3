@@ -1,4 +1,4 @@
-const user = {
+const orderByUser = {
   id: 2,
   email: "test@gmail.com",
   password: "$2b$10$yaMYBy6txhKM.20JsEMDN.3UZUSIUMLjR0l.1PkOdEEKQrNOsc3vC",
@@ -133,4 +133,4 @@ const user = {
   ],
 };
 
-export { user };
+export { orderByUser };
