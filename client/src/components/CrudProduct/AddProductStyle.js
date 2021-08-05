@@ -8,18 +8,28 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    [breakpoints.down("sm")]: {
+      width: "16rem",
+      fontSize: "13px"
+    }
   },
   field: {
     width: "100%",
-    margin: spacing(1)
+    // margin: spacing(1)
   },
   measures: {
     display: "flex",
     justifyContent: "space-around",
-    alignItems: "center"
+    alignItems: "center",
+    [breakpoints.down("sm")]: {
+      flexDirection: "column"
+    },
   },
   measuresField: {
-    width: "30%"
+    width: "30%",
+    [breakpoints.down("sm")]: {
+      width: "120%"
+    },
   },
   button: {
     margin: spacing(2),
